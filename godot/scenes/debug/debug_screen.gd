@@ -131,7 +131,7 @@ func _build_toolbar() -> void:
 	status.add_theme_font_size_override("font_size",22)
 	ui.add_child(status)
 	var help := Label.new()
-	help.text = "P1 A/D · salto W/Spazio | P2 J/L · salto I | Joypad: direzioni/su | Scelta: P1 ←/→ P2 ↑/↓ | F3 hurtbox · Esc titolo · F8 CRT · F11 fullscreen"
+	help.text = "P1 A/D · salto W/Spazio · pugno F | P2 J/L · salto I · pugno O | Joypad: su salto · X pugno | Scelta P1 ←/→ P2 ↑/↓ | F3 box · Esc titolo · F8 CRT · F11 fullscreen"
 	help.add_theme_font_size_override("font_size",21)
 	help.position = Vector2(30,1037)
 	help.add_theme_color_override("font_shadow_color",Color.BLACK)
@@ -172,9 +172,17 @@ func _physics_process(delta: float) -> void:
 			var fighter := fighters[slot]
 			fighter.reset_motion()
 			fighter.jump_was_down = _jump_held(slot)
+			fighter.attack_was_down = _attack_held(slot)
 		_update_view()
 		return
-	move_pair(Vector2(fighters[0].locomotion_step(_axis(0),delta,_jump_held(0)),fighters[1].locomotion_step(_axis(1),delta,_jump_held(1))))
+	move_pair(Vector2(fighters[0].locomotion_step(_axis(0),delta,_jump_held(0),_attack_held(0)),fighters[1].locomotion_step(_axis(1),delta,_jump_held(1),_attack_held(1))))
+	fighters[0].resolve_light_punch(fighters[1])
+	fighters[1].resolve_light_punch(fighters[0])
+
+func _attack_held(slot: int) -> bool:
+	var keyboard := Input.is_physical_key_pressed(KEY_F if slot==0 else KEY_O)
+	var pads := Input.get_connected_joypads()
+	return keyboard or (slot<pads.size() and Input.is_joy_button_pressed(pads[slot],JOY_BUTTON_X))
 
 func _jump_held(slot: int) -> bool:
 	var keyboard := (Input.is_physical_key_pressed(KEY_W) or Input.is_physical_key_pressed(KEY_SPACE)) if slot==0 else Input.is_physical_key_pressed(KEY_I)
@@ -212,13 +220,13 @@ func _update_view() -> void:
 	for slot in range(fighters.size()):
 		var fighter := fighters[slot]
 		fighter.position = Vector2(fighter.world_x-camera_x,1025+fighter.body_y)
-		if not fighter.jump.active:
+		if not fighter.jump.active and not fighter.attack_active:
 			var desired_facing: bool = fighter.world_x > fighters[1-slot].world_x
 			if fighter.flipped!=desired_facing:
 				fighter.flipped = desired_facing
 				fighter._update_frame()
 		var animation: Dictionary = fighter.animation
-		readouts[slot].text = "%d cm · %s · %d frame @ %d FPS · x %d" % [fighter.data.heightCm,animation.name,animation.frames.size(),animation.playbackFps,fighter.world_x]
+		readouts[slot].text = "%d cm · %s · x %d · Colpi %d" % [fighter.data.heightCm,animation.name,fighter.world_x,fighter.confirmed_hits]
 	status.text = "Camera: %d / 630 · 2× avanti: corsa · 2× indietro: salto · F3: hurtbox %s (posa corrente)" % [camera_x,"visibili" if hurtboxes_visible else "nascoste"]
 
 func set_hurtboxes_visible(value: bool) -> void:
@@ -226,6 +234,8 @@ func set_hurtboxes_visible(value: bool) -> void:
 	for fighter in fighters:
 		fighter.hurtboxes.debug_visible = value
 		fighter.hurtboxes.queue_redraw()
+		fighter.hitbox.debug_visible = value
+		fighter.hitbox.queue_redraw()
 	_update_view()
 
 func _input(event: InputEvent) -> void:

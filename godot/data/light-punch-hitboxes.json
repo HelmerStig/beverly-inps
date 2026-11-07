@@ -1,0 +1,260 @@
+{
+  "schema": "sanmauro.light-punch-hitboxes",
+  "version": 1,
+  "characters": {
+    "arianna": {
+      "sourceSha256": "4e850e267ad8a68fe384a7ff85c4164f228e4bd4d16c9fa880dbac83029edc06",
+      "framesSha256": "40372cafa816d9c9bcd51f0549c65b5ecb60a7427ef5dde077958a4a715594d4",
+      "impactFrame": 8,
+      "activeStartMs": 300.0,
+      "activeEndMs": 344.44444444444446,
+      "durationMs": 500,
+      "frames": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          397,
+          146,
+          421,
+          145,
+          9
+        ],
+        [
+          398,
+          144,
+          422,
+          143,
+          9
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "bue": {
+      "sourceSha256": "8f79f044930ef5f3531596e1ff27f1b8fd3383651060f461a3d39dac79f4b282",
+      "framesSha256": "b7981c0aa353e8824c25ec55a586ed17d13f38026a52b466bbe7b8ada79f95e1",
+      "impactFrame": 4,
+      "activeStartMs": 300,
+      "activeEndMs": 344.44444444444446,
+      "durationMs": 500,
+      "frames": [
+        null,
+        null,
+        null,
+        null,
+        [
+          426,
+          155,
+          448,
+          155,
+          10
+        ],
+        [
+          413,
+          155,
+          435,
+          155,
+          10
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "mangler": {
+      "sourceSha256": "e8a7e38f6a567674d0e2fe1395cc261b5bf2275e1f384712b66560fa6e44c4f8",
+      "framesSha256": "46108b9d39a7777e541e4460f56e282809299ebb488b3e52fe9b1e50105df4c8",
+      "impactFrame": 10,
+      "activeStartMs": 300,
+      "activeEndMs": 350,
+      "durationMs": 500,
+      "frames": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          439,
+          125,
+          452,
+          128,
+          10
+        ],
+        [
+          438,
+          124,
+          451,
+          127,
+          10
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "mileto": {
+      "sourceSha256": "b3fe5760e28f501aefafc7463cdc5da0d740ad06bbb82d73a5d9f20d231497ff",
+      "framesSha256": "b7981c0aa353e8824c25ec55a586ed17d13f38026a52b466bbe7b8ada79f95e1",
+      "impactFrame": 6,
+      "activeStartMs": 300,
+      "activeEndMs": 357.1428571428571,
+      "durationMs": 500,
+      "frames": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          410,
+          143,
+          421,
+          143,
+          9
+        ],
+        [
+          381,
+          154,
+          392,
+          154,
+          9
+        ],
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "oscare": {
+      "sourceSha256": "c7fe655f9ddb3f5a23959e4d71cc654bc907ad306341553439fded1ba4ad58c2",
+      "framesSha256": "b7981c0aa353e8824c25ec55a586ed17d13f38026a52b466bbe7b8ada79f95e1",
+      "impactFrame": 5,
+      "activeStartMs": 300,
+      "activeEndMs": 350,
+      "durationMs": 500,
+      "frames": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          389,
+          131,
+          410,
+          130,
+          8
+        ],
+        [
+          388,
+          132,
+          409,
+          131,
+          8
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "peirolo": {
+      "sourceSha256": "43845858f3c7a6e0b3dc4d18efd9bc346e74d87b2f5aefa74b5805c8c1fb1a7b",
+      "framesSha256": "b7981c0aa353e8824c25ec55a586ed17d13f38026a52b466bbe7b8ada79f95e1",
+      "impactFrame": 4,
+      "activeStartMs": 300,
+      "activeEndMs": 344.44444444444446,
+      "durationMs": 500,
+      "frames": [
+        null,
+        null,
+        null,
+        null,
+        [
+          409,
+          145,
+          424,
+          145,
+          10
+        ],
+        [
+          409,
+          145,
+          424,
+          145,
+          10
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "torpe": {
+      "sourceSha256": "2e56eef861db0db5d41aa0f3312addda3705d4365b11a96a8b796cf1567e1a1f",
+      "framesSha256": "b7981c0aa353e8824c25ec55a586ed17d13f38026a52b466bbe7b8ada79f95e1",
+      "impactFrame": 6,
+      "activeStartMs": 300,
+      "activeEndMs": 357.1428571428571,
+      "durationMs": 500,
+      "frames": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          410,
+          143,
+          425,
+          144,
+          10
+        ],
+        [
+          410,
+          157,
+          425,
+          158,
+          10
+        ],
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  }
+}

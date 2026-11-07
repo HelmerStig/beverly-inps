@@ -1,9 +1,13 @@
 extends Node2D
+signal light_punch_landed(target: Node2D)
 ## Catalog-driven locomotion with pose-specific hurt geometry.
 const SHADER := preload("res://shaders/debug_fighter.gdshader")
 const HURTBOX_RIG := preload("res://scenes/debug/hurtbox_rig.gd")
 const LOCOMOTION := preload("res://scenes/debug/locomotion.gd")
 const JUMP_MOTION := preload("res://scenes/debug/jump_motion.gd")
+const HITBOX := preload("res://scenes/debug/light_punch_hitbox.gd")
+const SWING_SOUND := preload("res://assets/sounds/sfx/swosh.wav")
+const HIT_SOUND := preload("res://assets/sounds/sfx/light-punch.wav")
 const JUMP_POSES := {
 	"arianna": {"hold":27,"descent":28,"touchdown":38,"end":48},
 	"bue": {"hold":20,"descent":20,"touchdown":26,"end":36},
@@ -37,6 +41,14 @@ var jump_sequence_end := 0.0
 var landing_active := false
 var landing_elapsed := 0.0
 var touchdown_hold := false
+var hitbox: Area2D
+var swing_player: AudioStreamPlayer
+var hit_player: AudioStreamPlayer
+var attack_active := false
+var attack_elapsed := 0.0
+var attack_was_down := false
+var attack_targets: Dictionary = {}
+var confirmed_hits := 0
 
 func _ready() -> void:
 	texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
@@ -45,6 +57,15 @@ func _ready() -> void:
 	hurtboxes = HURTBOX_RIG.new()
 	hurtboxes.name = "Hurtboxes"
 	add_child(hurtboxes)
+	hitbox = HITBOX.new()
+	hitbox.name = "LightPunchHitbox"
+	add_child(hitbox)
+	swing_player = AudioStreamPlayer.new()
+	swing_player.stream = SWING_SOUND
+	add_child(swing_player)
+	hit_player = AudioStreamPlayer.new()
+	hit_player.stream = HIT_SOUND
+	add_child(hit_player)
 
 func _make_sprite(is_shadow: bool) -> Sprite2D:
 	var node := Sprite2D.new()
@@ -60,6 +81,7 @@ func _make_sprite(is_shadow: bool) -> Sprite2D:
 	return node
 
 func select_character(character: Dictionary) -> void:
+	_cancel_attack()
 	data = character
 	motion.reset()
 	jump.reset()
@@ -92,7 +114,38 @@ func set_animation(id: String, force: bool = false) -> void:
 	shadow_sprite.offset = -anchor
 	if id=="jump":
 		jump_sequence_end = animation_duration("jump")
+	if id=="light-punch":
+		hitbox.configure(data,anchor)
 	_update_frame()
+
+func _cancel_attack() -> void:
+	attack_active = false
+	attack_elapsed = 0.0
+	attack_was_down = false
+	attack_targets.clear()
+	if hitbox!=null:
+		hitbox.disable()
+	if swing_player!=null:
+		swing_player.stop()
+
+func start_light_punch() -> void:
+	attack_active = true
+	attack_elapsed = 0.0
+	attack_targets.clear()
+	landing_active = false
+	touchdown_hold = false
+	motion.reset()
+	set_animation("light-punch",true)
+	swing_player.play()
+
+func resolve_light_punch(target: Node2D) -> bool:
+	if not attack_active or attack_targets.has(target.get_instance_id()) or not hitbox.touches(target.hurtboxes):
+		return false
+	attack_targets[target.get_instance_id()] = true
+	confirmed_hits += 1
+	hit_player.play()
+	light_punch_landed.emit(target)
+	return true
 
 func animation_duration(id: String) -> float:
 	var a: Dictionary = data.animations[id]
@@ -122,10 +175,24 @@ func _character_jump_clock() -> float:
 	var difference := int(pose.touchdown)-int(pose.descent)
 	return _jump_frame_time(int(pose.descent)+int(signf(difference))*int(floor(progress*abs(difference)+0.0000001)))
 
-func locomotion_step(axis: float, delta: float, jump_down: bool = false) -> float:
+func locomotion_step(axis: float, delta: float, jump_down: bool = false, attack_down: bool = false) -> float:
 	var jump_pressed := jump_down and not jump_was_down
+	var attack_pressed := attack_down and not attack_was_down
+	attack_was_down = attack_down
 	jump_was_down = jump_down
 	touchdown_hold = false
+	if attack_pressed and not attack_active and not jump.active and body_y==0.0 and motion.state!="back-jump" and not jump_pressed:
+		start_light_punch()
+	if attack_active:
+		attack_elapsed = minf(attack_elapsed+delta,animation_duration("light-punch"))
+		elapsed = attack_elapsed
+		_update_frame()
+		if attack_elapsed>=animation_duration("light-punch")-0.0000001:
+			attack_active = false
+			hitbox.disable()
+			motion.reset()
+			set_animation("idle")
+		return 0.0
 	if jump_pressed and not jump.active and motion.state!="back-jump":
 		landing_active = false
 		var forward := axis*(-1.0 if flipped else 1.0)>0.0
@@ -182,6 +249,7 @@ func locomotion_step(axis: float, delta: float, jump_down: bool = false) -> floa
 	return distance
 
 func reset_motion() -> void:
+	_cancel_attack()
 	motion.reset()
 	jump.reset()
 	body_y = 0.0
@@ -196,14 +264,14 @@ func _feet() -> Array:
 	return feet if not feet.is_empty() else [{"x":anchor.x,"y":anchor.y,"width":36.0}]
 
 func _process(delta: float) -> void:
-	if not frozen and not jump.active and not landing_active and not touchdown_hold:
+	if not frozen and not jump.active and not landing_active and not touchdown_hold and not attack_active:
 		elapsed += delta
 	if not data.is_empty():
 		_update_frame()
 
 func _update_frame() -> void:
 	var duration := animation_duration(animation_id)
-	var clock := minf(elapsed,duration-0.000001) if animation_id in ["back-jump","jump"] else fposmod(elapsed,duration)
+	var clock := minf(elapsed,duration-0.000001) if animation_id in ["back-jump","jump","light-punch"] else fposmod(elapsed,duration)
 	frame_index = 0
 	if animation.has("frameDurations"):
 		while frame_index<animation.frames.size()-1 and clock>=float(animation.frameDurations[frame_index])/1000.0-0.0000001:
@@ -217,6 +285,10 @@ func _update_frame() -> void:
 	shadow_sprite.region_rect = region
 	var flip := -1.0 if flipped else 1.0
 	sprite.scale = Vector2(visual_scale * flip, visual_scale)
+	if animation_id=="light-punch":
+		hitbox.update_frame(frame_index,attack_active,sprite.scale)
+	else:
+		hitbox.disable()
 	hurtboxes.scale = sprite.scale
 	hurtbox_frame = frame_index
 	hurtboxes.update_frame(hurtbox_frame)

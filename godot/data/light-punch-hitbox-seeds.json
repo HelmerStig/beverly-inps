@@ -1,0 +1,13 @@
+{
+  "schema":"sanmauro.light-punch-hitbox-seeds",
+  "coordinates":"Source 512px cell, reviewed wrist-to-knuckles capsule at demo impactFrame",
+  "characters":{
+    "arianna":[397,146,421,145,9],
+    "bue":[426,155,448,155,10],
+    "mangler":[439,125,452,128,10],
+    "mileto":[410,143,421,143,9],
+    "oscare":[389,131,410,130,8],
+    "peirolo":[409,145,424,145,10],
+    "torpe":[410,143,425,144,10]
+  }
+}
