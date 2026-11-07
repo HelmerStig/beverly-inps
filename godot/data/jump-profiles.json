@@ -78,7 +78,8 @@
       "sha256": "ffea698ed4b8d160846b277d89a383101f703616bba82605076d672652e84939"
     }
   ],
-  "descentSpeedMultiplier": 1.35,
+  "descentSpeedMultiplier": 1.0,
+  "horizontalFallSpeedScale": 0.7407407407407407,
   "horizontalDistanceMultiplier": 2.5,
-  "forwardDistanceScale": 0.8
+  "horizontalDistanceScale": 0.8
 }

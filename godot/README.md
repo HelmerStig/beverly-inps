@@ -449,3 +449,21 @@ nella richiesta ? stata interpretata come refuso per ?31?38?, coerentemente
 con il frame 31 richiesto al contatto. Le regole di Arianna, Bue e Mangler
 restano invariate. Il test Jump comprende mantenimento, discesa, contatto
 e durata esatta del recupero per questi tre personaggi.
+
+### Portata simmetrica del salto direzionale
+
+Il salto normale usa ora la stessa portata in avanti e indietro, a parit? di
+profilo di corsa: `horizontalDistanceScale=0.8` sostituisce la riduzione solo
+in avanti. La portata in avanti resta quella approvata; il salto direzionale
+indietro si riduce del 20% rispetto al valore precedente. Altezza, discesa
+e sequenze per personaggio restano invariati. Il doppio-indietro continua
+a essere una mossa separata, con il proprio spostamento. Il test verifica
+la simmetria per tutti e sette i personaggi.
+
+### Ripristino della discesa originale
+
+`descentSpeedMultiplier=1.0` ripristina la gravit? originale anche in discesa.
+Per conservare la portata gi? approvata nonostante il maggior tempo in aria,
+`horizontalFallSpeedScale=1/1.35` compensa soltanto la traslazione durante la
+discesa. Salita, altezza, portata simmetrica e regole dei fotogrammi per ciascun
+personaggio restano invariati, inclusi i recuperi a 100 FPS.

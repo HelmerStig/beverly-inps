@@ -20,7 +20,7 @@ func reset() -> void:
 	body_y = 0.0
 	unused_delta = 0.0
 
-func begin(character_id: String, direction: float, running: bool, _animation_duration: float, startup_override: float = -1.0, forward: bool = true) -> void:
+func begin(character_id: String, direction: float, running: bool, _animation_duration: float, startup_override: float = -1.0, _forward: bool = true) -> void:
 	if config.is_empty():
 		config = JSON.parse_string(FileAccess.get_file_as_string("res://data/jump-profiles.json"))
 	var p: Dictionary = config.characters[character_id]
@@ -29,10 +29,9 @@ func begin(character_id: String, direction: float, running: bool, _animation_dur
 	velocity_y = float(p.velocityY)*scale
 	gravity = float(p.gravity)*scale
 	horizontal_speed = signf(direction)*float(p.airSpeed)*scale*float(config.get("horizontalDistanceMultiplier",2.5))*(float(p.runMultiplier) if running else 1.0)
-	if forward:
-		horizontal_speed *= float(config.get("forwardDistanceScale",0.8))
+	horizontal_speed *= float(config.get("horizontalDistanceScale",0.8))
 	ascent_duration = -velocity_y/gravity
-	var fall_speed := float(config.get("descentSpeedMultiplier",1.35))
+	var fall_speed := float(config.get("descentSpeedMultiplier",1.0))
 	fall_duration = ascent_duration/fall_speed
 	fall_gravity = gravity*fall_speed*fall_speed
 	flight_duration = ascent_duration+fall_duration
@@ -60,4 +59,6 @@ func step(delta: float) -> float:
 	if elapsed>=total_duration-0.000001:
 		active = false
 		body_y = 0.0
-	return horizontal_speed*(air_time-previous)
+	var ascent_time := minf(air_time,ascent_duration)-minf(previous,ascent_duration)
+	var falling_time := maxf(0.0,air_time-ascent_duration)-maxf(0.0,previous-ascent_duration)
+	return horizontal_speed*(ascent_time+falling_time*float(config.get("horizontalFallSpeedScale",1.0)))

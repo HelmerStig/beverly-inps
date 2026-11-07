@@ -19,12 +19,12 @@ func _run() -> void:
 		var scale := 1080.0/648.0
 		var running_jump := JUMP.new()
 		running_jump.begin(id,1.0,true,1.5)
-		check(is_equal_approx(running_jump.horizontal_speed,float(p.airSpeed)*scale*float(profiles.horizontalDistanceMultiplier)*float(profiles.forwardDistanceScale)*float(p.runMultiplier)),"Running-jump multiplier combines legacy profile and forward tuning")
+		check(is_equal_approx(running_jump.horizontal_speed,float(p.airSpeed)*scale*float(profiles.horizontalDistanceMultiplier)*float(profiles.horizontalDistanceScale)*float(p.runMultiplier)),"Running-jump multiplier combines legacy profile and distance tuning")
 		var backward := JUMP.new()
 		backward.begin(id,-1.0,false,1.5,-1.0,false)
 		var forward_jump := JUMP.new()
 		forward_jump.begin(id,1.0,false,1.5)
-		check(is_equal_approx(forward_jump.horizontal_speed,absf(backward.horizontal_speed)*0.8),"Only forward jump distance is reduced by 20 percent")
+		check(is_equal_approx(forward_jump.horizontal_speed,absf(backward.horizontal_speed)),"Forward and backward jumps have the same range")
 		var landing := JUMP.new()
 		landing.begin(id,0.0,false,10.0)
 		landing.step(landing.startup+landing.flight_duration-0.0001)
@@ -39,14 +39,14 @@ func _run() -> void:
 			jump.step(jump.ascent_duration)
 			var expected_height := float(p.velocityY)*float(p.velocityY)/(2.0*float(p.gravity))*scale
 			check(is_equal_approx(-jump.body_y,expected_height),"Apex height matches old velocity/gravity in new arena units")
-			check(jump.fall_duration<jump.ascent_duration,"Descent is faster than ascent")
+			check(is_equal_approx(jump.fall_duration,jump.ascent_duration),"Original descent timing is restored")
 			for fps in [30,60,120]:
 				jump.begin(id,direction,false,1.5)
 				var distance := 0.0
 				for frame in range(fps*2):
 					distance += jump.step(1.0/fps)
 				check(not jump.active and jump.body_y==0.0,"Jump lands and recovery finishes")
-				var expected_distance: float = direction*float(p.airSpeed)*scale*float(profiles.horizontalDistanceMultiplier)*float(profiles.forwardDistanceScale)*(-float(p.velocityY)/float(p.gravity))*(1.0+1.0/float(profiles.descentSpeedMultiplier))
+				var expected_distance: float = direction*float(p.airSpeed)*scale*float(profiles.horizontalDistanceMultiplier)*float(profiles.horizontalDistanceScale)*(-float(p.velocityY)/float(p.gravity))*(1.0+float(profiles.horizontalFallSpeedScale)/float(profiles.descentSpeedMultiplier))
 				check(is_equal_approx(distance,expected_distance),"Horizontal distance matches old air speed at any physics rate")
 	var scene: Control = load("res://scenes/debug/debug_screen.tscn").instantiate()
 	root.add_child(scene)

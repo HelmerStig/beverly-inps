@@ -61,3 +61,9 @@ Step 2
 	Oscare: se è in aria deve rimanere a fotogramma 21 ed eseguire il resto dell'animazione di atterrata (21 -> 38), quando è atterrato deve trovarsi al fotogramma 31 e poi eseguire da 38 a 38 ad un fps molto alto, diciamo 100 e poi tornare in idle
 
 	Torpe: se è in aria deve rimanere a fotogramma 18 ed eseguire il resto dell'animazione di atterrata (18 -> 34), quando è atterrato deve trovarsi al fotogramma 25 e poi eseguire da 25 a 34 ad un fps molto alto, diciamo 100 e poi tornare in idle
+
+	Ora passiamo al pugno leggero da in piedi, gli hurt e le parate le vedremo in seguito
+		- prendi i timing da demo-moves-sanmauro
+		- per il suono usa questo: "F:\Personali\Godot\assets\sounds\sfx\swosh.wav"
+		- se il colpo va a segno aggiungi questo: "F:\Personali\Godot\assets\sounds\sfx\light-punch.wav"
+		- crea le hitbox in base allo sprite

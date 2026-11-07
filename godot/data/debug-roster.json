@@ -3251,6 +3251,233 @@
             18.51851851851852,
             18.51851851851852
           ]
+        },
+        "light-punch": {
+          "id": "light-punch",
+          "name": "Pugno leggero",
+          "image": "assets/characters/arianna/light-punch.png",
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              2560,
+              0,
+              512,
+              512
+            ],
+            [
+              3072,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              3072,
+              0,
+              512,
+              512
+            ],
+            [
+              2560,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              0,
+              512,
+              512
+            ]
+          ],
+          "playbackFps": 34,
+          "sourceFps": 48,
+          "sheetWidth": 3584,
+          "sheetHeight": 1024,
+          "sourcePath": "assets/sprites/characters/arianna/basic-moves/light-punch/light-punch.png",
+          "sourceConfigPath": "scripts/Arianna.gd",
+          "sourceTransform": {
+            "scale": [
+              0.78,
+              0.78
+            ],
+            "position": [
+              0,
+              -110
+            ]
+          },
+          "contentBounds": [
+            162,
+            64,
+            434,
+            426
+          ],
+          "medianContentHeight": 357,
+          "trimmed": false,
+          "sourceSha256": "4e850e267ad8a68fe384a7ff85c4164f228e4bd4d16c9fa880dbac83029edc06",
+          "loop": false,
+          "sourceLoop": false,
+          "sourceAnimation": "arianna_light_punch",
+          "sourceSetupPath": "scripts/AriannaAnimationCatalog.gd",
+          "frameDurations": [
+            37.5,
+            37.5,
+            37.5,
+            37.5,
+            37.5,
+            37.5,
+            37.5,
+            37.5,
+            22.22222222222222,
+            22.22222222222222,
+            22.22222222222222,
+            22.22222222222222,
+            22.22222222222222,
+            22.22222222222222,
+            22.22222222222222,
+            22.22222222222222,
+            22.22222222222222
+          ],
+          "durationMs": 500,
+          "sourceForwardFrameCount": 9,
+          "sourceRecoveryAnimation": "arianna_light_punch_recovery",
+          "playbackComposition": "forward-then-reverse-without-repeated-peak",
+          "preview": {
+            "drawRect": [
+              18.2663745561683,
+              90.15260255344862,
+              408.4550880108786,
+              408.4550880108786
+            ],
+            "anchor": [
+              298,
+              426
+            ],
+            "scale": [
+              0.7977638437712473,
+              0.7977638437712473
+            ],
+            "centerX": 256,
+            "groundY": 430,
+            "targetIdleHeight": 284.40281030444964,
+            "heightMultiplier": 1,
+            "viewScale": 0.8267523555361909
+          },
+          "normalizedPreview": {
+            "drawRect": [
+              -31.551192145862558,
+              18.93688639551192,
+              494.0476858345021,
+              494.0476858345021
+            ],
+            "anchor": [
+              298,
+              426
+            ],
+            "scale": [
+              0.9649368863955119,
+              0.9649368863955119
+            ],
+            "centerX": 256,
+            "groundY": 430,
+            "targetIdleHeight": 344
+          },
+          "sourceFrameDurations": [
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332
+          ],
+          "sourceDurationMs": 354.16666666666663,
+          "impactMs": 300,
+          "impactFrame": 8,
+          "impactNote": "Ultimo frame di andata a 300 ms; ritorno inverso 7-0 fino all’idle, senza ripetere il picco.",
+          "attackDurationMs": 500
         }
       },
       "footContacts": [
@@ -6909,6 +7136,198 @@
             23.80952380952381,
             23.80952380952381
           ]
+        },
+        "light-punch": {
+          "id": "light-punch",
+          "name": "Pugno leggero",
+          "image": "assets/characters/bue/light-punch.png",
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              0,
+              512,
+              512
+            ]
+          ],
+          "playbackFps": 26,
+          "sourceFps": 24,
+          "sheetWidth": 2560,
+          "sheetHeight": 1024,
+          "sourcePath": "assets/sprites/characters/bue/light_punch_spritesheet.png",
+          "sourceConfigPath": "scenes/Bue.tscn",
+          "sourceTransform": {
+            "scale": [
+              0.85,
+              0.85
+            ],
+            "position": [
+              0,
+              -117
+            ]
+          },
+          "contentBounds": [
+            145,
+            87,
+            456,
+            424
+          ],
+          "medianContentHeight": 329,
+          "trimmed": false,
+          "sourceSha256": "8f79f044930ef5f3531596e1ff27f1b8fd3383651060f461a3d39dac79f4b282",
+          "loop": false,
+          "sourceLoop": false,
+          "sourceAnimation": "light_punch",
+          "sourceSetupPath": "scripts/IdleRosterFighter.gd",
+          "frameDurations": [
+            75,
+            75,
+            75,
+            75,
+            22.22222222222222,
+            22.22222222222222,
+            22.22222222222222,
+            22.22222222222222,
+            22.22222222222222,
+            22.22222222222222,
+            22.22222222222222,
+            22.22222222222222,
+            22.22222222222222
+          ],
+          "durationMs": 500,
+          "preview": {
+            "drawRect": [
+              -1.464426092553822,
+              66.7224071106728,
+              438.67482914937625,
+              438.67482914937625
+            ],
+            "anchor": [
+              300.5,
+              424
+            ],
+            "scale": [
+              0.8567867756823755,
+              0.8567867756823755
+            ],
+            "centerX": 256,
+            "groundY": 430,
+            "targetIdleHeight": 293.0210772833724,
+            "heightMultiplier": 1.0303030303030303,
+            "viewScale": 0.8267523555361909
+          },
+          "normalizedPreview": {
+            "drawRect": [
+              -46.25730994152053,
+              3.5204678362572395,
+              514.9941520467837,
+              514.9941520467837
+            ],
+            "anchor": [
+              300.5,
+              424
+            ],
+            "scale": [
+              1.0058479532163744,
+              1.0058479532163744
+            ],
+            "centerX": 256,
+            "groundY": 430,
+            "targetIdleHeight": 344
+          },
+          "sourceFrameDurations": [
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664
+          ],
+          "sourceDurationMs": 541.6666666666666,
+          "impactMs": 300,
+          "impactFrame": 4,
+          "impactNote": "Prima posa di massima estensione, verificata visivamente sullo spritesheet.",
+          "attackDurationMs": 500
         }
       },
       "footContacts": [
@@ -10711,6 +11130,238 @@
             45.45454545454545,
             45.45454545454545
           ]
+        },
+        "light-punch": {
+          "id": "light-punch",
+          "name": "Pugno leggero",
+          "image": "assets/characters/mangler/light-punch.png",
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ],
+            [
+              1536,
+              512,
+              512,
+              512
+            ],
+            [
+              2048,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              1024,
+              512,
+              512
+            ],
+            [
+              512,
+              1024,
+              512,
+              512
+            ],
+            [
+              1024,
+              1024,
+              512,
+              512
+            ],
+            [
+              1536,
+              1024,
+              512,
+              512
+            ],
+            [
+              2048,
+              1024,
+              512,
+              512
+            ],
+            [
+              0,
+              1536,
+              512,
+              512
+            ],
+            [
+              512,
+              1536,
+              512,
+              512
+            ],
+            [
+              1024,
+              1536,
+              512,
+              512
+            ]
+          ],
+          "playbackFps": 36,
+          "sourceFps": 48,
+          "sheetWidth": 2560,
+          "sheetHeight": 2048,
+          "sourcePath": "assets/sprites/characters/mangler/basic-moves/light-punch/light-punch.png",
+          "sourceConfigPath": "scripts/Mangler.gd",
+          "sourceTransform": {
+            "scale": [
+              0.85,
+              0.85
+            ],
+            "position": [
+              0,
+              -115
+            ]
+          },
+          "contentBounds": [
+            147,
+            71,
+            459,
+            429
+          ],
+          "medianContentHeight": 351,
+          "trimmed": false,
+          "sourceSha256": "e8a7e38f6a567674d0e2fe1395cc261b5bf2275e1f384712b66560fa6e44c4f8",
+          "loop": false,
+          "sourceLoop": false,
+          "sourceAnimation": "light_punch_single",
+          "sourceSetupPath": "scripts/ManglerAnimationCatalog.gd",
+          "frameDurations": [
+            30,
+            30,
+            30,
+            30,
+            30,
+            30,
+            30,
+            30,
+            30,
+            30,
+            25,
+            25,
+            25,
+            25,
+            25,
+            25,
+            25,
+            25
+          ],
+          "durationMs": 500,
+          "preview": {
+            "drawRect": [
+              -3.7142857142857224,
+              62.28571428571428,
+              438.8571428571429,
+              438.8571428571429
+            ],
+            "anchor": [
+              303,
+              429
+            ],
+            "scale": [
+              0.8571428571428572,
+              0.8571428571428572
+            ],
+            "centerX": 256,
+            "groundY": 430,
+            "targetIdleHeight": 315.42857142857144,
+            "heightMultiplier": 1.1090909090909091,
+            "viewScale": 0.8267523555361909
+          },
+          "normalizedPreview": {
+            "drawRect": [
+              -27.239130434782624,
+              28.97826086956519,
+              478.60869565217394,
+              478.60869565217394
+            ],
+            "anchor": [
+              303,
+              429
+            ],
+            "scale": [
+              0.9347826086956522,
+              0.9347826086956522
+            ],
+            "centerX": 256,
+            "groundY": 430,
+            "targetIdleHeight": 344
+          },
+          "sourceFrameDurations": [
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332,
+            20.833333333333332
+          ],
+          "sourceDurationMs": 375,
+          "impactMs": 300,
+          "impactFrame": 10,
+          "impactNote": "Prima posa di massima estensione, verificata visivamente sullo spritesheet.",
+          "attackDurationMs": 500
         }
       },
       "footContacts": [
@@ -14701,6 +15352,198 @@
             27.77777777777778,
             27.77777777777778
           ]
+        },
+        "light-punch": {
+          "id": "light-punch",
+          "name": "Pugno leggero",
+          "image": "assets/characters/mileto/light-punch.png",
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              0,
+              512,
+              512
+            ]
+          ],
+          "playbackFps": 26,
+          "sourceFps": 24,
+          "sheetWidth": 2560,
+          "sheetHeight": 1024,
+          "sourcePath": "assets/sprites/characters/mileto/light_punch_spritesheet.png",
+          "sourceConfigPath": "scenes/Mileto.tscn",
+          "sourceTransform": {
+            "scale": [
+              0.87,
+              0.87
+            ],
+            "position": [
+              0,
+              -105
+            ]
+          },
+          "contentBounds": [
+            142,
+            83,
+            431,
+            411
+          ],
+          "medianContentHeight": 317,
+          "trimmed": false,
+          "sourceSha256": "b3fe5760e28f501aefafc7463cdc5da0d740ad06bbb82d73a5d9f20d231497ff",
+          "loop": false,
+          "sourceLoop": false,
+          "sourceAnimation": "light_punch",
+          "sourceSetupPath": "scripts/IdleRosterFighter.gd",
+          "frameDurations": [
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            28.571428571428573,
+            28.571428571428573,
+            28.571428571428573,
+            28.571428571428573,
+            28.571428571428573,
+            28.571428571428573,
+            28.571428571428573
+          ],
+          "durationMs": 500,
+          "preview": {
+            "drawRect": [
+              6.147206423553058,
+              71.57243225158919,
+              446.50830824132925,
+              446.50830824132925
+            ],
+            "anchor": [
+              286.5,
+              411
+            ],
+            "scale": [
+              0.8720865395338462,
+              0.8720865395338462
+            ],
+            "centerX": 256,
+            "groundY": 430,
+            "targetIdleHeight": 293.0210772833724,
+            "heightMultiplier": 1.0303030303030303,
+            "viewScale": 0.8267523555361909
+          },
+          "normalizedPreview": {
+            "drawRect": [
+              -37.321428571428555,
+              9.214285714285722,
+              524.1904761904761,
+              524.1904761904761
+            ],
+            "anchor": [
+              286.5,
+              411
+            ],
+            "scale": [
+              1.0238095238095237,
+              1.0238095238095237
+            ],
+            "centerX": 256,
+            "groundY": 430,
+            "targetIdleHeight": 344
+          },
+          "sourceFrameDurations": [
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664
+          ],
+          "sourceDurationMs": 541.6666666666666,
+          "impactMs": 300,
+          "impactFrame": 6,
+          "impactNote": "Prima posa di massima estensione, verificata visivamente sullo spritesheet.",
+          "attackDurationMs": 500
         }
       },
       "footContacts": [
@@ -18836,6 +19679,198 @@
             25,
             25
           ]
+        },
+        "light-punch": {
+          "id": "light-punch",
+          "name": "Pugno leggero",
+          "image": "assets/characters/oscare/light-punch.png",
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              0,
+              512,
+              512
+            ]
+          ],
+          "playbackFps": 26,
+          "sourceFps": 24,
+          "sheetWidth": 2560,
+          "sheetHeight": 1024,
+          "sourcePath": "assets/sprites/characters/oscare/Oscare-light_punch.png",
+          "sourceConfigPath": "scenes/Oscare.tscn",
+          "sourceTransform": {
+            "scale": [
+              0.92,
+              0.92
+            ],
+            "position": [
+              0,
+              -120
+            ]
+          },
+          "contentBounds": [
+            134,
+            91,
+            421,
+            414
+          ],
+          "medianContentHeight": 317,
+          "trimmed": false,
+          "sourceSha256": "c7fe655f9ddb3f5a23959e4d71cc654bc907ad306341553439fded1ba4ad58c2",
+          "loop": false,
+          "sourceLoop": false,
+          "sourceAnimation": "light_punch",
+          "sourceSetupPath": "scripts/IdleRosterFighter.gd",
+          "frameDurations": [
+            60,
+            60,
+            60,
+            60,
+            60,
+            25,
+            25,
+            25,
+            25,
+            25,
+            25,
+            25,
+            25
+          ],
+          "durationMs": 500,
+          "preview": {
+            "drawRect": [
+              -7.648881239242655,
+              36.66437177280551,
+              486.44406196213424,
+              486.44406196213424
+            ],
+            "anchor": [
+              277.5,
+              414
+            ],
+            "scale": [
+              0.9500860585197934,
+              0.9500860585197934
+            ],
+            "centerX": 256,
+            "groundY": 430,
+            "targetIdleHeight": 315.42857142857144,
+            "heightMultiplier": 1.1090909090909091,
+            "viewScale": 0.8267523555361909
+          },
+          "normalizedPreview": {
+            "drawRect": [
+              -31.530120481927725,
+              1.0361445783132694,
+              530.5060240963855,
+              530.5060240963855
+            ],
+            "anchor": [
+              277.5,
+              414
+            ],
+            "scale": [
+              1.036144578313253,
+              1.036144578313253
+            ],
+            "centerX": 256,
+            "groundY": 430,
+            "targetIdleHeight": 344
+          },
+          "sourceFrameDurations": [
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664
+          ],
+          "sourceDurationMs": 541.6666666666666,
+          "impactMs": 300,
+          "impactFrame": 5,
+          "impactNote": "Prima posa di massima estensione, verificata visivamente sullo spritesheet.",
+          "attackDurationMs": 500
         }
       },
       "footContacts": [
@@ -23017,6 +24052,198 @@
             26.31578947368421,
             26.31578947368421
           ]
+        },
+        "light-punch": {
+          "id": "light-punch",
+          "name": "Pugno leggero",
+          "image": "assets/characters/peirolo/light-punch.png",
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              0,
+              512,
+              512
+            ]
+          ],
+          "playbackFps": 26,
+          "sourceFps": 24,
+          "sheetWidth": 2560,
+          "sheetHeight": 1024,
+          "sourcePath": "assets/sprites/characters/peirolo/light_punch_spritesheet.png",
+          "sourceConfigPath": "scenes/Peirolo.tscn",
+          "sourceTransform": {
+            "scale": [
+              0.83,
+              0.83
+            ],
+            "position": [
+              0,
+              -117
+            ]
+          },
+          "contentBounds": [
+            149,
+            86,
+            432,
+            423
+          ],
+          "medianContentHeight": 330,
+          "trimmed": false,
+          "sourceSha256": "43845858f3c7a6e0b3dc4d18efd9bc346e74d87b2f5aefa74b5805c8c1fb1a7b",
+          "loop": false,
+          "sourceLoop": false,
+          "sourceAnimation": "light_punch",
+          "sourceSetupPath": "scripts/IdleRosterFighter.gd",
+          "frameDurations": [
+            75,
+            75,
+            75,
+            75,
+            22.22222222222222,
+            22.22222222222222,
+            22.22222222222222,
+            22.22222222222222,
+            22.22222222222222,
+            22.22222222222222,
+            22.22222222222222,
+            22.22222222222222,
+            22.22222222222222
+          ],
+          "durationMs": 500,
+          "preview": {
+            "drawRect": [
+              6.373539733666661,
+              66.51637627311874,
+              439.96126559849455,
+              439.96126559849455
+            ],
+            "anchor": [
+              290.5,
+              423
+            ],
+            "scale": [
+              0.8592993468720597,
+              0.8592993468720597
+            ],
+            "centerX": 256,
+            "groundY": 430,
+            "targetIdleHeight": 293.0210772833724,
+            "heightMultiplier": 1.0303030303030303,
+            "viewScale": 0.8267523555361909
+          },
+          "normalizedPreview": {
+            "drawRect": [
+              -37.05571847507332,
+              3.2785923753665998,
+              516.5043988269795,
+              516.5043988269795
+            ],
+            "anchor": [
+              290.5,
+              423
+            ],
+            "scale": [
+              1.0087976539589443,
+              1.0087976539589443
+            ],
+            "centerX": 256,
+            "groundY": 430,
+            "targetIdleHeight": 344
+          },
+          "sourceFrameDurations": [
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664
+          ],
+          "sourceDurationMs": 541.6666666666666,
+          "impactMs": 300,
+          "impactFrame": 4,
+          "impactNote": "Prima posa di massima estensione, verificata visivamente sullo spritesheet.",
+          "attackDurationMs": 500
         }
       },
       "footContacts": [
@@ -26518,6 +27745,198 @@
             27.77777777777778,
             27.77777777777778
           ]
+        },
+        "light-punch": {
+          "id": "light-punch",
+          "name": "Pugno leggero",
+          "image": "assets/characters/torpe/light-punch.png",
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              0,
+              512,
+              512
+            ]
+          ],
+          "playbackFps": 26,
+          "sourceFps": 24,
+          "sheetWidth": 2560,
+          "sheetHeight": 1024,
+          "sourcePath": "assets/sprites/characters/torpe/light_punch_spritesheet.png",
+          "sourceConfigPath": "scenes/Torpe.tscn",
+          "sourceTransform": {
+            "scale": [
+              0.9,
+              0.9
+            ],
+            "position": [
+              0,
+              -110
+            ]
+          },
+          "contentBounds": [
+            155,
+            93,
+            436,
+            409
+          ],
+          "medianContentHeight": 310,
+          "trimmed": false,
+          "sourceSha256": "2e56eef861db0db5d41aa0f3312addda3705d4365b11a96a8b796cf1567e1a1f",
+          "loop": false,
+          "sourceLoop": false,
+          "sourceAnimation": "light_punch",
+          "sourceSetupPath": "scripts/IdleRosterFighter.gd",
+          "frameDurations": [
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            28.571428571428573,
+            28.571428571428573,
+            28.571428571428573,
+            28.571428571428573,
+            28.571428571428573,
+            28.571428571428573,
+            28.571428571428573
+          ],
+          "durationMs": 500,
+          "preview": {
+            "drawRect": [
+              -15.751299480207877,
+              53.87045181927232,
+              470.85165933626547,
+              470.85165933626547
+            ],
+            "anchor": [
+              295.5,
+              409
+            ],
+            "scale": [
+              0.9196321471411435,
+              0.9196321471411435
+            ],
+            "centerX": 256,
+            "groundY": 430,
+            "targetIdleHeight": 301.6393442622951,
+            "heightMultiplier": 1.0606060606060606,
+            "viewScale": 0.8267523555361909
+          },
+          "normalizedPreview": {
+            "drawRect": [
+              -53.914634146341484,
+              1.0487804878048337,
+              536.9756097560976,
+              536.9756097560976
+            ],
+            "anchor": [
+              295.5,
+              409
+            ],
+            "scale": [
+              1.048780487804878,
+              1.048780487804878
+            ],
+            "centerX": 256,
+            "groundY": 430,
+            "targetIdleHeight": 344
+          },
+          "sourceFrameDurations": [
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664
+          ],
+          "sourceDurationMs": 541.6666666666666,
+          "impactMs": 300,
+          "impactFrame": 6,
+          "impactNote": "Prima posa di massima estensione, verificata visivamente sullo spritesheet.",
+          "attackDurationMs": 500
         }
       },
       "footContacts": [

@@ -5,12 +5,16 @@ Requires Pillow. Coordinates are the original 512px cells.
 """
 import hashlib
 import json
+import sys
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFilter, ImageStat
 
 ROOT=Path(__file__).resolve().parents[1]
 roster=json.loads((ROOT/'data/debug-roster.json').read_text(encoding='utf-8'))
 out={'schema':'sanmauro.movement-hurtboxes','version':1,'method':'Alpha silhouette, adaptive capsule bands; idle anatomical model kept separately','characters':{}}
+names=sys.argv[1:] or ['walk','backwalk','run','back-jump','jump','light-punch']
+if sys.argv[1:] and (ROOT/'data/movement-hurtboxes.json').exists():
+    out=json.loads((ROOT/'data/movement-hurtboxes.json').read_text(encoding='utf-8'))
 artifacts=ROOT/'tests/artifacts'
 artifacts.mkdir(parents=True,exist_ok=True)
 cache={}
@@ -62,8 +66,8 @@ def build(frame):
     return boxes
 
 for c in roster['characters']:
-    out['characters'][c['id']]={}
-    for name in ['walk','backwalk','run','back-jump','jump']:
+    out['characters'].setdefault(c['id'],{})
+    for name in names:
         a=c['animations'][name]; source=ROOT/a['image']
         digest=hashlib.sha256(source.read_bytes()).hexdigest()
         if digest!=a['sourceSha256']: raise ValueError('Stale asset: '+c['id']+'/'+name)
