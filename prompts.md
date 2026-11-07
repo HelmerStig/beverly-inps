@@ -22,4 +22,24 @@ Step 1
 	- Se si può, i filtri CRT, vanno applicati sopra a tutta l'interfaccia, non solo all'immagine di background
 		
 Step 2
-- Pagina di Debug
+- Pagina di Debug:
+- Per lo sfondo utilizziamo lo stage: demo-moves-sanmauro\stages.html
+- Lo sfondo deve avere lo stesso comportamento della demo precedente: F:/Personali/Godot, centrato nello stage, quando un personaggio raggiunge il bordo sinistro o destro, lo sfondo scrolla fino alla sua fine se non è bloccato dalla posizione dei sue peronaggi.
+- In questa sezione vorrei iniziare a comporre hurtbox e hitbox per ogni personaggio, vorrei poter selezionare il personaggio da visualizzare in qualsiasi momento, metti un menù in alto magari in modo che possa switchare da uno all'altro.
+- Iniziamo con il personaggio in idle, i parametri per spritesheet, fps di ogni personaggio  li trovi in: demo-moves-sanmauro\personaggio.html
+- Hai domande?
+- Per il ritorno al titolo non usare B perchè sarà una mossa, solo esc. Per la selezione di player 1 metti frecce orizzontali, per player 2, frecce verticali
+
+- Ora iniziamo che la creazione delle hurtbox, falle tu analizzando il personaggio. Fai si che siano visualizzabili con il tasto F3
+- Okay ora quando le hurtbox dei personaggi si toccano, il personaggio non dovrebbe continuare ad avanzare in direzione dell'avversario
+- Ora possiamo iniziare a implementare i movimenti di base, li trovi tutti in demo-moves-sanmauro\personaggio.html
+	- Camminata
+	- Camminata indietro
+	- Corsa (attivabile con 2 volte avanti, resta attiva finchè non si rilascia avanti)
+	- Salto indietro (attivabile con 2 volte indietro)
+	Bugfixes:
+		- Controlla le ombre, fanno strane rotazioni soprattutto durante la corsa
+		- Aggiorna le hurtBox
+	- Salto indietro: dev'essere uno spostamento più veloce della camminata (in godot non lo sprite)
+	Bug Ombre:
+		- Nella camminata avanti e indietro l'ombra risulta staccata dai piedi: oscar,torpe,Arianna, Bue, MIleto, Mangler (solo quella indietro)

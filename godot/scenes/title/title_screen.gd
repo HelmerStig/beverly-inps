@@ -8,6 +8,8 @@ const BACKGROUND := preload("res://scenes/title/title_background.gd")
 const PIPELINE := preload("res://scenes/title/crt_pipeline.gd")
 const TITLE_LOGO := preload("res://assets/ui/title-logo.png")
 const OSWALD_FONT := preload("res://assets/fonts/Oswald-Variable.ttf")
+const CONFIRM_SOUND := preload("res://assets/sounds/sfx/light-punch.wav")
+const MOVE_SOUND := preload("res://assets/sounds/sfx/swosh.wav")
 const LOGO_SIZE := Vector2(704.0, 384.0)
 const LOGO_CENTER_OFFSET := Vector2(0.0, -60.0)
 const LOGO_IMPACT_TIME := 0.48
@@ -17,9 +19,13 @@ var background: Node2D
 var pipeline: Node
 var display: TextureRect
 var contents: Control
+var interface_viewport: SubViewport
 var press_start_label: Label
 var main_menu: VBoxContainer
 var menu_buttons: Array[Button] = []
+var confirm_player: AudioStreamPlayer
+var move_player: AudioStreamPlayer
+var current_menu_item: Button
 var title_logo: TextureRect
 var neon_subtitle: Label
 var neon_subtitle_glow: Label
@@ -28,22 +34,37 @@ var neon_flicker_time := 0.7
 var neon_flicker_steps := 0
 var neon_enabled := false
 var neon_random := RandomNumberGenerator.new()
+var transition_pending := false
 
 func _ready() -> void:
 	neon_random.randomize()
+	confirm_player = AudioStreamPlayer.new()
+	confirm_player.name = "MenuConfirmSound"
+	confirm_player.stream = CONFIRM_SOUND
+	add_child(confirm_player)
+	move_player = AudioStreamPlayer.new()
+	move_player.name = "MenuMoveSound"
+	move_player.stream = MOVE_SOUND
+	add_child(move_player)
+	var container := SubViewportContainer.new()
+	container.name = "InterfaceInput"
+	container.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	container.stretch = true
+	add_child(container)
 	var viewport := SubViewport.new()
-	viewport.name = "BackgroundSource"
+	interface_viewport = viewport
+	viewport.name = "InterfaceSource"
 	viewport.size = Vector2i(1920, 1080)
 	viewport.disable_3d = true
 	viewport.render_target_update_mode = SubViewport.UPDATE_ALWAYS
-	add_child(viewport)
+	container.add_child(viewport)
 	background = BACKGROUND.new()
 	viewport.add_child(background)
 	pipeline = PIPELINE.new()
 	add_child(pipeline)
 	pipeline.build(viewport.get_texture())
 	display = TextureRect.new()
-	display.name = "FilteredBackground"
+	display.name = "FilteredInterface"
 	display.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	display.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	display.texture = pipeline.output
@@ -51,10 +72,22 @@ func _ready() -> void:
 	add_child(display)
 	contents = Control.new()
 	contents.name = "TitleContents"
+	contents.size = Vector2(1920, 1080)
 	contents.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	contents.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	add_child(contents)
+	viewport.add_child(contents)
 	_build_contents()
+	mode_selected.connect(_on_mode_selected)
+
+func _on_mode_selected(mode: StringName) -> void:
+	if mode != &"debug" or transition_pending:
+		return
+	transition_pending = true
+	# Keep the confirmation audible before freeing the title scene.
+	if confirm_player.playing:
+		await confirm_player.finished
+	if is_inside_tree():
+		get_tree().change_scene_to_file("res://scenes/debug/debug_screen.tscn")
 
 func _build_contents() -> void:
 	_add_animated_logo()
@@ -94,6 +127,11 @@ func _build_menu() -> void:
 		panel.set_corner_radius_all(8)
 		panel.set_border_width_all(1)
 		panel.border_color = Color(0.4, 0.75, 0.85, 0.55)
+		# Compensate Oswald's low visual baseline inside the centered line box.
+		panel.content_margin_top = 0.0
+		panel.content_margin_bottom = 6.0
+		panel.content_margin_left = 16.0
+		panel.content_margin_right = 16.0
 		button.add_theme_stylebox_override("normal", panel)
 		var highlighted := panel.duplicate() as StyleBoxFlat
 		highlighted.bg_color = Color(0.05, 0.19, 0.26, 0.95)
@@ -101,7 +139,15 @@ func _build_menu() -> void:
 		highlighted.set_border_width_all(2)
 		for state in ["hover", "pressed", "focus"]:
 			button.add_theme_stylebox_override(state, highlighted)
-		button.pressed.connect(func(): mode_selected.emit(modes[index]))
+		button.pressed.connect(func():
+			confirm_player.play()
+			mode_selected.emit(modes[index])
+		)
+		button.focus_entered.connect(_on_menu_item_changed.bind(button))
+		button.mouse_entered.connect(func():
+			if main_menu.visible:
+				button.grab_focus()
+		)
 		main_menu.add_child(button)
 		menu_buttons.append(button)
 	for index in range(menu_buttons.size()):
@@ -109,17 +155,26 @@ func _build_menu() -> void:
 		button.focus_neighbor_top = button.get_path_to(menu_buttons[posmod(index - 1, menu_buttons.size())])
 		button.focus_neighbor_bottom = button.get_path_to(menu_buttons[(index + 1) % menu_buttons.size()])
 
+func _on_menu_item_changed(button: Button) -> void:
+	if not main_menu.visible or button == current_menu_item:
+		return
+	current_menu_item = button
+	move_player.play()
+
 func _show_menu() -> void:
 	main_menu.show()
 	press_start_label.hide()
+	current_menu_item = menu_buttons[0]
 	menu_buttons[0].grab_focus()
+	confirm_player.play()
 	start_requested.emit()
 
 func _hide_menu() -> void:
-	var focused := get_viewport().gui_get_focus_owner()
+	var focused := interface_viewport.gui_get_focus_owner()
 	if focused != null:
 		focused.release_focus()
 	main_menu.hide()
+	current_menu_item = null
 	blink_accum = 0.0
 	press_start_label.show()
 
@@ -136,6 +191,20 @@ func set_effects_enabled(value: bool) -> void:
 	display.texture = pipeline.output if value else pipeline.source
 
 func _input(event: InputEvent) -> void:
+	# Joypad button events are not reliably forwarded to focused Controls in
+	# the CRT SubViewport. Activate once here and consume both press/release.
+	if event is InputEventJoypadButton and event.button_index == JOY_BUTTON_A:
+		get_viewport().set_input_as_handled()
+		if event.pressed and not transition_pending:
+			if main_menu.visible:
+				var focused := interface_viewport.gui_get_focus_owner()
+				if focused is Button and focused in menu_buttons:
+					focused.pressed.emit()
+				elif current_menu_item != null:
+					current_menu_item.pressed.emit()
+			else:
+				_show_menu()
+		return
 	# Handle back before a focused menu button consumes GUI input.
 	var joypad_back: bool = event is InputEventJoypadButton and event.pressed and event.button_index == JOY_BUTTON_B
 	if main_menu.visible and (joypad_back or event.is_action_pressed("ui_cancel")):

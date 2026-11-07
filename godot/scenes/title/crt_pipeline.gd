@@ -11,9 +11,9 @@ var enabled := true
 var clock := 0.0
 var frozen := false
 
-func build(input: Texture2D) -> void:
+func build(input: Texture2D, preset_path: String = PRESET_PATH) -> void:
 	source = input
-	var preset: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(PRESET_PATH))
+	var preset: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(preset_path))
 	var p: Dictionary = preset.settings
 	var prepared := _pass("prepare", source, {
 		"blurAmount": p.blur, "grainAmount": p.grain, "gammaValue": p.gamma,

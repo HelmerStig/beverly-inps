@@ -2,6 +2,8 @@ extends Node2D
 ## Same cover, layer order, haze and deterministic dust as the UI demo.
 
 const MANIFEST_PATH := "res://assets/ui/title-screen/screen.json"
+var manifest_path := MANIFEST_PATH
+var camera_x := 660.0
 var manifest: Dictionary
 var textures: Array[Texture2D] = []
 var elapsed := 0.0
@@ -9,7 +11,7 @@ var effects_enabled := true
 var frozen := false
 
 func _ready() -> void:
-	manifest = JSON.parse_string(FileAccess.get_file_as_string(MANIFEST_PATH))
+	manifest = JSON.parse_string(FileAccess.get_file_as_string(manifest_path))
 	for layer: Dictionary in manifest.layers:
 		textures.append(load("res://" + str(layer.image)) as Texture2D)
 	texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
@@ -24,9 +26,9 @@ func _draw() -> void:
 		return
 	for index in range(manifest.layers.size()):
 		var layer: Dictionary = manifest.layers[index]
-		var width := float(layer.renderWidth)
+		var width := float(layer.get("renderWidth", layer.width))
 		var speed := float(layer.get("speed", 0.0))
-		var x := -660.0
+		var x := (float(manifest.width) - width) / 2.0 - camera_x
 		if speed > 0.0:
 			x -= fposmod(elapsed * speed, width)
 			while x + width <= 0.0:
@@ -52,10 +54,10 @@ func _draw_dust() -> void:
 	for i in range(160):
 		var life := 4000.0 + (i % 5) * 900.0
 		var phase := fposmod(elapsed * 1000.0 + i * 1730.0, life) / life
-		var x := fposmod(i * 401.0 + 137.0 - phase * (30.0 + (i % 4) * 12.0), 3240.0) - 660.0
+		var x := fposmod(i * 401.0 + 137.0 - phase * (30.0 + (i % 4) * 12.0), float(manifest.width)) - camera_x
 		var y := 1080.0 * (0.96 - (i % 7) * 0.006) - phase * (24.0 + (i % 4) * 12.0)
 		var color: Color = colors[i % 3]
 		color.a = 0.65 * sin(PI * phase)
 		var side := 2 + (i % 3) * 2
 		# Browser rounds world X before subtracting the camera.
-		draw_rect(Rect2(roundf((x + 660.0) / 2) * 2 - 660, roundf(y / 2) * 2, side, side), color)
+		draw_rect(Rect2(roundf((x + camera_x) / 2) * 2 - camera_x, roundf(y / 2) * 2, side, side), color)

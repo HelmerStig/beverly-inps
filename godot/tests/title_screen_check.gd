@@ -13,6 +13,7 @@ func check(value: bool, message: String) -> void:
 func _run() -> void:
 	var title := load("res://scenes/title/title_screen.tscn").instantiate() as Control
 	root.add_child(title)
+	title.mode_selected.disconnect(title._on_mode_selected)
 	await process_frame
 	check(title.background.textures.size() == 10, "All ten UI layers must load")
 	check(title.pipeline.viewports.size() == 7, "CRT must use seven explicit render passes")
@@ -24,10 +25,11 @@ func _run() -> void:
 	var enter := InputEventKey.new()
 	enter.keycode = KEY_ENTER
 	enter.pressed = true
-	title._unhandled_input(enter)
+	root.push_input(enter)
+	await process_frame
 	check(started[0] == 1, "Enter emits start without loading an unfinished scene")
 	check(title.main_menu.visible and not title.press_start_label.visible, "Enter opens the menu and hides the prompt")
-	check(root.gui_get_focus_owner() == title.menu_buttons[0], "First menu item receives keyboard/joypad focus")
+	check(title.interface_viewport.gui_get_focus_owner() == title.menu_buttons[0], "First menu item receives keyboard/joypad focus")
 	check(title.menu_buttons.map(func(button: Button): return button.text) == ["Single Player", "Versus", "Debug"], "All three requested menu items exist")
 	var selected: Array[StringName] = []
 	title.mode_selected.connect(func(mode: StringName): selected.append(mode))
@@ -39,9 +41,10 @@ func _run() -> void:
 	var back := InputEventJoypadButton.new()
 	back.button_index = JOY_BUTTON_B
 	back.pressed = true
-	title._input(back)
+	root.push_input(back)
+	await process_frame
 	check(not title.main_menu.visible and title.press_start_label.visible, "Joypad B returns to title")
-	check(root.gui_get_focus_owner() == null, "Returning releases hidden menu focus")
+	check(title.interface_viewport.gui_get_focus_owner() == null, "Returning releases hidden menu focus")
 	title.background.frozen = true
 	title.background.elapsed = 0.0
 	title.pipeline.frozen = true
@@ -51,6 +54,25 @@ func _run() -> void:
 	DirAccess.make_dir_recursive_absolute("res://tests/artifacts")
 	FileAccess.open("res://tests/artifacts/.gdignore", FileAccess.WRITE).close()
 	if DisplayServer.get_name() != "headless":
+		await RenderingServer.frame_post_draw
+		root.get_texture().get_image().save_png("res://tests/artifacts/title-screen.png")
+		title._show_menu()
+		for frame in range(10):
+			await process_frame
+		await RenderingServer.frame_post_draw
+		root.get_texture().get_image().save_png("res://tests/artifacts/menu-screen.png")
+		check(title.menu_buttons[0].get_viewport() == title.background.get_viewport(), "Menu and background share the CRT source")
+		# Check actual GUI routing through the container, not just signal handlers.
+		var down := InputEventKey.new()
+		down.keycode = KEY_DOWN
+		down.pressed = true
+		root.push_input(down)
+		await process_frame
+		check(title.interface_viewport.gui_get_focus_owner() == title.menu_buttons[1], "Keyboard navigation reaches the filtered menu")
+		title._hide_menu()
+		title.contents.visible = false
+		for frame in range(10):
+			await process_frame
 		await RenderingServer.frame_post_draw
 		var filtered: Image = title.pipeline.output.get_image()
 		check(filtered.get_size() == Vector2i(1920,1080), "CRT output is 1080p")
@@ -70,11 +92,8 @@ func _run() -> void:
 			print("Browser/Godot sampled RGB mean absolute error: ", mean_error)
 			check(mean_error < 0.03, "Godot CRT must stay close to the browser reference at 1080p")
 		title.pipeline.source.get_image().save_png("res://tests/artifacts/ui-source.png")
-		root.get_texture().get_image().save_png("res://tests/artifacts/title-screen.png")
-		title.contents.visible = false
-		await process_frame
-		await RenderingServer.frame_post_draw
 		root.get_texture().get_image().save_png("res://tests/artifacts/background-window.png")
+		title.contents.visible = true
 	title.set_effects_enabled(false)
 	check(title.display.texture == title.pipeline.source, "Original view bypasses CRT")
 	check(not title.background.effects_enabled, "Original view disables haze and dust")
