@@ -1,0 +1,665 @@
+SANMAURO FIGHTERS — DEMO MOSSE
+
+Schermata principale con i sette personaggi del vecchio progetto, ricerca
+per nome, menu mobile e anteprime idle su hover/focus.
+Le schede e il menu Per personaggio aprono personaggio.html?id=<id>:
+i player includono tutte le mosse normali presenti e realmente usate in Godot.
+Arianna e Mangler hanno 38 animazioni ciascuno; gli altri cinque ne hanno 39.
+Totale: 271 animazioni. Il menu Per mossa presenta prima movimenti e stati,
+poi attacchi in piedi, accovacciati e in salto. Nessuna variante assente in
+Godot viene inventata; la posa in aria separata esiste solo per cinque personaggi.
+Ogni player ha pausa, avanzamento frame, timeline, loop, velocità, sfondi
+e download PNG; Riproduci tutte/Pausa tutte controllano la galleria.
+Esclusi special, super, prese, combo e varianti Mangler già accovacciato.
+
+Aprire index.html direttamente oppure, dalla radice del repository:
+  node demo-moves-sanmauro/scripts/serve.mjs
+  http://127.0.0.1:4185/
+Porta alternativa come argomento finale, ad esempio 4186.
+
+Anche il server WEDOO aggiornato serve la nuova cartella:
+  node demo-moves/scripts/serve.mjs
+  http://127.0.0.1:4173/demo-moves-sanmauro/
+Se il server era già avviato prima della modifica, riavviarlo.
+
+La cartella è autonoma: HTML, CSS, JS e asset si possono copiare insieme su
+un'altra postazione o su hosting statico, senza il progetto Godot originario.
+Non servono connessioni o dipendenze frontend.
+
+assets/characters/<id>/idle.png: copia integrale dello spritesheet sorgente.
+assets/characters/<id>/walk.png: copia integrale della camminata usata in Godot.
+assets/characters/<id>/jump.png: copia integrale del foglio salto usato in Godot;
+il catalogo seleziona esclusivamente i frame effettivamente configurati.
+assets/characters/<id>/victory.png e ko.png: copie integrali dei rispettivi
+fogli Godot; il catalogo conserva le selezioni realmente utilizzate.
+assets/characters/<id>/portrait.png: anteprima derivata dalla prima cella idle,
+normalizzata con lo stesso allineamento dei player su un canvas 512 × 512.
+assets/manifest.json: frame, dimensioni e provenienza con SHA-256.
+catalog.js: copia incorporata per funzionare anche da file://.
+Sono copiati soltanto gli asset delle sedici mosse realmente referenziate.
+Fonte: F:/Personali/Godot/assets/sprites/characters, senza modifiche ai sorgenti.
+Per Arianna è usata basic-moves/idle.png, come nel controller Godot;
+per Mangler 01-mangler-idle.png; per gli altri il foglio indicato nella scena.
+Frame: Arianna 24, Mangler 49, Torpe 61, Bue/Mileto/Oscare/Peirò 63.
+Camminata: celle 512 × 512, 7 colonne, ordine avanti, loop a 24 fps.
+Fonti verificate nei controller e nei cataloghi di Arianna/Mangler, nelle
+scene degli altri e in IdleRosterFighter._configure_animations:
+- Arianna: arianna/basic-moves/01-walk.png, 48 frame.
+- Mangler: mangler/02-walk.png, 48 frame.
+- Bue: bue/walk-spritesheet.png, 49 frame.
+- Mileto: mileto/walk-spritesheet.png, 49 frame.
+- Oscare: oscare/walk-spritesheet.png, 49 frame.
+- Peirò: peirolo/walk-spritesheet.png, 49 frame.
+- Torpe: torpe/Torpe-walk-trimmed.png, 21 frame, come nella scena attuale.
+I percorsi sono relativi ad assets/sprites/characters nel progetto sorgente.
+Non sono importate backwalk, corsa o versioni alternative dei fogli walk.
+Il tag TRIMMED di Torpe indica il foglio già tagliato usato in Godot: la demo
+lo copia senza modificarlo e riproduce tutti i suoi 21 frame in avanti.
+Idle e camminata a 24 fps per tutti, come nella demo WEDOO; gli fps del vecchio
+progetto (18 per i cinque fighter del roster) sono annotati come sourceFps.
+Con movimento ridotto le anteprime restano statiche fino alla riproduzione
+esplicita nei player. Nessun ritaglio della sagoma o ritorno inverso.
+
+Per aggiornare da una copia del vecchio progetto (Python con Pillow):
+  python demo-moves-sanmauro/scripts/import-roster.py F:/Personali/Godot
+Lo script ricava numero frame, colonne e foglio dai controller/scene, copia
+idle, camminate e salti e rigenera le immagini statiche, manifest e catalogo.
+Il manifest conserva anche il percorso della configurazione Godot sorgente.
+I player e gli stili sono copie locali della demo WEDOO, senza collegamenti
+alla vecchia cartella demo-moves; le modifiche future sono indipendenti.
+
+ACCOVACCIATA — CROUCH
+Disponibile per tutti in personaggio.html?id=<id>&anim=crouch e
+mosse.html?move=crouch, con titolo Accovacciata.
+Sequenza in avanti di ingresso nella posa bassa, senza rialzata concatenata.
+Default con Loop attivo. Disattivandolo, la posa finale resta visibile. Il checkbox consente di
+ripetere la sequenza per confronto, senza generare frame inversi aggiuntivi.
+Durata comune di 250 ms (0.25 s) a 1x, ultimo frame incluso; FPS demo = frame × 4.
+Fonti Godot (celle 512 × 512, 5 colonne, tutti i frame da indice 0):
+- Arianna: arianna/basic-moves/crouched.png, 19 frame, 48 fps sorgenti.
+- Mangler: mangler/04-crouching.png, 25 frame, 48 fps sorgenti, scala 0.85.
+- Bue: bue/crouch-spritesheet.png, 7 frame, 24 fps sorgenti.
+- Mileto: mileto/crouch-spritesheet.png, 13 frame, 24 fps sorgenti.
+- Oscare: oscare/crouch-spritesheet.png, 9 frame, 24 fps sorgenti.
+- Peirò: peirolo/crouch-spritesheet.png, 11 frame, 24 fps sorgenti.
+- Torpe: torpe/crouch-spritesheet.png, 7 frame, 24 fps sorgenti.
+Le proporzioni fisiche restano quelle della idle del personaggio; la postura
+accovacciata non viene ingrandita per compensarne l'altezza inferiore.
+File locale crouch.png; configurazione in assets/crouch-timing.json.
+poseDurationMs, durationMs e frameDurations descrivono la demo; sourceFps,
+sourceFrameDurations e sourceDurationMs conservano i timing Godot.
+Report reports/crouch-timing.html e .csv, con ingresso/centro/fine, collegato
+sotto il titolo della mossa con lo stesso stile degli altri report.
+Rigenerazione locale:
+  python demo-moves-sanmauro/scripts/build-crouch-report.py
+L'importazione e le altre rigenerazioni dei report aggiornano anche questo.
+
+PARATE ALTA, MEDIA E BASSA - FONTI GODOT
+Tutte le 21 parate eseguono andata e ritorno inverso in 500 ms (0.5 s) a 1x.
+Con N frame di ingresso, la demo riproduce 0..N-1,N-2..0: 2*N-1 frame,
+senza duplicare il picco. Disattivando Loop resta visibile la posa iniziale.
+Loop resta attivo di default. FPS medi = frame totali * 2; ogni frame dura
+500/frame totali ms, incluso l'ultimo. A 0.5x il ciclo dura 1000 ms, a 2x 250 ms.
+Configurazione: assets/guard-timing.json, reverseAnimationIds per tutte e tre.
+sourceFrames e sourceForwardFrameCount conservano la sequenza di ingresso;
+sourceFps/sourceFrameDurations/sourceDurationMs conservano i timing Godot.
+playbackComposition descrive il ritorno inverso della demo. PNG, proporzioni,
+scale e ancoraggi restano invariati. Nessun tempo comune di ingresso imposto.
+Report HTML/CSV sotto il titolo di ciascuna parata, stile play-button,
+margin-top 30 px; pose difensive in reports/block-*-poses/.
+Rigenerazione: python demo-moves-sanmauro/scripts/build-guard-reports.py
+Anche importazione e rigenerazione degli altri report aggiornano le parate.
+I conteggi qui sotto descrivono soltanto l'andata sorgente Godot.
+
+Frame alta / media / bassa:
+- Arianna: 16 / 13 / 16; 48 fps per tutte, 4 colonne; guard_high.png,
+  guard_middle.png e guard_low.png in arianna/basic-moves/.
+- Mangler: 14 / 8 / 11; rispettivamente 48 / 24 / 24 fps, 5 colonne;
+  06-block-high.png, 07-block-middle.png, 08-block-low.png. La parata alta
+  usa gli indici sorgente 8-21 (frame visivi 9-22), come il catalogo Godot.
+  Tutte e tre usano la scala reworked 0.85 e la posizione (0,-115).
+- Bue: 10 / 6 / 11.
+- Mileto: 6 / 6 / 11.
+- Oscare: 10 / 6 / 11.
+- Peirò: 6 / 6 / 11.
+- Torpe: 9 / 6 / 11.
+Gli ultimi cinque usano 5 colonne, alta/media a 24 fps e bassa a 48 fps;
+fogli block-spritesheet.png, block_medium_spritesheet.png e la rispettiva
+immagine *-parata_bassa.png, realmente referenziati dalle scene.
+Non vengono usate le immagini alternative block-medium.png o block-medium
+non selezionate dal codice. sourceAnimation conserva il nome runtime Godot.
+I timing del progetto sorgente sono conservati come provenienza; il playback
+demo usa la durata comune di 250 ms, senza un marcatore difensivo a 100 ms.
+Viste: mosse.html?move=block-high, block-mid o block-low.
+
+HURT ALTO, MEDIO E BASSO — DURATA UNIFORME E FONTI GODOT
+Viste: mosse.html?move=hurt-high, hurt-medium o hurt-low. Corrispondono ai
+runtime hurt_high, hurt_mid e hurt_low (sourceAnimation nel manifest).
+Gli spritesheet locali sono hurt-high.png, hurt-medium.png e hurt-low.png.
+Tutte le 21 reazioni durano 500 ms (0.5 s) a 1x, ultimo frame compreso:
+FPS demo = numero frame × 2. Frame, ordine, proporzioni fisiche e pixel
+originali sono conservati. Non sono sincronizzati specifici frame di impatto.
+Default con Loop attivo; disattivandolo viene mantenuta la posa finale.
+Riproduci tutte riallinea i cicli; 0.5x dura 1 s, 2x dura 250 ms.
+Configurazione canonica: assets/hurt-timing.json. reactionDurationMs,
+durationMs e frameDurations descrivono il timing demo; sourceFps,
+sourceFrameDurations e sourceDurationMs conservano quello originario.
+
+Frame riprodotti alto / medio / basso e timing nominali Godot:
+- Arianna: 8 / 15 / 7 a 24 / 48 / 24 fps; scala 0.78, celle 512 × 512,
+  5 colonne, fogli basic-moves/hurt_high.png, hurt_medium.png, hurt_low.png.
+  Alto: indici 0-6, poi 0. Medio: 0-7, poi 6-0. Basso: 0-5, poi 0.
+  Questi ritorni sono inclusi nel catalogo runtime Godot, non inventati dalla demo.
+- Mangler: 16 / 16 / 10 a 24 fps; scala legacy 0.70 e posizione (0,-120),
+  4 colonne, rettangoli letti da idle_frames.tres. Fogli hurt-high.png,
+  hurt-medium.png, hurt_low.png; il basso usa gli indici sorgente 6-15.
+- Bue: 18 / 11 / 11 a 48 fps.
+- Mileto: 14 / 11 / 11 a 48 fps.
+- Oscare: 8 / 11 / 11 a 48 fps.
+- Peirò: 9 / 11 / 11 a 48 fps.
+- Torpe: 8 / 11 / 11 a 48 fps.
+Per gli ultimi cinque, 5 colonne e fogli *-hurt-high.png,
+hurt_medium_spritesheet.png, hurt_low_spritesheet.png delle scene.
+Sono mostrate le animazioni nominali complete: i recovery *_reverse separati
+degli altri fighter non sono concatenati. Hitstun, frame iniziale contestuale
+e ripetizioni delle speciali restano comportamenti di combattimento Godot.
+
+Report sotto i titoli delle mosse, stile play-button e margin-top 30 px:
+reports/hurt-high-timing.html, hurt-medium-timing.html e hurt-low-timing.html,
+con i rispettivi CSV. Ogni riga mostra ingresso, frame centrale e fine;
+le immagini confrontano tre campioni, senza chiamare il centro un impatto.
+Generazione locale senza accesso al vecchio progetto:
+  python demo-moves-sanmauro/scripts/build-hurt-reports.py
+L'importazione e le altre rigenerazioni dei report aggiornano anche questi.
+
+HURT ACCOVACCIATO — HURT_CROUCHED
+Disponibile per tutti come hurt-crouched (runtime Godot hurt_crouched),
+con titolo Hurt accovacciato. Non è la parata bassa né la posa crouch.
+Ogni scena Godot indica hurt_crouched_sheet: per Arianna il PNG si trova in
+basic-moves/hurt_crouched_spritesheet.png, per gli altri direttamente nella
+cartella del personaggio, con lo stesso nome. Copia locale: hurt-crouched.png.
+Fighter._configure_hurt_crouched_animation usa i primi 12 frame, indici 0-11,
+5 colonne, celle 512 × 512, a 24 fps, senza loop. La demo riproduce questa
+sequenza nominale in 500 ms a 1x e mantiene la posa finale; la sequenza
+hurt_crouched_reverse separata non è concatenata.
+Scala Mangler 0.85 e posizione (0,-115), come le animazioni reworked; gli
+hurt in piedi restano a scala sorgente 0.70. Conservate altezze e proporzioni.
+La durata comune è inclusa in assets/hurt-timing.json e sourceSetupPath
+documenta scripts/Fighter.gd, oltre alla scena e al PNG sorgenti.
+Report: reports/hurt-crouched-timing.html e .csv, con ingresso/centro/fine;
+link sotto il titolo. Le reazioni hurt ora sono quattro, per 28 player.
+Rigenerazione: python demo-moves-sanmauro/scripts/build-hurt-reports.py.
+
+VITTORIA E SCONFITTA — FONTI GODOT
+Entrambe disponibili per tutti i sette personaggi, a 24 fps, in ordine avanti,
+senza loop iniziale: mantengono l'ultima posa fino a una nuova riproduzione.
+Il checkbox Loop permette comunque la ripetizione per confrontare gli asset.
+Le proporzioni fisiche, la scala corretta per ciascun foglio e gli ancoraggi
+restano fissi durante il ciclo. Il margine comune tiene conto anche delle
+braccia alzate e delle pose distese; i PNG sorgenti non sono ritoccati.
+
+Vittoria (mosse.html?move=victory):
+- Arianna: basic-moves/victory.png, 49 frame, dal suo catalogo runtime.
+- Mangler: victory.png, 45 frame utilizzati su 49: esclusi gli indici sorgente
+  8,9,10,11 (frame visivi 9-12), come in configure_victory_frames.
+  Scala Godot reworked 0.85; sourceSkippedFrames documenta le esclusioni.
+- Bue, Mileto, Oscare, Peirò e Torpe: victory.png referenziato nella scena,
+  49 frame ciascuno, 7 colonne, come in IdleRosterFighter.
+
+Sconfitta (mosse.html?move=ko):
+- Arianna: basic-moves/ko.png, 25 frame, 5 colonne, scala Godot 0.78.
+- Mangler: ko.png, 25 frame e rettangoli dalla risorsa idle_frames.tres,
+  5 colonne, scala legacy 0.70 e posizione (0,-120), come nel controller.
+- Bue, Mileto, Oscare, Peirò e Torpe: death.png della scena, 49 frame,
+  7 colonne, come la configurazione ko di IdleRosterFighter.
+I percorsi sono relativi alla cartella del personaggio nel vecchio progetto.
+Non sono importate mosse di knockdown/rialzata come sostituti della sconfitta.
+
+DIMENSIONI E ALLINEAMENTO DELLE ANTEPRIME
+Gli spritesheet idle.png e walk.png restano copie integrali dei sorgenti.
+Il manifest conserva sourceTransform con scala e posizione usate in Godot:
+- Mangler: idle/salto scala 0.85, posizione (0,-115); walk scala 0.70, (0,-120).
+- Arianna: scala 0.78, posizione (0,-110).
+- Gli altri: override della scena o default di IdleRosterFighter.
+La normalizzazione di base usa un'altezza idle mediana di 344 px su canvas
+512 × 512, salvata in normalizedPreview. Sopra questa base tutte le pagine
+applicano il rapporto delle altezze in centimetri da character-proportions.json.
+Un unico zoom di inquadratura per l'intero roster mantiene un margine di 16 px
+anche nei salti più alti; non cambia durante la riproduzione. Applica lo stesso
+fattore a tutte le mosse del personaggio, conservando le correzioni Godot.
+Non forza la stessa larghezza: le proporzioni e le corporature restano naturali.
+Il centro orizzontale dell'ingombro dell'intero ciclo va a x=256 e il fondo
+della sagoma a y=430, vicino alla linea di appoggio della preview.
+La posizione Godot è registrata come provenienza; il posizionamento nella
+demo è sostituito da questo ancoraggio comune, ricavato dai pixel visibili.
+Bounds misurati con alpha >=32; la scala usa l'altezza mediana delle pose idle.
+Scala e ancoraggio restano costanti per tutta l'animazione: niente zoom o
+ricentramento per frame. Le piccole oscillazioni del movimento sono conservate.
+I rettangoli di destinazione sono in animation.preview.drawRect: applicati
+da animation-gallery.js e roster-preview.js anche nella vista Per mossa.
+Gli interi frame sorgenti sono disegnati con filtro nearest, senza ritagliare
+la sagoma. Solo portrait.png è rigenerata con la stessa trasformazione.
+Dopo modifiche a scale, offset o asset Godot rieseguire import-roster.py.
+
+SALTO — SELEZIONI E TIMING GODOT
+Il playback della demo è ora sincronizzato: apice visivo selezionato a 500 ms,
+ciclo di 1000 ms a 1x, come nella demo WEDOO. I dettagli Godot sotto descrivono
+la provenienza; le durate originali restano nei campi sourceFrameDurations,
+sourceDurationMs e sourceTakeoffMs del manifest.
+Le pose approvate e gli hash di PNG/sequenze sono in assets/jump-timing.json.
+Il report è reports/jump-timing.html, anche CSV, collegato sotto il titolo
+Salto con stile play-button e margin-top 30 px.
+Gli apici visivi (frame della selezione, da 1) sono: Arianna 23, Bue 17,
+Mangler 15, Mileto 22, Oscare 19, Peirò 22, Torpe 17.
+Sono riferiti al corpo visibile: il report annota plateau, ginocchia raccolte
+e il bordo superiore tagliato di Arianna, senza fingere una misura fisica.
+Prima dell'apice: indice apice (da 0) / 0.5 FPS; seconda fase:
+frame rimanenti / 0.5 FPS. Tutti i frame restano in ordine e la posa apice
+inizia esattamente a 500 ms. Cambiando velocità cambia anche questo tempo.
+Riproduci tutte riallinea i player e mantiene i cicli sincronizzati.
+Il nuovo timing modifica anche lo stacco; non preserva i 66.67 ms del gioco.
+Per rivedere le selezioni e rigenerare timing, catalogo e report senza Godot:
+  python demo-moves-sanmauro/scripts/build-jump-report.py
+L'importazione completa rigenera automaticamente anche il report. Una modifica
+a PNG o rettangoli richiede la revisione delle selezioni, altrimenti fallisce.
+
+Percorsi relativi ad assets/sprites/characters nel progetto sorgente.
+Le celle restano 512 × 512; i numeri visivi sotto sono 1-based:
+- Arianna: arianna/basic-moves/custom_jump.png; frame 1-49, 7 colonne,
+  32 fps nominali. Fonte: Arianna.gd e AriannaAnimationCatalog.gd.
+- Mangler: mangler/04-jump.png; 25 frame, 5 colonne, 24 fps nominali.
+  La sequenza arriva dalla risorsa SpriteFrames referenziata in Mangler.tscn,
+  assets/sprites/characters/mangler/idle_frames.tres. Importati i rettangoli
+  AtlasTexture e le durate effettive, senza usare fogli alternativi.
+- Bue: bue/Bue-jump.png; frame 4-40, 37 frame.
+- Mileto: mileto/Mileto-jump.png; frame 5-43, 39 frame.
+- Oscare: oscare/Oscare-jump.png; frame 6-43, 38 frame.
+- Peirò: peirolo/Peirolo-jump.png; frame 5-44, 40 frame.
+- Torpe: torpe/Torpe-jump.png; frame 5-38, 34 frame.
+Gli ultimi cinque usano 7 colonne e 24 fps nominali; selezioni e stacco
+derivano dalle scene e da IdleRosterFighter._configure_animations.
+In Godot tutti usano la preparazione compressa a 4/60 s (66.67 ms) applicata
+da Fighter.configure_jump_startup_timing; dopo lo stacco valgono le durate
+originarie. In Mangler alcuni frame aerei hanno peso 1.942857: le durate originali
+restano archiviate nei campi source, mentre il playback demo usa le nuove fasi.
+Le durate Godot in millisecondi sono archiviate nei campi sourceFrameDurations
+e sourceDurationMs. frameDurations/durationMs sono ora i timing sincronizzati;
+apexFrame/apexMs identificano l'apice e takeoffFrame/takeoffMs lo stacco demo.
+Il player mostra durata del ciclo e apice.
+Il salto usa lo stesso fattore di normalizzazione della idle del personaggio,
+con le scale Godot corrette. Nessun ridimensionamento per singolo frame.
+Questa è una galleria degli asset: allinea le pose di apice ma non riproduce
+la traiettoria fisica del CharacterBody2D.
+Non sono aggiunti frame di atterraggio o pose mancanti: Mangler mantiene
+anche l'ultima posa prevista dalla sua risorsa, mentre il gioco gestisce
+la caduta e il rientro in idle tramite la fisica e il controller.
+Godot usa jump senza loop (sourceLoop=false); il player della demo permette
+di ripeterlo col checkbox Loop, senza invertire la sequenza.
+
+Verifica:
+  $testFiles = @(Get-ChildItem demo-moves-sanmauro/scripts/*.test.cjs | ForEach-Object { $_.FullName })
+  node --test @testFiles
+  python -m unittest discover -s demo-moves-sanmauro/scripts -p "test_*.py"
+
+STAGES — PIAZZA EUROPA
+Aprire stages.html dal menu Stages, oppure:
+  http://127.0.0.1:4185/stages.html
+La cartella rimane autonoma anche per stage, CRT e preset: nessun riferimento
+runtime ai file della demo WEDOO o al vecchio progetto Godot.
+
+Asset in assets/stages/Piazza Europa/:
+- cielo.png: 2550 × 1080, z=0.
+- 01-nuvole-lontane.png: 5000 × 1080, z=2, 6 px/s verso sinistra.
+- 02-nuvole-intermedie.png: 5000 × 1080, z=3, 12 px/s verso sinistra.
+- 03-nuvole-vicine.png: 5000 × 1080, z=4, 20 px/s verso sinistra.
+  È il nome del file disponibile, corrispondente alle nuvole prossime richieste.
+- piazza-europa.png: 2550 × 1080, z=4; davanti alle nuvole a parità di z.
+I PNG sono usati integri, senza ritagli o modifiche. La scena mantiene il
+mondo 2550 × 1080 determinato dal fondale e una vista 1920 × 1080 (16:9),
+come Villa Arduino. La camera parte a x=315 e si muove entro 0-630 con drag,
+frecce/Home/End. La vista esplora l'intera larghezza del fondale; le nuvole
+mantengono altezza e larghezza native e scorrono in loop indipendentemente.
+Fullscreen usa la Fullscreen API sullo stage, con eventuali bande nere.
+
+Arianna a sinistra (x=675), Oscare a destra riflesso (x=1890), in idle a
+24 fps, pavimento y=1025. Le scale derivano dalla normalizzazione delle idle
+con fattore stage 4/3 e rapporto delle altezze fisiche in centimetri.
+Fonte canonica: assets/character-proportions.json, solo per Sanmauro:
+Arianna 165 cm; Bue 170 cm; Mangler 183 cm; Mileto 170 cm; Oscare 183 cm;
+Peirò 170 cm; Torpe 175 cm. Arianna è il riferimento: 344 px nelle anteprime,
+344 × 4/3 px nello stage. Moltiplicatore fisico = altezza cm / 165.
+Oscare nello stage è quindi 183/165 volte l'altezza di riferimento di Arianna.
+Il moltiplicatore si applica alla scala già corretta dello spritesheet e resta
+lo stesso su tutte le mosse del personaggio, comprese le correzioni di Mangler.
+La linea dei piedi e le ombre seguono la nuova scala. Le proporzioni fisiche
+sono applicate anche a roster, hover, viste Per personaggio/Per mossa e pose
+dei report. Lo stage usa la base normalizedPreview per evitare di applicare
+due volte il rapporto delle altezze; mantiene la dimensione globale approvata.
+Manifest e catalogo conservano heightCm,
+stageHeightMultiplier e characterProportions per la futura integrazione Godot.
+Per cambiare altezze modificare il JSON e rieseguire build-stages.py; non serve
+reimportare Godot. L'importazione completa conserva e riapplica questi valori.
+Il roster WEDOO non usa questa configurazione e i suoi sprite restano invariati.
+Le ombre usano la sagoma del frame corrente e due contatti delle suole per
+ciascuno degli 87 frame complessivi: 24 Arianna, 63 Oscare. Lo stesso verso
+di luce è mantenuto dopo il riflesso e il drag. Colore #1d1625, shearX=0.5,
+flattenY=0.11, opacity=0.72, contactOpacity=0.28, come Villa Arduino.
+
+Effetti e default identici a WEDOO:
+- Ombre 80%, toni caldi 35%, foschia 65%, polvere 100% (160 particelle).
+- CRT base generale 100%; scanline 50%, RGB 50%, vignetta 80%, contrasto 50%,
+  saturazione 70%, luminosità 100%, riflesso vetro 100%.
+- CRT avanzato attivo al 100%, con il preset approvato presente in
+  assets/stages/Piazza Europa/crt-preset.json, incorporato in crt-presets.js.
+Il pannello Parametri CRT è un offcanvas con scroll interno; CRT base e
+avanzato restano indipendenti, con import/export, fissaggio nel browser,
+Base di lavoro, Azzera avanzato e confronto Vista originale.
+Le preferenze avanzate di Piazza Europa sono distinte da Villa Arduino.
+Pausa nuvole non ferma le idle o la polvere; movimento ridotto ferma le
+animazioni. I filtri non cambiano gli asset. Per WebGL usare il server locale.
+
+Codice stage: stages-app.js, stage-player.js, stage-effects.js,
+stage-fullscreen.js, crt-panel.js, crt-webgl.js, styles.css.
+Generatore locale per dimensioni, scale, contatti e preset incorporati:
+  python demo-moves-sanmauro/scripts/build-stages.py
+Output generati: stages-catalog.js, stage-foot-contacts.js, crt-presets.js,
+assets/stages/Piazza Europa/stage.json e foot-contacts.json.
+Modificare il preset JSON per cambiare la base avanzata; per posizioni e
+impostazioni dello stage modificare il generatore, poi rigenerare.
+L'importazione delle animazioni rigenera automaticamente anche questi dati.
+I test controllano hash dei PNG, aggancio dei piedi, riflesso, camera, effetti,
+fullscreen, pannello e pipeline WebGL. I test GPU usano un contesto simulato;
+non certificano la resa finale del driver grafico nel browser.
+
+PUGNO LEGGERO
+Disponibile per tutti in mosse.html?move=light-punch e nelle pagine personaggio.
+Durata comune 500 ms a 1x; massima estensione a 300 ms per tutti.
+Timing variabile: primi 300 ms fino al frame selezionato, poi 200 ms fino
+alla fine, incluso il frame finale. FPS medi = frame / 0.5.
+Arianna: 17 frame 0-8,7-0, 7 colonne, sorgente 48 fps. Ultimo frame di
+andata (indice 8) a 300 ms, poi ritorno inverso fino all’idle a fine ciclo.
+Il picco non viene duplicato; la sequenza composta resta esplicita nel manifest.
+Mangler: 18 frame 0-17, 5 colonne, sorgente 48 fps, scala reworked 0.85.
+Bue, Mileto, Oscare, Peiro e Torpe: 13 frame (0-6,5-0), 5 colonne,
+sorgente 24 fps. Il ritorno appartiene alla sequenza principale Godot.
+PNG copiati integri in assets/characters/<id>/light-punch.png.
+Proporzioni fisiche e scale Godot conservate. Frame selezionati (indici da 0):
+Arianna 8, Bue 4, Mangler 10, Mileto 6, Oscare 5, Peiro 4, Torpe 6.
+Selezioni verificate visivamente e vincolate a hash PNG e sequenza.
+Dopo una sostituzione degli asset occorre rivedere il frame di estensione.
+Configurazione: assets/light-punch-timing.json. Timing originali nel manifest.
+Report HTML/CSV con pose: reports/light-punch-timing.html, link sotto il titolo.
+Rigenerazione: python demo-moves-sanmauro/scripts/build-light-punch-report.py
+L'importazione completa rigenera anche questo report.
+Il campo light_punch_sheet viene letto per nome esatto, senza confonderlo con
+jump_light_punch_sheet. Bue, Mileto, Peirò e Torpe usano light_punch_spritesheet.png;
+Oscare usa Oscare-light_punch.png. Sono tutti pugni leggeri a terra.
+
+LOOP DELLA DEMO
+Tutte le animazioni partono con Loop attivo nelle pagine per personaggio e
+per mossa, anche vittoria, KO e attacchi. Il checkbox permette di disattivarlo.
+I valori loop/sourceLoop nel manifest conservano il riferimento Godot;
+la preferenza iniziale del player della demo rimane indipendente.
+
+PUGNO MEDIO
+Disponibile per tutti, 750 ms a 1x; massima estensione a 450 ms, idle finale
+esattamente a 750 ms (frame terminale di durata zero, senza pausa nel loop).
+Arianna: basic-moves/medium-punch/medium-punch.png, 25+24 inversi = 49 frame.
+Bue: Bue-medium_punch.png, 24+23 inversi = 47 frame, recovery sorgente 96 fps.
+Mangler: medium_open_hand_slap usa SOLO tre PNG in basic-moves/medium-punch:
+medium-punch-preparation.png (10), medium-punch-hit.png (16),
+medium-punch-to-idle.png (16). Copiati integri e riuniti in medium-punch.png
+per il canvas: 42 celle, pixel identici, scale reworked 0.85 e centratura
+comune. sourceSheets conserva percorsi, hash e rettangoli dei tre originali;
+sourceSha256 sul record principale identifica l'atlas derivato.
+Mileto: Mileto-medium_punch.png, 24 frame con ritorno incluso, senza inverso.
+Oscare: Oscare-medium_punch.png, 22+21 inversi = 43, recovery 96 fps.
+Peiro: Peiro-medium_punch.png, 15+14 inversi = 29, recovery 48 fps.
+Torpe: Torpe-medium_punch.png, 14+13 inversi = 27, sorgente/recovery 30 fps.
+Gli altri sorgenti sono a 48 fps. Frame di estensione (indici da 0):
+Arianna 20, Bue 22, Mangler 16, Mileto 13, Oscare 20, Peiro 13, Torpe 10.
+Configurazione assets/medium-punch-timing.json, vincolata a PNG e sequenze.
+Report HTML/CSV: reports/medium-punch-timing.html, sotto il titolo della mossa.
+Rigenerazione: python demo-moves-sanmauro/scripts/build-medium-punch-report.py
+Importazione completa e altri report rigenerano anche il pugno medio.
+
+RITRATTI GODOT
+Le immagini accanto ai nomi nelle pagine personaggio sono quelle selezionate
+da CharacterSelect._get_portrait: Arianna v2, Mangler/Bue/Mileto/Peirolo/Torpe v1,
+Oscare slim-bust. PNG originali copiati in assets/portraits, senza ridimensionarli.
+Manifest: portrait e portraitSource; thumbnail resta l'anteprima idle del roster.
+Rigenerazione: python demo-moves-sanmauro/scripts/import-portraits.py
+L'importazione completa conserva questa scelta. Nessun riferimento esterno.
+
+PUGNO PESANTE
+Integrato per tutti con estensione a 500 ms, ciclo 1000 ms a 1x e idle terminale
+esatto al termine (durata zero del frame finale). Loop attivo di default.
+Arianna: basic-moves/strong-punch/strong-punch.png, 49 frame, 48 fps sorgenti.
+Mangler: moves/00-heavy_punch_high.png, alias heavy_punch. Godot usa 49 frame
+0-48 poi 40-20 inversi, 70 frame a 48 fps. La demo aggiunge solo la posa
+iniziale terminale per esplicitare il passaggio allo stato idle, 71 frame
+in tutto. Scala reworked 0.85, posizione (0,-115), ancoraggio comune. Il pugno
+raggiunge il bordo destro del PNG originale; nessun ritaglio aggiuntivo.
+Bue: Bue-strong_punch.png, 21 frame, 24 fps sorgenti.
+Mileto: Mileto-strong_punch.png, 38 frame, 30 fps.
+Oscare: Oscare-strong_punch.png, 28 frame, 30 fps.
+Peiro: Peiro-strong_punch.png, 25 frame, 24 fps.
+Torpe: Torpe-strong_punch.png, 31 frame, 30 fps.
+Il campo strong_punch_sheet viene letto per nome esatto, distinto da jump e low.
+Frame estensione (indici da 0): Arianna 23, Bue 15, Mangler 40, Mileto 16,
+Oscare 15, Peiro 10, Torpe 15. Config assets/heavy-punch-timing.json con
+hash PNG/sequenza; rivedere le selezioni dopo un cambio degli asset.
+Report HTML/CSV e pose: reports/heavy-punch-timing.html, sotto il titolo.
+Rigenerazione: python demo-moves-sanmauro/scripts/build-heavy-punch-report.py
+Importazione e altri report lo rigenerano automaticamente.
+
+COMPLETAMENTO DELLE MOSSE NORMALI
+Aggiunte 159 animazioni: calci light/medium/heavy in piedi, pugni e calci
+accovacciati, pugni e calci in salto; inoltre corsa, camminata indietro,
+salto indietro (dodge per Mangler), posa in aria dove presente, colpo subito
+in aria, atterramento da spazzata, rialzata da terra e da accovacciata.
+Special, super, prese, combo e le due varianti già accovacciato di Mangler
+sono escluse sia dai menu sia dalle importazioni future.
+
+TIMING DELLE NUOVE MOSSE
+Light: estensione 300 ms / ciclo 500 ms. Medium: 450 / 750 ms. Heavy: 500 / 1000 ms.
+Le recovery definite separatamente da Godot sono concatenate alle sequenze
+principali. Il frame terminale replica la posa iniziale senza aggiungere
+durata al ciclo: guardia in piedi, posa accovacciata o aerea secondo la mossa.
+I montanti sono revisionati per estensione verticale, gli altri attacchi sulle
+pose di distensione dell'arto. Tutte le selezioni sono modificabili e legate
+a hash PNG e sequenza in assets/remaining-moves-timing.json.
+Movimenti e reazioni nuovi mantengono FPS/pesi/durate Godot; la rialzata da
+accovacciata dura 250 ms come l'ingresso. Nessuna simulazione fisica del salto.
+Gli attacchi aerei mostrano la sequenza visiva, senza imporre un atterraggio.
+
+PROPORZIONI MANGLER
+Le scale vengono lette dal comportamento update_sprite_scale di Godot: .85
+per le mosse reworked, .70 per quelle legacy, .80 per i tre calci aerei.
+Posizione sprite .85/reworked (0,-115), legacy (0,-120); alcuni calci in aria
+conservano posizione legacy e scala .80. Le altre altezze fisiche restano
+quelle configurate. Un unico zoom della galleria impedisce ritagli; gli
+stage mantengono la scala approvata tramite normalizedPreview separata.
+
+AUDIT E RIGENERAZIONE
+Snapshot: assets/remaining-moves-source.json (rettangoli/durate runtime e
+hash PNG, script catalogo e configurazione); non legge cartelle per nome.
+Le copie dei cataloghi sono eseguite con Godot in tmp/godot-animation-audit,
+con PNG letti come ImageTexture da percorsi assoluti. Il vecchio progetto
+Godot resta intatto: nessuna scrittura in F:/Personali/Godot.
+Per nuovi asset o modifiche dei cataloghi:
+  python demo-moves-sanmauro/scripts/audit-godot-catalogs.py
+  python demo-moves-sanmauro/scripts/build-remaining-source.py
+Poi rivedere le selezioni in remaining-moves-timing.json e i relativi hash
+prima dell'importazione; i riferimenti obsoleti sono rifiutati.
+Importazione completa:
+  python demo-moves-sanmauro/scripts/import-roster.py
+Solo queste mosse, con gli asset Godot disponibili:
+  python demo-moves-sanmauro/scripts/remaining_moves.py
+Solo report e timing, completamente offline:
+  python demo-moves-sanmauro/scripts/build-remaining-reports.py
+
+REPORT
+23 report HTML/CSV aggiuntivi con 159 confronti di pose, collegati sotto il
+titolo di ciascuna mossa. reports/remaining-moves.html elenca disponibilità
+e collegamenti. Nessuna voce Combo o già accovacciato resta nella demo.
+
+SPECIAL E SUPER - PRIMO PERSONAGGIO: ARIANNA
+Pagina specials.html, voce autonoma nel menu accanto a Stages. Le mosse
+restano separate dalle 271 animazioni normali: nessuna Special/Super viene
+aggiunta al menu Per mossa normale. Peiro non e incluso: asset ancora da creare.
+
+Arianna dispone di due Special (Mazza da baseball e Fischio/Bateau) e della
+Super Gatti. Asset originali in assets/specials/arianna, 16 PNG totali:
+3 animazioni di Arianna + tornado + 3 fasi Bateau + 9 animazioni dei gatti.
+PNG integri, ritagli e frame usati da Godot, scale e posizioni conservate nel
+manifest specials.json. specials-catalog.js incorpora tutto per file://.
+
+Mazza: 49 frame a 48 fps, tornado al frame 23 (indice 0), 479.17 ms.
+Il tornado ha 49 frame a 48 fps, cresce da .08 a .48 in .5 s, vita massima 4 s.
+Potenza light/medium/heavy: velocita 420/560/700 unita Godot al secondo,
+con particelle e lampo rispettivamente azzurri, gialli o arancio.
+Fischio: sequenza 0-24,23-0, 49 frame a 24 fps; Bateau nasce al frame 12
+a 500 ms. Cane: corsa 49 frame, attacco 25, ritorno alla corsa 25, 24 fps;
+velocita 800, attacco a distanza 620, contatto 70, hit al frame 17.
+Bateau-run ha una cella finale trasparente (indice 48) nel PNG originale:
+la demo mantiene il frame precedente in quel solo intervallo senza alterare
+i pixel o la durata. Eccezione registrata in emptySourceFrames.
+Super: frame sorgenti 9-42, 34 frame a 24 fps; ondata al frame 10 riprodotto
+(416.67 ms). Dodici gatti, quattro Tullio/Tilda/Telma; corse da 42/42/49
+frame, salti 15 e attacchi 12, tutti a 24 fps. Velocita 680/755/625.
+Ordine casuale, ritardi 70-170 ms, moltiplicatore .82-1.22; tre attacchi
+per gatto o salto al volto con probabilita .30. Un seme rende la singola
+ondata ripetibile; Nuova ondata modifica il seme.
+
+PROVA NELLO STAGE
+Arianna a sinistra e Oscare riflesso come bersaglio, Piazza Europa, drag
+orizzontale, parallasse e stesso CRT base/avanzato indipendenti, foschia,
+polvere e ombre. Fullscreen reale e pannello CRT laterale con scroll interno.
+Controlli: selezione mossa, riproduci/pausa, ricomincia, loop, timeline,
+potenza tornado, nuova ondata. La pausa delle nuvole e indipendente dalla
+sequenza. Movimento ridotto rispettato, riproduzione riattivabile dall'utente.
+Sotto lo stage: gallerie autonome delle animazioni e dei proiettili usati.
+
+Anteprima VISIVA: animazioni, spawn, traiettorie e fasi ricostruiti dai dati
+Godot; bersaglio fermo, reazione visiva ai colpi. Particelle e lampi adattati
+al canvas. Non simula danni, collisioni fisiche, input da combattimento o audio.
+Le normali mantengono i timing uniformati; per Special/Super si usano i FPS Godot.
+La proiezione usa lo stesso fattore di scala del personaggio nello stage.
+
+Rigenerazione completa: python demo-moves-sanmauro/scripts/import-specials.py
+Accetta anche il percorso Godot come argomento. Anche import-roster.py
+rigenera questa sezione quando il manifest Special e gia presente.
+Report: reports/arianna-specials.html (timing, varianti, fonti ed eccezioni).
+Confronto ripetibile via URL: specials.html?move=cats&seed=7&time=2600&paused=1
+Valori move: baseball, dog, cats; strength light/medium/heavy; time in ms.
+
+Anteprima Special/Super: tutti i proiettili rialzati di 30 px sul riferimento
+1080p (preview.projectileOffsetY=-30). Personaggi, scale e timing invariati;
+correzione della sola demo, conservata anche dopo la rigenerazione.
+
+SPECIAL E SUPER - ALTRI PERSONAGGI
+Macchia corrisponde a Torpe (chiarimento dell'autore). Il selettore nella
+pagina specials.html ora comprende 6 personaggi e 14 mosse complessive.
+Peirò rimane escluso. Le 271 animazioni normali e la demo WEDOO non cambiano.
+
+- Mangler: lancio dei piatti, rotazione coi pugni; Super con preparazione,
+  rotazione delle bacchette, corsa e due rullate (8 impatti). Fogli reworked
+  effettivamente usati, scala Godot .85; tutte le sequenze a 48 fps.
+  Piatti al frame 22, 458.33 ms; velocità 520/676/832, scala .82.
+  Rotazione: avanzamento 75 unità/s. Super: corsa 480, arresto a 130;
+  impatti ai frame 4/10/16/22 di ciascuna rullata da 24 frame.
+- Oscare: 20 frame di accensione a 60 fps prima di entrambe le Special.
+  Lancio: 29 frame, rilascio al frame 18 (633.33 ms totali), velocità
+  520/720/920. Come Godot, runtime 18 usa source 19 per togliere la sigaretta
+  già disegnata. Fumata: 49 frame a 60 fps; 26 frame di fumo sincronizzati
+  dal frame 20 (666.67 ms totali), aggancio alla bocca interpolata.
+- Torpe/Macchia: bottiglia e saldatura dalle due risorse SpriteFrames TRES
+  reali, 64 frame riprodotti con duplicazioni e pesi conservati, 64/60 fps.
+  Bottiglia rilasciata al frame 37 (578.125 ms); velocità 520/720/920,
+  rotazioni 1.8/2.2/2.6 giri/s, gravità 600, velocità iniziale Y -150.
+  Come Godot, i 40 px superiori dei runtime 37/38 sono esclusi su un atlas
+  derivato; PNG originale e TRES copiati integri accanto all'atlas.
+  Saldatura dal frame 42 (700 ms): scintille generate nel canvas, intensità
+  600/1000/1400 emissioni/s e raggio 300, senza inventare uno spritesheet.
+- Mileto: spallata 40 frame a 48 fps, corsa dal frame 12; posa 30 mantenuta
+  fino al contatto, poi recupero. Velocità 800/1100/1400.
+  Chitarra: preparazione 45 frame a 100 fps, lancio 23 frame a 60 fps;
+  rilascio al frame 20 (783.33 ms totali). Proiettile 25 frame a 100 fps,
+  scala 2, velocità 600/800/1000.
+- Bue: evocazione 30 frame a 60 fps, cantanti al frame 9 (150 ms).
+  Claudio Baglioni: materializzazione 28@60, corsa 49@48, attacco 49@60,
+  tre colpi ai frame 23/35/40; completa la sequenza prima di uscire.
+  Tom Waits: materializzazione 30@60, corsa 49@48, attacco 49@60,
+  tre colpi ai frame 15/28/41; riparte dopo il terzo contatto.
+  Entrambi: velocità 480, scala .85, offset Y rispettivamente -150/-158.
+
+Ogni personaggio è a sinistra; Oscare è il bersaglio riflesso a destra.
+Per le Special di Oscare il bersaglio è Arianna. Si mantengono altezze in cm,
+normalizzazione idle, ombre, CRT, parallasse e tutti i controlli già presenti.
+Caricamento limitato agli asset del personaggio selezionato.
+Le mosse ravvicinate (fumata, saldatura, rotazione) mantengono la portata:
+il bersaglio lontano non riceve un impatto artificiale. Reazioni della Super
+adattate all'hurt/KO del bersaglio della demo; collisioni, danni e audio non
+sono eseguiti. Frammenti, aura elettrica e scintille sono adattamenti canvas.
+
+Manifest aggregato: assets/specials/manifest.json e specials-catalog.js.
+Importatori: import-specials.py esegue import-arianna-specials.py seguito da
+import-other-specials.py; anche import-roster.py usa questa sequenza completa.
+Non usare il solo importatore Arianna per rigenerare il catalogo completo.
+Report: reports/{arianna,mangler,oscare,torpe,mileto,bue}-specials.html.
+Esempio: specials.html?character=mangler&move=drums&time=3400&paused=1
+character: arianna/mangler/oscare/torpe/mileto/bue.
+move: baseball/dog/cats; cymbals/spin/drums; cigarette/smoke;
+bottle/welding; shoulder/guitar; baglioni/tom. strength: light/medium/heavy.
+I manifest conservano hash dei PNG e script sorgenti, FPS, indici, rettangoli,
+scale e posizioni. Il vecchio progetto Godot viene soltanto letto.
+
+CORREZIONI OMBRE E ALTEZZA CANTANTI
+Contatti delle suole per tutti i 386 frame idle dei sette personaggi, più
+hurt-high, knockdown e get-up dei bersagli. Generati da build-stages.py con
+feet_contacts.py e incorporati in stage-foot-contacts.js per uso offline.
+La proiezione mantiene fermo anche un singolo appoggio: alcuni frame delle
+Special hanno una sola suola rilevabile. Il renderer usa il piano verticale
+della sagoma, compresi i cantanti di Bue; i salti dei gatti conservano il
+proprio piano a terra mentre il corpo sale. Controllati tutti i frame delle
+42 sequenze Special/Super, inclusi riflesso e spostamento della camera.
+Baglioni e Tom Waits rialzati di altri 20 px: previewOffsetY=-20 per entrambi,
+oltre ai -30 comuni, per un rialzo totale di 50 px a 1080p. Bue resta fermo;
+timing, scale e file PNG invariati. Valore conservato nella rigenerazione.
+Per rigenerare solo stage/contatti senza concatenare i report delle mosse:
+python demo-moves-sanmauro/scripts/build-stages.py --skip-reports
+
+UI - FONDALE DELLA SCHERMATA INIZIALE
+Sezione UI nel menu, pagina ui.html. Ricomposizione del solo fondale della
+TitleScreen Godot: niente logo, testi, menu di gioco, personaggi o transizioni.
+Dieci PNG originali copiati in assets/ui/title-screen, mantenendo le cartelle
+nuvole/ e riflessi/. Importati soltanto i BACKGROUND_LAYERS effettivamente
+elencati da scripts/TitleScreen.gd, nell'ordine sorgente:
+livello-01, nuvole-01/02/03, livello-03, water-level-03_5,
+riflesso-1/2/3, livello-04. I PNG restano integri, con hash nel manifest.
+
+Riferimento 1920x1080, 16:9. Ogni layer nativo 1776x592 viene disegnato a
+3240x1080 senza deformare le proporzioni, come il cover di Godot in 16:9.
+Vista centrata, drag/frecce per esplorare i lati (camera da 0 a 1320).
+Nuvole lontane/intermedie/vicine a 6/12/20 px/s verso sinistra, come Piazza
+Europa; riflessi sincronizzati alle rispettive nuvole. Loop sul panorama
+scalato intero, indipendente dal drag. Pausa nuvole ferma anche i riflessi.
+Godot usava 2.5/4.5/7 px/s: qui sono sostituiti dai valori di Piazza Europa
+su richiesta. Acqua statica: i due shader specifici della TitleScreen Godot
+non vengono applicati; la demo usa i filtri condivisi di Piazza Europa.
+
+Stesso player canvas, CRT base e avanzato, preset di Piazza Europa, foschia,
+polvere, Vista originale, Ripristina, offcanvas CRT e fullscreen reale.
+I controlli ombre/personaggi sono nascosti perché questo fondale non contiene
+personaggi. Supportati movimento ridotto, menu mobile e uso offline file://.
+Sotto la vista, elenco dei dieci layer con download dei PNG originali.
+
+Rigenerazione dalla radice:
+  python demo-moves-sanmauro/scripts/build-ui.py
+Percorso Godot alternativo come primo argomento. Il sorgente viene solo letto.
+Il generatore legge velocità e risoluzione da assets/stages/Piazza Europa/
+stage.json e il preset CRT dallo stesso stage, conservando il riferimento
+nei file assets/ui/title-screen/screen.json e crt-preset.json.
+ui-catalog.js incorpora il manifest per non richiedere fetch in locale.
+La cartella demo-moves-sanmauro resta autonoma dopo l'importazione.

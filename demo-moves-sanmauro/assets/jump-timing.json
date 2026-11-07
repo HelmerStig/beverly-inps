@@ -1,0 +1,58 @@
+{
+  "schema": "sanmauro.jump-timing",
+  "version": 1,
+  "updatedAt": "2026-11-06",
+  "apexMs": 500,
+  "durationMs": 1000,
+  "items": [
+    {
+      "characterId": "arianna",
+      "sourceSha256": "a641b435a40e9368d65220cd2efb8c8f796a75c751305586fd72f8acae017e0e",
+      "framesSha256": "c11db87a68ca686075f3d3f7ba4f31ba72f108bd3d1dbb6532a14a8dd0033692",
+      "apexFrame": 22,
+      "note": "Testa tagliata dal bordo superiore per pi? pose: apice stimato dal corpo visibile; plateau vicino ai frame 22-23."
+    },
+    {
+      "characterId": "bue",
+      "sourceSha256": "6dd5bcd0f320133b7337a4ae47a1b583b3eb439499c39b7c01b01a2f2c87b948",
+      "framesSha256": "c78999c576fbfc9dbc53650ac890ce5367616618223873fd940c776ce3390be0",
+      "apexFrame": 16,
+      "note": "Plateau breve vicino ai frame 17-18; selezionata la posa di massima elevazione del corpo."
+    },
+    {
+      "characterId": "mangler",
+      "sourceSha256": "3af27485db6bdf202610144325073252d639594ff83a60c65dc88f346f476c93",
+      "framesSha256": "407c07f408e91d1f68a5a360fafe95d0229991eb7005e5131061bc9bfc0d373a",
+      "apexFrame": 14,
+      "note": "Apice del corpo al frame 15, dopo la massima quota del cappello: non usare solo il bordo alto. Scala Godot 0.85 conservata; il foglio termina ancora in aria."
+    },
+    {
+      "characterId": "mileto",
+      "sourceSha256": "012601c68c2681f560ab179efdb142f4e8874ab839cee267228b272eb5c06dab",
+      "framesSha256": "e5ec8eab5704ec3640d8b9a48ace1c518d1c8402280b11a4f13207e77564166d",
+      "apexFrame": 21,
+      "note": "Plateau vicino ai frame 21-23; riferimento alla posa del corpo."
+    },
+    {
+      "characterId": "oscare",
+      "sourceSha256": "e8bf6735838f1874b378e5a402038a657760e8824d79a8e4d77f3b1eae47e3ee",
+      "framesSha256": "e6b50b599604bf92c0a7a0e7dae1927d7349bdde9b0a637e4a617d7b87936658",
+      "apexFrame": 18,
+      "note": "La raccolta delle gambe prosegue dopo la massima quota della testa; scelta la massima elevazione del corpo visibile."
+    },
+    {
+      "characterId": "peirolo",
+      "sourceSha256": "458e34afe15a067fe3661468364bf17c85694dd71e3a447923a6c6feb05b4e57",
+      "framesSha256": "3aeb777b533bd969295993b48da33c810a55bab8474c625c816ba386722fe83e",
+      "apexFrame": 21,
+      "note": "Plateau vicino ai frame 21-23; riferimento alla posa del corpo."
+    },
+    {
+      "characterId": "torpe",
+      "sourceSha256": "14454d339a17f0f3b548c1dd5371b0ec758ff7b3816ab0a28e2701516735c992",
+      "framesSha256": "bb5117d5e8086896d456670f935bf84bc0bc6e5e00d1f1ad9761d2b049c10221",
+      "apexFrame": 16,
+      "note": "Apice del corpo vicino ai frame 17-18; scala e ancoraggio costanti."
+    }
+  ]
+}

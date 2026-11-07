@@ -1,0 +1,57 @@
+{
+  "schema": "sanmauro.heavy-punch-timing",
+  "version": 1,
+  "durationMs": 1000,
+  "impactMs": 500,
+  "items": [
+    {
+      "characterId": "arianna",
+      "impactFrame": 23,
+      "sourceSha256": "65e1152cc41f64497ab6bbecc25160b5cee84d1c5342a9903aed044bd8498900",
+      "framesSha256": "c11db87a68ca686075f3d3f7ba4f31ba72f108bd3d1dbb6532a14a8dd0033692",
+      "note": "Massima estensione verificata visivamente; idle terminale a 1000 ms."
+    },
+    {
+      "characterId": "bue",
+      "impactFrame": 15,
+      "sourceSha256": "3038befa928999f9c62a289b0463b22a87ea1d0562e7c8c22e9d58b72ead83f5",
+      "framesSha256": "aeea77f6c7e6f9d21132b6a2b90adfdb76028c16378663810b5bd1045c18ffa8",
+      "note": "Massima estensione verificata visivamente; idle terminale a 1000 ms."
+    },
+    {
+      "characterId": "mangler",
+      "impactFrame": 40,
+      "sourceSha256": "16ca092e1c2c73ad70ffb904275c6e6ca458456aa9291e54191e9826770790e6",
+      "framesSha256": "73bb318f2f30aac43db1f0373d185bd0cad71a3f85c3800ee0ff1e7e7725761c",
+      "note": "Massima estensione verificata visivamente; idle terminale a 1000 ms."
+    },
+    {
+      "characterId": "mileto",
+      "impactFrame": 16,
+      "sourceSha256": "8ee24afb290b8f8dcb13a2d41298ae5e6ec6b05812e5667e75620e0e55e6b213",
+      "framesSha256": "57d2ce18e121e13485c63d2838a19dba46f5d22addc265935c69a4b0e34a7de3",
+      "note": "Massima estensione verificata visivamente; idle terminale a 1000 ms."
+    },
+    {
+      "characterId": "oscare",
+      "impactFrame": 15,
+      "sourceSha256": "698f612444b7d86397ce0dec42804355044823b8f6b010b57c3d365cbaf95a1e",
+      "framesSha256": "606bdf22622b3fc834d8e1ed53f3c5ba6222e8bf577a257389bec4e77dc0b967",
+      "note": "Massima estensione verificata visivamente; idle terminale a 1000 ms."
+    },
+    {
+      "characterId": "peirolo",
+      "impactFrame": 10,
+      "sourceSha256": "e3b5c70abc1105a67363f23c6035d7dff97f68972ae73c8abd54ecc5a906e85e",
+      "framesSha256": "a6f3b2a3e97d82d70f1f1dcfcc16a88b5a5e51ea196213e88d18fa2f7b0147b6",
+      "note": "Massima estensione verificata visivamente; idle terminale a 1000 ms."
+    },
+    {
+      "characterId": "torpe",
+      "impactFrame": 15,
+      "sourceSha256": "dd248dcefa56bdf02918d3eedef22c5a31378af734b31a8548e9d3bf3d1a8307",
+      "framesSha256": "68173fc6da4afecea70d2e4a68e95863a7b0019d47dcdb1bd564200638661b7b",
+      "note": "Massima estensione verificata visivamente; idle terminale a 1000 ms."
+    }
+  ]
+}

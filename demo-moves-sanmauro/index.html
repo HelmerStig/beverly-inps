@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Il roster Sanmauro e le sue animazioni in pixel art.">
+  <title>Personaggi · Sanmauro Fighters</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="roster.css">
+  <script src="catalog.js" defer></script>
+  <script src="player-core.js" defer></script>
+  <script src="roster-preview.js" defer></script>
+  <script src="move-groups.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body data-page="roster">
+  <a class="skip-link" href="#main">Vai al contenuto</a>
+  <aside class="sidebar" id="sidebar" aria-label="Navigazione personaggi e mosse"></aside>
+  <button class="menu-overlay" type="button" aria-label="Chiudi il menu" hidden></button>
+  <div class="workspace">
+    <header class="topbar">
+      <button class="menu-toggle icon-button" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="sidebar">☰</button>
+      <div class="breadcrumb"><span>Sanmauro Fighters</span><span aria-hidden="true">/</span><strong>Personaggi</strong></div>
+      <span class="local-status"><i aria-hidden="true"></i> Archivio mosse</span>
+    </header>
+    <main id="main" class="main-content" tabindex="-1">
+      <section class="roster-heading">
+        <div><p class="eyebrow">SCEGLI IL TUO PERSONAGGIO</p><h1>Il roster<span class="accent">.</span></h1><p class="intro">Volti familiari. Mosse da scoprire.<br>Seleziona un personaggio per esplorare le sue animazioni.</p></div>
+        <div class="roster-total"><span data-total>—</span><span>PERSONAGGI<br>IN LIBRERIA</span></div>
+      </section>
+      <div class="section-bar"><div><span class="tiny-square" aria-hidden="true"></span><h2>Tutti i personaggi</h2><span class="count-pill" id="visible-count" aria-live="polite">—</span></div><span class="order-label">A — Z</span></div>
+      <div class="character-grid" id="character-grid" aria-label="Personaggi"></div>
+      <p class="empty-state" id="empty-state" hidden>Nessun personaggio trovato. Prova con un altro nome.</p>
+      <noscript><p class="notice">Attiva JavaScript per visualizzare il roster e le animazioni.</p></noscript>
+      <footer class="page-footer"><span>SANMAURO FIGHTERS</span><span>Personaggi, una mossa alla volta.</span></footer>
+    </main>
+  </div>
+</body>
+</html>

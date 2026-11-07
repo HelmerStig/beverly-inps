@@ -1,0 +1,8 @@
+﻿Personaggio,Frame demo,Durata demo ms,Estensione ms,Frame estensione indice 0,FPS Godot,Durata Godot ms,Animazione Godot,PNG sorgente,SHA256,Note
+Arianna,18,250,,,48.0,375.0,arianna_crouch_recovery,assets/sprites/characters/arianna/basic-moves/crouched.png,fd15f737180dd683c6025b39b9fba7dd7ec20f78a66043afd33fd0ab60d0dc44,"Sequenza Godot, senza imporre un punto di estensione."
+Bue,7,250,,,24.0,291.66666666666663,crouch,assets/sprites/characters/bue/crouch-spritesheet.png,8cd349dfa87e8f4e46df4ca9a68d12279737531224c3ca762b198213739271f9,"Sequenza Godot, senza imporre un punto di estensione."
+Mangler,25,250,,,48.0,520.8333333333333,crouch,assets/sprites/characters/mangler/04-crouching.png,e9d08e3f8f983b53135b2ab0333ab01975d0d485681ee9acb085fad00eebfb2c,"Sequenza Godot, senza imporre un punto di estensione. Scala Godot [0.85, 0.85]."
+Mileto,13,250,,,24.0,541.6666666666666,crouch,assets/sprites/characters/mileto/crouch-spritesheet.png,b93f5fd6a2924854d1b8ee20c3acd395b9ffcbd73edbbb4f88c0255b669a27d8,"Sequenza Godot, senza imporre un punto di estensione."
+Oscare,9,250,,,24.0,375.0,crouch,assets/sprites/characters/oscare/crouch-spritesheet.png,2f9c530df8ae1b491c7eb2d5e06aafe6579be39b8ae30bf68230c9eb895c2f12,"Sequenza Godot, senza imporre un punto di estensione."
+Peirò,11,250,,,24.0,458.3333333333333,crouch,assets/sprites/characters/peirolo/crouch-spritesheet.png,b050d1d0dfc6139b0471b0d7e1728c3a3d854fea6f4f58d6fcad98fa3c8e3f73,"Sequenza Godot, senza imporre un punto di estensione."
+Torpe,7,250,,,24.0,291.66666666666663,crouch,assets/sprites/characters/torpe/crouch-spritesheet.png,78066d8553910a789bcc37b793bb4e3b964ce50dab3da423f35ac4d30b9ff5ad,"Sequenza Godot, senza imporre un punto di estensione."

@@ -1,0 +1,86 @@
+<!doctype html><html lang="it"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Oscare · Special e Super</title><style>body{background:#141815;color:#eff3eb;font:15px/1.6 system-ui;padding:28px}main{max-width:1200px;margin:auto}a{color:#ceef80}table{border-collapse:collapse;width:100%}td,th{text-align:left;padding:12px;border-bottom:1px solid #3b493c}.scroll{overflow:auto}pre{white-space:pre-wrap}</style><main><a href="../specials.html?character=oscare">← Prova nello stage</a><h1>Oscare · Special e Super</h1><p>Macchia è Torpe. Sequenze e FPS del codice Godot, incluse le fasi preparatorie. Scala e centratura derivano dall’idle e dalle altezze del roster. Proiettili rialzati di 30 px nell’anteprima, con ulteriori 20 px per Baglioni e Tom Waits (50 px totali).</p><p>Simulazione visiva con bersaglio fermo: particelle, contatti e reazioni sono adattati al canvas; audio, danni e collisioni fisiche Godot non vengono eseguiti. Le mosse ravvicinate mostrano il loro raggio reale senza avvicinare artificialmente il bersaglio. Peirò escluso.</p><div class="scroll"><table><tr><th>Sequenza</th><th>Frame</th><th>FPS</th><th>Durata</th><th>Asset</th><th>Note</th></tr><tr><th>Accensione sigaretta</th><td>20</td><td>60</td><td>333.33 ms</td><td><a href="../assets/specials/oscare/cigarette-light.png">PNG</a></td><td></td></tr><tr><th>Lancio sigaretta</th><td>29</td><td>60</td><td>483.33 ms</td><td><a href="../assets/specials/oscare/cigarette.png">PNG</a></td><td></td></tr><tr><th>Fumata bianca</th><td>49</td><td>60</td><td>816.67 ms</td><td><a href="../assets/specials/oscare/smoke.png">PNG</a></td><td></td></tr><tr><th>Sigaretta</th><td>25</td><td>60</td><td>416.67 ms</td><td><a href="../assets/specials/oscare/cigarette-projectile.png">PNG</a></td><td></td></tr><tr><th>Fumo bianco</th><td>26</td><td>60</td><td>433.33 ms</td><td><a href="../assets/specials/oscare/smoke-projectile.png">PNG</a></td><td></td></tr></table></div><h2>Parametri sorgente</h2><pre>{
+  &quot;cigarette&quot;: {
+    &quot;spawnFrame&quot;: 18,
+    &quot;speeds&quot;: [
+      520,
+      720,
+      920
+    ],
+    &quot;hand&quot;: [
+      390,
+      142
+    ],
+    &quot;lifetime&quot;: 3
+  },
+  &quot;smoke&quot;: {
+    &quot;spawnFrame&quot;: 20,
+    &quot;outlet&quot;: [
+      23,
+      256
+    ],
+    &quot;mouthFrames&quot;: [
+      0,
+      16,
+      18,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      43,
+      45,
+      48
+    ],
+    &quot;mouthPositions&quot;: [
+      [
+        284,
+        120
+      ],
+      [
+        285,
+        118
+      ],
+      [
+        289,
+        123
+      ],
+      [
+        307,
+        146
+      ],
+      [
+        333,
+        161
+      ],
+      [
+        341,
+        164
+      ],
+      [
+        342,
+        164
+      ],
+      [
+        342,
+        164
+      ],
+      [
+        336,
+        159
+      ],
+      [
+        305,
+        146
+      ],
+      [
+        293,
+        130
+      ],
+      [
+        283,
+        119
+      ]
+    ]
+  }
+}</pre><a href="../assets/specials/manifest.json">Manifest con provenienza e hash sorgenti</a></main></html>

@@ -1,0 +1,192 @@
+// Generato da scripts/build-ui.py.
+(function(root){const data={
+  "schema": "sanmauro.ui",
+  "version": 1,
+  "screens": [
+    {
+      "id": "ui-title-screen",
+      "name": "Schermata iniziale",
+      "width": 3240.0,
+      "height": 1080,
+      "viewportWidth": 1920,
+      "layers": [
+        {
+          "id": "title-layer-0",
+          "name": "Cielo e paesaggio lontano",
+          "image": "assets/ui/title-screen/livello-01.png",
+          "zIndex": 0,
+          "width": 1776,
+          "height": 592,
+          "renderWidth": 3240.0,
+          "renderHeight": 1080,
+          "sourcePath": "assets/backgrounds/default_stage/main-image/livello-01.png",
+          "sourceSha256": "452f65047868a2c7ed847ee9facf156d1bf45035bc2a8b03263786f2816d6090"
+        },
+        {
+          "id": "title-layer-1",
+          "name": "Nuvole lontane",
+          "image": "assets/ui/title-screen/nuvole/nuvole-01.png",
+          "zIndex": 1,
+          "width": 1776,
+          "height": 592,
+          "renderWidth": 3240.0,
+          "renderHeight": 1080,
+          "sourcePath": "assets/backgrounds/default_stage/main-image/nuvole/nuvole-01.png",
+          "sourceSha256": "f8dbf41b2ddd4e094aac12617762ef14d5fbf2bc353242f5d3829273eca674f5",
+          "speed": 6,
+          "haze": 1
+        },
+        {
+          "id": "title-layer-2",
+          "name": "Nuvole intermedie",
+          "image": "assets/ui/title-screen/nuvole/nuvole-02.png",
+          "zIndex": 2,
+          "width": 1776,
+          "height": 592,
+          "renderWidth": 3240.0,
+          "renderHeight": 1080,
+          "sourcePath": "assets/backgrounds/default_stage/main-image/nuvole/nuvole-02.png",
+          "sourceSha256": "0646963512547e7f3d7cd74cdc8c7959bf36638ac896fc6c5cda2a0061ede5aa",
+          "speed": 12,
+          "haze": 0.35
+        },
+        {
+          "id": "title-layer-3",
+          "name": "Nuvole vicine",
+          "image": "assets/ui/title-screen/nuvole/nuvole-03.png",
+          "zIndex": 3,
+          "width": 1776,
+          "height": 592,
+          "renderWidth": 3240.0,
+          "renderHeight": 1080,
+          "sourcePath": "assets/backgrounds/default_stage/main-image/nuvole/nuvole-03.png",
+          "sourceSha256": "de7ee2298e46a458202ccba076686c23dd963bc9fe78482d313bda630575a144",
+          "speed": 20
+        },
+        {
+          "id": "title-layer-4",
+          "name": "Paesaggio",
+          "image": "assets/ui/title-screen/livello-03.png",
+          "zIndex": 4,
+          "width": 1776,
+          "height": 592,
+          "renderWidth": 3240.0,
+          "renderHeight": 1080,
+          "sourcePath": "assets/backgrounds/default_stage/main-image/livello-03.png",
+          "sourceSha256": "a2dbf577af987d1c6b4cf9a71332225b3caf2f6b4de739d0086b82aeb1c6d5e9"
+        },
+        {
+          "id": "title-layer-5",
+          "name": "Acqua",
+          "image": "assets/ui/title-screen/water-level-03_5.png",
+          "zIndex": 5,
+          "width": 1776,
+          "height": 592,
+          "renderWidth": 3240.0,
+          "renderHeight": 1080,
+          "sourcePath": "assets/backgrounds/default_stage/main-image/water-level-03_5.png",
+          "sourceSha256": "98e868a530168b645a254978fdd5ab5a036d43c47590f2ece47c1fed998b2349"
+        },
+        {
+          "id": "title-layer-6",
+          "name": "Riflesso nuvole lontane",
+          "image": "assets/ui/title-screen/riflessi/riflesso-1.png",
+          "zIndex": 6,
+          "width": 1776,
+          "height": 592,
+          "renderWidth": 3240.0,
+          "renderHeight": 1080,
+          "sourcePath": "assets/backgrounds/default_stage/main-image/riflessi/riflesso-1.png",
+          "sourceSha256": "da51cd3a3419919b6f954fca32916de0b9523fc0863798f9c78e46e1478450d2",
+          "speed": 6
+        },
+        {
+          "id": "title-layer-7",
+          "name": "Riflesso nuvole intermedie",
+          "image": "assets/ui/title-screen/riflessi/riflesso-2.png",
+          "zIndex": 7,
+          "width": 1776,
+          "height": 592,
+          "renderWidth": 3240.0,
+          "renderHeight": 1080,
+          "sourcePath": "assets/backgrounds/default_stage/main-image/riflessi/riflesso-2.png",
+          "sourceSha256": "11554597c767f20f4608dbe465be855ab467ac43bb893120da4b679802a88ae5",
+          "speed": 12
+        },
+        {
+          "id": "title-layer-8",
+          "name": "Riflesso nuvole vicine",
+          "image": "assets/ui/title-screen/riflessi/riflesso-3.png",
+          "zIndex": 8,
+          "width": 1776,
+          "height": 592,
+          "renderWidth": 3240.0,
+          "renderHeight": 1080,
+          "sourcePath": "assets/backgrounds/default_stage/main-image/riflessi/riflesso-3.png",
+          "sourceSha256": "b21fe80c435d0d1c2b7c98de020366f7d65cbe567b81502e505b343a093ea348",
+          "speed": 20
+        },
+        {
+          "id": "title-layer-9",
+          "name": "Primo piano",
+          "image": "assets/ui/title-screen/livello-04.png",
+          "zIndex": 9,
+          "width": 1776,
+          "height": 592,
+          "renderWidth": 3240.0,
+          "renderHeight": 1080,
+          "sourcePath": "assets/backgrounds/default_stage/main-image/livello-04.png",
+          "sourceSha256": "e5f52c7cbb280096e39cc2da7157802751e699f1b225871864fafa4f6154471a"
+        }
+      ],
+      "fighters": [],
+      "crtPreset": {
+        "schema": "wedoo.crt-preset",
+        "version": 1,
+        "referenceResolution": [
+          1920,
+          1080
+        ],
+        "strength": 1,
+        "enabled": true,
+        "settings": {
+          "blur": 0,
+          "grain": 0.05,
+          "gamma": 0.96,
+          "blackPoint": 3,
+          "whitePoint": 255,
+          "type": "lcd",
+          "distortion": 0,
+          "dotScale": 0.11,
+          "dotPitch": 6.5,
+          "falloff": 0.57,
+          "brightnessBoost": 3,
+          "vignette": 0.11,
+          "glowRadius": 0.07,
+          "glowIntensity": 0.08,
+          "blend": "screen",
+          "bloomThreshold": 0.56,
+          "bloomIntensity": 0.86,
+          "bloomRadius": 1.2,
+          "redX": -0.6,
+          "redY": 0.3,
+          "blueX": 1.6,
+          "blueY": -6,
+          "convergenceStrength": 0
+        }
+      },
+      "sourceFiles": [
+        {
+          "path": "scripts/TitleScreen.gd",
+          "sha256": "0affb6934450ab7d2278e4a1a09b2cfff2c1545abf4b70463a10a421ed094404"
+        },
+        {
+          "path": "scenes/TitleScreen.tscn",
+          "sha256": "dd44b1434b2a5f42b8f995f28861594e1f205f96ecf6d98d8d532fae4df10a28"
+        }
+      ],
+      "scope": "Solo fondale; nessun logo, testo, menu, personaggio o transizione. Acqua statica; riflessi delle nuvole in movimento.",
+      "referenceStageId": "piazza-europa"
+    }
+  ]
+};if(typeof module==="object"&&module.exports)module.exports=data;else root.UI_CATALOG=data;})(typeof globalThis!=="undefined"?globalThis:this);

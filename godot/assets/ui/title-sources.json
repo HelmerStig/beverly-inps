@@ -1,0 +1,18 @@
+{
+  "background": "title-screen/screen.json",
+  "legacyScript": "F:/Personali/Godot/scripts/TitleScreen.gd",
+  "legacyScriptSha256": "0affb6934450ab7d2278e4a1a09b2cfff2c1545abf4b70463a10a421ed094404",
+  "content": [
+    {
+      "local": "assets/ui/title-logo.png",
+      "source": "F:/Personali/Godot/assets/backgrounds/default_stage/main-image/10099.png",
+      "sha256": "1bb00835b33652aefa93d83bef0205e433b360636bf26567ab6aa92fdf6b3bd3"
+    },
+    {
+      "local": "assets/fonts/Oswald-Variable.ttf",
+      "source": "F:/Personali/Godot/assets/fonts/Oswald-Variable.ttf",
+      "sha256": "5b38c246e255a12f5712d640d56bcced0472466fc68983d2d0410ec0457c2817"
+    }
+  ],
+  "scope": "Title screen only. Legacy project is read-only; no runtime paths outside res://."
+}

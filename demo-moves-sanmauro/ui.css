@@ -1,0 +1,6 @@
+.ui-card .stage-effect[hidden]{display:none}
+.ui-layers{padding:20px;border-top:1px solid var(--line,#35402e)}
+.ui-layers summary{cursor:pointer;font-size:14px}
+.ui-layers ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px 24px;padding-left:20px;margin:18px 0 0;font-size:13px}
+.ui-layers a{color:var(--accent,#d4f780)}
+.ui-layers small{display:block;color:#aabb9b}

@@ -1,0 +1,860 @@
+{
+  "schema": "sanmauro.remaining-moves-timing",
+  "version": 1,
+  "strengths": {
+    "light": {
+      "durationMs": 500,
+      "impactMs": 300
+    },
+    "medium": {
+      "durationMs": 750,
+      "impactMs": 450
+    },
+    "heavy": {
+      "durationMs": 1000,
+      "impactMs": 500
+    }
+  },
+  "items": [
+    {
+      "characterId": "arianna",
+      "id": "crouched-light-punch",
+      "sourceSha256": "7f576338f2b08e8c09693a44909aef17f5633dd9f241f7a327990193c806ad33",
+      "framesSha256": "8157f1cf53a360b21ec44519ca703cf725ba6cebcbf61cce2396825aef146097",
+      "impactFrame": 14,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "arianna",
+      "id": "crouched-medium-punch",
+      "sourceSha256": "c3566afe7192ee0ddc37263f230096fd68d31460b67347e05e0b876437a64ab8",
+      "framesSha256": "ba721cc69ad15f088c964d146158bce6b1fe6f56f5942bb0f39f54bc2d06bdbb",
+      "impactFrame": 10,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "arianna",
+      "id": "crouched-heavy-punch",
+      "sourceSha256": "509b965d3138dfae6af263f75272986c17c78ac5f2a180d6583dc655664ce100",
+      "framesSha256": "4973d5f7667893c6589180ba03301f259ea4a94f494d04bdcf1864b9e14b5b61",
+      "impactFrame": 10,
+      "note": "Montante: massima estensione verso l’alto, verificata sulla sequenza runtime."
+    },
+    {
+      "characterId": "arianna",
+      "id": "light-kick",
+      "sourceSha256": "1c3305f0b20a7784a909cd9eeac9938c0274a12e8c602c3744e9058831d51db1",
+      "framesSha256": "464d587c982593398bf73f955d80f6f9dcd29a9334b5fe576bb2e5ef68e5f926",
+      "impactFrame": 11,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "arianna",
+      "id": "crouched-light-kick",
+      "sourceSha256": "3c1f036d50cd55c95ce226a0de4027d9609f97070a0b3609d44defb51683a831",
+      "framesSha256": "b791ef270a8165858fcda4a1d83a7673f6740dc3ecca7063b310d0aad8cbb456",
+      "impactFrame": 18,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "arianna",
+      "id": "medium-kick",
+      "sourceSha256": "83a4514dd4e71cade66b352ba47c02a4d05a8f416af6d8b2235acb37d0b91d91",
+      "framesSha256": "4b03aba267ad864ba80f36162bc537efb8f310633d8f803f3ba6fb125b90a673",
+      "impactFrame": 20,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "arianna",
+      "id": "crouched-medium-kick",
+      "sourceSha256": "628420225e790dbc01b456fcba6012639d45dc03e8e87444313d1d250e60c8ba",
+      "framesSha256": "dd521b1eb198c3417739de239294b2b865ad7a38b5df600252ec6c498494045e",
+      "impactFrame": 13,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "arianna",
+      "id": "heavy-kick",
+      "sourceSha256": "33daeb7f549db63724396970169d78b9090f35795bfdea21bf793cb49a123c00",
+      "framesSha256": "e69139247c4cfae8fb9908e5e97f3b28d7fe5e716390728a1c063d92ca825f13",
+      "impactFrame": 16,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "arianna",
+      "id": "crouched-heavy-kick",
+      "sourceSha256": "6963c03953e5c7a1de6068ba9c27e36761bfeb3998cd6bcb633830d1442129ec",
+      "framesSha256": "9a321c84303b5b06342f466049193f5fe691ebbd33019cd82efe98c7e8b62916",
+      "impactFrame": 15,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "arianna",
+      "id": "jump-light-punch",
+      "sourceSha256": "33071c927f422f1621e60ec4b5eec4676c3004cc47b868b96d545f7e56baf6e1",
+      "framesSha256": "f86508c64efc3e57de1b3be4ecebb51d75f6ec46951600cc97026f91d527913d",
+      "impactFrame": 2,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "arianna",
+      "id": "jump-medium-punch",
+      "sourceSha256": "85aa47c7b78c7098a4297713cbfbd7a6a150e90b4db2f8aa876e9464c706bdd9",
+      "framesSha256": "0010ccb162278f7169ae5de11edbf49866471a7ea1bae52b9a29b9dc3d1f13f7",
+      "impactFrame": 20,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "arianna",
+      "id": "jump-heavy-punch",
+      "sourceSha256": "cde852c4923ba04d8cfdcec9b6a90b8be00ca69f0ebea99c681a2ee940b447b0",
+      "framesSha256": "a99ac27c1a7efade0193b6dd6134c6849d8b942e92ea29e3259784e3ac1a3722",
+      "impactFrame": 14,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "arianna",
+      "id": "jump-light-kick",
+      "sourceSha256": "0c99b4c901c2116b2433409211714e6165e07e6e647eb733c9bafd82f7450352",
+      "framesSha256": "d2aa13782ec8050d1ed6e49b5ddabc22e6b7adf97af2ffc1c70482a6c374eee2",
+      "impactFrame": 10,
+      "note": "Calcio in aria: posa di estensione verso il basso verificata nei frame 8-14."
+    },
+    {
+      "characterId": "arianna",
+      "id": "jump-medium-kick",
+      "sourceSha256": "c595f13554f295d4d6415c45af2f952b186e30e5156fda68691379e420a763f7",
+      "framesSha256": "eaa419e5c4222734e3a548439df339bb819d8d3299cd16291a8376754832d9d7",
+      "impactFrame": 28,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "arianna",
+      "id": "jump-heavy-kick",
+      "sourceSha256": "1643e41485ee6ec7c40a4ed0c774e0dfac7bc8df922faeec0905fe1e2cd6c0b5",
+      "framesSha256": "0edd077a9568ef9694e3af1355562725c34ac35e7173303deb99b2e40ee12608",
+      "impactFrame": 19,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "bue",
+      "id": "crouched-light-kick",
+      "sourceSha256": "110c7ce6c740941c621d4a99dfe5b3241eb5f2bafa1df30ba89feb36eeb22486",
+      "framesSha256": "b432b6d79f161abf2d85ffa4ce6a4f5f20a75227322bbd160b7703f3eaae8b4d",
+      "impactFrame": 8,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "bue",
+      "id": "crouched-light-punch",
+      "sourceSha256": "a77d7888ede01fd8cc334e70a69ba8923138338b7450fae405cfdf9301aa132a",
+      "framesSha256": "3a0e8d89757a0452791a55cff12d8cd24f2eb41fb3728a86bfc7d7bf326e2aad",
+      "impactFrame": 2,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "bue",
+      "id": "crouched-medium-kick",
+      "sourceSha256": "e91e4bc94aa1d184d1e3eee30a2653e21c133fbb78261337d473b89e78bfb8fc",
+      "framesSha256": "41289cc35002d141ba76f48f82fc966e4b0a4d159b3a1508a45a98aa1b05aa5b",
+      "impactFrame": 16,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "bue",
+      "id": "crouched-medium-punch",
+      "sourceSha256": "e37ea1580c802fc9ef2248e874f0b32b78455dcd3d9b07ae321df1a1de5a403c",
+      "framesSha256": "a718c78e73b9508d744d72178d1751950a9c6bacd14ff2ad9d366af3d82af3ed",
+      "impactFrame": 12,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "bue",
+      "id": "crouched-heavy-kick",
+      "sourceSha256": "e08c85e720e9dc7a6499b4e70a1720d14b59d7e28833f50a2f164e8833fb2047",
+      "framesSha256": "e020acca15d8e74c503a1383556936866acd1468cea6fa582718915f8a9256b0",
+      "impactFrame": 11,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "bue",
+      "id": "crouched-heavy-punch",
+      "sourceSha256": "e245884393f43f196fb19144f911337460e8aeef138b7e39c4fe45019e92bf9f",
+      "framesSha256": "29c95f7820fa0d4de09853536ab25ad5d05443d9a55cdb8a283925f443ba7603",
+      "impactFrame": 7,
+      "note": "Montante: massima estensione verso l’alto, verificata sulla sequenza runtime."
+    },
+    {
+      "characterId": "bue",
+      "id": "jump-light-kick",
+      "sourceSha256": "a4c3c0bdc723e0f881de83f28ca01021a038d5c46ef209673f251a2590636f43",
+      "framesSha256": "68d10fe63d376ff47e2c018e07b08a69ca551c4219dc31070ba637535a8f2b58",
+      "impactFrame": 4,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "bue",
+      "id": "jump-light-punch",
+      "sourceSha256": "56355d2b4e09e14ac2583f742fcc2dc807e7f7505dff8ceb316b054947d26ee7",
+      "framesSha256": "0719a78e41e42566b7022bd8db6da0703cd7c04a75551d6570c654d7d4baeb77",
+      "impactFrame": 4,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "bue",
+      "id": "jump-medium-kick",
+      "sourceSha256": "74bf988a213f9332285b582cae5ab5656fe2883dd693f1a1a6620932fb9d9e35",
+      "framesSha256": "6ba9a0e7a2b54a676626ce343e9f2e15bcf3b9914a147f47b86a2077654ec3b5",
+      "impactFrame": 15,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "bue",
+      "id": "jump-medium-punch",
+      "sourceSha256": "2c0e1dc82908177626c167e98d0ae9969cbc255255c29cf4df604fe85a90ff6d",
+      "framesSha256": "64a85a57ac10eaf379c7b49758e0b32319253ee959d424f8e3e149ba12ac1b84",
+      "impactFrame": 11,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "bue",
+      "id": "jump-heavy-kick",
+      "sourceSha256": "9d97748e1c5533cd14d2da32894f536d3b84c93c95f4d6085891532246b7c639",
+      "framesSha256": "9237061c0757937d48941d79e43b3584ba7479315ab63f8703e0834559393ad5",
+      "impactFrame": 18,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "bue",
+      "id": "jump-heavy-punch",
+      "sourceSha256": "1e9cfdd1cf1d389c1249676e650dc6949e4240a36990ad8914cf4766f6f09150",
+      "framesSha256": "930fc75c2c9d5d434534f11bf282c2c813589011f981cd5b1ce520f3e7928fe3",
+      "impactFrame": 9,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "bue",
+      "id": "light-kick",
+      "sourceSha256": "e3995d0d8961318cadea943ffaff22ba68e558c0b08d6502cc9dae138c9d21ec",
+      "framesSha256": "930fc75c2c9d5d434534f11bf282c2c813589011f981cd5b1ce520f3e7928fe3",
+      "impactFrame": 9,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "bue",
+      "id": "medium-kick",
+      "sourceSha256": "7bb33453d70eb01ca2d707e8ef016fed8a1c045075ebbff5d44a22186e4593b6",
+      "framesSha256": "9f9a455e89aefccf96220d5ee9221b703a7dce3e79752cabf99cf49554ab295e",
+      "impactFrame": 9,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "bue",
+      "id": "heavy-kick",
+      "sourceSha256": "7e76ac0c605a8d0fb17899a29daa186487c07195ffdb3b85b0d880b065654cf6",
+      "framesSha256": "a99ac27c1a7efade0193b6dd6134c6849d8b942e92ea29e3259784e3ac1a3722",
+      "impactFrame": 20,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "mangler",
+      "id": "crouched-heavy-punch",
+      "sourceSha256": "84cd3309938b5d4dec06a548ea366d6d7904dfac32b5d488e15d5091c656b3f2",
+      "framesSha256": "f1b0cb78a41906dd9485411144fb28d92fee8232dcc2b7de7a27f6204e74f65a",
+      "impactFrame": 18,
+      "note": "Montante: massima estensione verso l’alto, verificata sulla sequenza runtime."
+    },
+    {
+      "characterId": "mangler",
+      "id": "heavy-kick",
+      "sourceSha256": "ccda868ed4e692ab8cd74c836b594312f97eae52a03d5d3b97f18141c86a64f3",
+      "framesSha256": "f2313617cc31a99d8b197cd2c590decc8a722728277ac92e13e0a7bf8d668529",
+      "impactFrame": 22,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "mangler",
+      "id": "crouched-heavy-kick",
+      "sourceSha256": "a98f854e17ad497cfd6a27d8ec30d56456c2dd0a23b6401695f7ef01abc4780f",
+      "framesSha256": "9a321c84303b5b06342f466049193f5fe691ebbd33019cd82efe98c7e8b62916",
+      "impactFrame": 19,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "mangler",
+      "id": "medium-kick",
+      "sourceSha256": "6691450f79c0b77cf07c0ca73f6a8f04500b8602f29ea45d60c6a6cf6dafbe97",
+      "framesSha256": "0bcb394fd2cbbe529a96074a9bc6ed2ef43659ade516d0654aa1d556574f06cb",
+      "impactFrame": 23,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "mangler",
+      "id": "crouched-medium-kick",
+      "sourceSha256": "5cad04c8319dabc2c2517cafe62769036bb21d97720105cc78c4ff9828ca61c7",
+      "framesSha256": "f1b0cb78a41906dd9485411144fb28d92fee8232dcc2b7de7a27f6204e74f65a",
+      "impactFrame": 22,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "mangler",
+      "id": "light-kick",
+      "sourceSha256": "7583d5dde90166d4629e7e9f3e24fd1d0f2467445568d112cf111b866e2b3d74",
+      "framesSha256": "db1ddab0985c57947d6611eb1460b77952556eb0d433a8a545d2d681e22f83c2",
+      "impactFrame": 13,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "mangler",
+      "id": "crouched-light-kick",
+      "sourceSha256": "b5ace277ad3ef242c1451d4c378ef54d158701595c489e09573a7ead197e4101",
+      "framesSha256": "cfe65ab7e14117b16473d406b778bba1124bd7e77b565b905d5d1f43eeac543d",
+      "impactFrame": 15,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "mangler",
+      "id": "jump-light-kick",
+      "sourceSha256": "d31fdd97d3b8e52f4112c5b7b6a0481ed68dc37fe507617060bcf7716addc3fe",
+      "framesSha256": "f1376ada32be38e8c8217e5db798c09961a37727b35b0ec6fe5a719db4c1187c",
+      "impactFrame": 12,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "mangler",
+      "id": "jump-light-punch",
+      "sourceSha256": "214d36daf0a50611e2d8c1042601b96704606b5ead5844ac21c3b2dc063b646c",
+      "framesSha256": "df28f753a286669f7086c34001bf40fe568d16c4357d37e6fd7d1513f6778298",
+      "impactFrame": 15,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "mangler",
+      "id": "jump-heavy-kick",
+      "sourceSha256": "9c59d75490664411514e248439e41dbc2053fb9d600e3e78c7f5b3dbe6747e59",
+      "framesSha256": "f1376ada32be38e8c8217e5db798c09961a37727b35b0ec6fe5a719db4c1187c",
+      "impactFrame": 19,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "mangler",
+      "id": "jump-medium-kick",
+      "sourceSha256": "3befcb215e266ec97cb7e13e43dc06f1c037057a6ef16442874e09cf4844e188",
+      "framesSha256": "f1376ada32be38e8c8217e5db798c09961a37727b35b0ec6fe5a719db4c1187c",
+      "impactFrame": 18,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "mangler",
+      "id": "crouched-light-punch",
+      "sourceSha256": "faacfea360928c5fa6708ee293f9bc4480fdc74a06aeb65acd554012f1ed70b7",
+      "framesSha256": "63d823a3bf8d826d89371bbf722e49dc425dc66145cda39127f104a156771389",
+      "impactFrame": 10,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "mangler",
+      "id": "crouched-medium-punch",
+      "sourceSha256": "308fbb37b100c9599c8134f7fd8ad6e2960d3fd0c8cdb4494aa5f96f55369b82",
+      "framesSha256": "a8bd546c54a1aa87139292d99e246e4ee9f30b7ef950beaead5e13f5311163e3",
+      "impactFrame": 10,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "mangler",
+      "id": "jump-medium-punch",
+      "sourceSha256": "23de498cb8d6733e1390c61bb0c9cacb4247fcee6421b773cdaad6c01ab46d61",
+      "framesSha256": "df28f753a286669f7086c34001bf40fe568d16c4357d37e6fd7d1513f6778298",
+      "impactFrame": 13,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "mangler",
+      "id": "jump-heavy-punch",
+      "sourceSha256": "b997957b6f6c46e41ebe38119dea14438e67214a3c3f428e89cd4e9f75b2f881",
+      "framesSha256": "9cdb751078fb4eee100974dc7af91dcdb536ff0b169693948081f4a5cd60195f",
+      "impactFrame": 12,
+      "note": "Colpo discendente a due mani: posa di estensione verso il basso verificata nella sequenza runtime."
+    },
+    {
+      "characterId": "mileto",
+      "id": "crouched-light-kick",
+      "sourceSha256": "33a78ca5b6aa23df320acfb6d0f6a1a49dcf028e34761488b94b3e5aa7be69e0",
+      "framesSha256": "b432b6d79f161abf2d85ffa4ce6a4f5f20a75227322bbd160b7703f3eaae8b4d",
+      "impactFrame": 18,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "mileto",
+      "id": "crouched-light-punch",
+      "sourceSha256": "1b94ffec389f1801b862a4fe8a5aadd3cd7b4d18280473fa3d08e7b78d5dbdb5",
+      "framesSha256": "3a0e8d89757a0452791a55cff12d8cd24f2eb41fb3728a86bfc7d7bf326e2aad",
+      "impactFrame": 3,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "mileto",
+      "id": "crouched-medium-kick",
+      "sourceSha256": "738b4210d3c6de78786eabb27c3021dfc48103c0ddfe48f641a42b27b31d7a93",
+      "framesSha256": "f3cc51833f50834d6ec7580cc717e10f083e47bcc3eca03797c0b9ced9387761",
+      "impactFrame": 22,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "mileto",
+      "id": "crouched-medium-punch",
+      "sourceSha256": "dd223c6a902ff52790a3216ccd2ddeb6e8a2a9905c87f862ba1a377c6d4ebd92",
+      "framesSha256": "ba4e71ca9069ede636b20c9ad28ad8692e904efa98de87ca4af2cea326c6f8bf",
+      "impactFrame": 15,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "mileto",
+      "id": "crouched-heavy-kick",
+      "sourceSha256": "89196084854e50ec3acedbc8838cf7121ec31697479cd59de958765b7992e549",
+      "framesSha256": "7e03efe21ff6a240c07bb780bab60497aee22abb39d9516b09631d0a5f479b0c",
+      "impactFrame": 14,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "mileto",
+      "id": "crouched-heavy-punch",
+      "sourceSha256": "7151842b5f7388d0af3ff1d406603000e88e926b3d755a93744fe9ebf67d2c51",
+      "framesSha256": "fbd060dfc298ef27a4663609bda00627179ba8b2b5e26fadb61a3e52441e73d5",
+      "impactFrame": 12,
+      "note": "Montante: massima estensione verso l’alto, verificata sulla sequenza runtime."
+    },
+    {
+      "characterId": "mileto",
+      "id": "jump-light-kick",
+      "sourceSha256": "92a788f5d52d4c01e8424e05b79a239e5f46f356ec8698474bf22fcb9e6b14bf",
+      "framesSha256": "935bb275163c1da362163ec1317585c1bc8a0378f9cd6931d7d708a2226d0e80",
+      "impactFrame": 6,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "mileto",
+      "id": "jump-light-punch",
+      "sourceSha256": "41780ede90ab78de022fd80339d88c83d4bcbe18557cc0f1e11c19f0dfad1af5",
+      "framesSha256": "68d10fe63d376ff47e2c018e07b08a69ca551c4219dc31070ba637535a8f2b58",
+      "impactFrame": 12,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "mileto",
+      "id": "jump-medium-kick",
+      "sourceSha256": "e3c12a5d73332c13dbc19df1a8d7a0631bb3bc2aa7b6875abb2997c974ea7c58",
+      "framesSha256": "0cd01b7e5a5722e9a93f4acc844d05edd92781a0d54535a4f32f866aece7e712",
+      "impactFrame": 17,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "mileto",
+      "id": "jump-medium-punch",
+      "sourceSha256": "f111772f0153773577662690fefb807da4af2e5b6d2bfe98676025b140f9b339",
+      "framesSha256": "64a85a57ac10eaf379c7b49758e0b32319253ee959d424f8e3e149ba12ac1b84",
+      "impactFrame": 11,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "mileto",
+      "id": "jump-heavy-kick",
+      "sourceSha256": "fa288ae1bbae244503d480431bb032f8ba0c5ca081c38e6c9f8adc72df3a9a17",
+      "framesSha256": "0cd01b7e5a5722e9a93f4acc844d05edd92781a0d54535a4f32f866aece7e712",
+      "impactFrame": 12,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "mileto",
+      "id": "jump-heavy-punch",
+      "sourceSha256": "72d5bef1439578165e1a91e46c47ac3264853eed287bbd210eecae5726b92ce4",
+      "framesSha256": "e3f8f9048ed725a5b8c595dcc124ec4000b28268ea45abd0d6368802886318d7",
+      "impactFrame": 14,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "mileto",
+      "id": "light-kick",
+      "sourceSha256": "d7038c279cc4692a4c8133a1a72faf0fa5fe1260f47c8121c589c91039b522d1",
+      "framesSha256": "ecd908810e11ab54b989e83be57695cab763cf1fb6d6185b1c4cd981f20e1e98",
+      "impactFrame": 10,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "mileto",
+      "id": "medium-kick",
+      "sourceSha256": "da8fde45ce121b2b60ceb9048f32b38ce869dca43e5815d7ae52b4fbc8dfc412",
+      "framesSha256": "7e03efe21ff6a240c07bb780bab60497aee22abb39d9516b09631d0a5f479b0c",
+      "impactFrame": 19,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "mileto",
+      "id": "heavy-kick",
+      "sourceSha256": "e17e003267cf26b7c08bfb10ac4cc488873bc8106208b88984470e194bc7c43f",
+      "framesSha256": "599ca3d90cbdb36475f58da07a117c739baf215623458f3a72eb4f8ac9273149",
+      "impactFrame": 18,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "oscare",
+      "id": "crouched-light-kick",
+      "sourceSha256": "090f431a626475116b8544153424f6ecdde2147395811b1e3af5b45d0ffa08fb",
+      "framesSha256": "b432b6d79f161abf2d85ffa4ce6a4f5f20a75227322bbd160b7703f3eaae8b4d",
+      "impactFrame": 8,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "oscare",
+      "id": "crouched-light-punch",
+      "sourceSha256": "5f80a432d72f0022fe8004c851e1468313e8867d60a57f132ef32c031e11af9c",
+      "framesSha256": "3a0e8d89757a0452791a55cff12d8cd24f2eb41fb3728a86bfc7d7bf326e2aad",
+      "impactFrame": 2,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "oscare",
+      "id": "crouched-medium-kick",
+      "sourceSha256": "100f60f639a16e3e027d15b5648ef1e5a047110c22c94ad349ef4c712249b2d5",
+      "framesSha256": "24f6fe28a88f2d78b9f1fc4922d646da2ae762508e2cfde50c32568f0f12bb6d",
+      "impactFrame": 11,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "oscare",
+      "id": "crouched-medium-punch",
+      "sourceSha256": "6a276e98b28d76ca8e8f3cb241871722c89ffa84caf1e7fd459cfceb5beff035",
+      "framesSha256": "ba4e71ca9069ede636b20c9ad28ad8692e904efa98de87ca4af2cea326c6f8bf",
+      "impactFrame": 13,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "oscare",
+      "id": "crouched-heavy-kick",
+      "sourceSha256": "64b7a593e04bdcc1ccc3f536305575a3ddbd0cf9a1165a8fa98e9e262efca013",
+      "framesSha256": "7e03efe21ff6a240c07bb780bab60497aee22abb39d9516b09631d0a5f479b0c",
+      "impactFrame": 18,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "oscare",
+      "id": "crouched-heavy-punch",
+      "sourceSha256": "d87c0c1293c23fb4d3d043c49e2a5bdcbb4849a370cc17f7aece26a9bab590f5",
+      "framesSha256": "a99ac27c1a7efade0193b6dd6134c6849d8b942e92ea29e3259784e3ac1a3722",
+      "impactFrame": 9,
+      "note": "Montante: massima estensione verso l’alto, verificata sulla sequenza runtime."
+    },
+    {
+      "characterId": "oscare",
+      "id": "jump-light-kick",
+      "sourceSha256": "ab67cfd0e3e261f0eab0f0544c6866be3faf5d9f49a5b4099fda9fbd8d53586c",
+      "framesSha256": "798518d0dd4b571b9c7a6605782b27817f0f534e1bb2bb31a9a7736c30d1b3db",
+      "impactFrame": 6,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "oscare",
+      "id": "jump-light-punch",
+      "sourceSha256": "5c7791fe5d65b139d6e264eb20c189e80e56141e556676cbc3fa3d7fd879c8b5",
+      "framesSha256": "0719a78e41e42566b7022bd8db6da0703cd7c04a75551d6570c654d7d4baeb77",
+      "impactFrame": 3,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "oscare",
+      "id": "jump-medium-kick",
+      "sourceSha256": "0a4b7cc2c955ac1640cb750b20a56ce6a06ba5726dbfad5275ebdbd64b035ea4",
+      "framesSha256": "24a43201d0fbddb97ba10f2844a71aed7c067941381db4c76ef7454ab00a63d6",
+      "impactFrame": 22,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "oscare",
+      "id": "jump-medium-punch",
+      "sourceSha256": "442c1c31d5f984819190e11e479e868fb4db1214f94b7722f3c0e06cf0511ff3",
+      "framesSha256": "7e03efe21ff6a240c07bb780bab60497aee22abb39d9516b09631d0a5f479b0c",
+      "impactFrame": 18,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "oscare",
+      "id": "jump-heavy-kick",
+      "sourceSha256": "cf5f16abd542385051f9d0f0a3e6229f17844fc50cee0b12f601217a4adf3c98",
+      "framesSha256": "e643bda8c0eacd95dceb92d3ba84852a158318d6e1eee61348fcb243baa5adb1",
+      "impactFrame": 14,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "oscare",
+      "id": "jump-heavy-punch",
+      "sourceSha256": "4e01c8859ba6dc3981f9c229e6cfa0adbf2c2eddbb8a9104a562b3b2ab655f20",
+      "framesSha256": "e020acca15d8e74c503a1383556936866acd1468cea6fa582718915f8a9256b0",
+      "impactFrame": 11,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "oscare",
+      "id": "light-kick",
+      "sourceSha256": "031c98b900797cd551975dc49f92cf4fe982bbd163f548a881b1916b8188c301",
+      "framesSha256": "24f6fe28a88f2d78b9f1fc4922d646da2ae762508e2cfde50c32568f0f12bb6d",
+      "impactFrame": 9,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "oscare",
+      "id": "medium-kick",
+      "sourceSha256": "e470eba221ba7781b80163fa0fd29dbe741bb56bbbdc8fe3e7c800e0927ca0cc",
+      "framesSha256": "9237061c0757937d48941d79e43b3584ba7479315ab63f8703e0834559393ad5",
+      "impactFrame": 19,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "oscare",
+      "id": "heavy-kick",
+      "sourceSha256": "1fb598157faef2bf80383961b7ee2601975d106ac48f6b191c23bd4b69f802f7",
+      "framesSha256": "599ca3d90cbdb36475f58da07a117c739baf215623458f3a72eb4f8ac9273149",
+      "impactFrame": 18,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "peirolo",
+      "id": "crouched-light-kick",
+      "sourceSha256": "0b44f68d5b048c949e70b0deab633d5c3192619802142a34930b5fe6e15261ed",
+      "framesSha256": "b432b6d79f161abf2d85ffa4ce6a4f5f20a75227322bbd160b7703f3eaae8b4d",
+      "impactFrame": 8,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "peirolo",
+      "id": "crouched-light-punch",
+      "sourceSha256": "106d6450028f93d42d19a949b9a887627df0ab2111fd012b652c64d52279bf6e",
+      "framesSha256": "6436c87aa30b7c0dcc3d19df992d2a984f21b6577f1a4f643d28098928bfb9f7",
+      "impactFrame": 5,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "peirolo",
+      "id": "crouched-medium-kick",
+      "sourceSha256": "6580842a9839ebaecd4b9adf63baa55317016a5abd6fbb65aec2ee8e3b002b64",
+      "framesSha256": "9237061c0757937d48941d79e43b3584ba7479315ab63f8703e0834559393ad5",
+      "impactFrame": 18,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "peirolo",
+      "id": "crouched-medium-punch",
+      "sourceSha256": "83d4f3ca102d3db133605768fb725e86e892211aad6789273f3227a673fad13d",
+      "framesSha256": "fbd060dfc298ef27a4663609bda00627179ba8b2b5e26fadb61a3e52441e73d5",
+      "impactFrame": 16,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "peirolo",
+      "id": "crouched-heavy-kick",
+      "sourceSha256": "19b39c9a1fc6c4617298aeee491f21e789707c3017350aa988b2b3bb6bd853a4",
+      "framesSha256": "43c95195204813165c28237405369b7af9fd166f17ff8898868ec51ecb24b777",
+      "impactFrame": 14,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "peirolo",
+      "id": "crouched-heavy-punch",
+      "sourceSha256": "c8b3e285f3647910762a54a5660272f4555200d60633b23f99846dbe804d8068",
+      "framesSha256": "fbd060dfc298ef27a4663609bda00627179ba8b2b5e26fadb61a3e52441e73d5",
+      "impactFrame": 14,
+      "note": "Montante: massima estensione verso l’alto, verificata sulla sequenza runtime."
+    },
+    {
+      "characterId": "peirolo",
+      "id": "jump-light-kick",
+      "sourceSha256": "be1c9dff5c9443abdf65cd89c6def0973c74de11ea8ab3688fd604492f613e52",
+      "framesSha256": "798518d0dd4b571b9c7a6605782b27817f0f534e1bb2bb31a9a7736c30d1b3db",
+      "impactFrame": 7,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "peirolo",
+      "id": "jump-light-punch",
+      "sourceSha256": "64ba2bf4230ce192f66e2ae2e2041eeb12c7dc1bbe46b86b3f6c2d11f65ce8a8",
+      "framesSha256": "68d10fe63d376ff47e2c018e07b08a69ca551c4219dc31070ba637535a8f2b58",
+      "impactFrame": 5,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "peirolo",
+      "id": "jump-medium-kick",
+      "sourceSha256": "696ed529cf80181a4a8295012c8f2cb5122f24ae85104e4a2f7ac4d2e315fc26",
+      "framesSha256": "c11a13d334e4a95408b816272690ebedafcbc695f096488546a527c9af4817e8",
+      "impactFrame": 18,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "peirolo",
+      "id": "jump-medium-punch",
+      "sourceSha256": "b356b8ad90813aa6ef8a45f8cf80a4f56d7bc49f292f64997d7b9a3202287b29",
+      "framesSha256": "9237061c0757937d48941d79e43b3584ba7479315ab63f8703e0834559393ad5",
+      "impactFrame": 16,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "peirolo",
+      "id": "jump-heavy-kick",
+      "sourceSha256": "6ddfe80ed1831db5ed86fb78f7df060e61855cc58ccf0da1c46c7caad2fdec82",
+      "framesSha256": "b432b6d79f161abf2d85ffa4ce6a4f5f20a75227322bbd160b7703f3eaae8b4d",
+      "impactFrame": 11,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "peirolo",
+      "id": "jump-heavy-punch",
+      "sourceSha256": "0bce5f0c33d152cffccd4675f86af92d074ac2c8e5b3966d776508db1804d80e",
+      "framesSha256": "fbd060dfc298ef27a4663609bda00627179ba8b2b5e26fadb61a3e52441e73d5",
+      "impactFrame": 7,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "peirolo",
+      "id": "light-kick",
+      "sourceSha256": "b72f731cf1548051ced99da5f6ad44aa348ba5097b57f35cf72255777dd2002d",
+      "framesSha256": "fbd060dfc298ef27a4663609bda00627179ba8b2b5e26fadb61a3e52441e73d5",
+      "impactFrame": 11,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "peirolo",
+      "id": "medium-kick",
+      "sourceSha256": "480021907b8919ecbbbf657d9be49b29da27393a61d9322ccc77ce1271bbcba7",
+      "framesSha256": "ba4e71ca9069ede636b20c9ad28ad8692e904efa98de87ca4af2cea326c6f8bf",
+      "impactFrame": 15,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "peirolo",
+      "id": "heavy-kick",
+      "sourceSha256": "8bdc2dcf6db20cbff3bddb49e8ffaa47a0da32f47aedadeb9f2b57ebac6bd912",
+      "framesSha256": "e643bda8c0eacd95dceb92d3ba84852a158318d6e1eee61348fcb243baa5adb1",
+      "impactFrame": 16,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "torpe",
+      "id": "crouched-light-kick",
+      "sourceSha256": "9c62199ea1deed5e632df36af8698f826d6614baeb05e3e120022e680ae7b9ec",
+      "framesSha256": "b432b6d79f161abf2d85ffa4ce6a4f5f20a75227322bbd160b7703f3eaae8b4d",
+      "impactFrame": 9,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "torpe",
+      "id": "crouched-light-punch",
+      "sourceSha256": "ef673ebfa0f8da441e0634494b2f836bd6372ae6f58e58e965c9f911410b1179",
+      "framesSha256": "3a0e8d89757a0452791a55cff12d8cd24f2eb41fb3728a86bfc7d7bf326e2aad",
+      "impactFrame": 2,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "torpe",
+      "id": "crouched-medium-kick",
+      "sourceSha256": "785ea37a1500682bcb30d1416a2febdc0aa846809aba07ca5402ac7d8e92db1e",
+      "framesSha256": "64a85a57ac10eaf379c7b49758e0b32319253ee959d424f8e3e149ba12ac1b84",
+      "impactFrame": 23,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "torpe",
+      "id": "crouched-medium-punch",
+      "sourceSha256": "86753a6f6511d216ce145bf561501d15e772eccefd2d68045a6736366d44bfd6",
+      "framesSha256": "bb1093854140b8595dd745cf8d6cf299d8223c34f4851f5e58c7375c711d2136",
+      "impactFrame": 8,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "torpe",
+      "id": "crouched-heavy-kick",
+      "sourceSha256": "19a532630bdd377b4420532fa408b370a0f8b9c51386fad4951631c0973e2206",
+      "framesSha256": "7e03efe21ff6a240c07bb780bab60497aee22abb39d9516b09631d0a5f479b0c",
+      "impactFrame": 18,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "torpe",
+      "id": "crouched-heavy-punch",
+      "sourceSha256": "14cf0d058dd712e3a7bac409a7743c6e4c5b0d93d03499d73020e8b8841dd71b",
+      "framesSha256": "ba4e71ca9069ede636b20c9ad28ad8692e904efa98de87ca4af2cea326c6f8bf",
+      "impactFrame": 10,
+      "note": "Montante: massima estensione verso l’alto, verificata sulla sequenza runtime."
+    },
+    {
+      "characterId": "torpe",
+      "id": "jump-light-kick",
+      "sourceSha256": "bab44232a4e53edb28798cd9695b1a37104fc6d1064c453e32d7a4612f840861",
+      "framesSha256": "2dd76cc7c163c4f35885f013264bc57737034d9df8fddb27e2afa5e16b1598a8",
+      "impactFrame": 8,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "torpe",
+      "id": "jump-light-punch",
+      "sourceSha256": "2e47955a1c0f60a8e384aef92419515e3fd5375b6eeafdef218a7f9ca8d169ee",
+      "framesSha256": "68d10fe63d376ff47e2c018e07b08a69ca551c4219dc31070ba637535a8f2b58",
+      "impactFrame": 3,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "torpe",
+      "id": "jump-medium-kick",
+      "sourceSha256": "10a59d39067e3b98fc4963cbe9adcdfae84c59db889843c1028a2551acf46754",
+      "framesSha256": "0edd077a9568ef9694e3af1355562725c34ac35e7173303deb99b2e40ee12608",
+      "impactFrame": 15,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "torpe",
+      "id": "jump-medium-punch",
+      "sourceSha256": "5d5d202b53528ae308e7e16b598322cba804f70d0579ff5b345d8f8441435c11",
+      "framesSha256": "64a85a57ac10eaf379c7b49758e0b32319253ee959d424f8e3e149ba12ac1b84",
+      "impactFrame": 14,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "torpe",
+      "id": "jump-heavy-kick",
+      "sourceSha256": "d193d0ed7153433891dbb0dfe28816d0862add42eb9118174381f52c8a7c2827",
+      "framesSha256": "c11a13d334e4a95408b816272690ebedafcbc695f096488546a527c9af4817e8",
+      "impactFrame": 12,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "torpe",
+      "id": "jump-heavy-punch",
+      "sourceSha256": "952034822ee5da68ecb759097498fd912190b88618365fd14c70eb9f9bb732d3",
+      "framesSha256": "9237061c0757937d48941d79e43b3584ba7479315ab63f8703e0834559393ad5",
+      "impactFrame": 12,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "torpe",
+      "id": "light-kick",
+      "sourceSha256": "8ca529d335a6c99cd33343ffecdc05dafac6029a6af9b68b2ea686ac59508085",
+      "framesSha256": "512598185ee9c649443f6ca04a348ed0bdc6c5c7ae933dca5f322b4b30a4462c",
+      "impactFrame": 5,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "torpe",
+      "id": "medium-kick",
+      "sourceSha256": "ff6923805f6f38da3589ba25ace7558be3e085366b6a981ee1eb393eb84279ea",
+      "framesSha256": "fbd060dfc298ef27a4663609bda00627179ba8b2b5e26fadb61a3e52441e73d5",
+      "impactFrame": 16,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    },
+    {
+      "characterId": "torpe",
+      "id": "heavy-kick",
+      "sourceSha256": "09eaf91a0a9a4c17e8ac583566483e8eb32aacc580b27ab5814cb0a5549982f7",
+      "framesSha256": "43c95195204813165c28237405369b7af9fd166f17ff8898868ec51ecb24b777",
+      "impactFrame": 13,
+      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+    }
+  ]
+}

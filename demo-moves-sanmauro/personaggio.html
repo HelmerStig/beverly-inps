@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Esplora e riproduci le animazioni di un personaggio Sanmauro Fighters.">
+  <title>Animazioni · Sanmauro Fighters</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="roster.css">
+  <script src="catalog.js" defer></script>
+  <script src="player-core.js" defer></script>
+  <script src="animation-gallery.js" defer></script>
+  <script src="move-groups.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body data-page="character">
+  <a class="skip-link" href="#main">Vai al contenuto</a>
+  <aside class="sidebar" id="sidebar" aria-label="Navigazione personaggi"></aside>
+  <button class="menu-overlay" type="button" aria-label="Chiudi il menu" hidden></button>
+  <div class="workspace">
+    <header class="topbar">
+      <button class="menu-toggle icon-button" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="sidebar">☰</button>
+      <div class="breadcrumb"><a href="index.html">Personaggi</a><span aria-hidden="true">/</span><strong id="breadcrumb-name">Animazioni</strong></div>
+      <span class="local-status"><i aria-hidden="true"></i> Archivio mosse</span>
+    </header>
+    <main id="main" class="main-content detail-content" tabindex="-1">
+      <div id="character-detail"></div>
+      <noscript><p class="notice">Attiva JavaScript per riprodurre le animazioni.</p></noscript>
+      <footer class="page-footer"><a href="index.html">← Tutti i personaggi</a><span>SANMAURO FIGHTERS</span></footer>
+    </main>
+  </div>
+</body>
+</html>

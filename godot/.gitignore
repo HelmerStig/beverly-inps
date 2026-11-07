@@ -1,0 +1,8 @@
+# Generated editor and import cache.
+.godot/
+
+# Exported credentials.
+export_credentials.cfg
+
+# Local visual verification artifacts.
+tests/artifacts/

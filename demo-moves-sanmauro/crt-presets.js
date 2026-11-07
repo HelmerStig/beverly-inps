@@ -1,0 +1,38 @@
+/* Generato da scripts/build-stages.py. */
+window.STAGE_CRT_PRESETS = {
+  "piazza-europa": {
+    "schema": "wedoo.crt-preset",
+    "version": 1,
+    "referenceResolution": [
+      1920,
+      1080
+    ],
+    "strength": 1,
+    "enabled": true,
+    "settings": {
+      "blur": 0,
+      "grain": 0.05,
+      "gamma": 0.96,
+      "blackPoint": 3,
+      "whitePoint": 255,
+      "type": "lcd",
+      "distortion": 0,
+      "dotScale": 0.11,
+      "dotPitch": 6.5,
+      "falloff": 0.57,
+      "brightnessBoost": 3,
+      "vignette": 0.11,
+      "glowRadius": 0.07,
+      "glowIntensity": 0.08,
+      "blend": "screen",
+      "bloomThreshold": 0.56,
+      "bloomIntensity": 0.86,
+      "bloomRadius": 1.2,
+      "redX": -0.6,
+      "redY": 0.3,
+      "blueX": 1.6,
+      "blueY": -6,
+      "convergenceStrength": 0
+    }
+  }
+};

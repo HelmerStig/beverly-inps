@@ -1,0 +1,6 @@
+﻿Personaggio,Frame demo,Durata demo ms,Estensione ms,Frame estensione indice 0,FPS Godot,Durata Godot ms,Animazione Godot,PNG sorgente,SHA256,Note
+Bue,1,41.666666666666664,,,24.0,41.666666666666664,jump_pose,assets/sprites/characters/bue/jump_light_punch.png,56355d2b4e09e14ac2583f742fcc2dc807e7f7505dff8ceb316b054947d26ee7,"Sequenza Godot, senza imporre un punto di estensione."
+Mileto,1,41.666666666666664,,,24.0,41.666666666666664,jump_pose,assets/sprites/characters/mileto/jump_light_punch.png,41780ede90ab78de022fd80339d88c83d4bcbe18557cc0f1e11c19f0dfad1af5,"Sequenza Godot, senza imporre un punto di estensione."
+Oscare,1,41.666666666666664,,,24.0,41.666666666666664,jump_pose,assets/sprites/characters/oscare/jump_light_punch.png,5c7791fe5d65b139d6e264eb20c189e80e56141e556676cbc3fa3d7fd879c8b5,"Sequenza Godot, senza imporre un punto di estensione."
+Peirò,1,41.666666666666664,,,24.0,41.666666666666664,jump_pose,assets/sprites/characters/peirolo/jump_light_punch.png,64ba2bf4230ce192f66e2ae2e2041eeb12c7dc1bbe46b86b3f6c2d11f65ce8a8,"Sequenza Godot, senza imporre un punto di estensione."
+Torpe,1,41.666666666666664,,,24.0,41.666666666666664,jump_pose,assets/sprites/characters/torpe/jump_light_punch.png,2e47955a1c0f60a8e384aef92419515e3fd5375b6eeafdef218a7f9ca8d169ee,"Sequenza Godot, senza imporre un punto di estensione."

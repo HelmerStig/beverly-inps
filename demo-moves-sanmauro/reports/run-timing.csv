@@ -1,0 +1,8 @@
+﻿Personaggio,Frame demo,Durata demo ms,Estensione ms,Frame estensione indice 0,FPS Godot,Durata Godot ms,Animazione Godot,PNG sorgente,SHA256,Note
+Arianna,48,2000.0,,,24.0,2000.0,run,assets/sprites/characters/arianna/basic-moves/run.png,c43de5286b50cc29e5e1d83d1a4e16752735563d4ba67b0058e7ae5cb005d8ae,"Sequenza Godot, senza imporre un punto di estensione."
+Bue,31,1291.6666666666665,,,24.0,1291.6666666666665,run,assets/sprites/characters/bue/Bue-run.png,ad760f11917e48759f8a8895ab98dfe0df6a26e7940171e10f954a61fe70fbf6,"Sequenza Godot, senza imporre un punto di estensione."
+Mangler,46,1916.6666666666665,,,24.0,1916.6666666666665,run,assets/sprites/characters/mangler/05-run.png,d482fe33c5ca7635f387304d50c5f118a8679b20652963acfd3f4b83de3aa33f,"Sequenza Godot, senza imporre un punto di estensione. Scala Godot [0.7, 0.7]."
+Mileto,32,1333.3333333333333,,,24.0,1333.3333333333333,run,assets/sprites/characters/mileto/Mileto-run.png,76f112c70a3eabc208ddf609e18915eebd49be387bfb11fc8d26b1174e8b2633,"Sequenza Godot, senza imporre un punto di estensione."
+Oscare,31,1291.6666666666665,,,24.0,1291.6666666666665,run,assets/sprites/characters/oscare/Oscare-run.png,1984b06505f9e72677d14c93134f5f6894d7cd47d862f0c6dd150e08a3c9fbcf,"Sequenza Godot, senza imporre un punto di estensione."
+Peirò,33,1375.0,,,24.0,1375.0,run,assets/sprites/characters/peirolo/Peiro-run.png,057f15241682f28e90c09b2ea4fd7b0934eba2e937cb8220a88ca5b893ca7a6d,"Sequenza Godot, senza imporre un punto di estensione."
+Torpe,30,1250.0,,,24.0,1250.0,run,assets/sprites/characters/torpe/Torpe-run.png,077376f056c2caa1987b31e80cf7fabd8c4feb44ca4829de6f9d78b2b3d17a5f,"Sequenza Godot, senza imporre un punto di estensione."

@@ -1,0 +1,416 @@
+WEDOO FIGHTERS — RIEPILOGO PER CAMBIO POSTAZIONE
+Aggiornato: 7 novembre 2026
+
+SCOPO E STATO
+Totale attuale Sanmauro: 271 animazioni: 38 per Arianna/Mangler, 39 per gli altri cinque. È presente anche
+Hurt accovacciato (hurt-crouched): i 12 frame a 24 fps della configurazione
+Fighter.gd, durata 500 ms, senza recupero inverso concatenato. Mangler usa
+scala reworked 0.85 per questa reazione, mentre gli hurt in piedi usano 0.70.
+Report HTML/CSV hurt-crouched-timing sotto il titolo; rigenerazione insieme
+agli altri report hurt. Fonte timing: assets/hurt-timing.json in Sanmauro.
+È stata aggiunta anche demo-moves-sanmauro, separata e autonoma, per il roster
+del vecchio progetto Godot: Arianna, Bue, Mangler, Mileto, Oscare, Peirò, Torpe.
+Contiene la schermata principale con ricerca e anteprime idle e le gallerie
+Per personaggio (personaggio.html?id=<id>) e Per mossa (mosse.html?move=walk).
+Sono importate Idle, Camminata e Salto per tutti: walk a 24 fps con i fogli realmente
+usati in Godot; Arianna/Mangler 48 frame, Bue/Mileto/Oscare/Peirò 49,
+Torpe 21 da Torpe-walk-trimmed.png. Non importate altre varianti o backwalk.
+Sono integrate anche Vittoria (victory) e Sconfitta (ko) per tutti: 35
+animazioni prima delle parate. Sono inoltre integrate Parata alta/media/bassa
+(block-high/block-mid/block-low) per tutti: ora 56 animazioni complessive.
+Parate: Arianna 16/13/16 frame a 48 fps; Mangler 14/8/11 a 48/24/24 fps
+con alta dai frame sorgente 9-22 e scala 0.85; Bue 10/6/11, Mileto 6/6/11,
+Oscare 10/6/11, Peirò 6/6/11, Torpe 9/6/11. Per questi cinque: alta/media
+24 fps, bassa 48 fps. Tutte le 21 parate ora eseguono andata e ritorno
+inverso in 500 ms (0.5 s) a 1x, senza duplicare il picco. N frame sorgenti
+producono 2*N-1 frame demo; FPS demo = frame totali * 2. Loop attivo di default.
+Timing originali in sourceFps/sourceFrameDurations/sourceDurationMs; sequenza
+originale in sourceFrames. Config: assets/guard-timing.json.
+Report HTML/CSV block-high-timing, block-mid-timing e block-low-timing nella
+cartella reports/, collegati sotto i titoli delle mosse. Rigenerare con:
+python demo-moves-sanmauro/scripts/build-guard-reports.py.
+Non è un marcatore di posa difensiva a 100 ms; il ritorno resta separato.
+Vittoria e Sconfitta sono a 24 fps, senza loop iniziale,
+con ultima posa mantenuta e possibilità di attivare Loop nel player.
+Vittoria: 49 frame per tutti tranne Mangler, 45, con esclusione degli indici
+sorgente 8-11 prevista nel catalogo Godot. Sconfitta: Arianna e Mangler 25
+frame, gli altri cinque 49. Mangler KO usa la scala legacy 0.70, vittoria 0.85.
+Fonti e selezioni sono registrate nel manifest e nel LEGGIMI Sanmauro.
+Sono integrate anche Hurt alto/medio/basso (hurt-high/hurt-medium/hurt-low)
+per tutti: ora 77 animazioni, 11 per personaggio. Le 21 reazioni durano 500 ms
+a 1x, incluso l'ultimo frame; FPS demo = numero frame × 2. Timing Godot
+conservati come sourceFps/sourceFrameDurations/sourceDurationMs. Config:
+demo-moves-sanmauro/assets/hurt-timing.json. Report HTML/CSV hurt-*-timing
+sotto i titoli, con confronti ingresso/centro/fine. Rigenerazione:
+python demo-moves-sanmauro/scripts/build-hurt-reports.py.
+Arianna usa le sequenze di ritorno incluse nel suo catalogo (8/15/7 frame);
+Mangler usa 16/16/10 frame, scala legacy 0.70 e hurt_low dagli indici 6-15.
+I recovery inversi separati degli altri non sono concatenati automaticamente.
+È integrata anche Accovacciata (crouch) per tutti, durata 250 ms a 1x e posa
+finale mantenuta senza rialzata automatica: ora 84 animazioni, 12 per fighter.
+Frame: Arianna 19, Mangler 25, Bue 7, Mileto 13, Oscare 9, Peirò 11, Torpe 7.
+Mangler usa 04-crouching.png, scala 0.85; Arianna basic-moves/crouched.png.
+Configurazione: assets/crouch-timing.json; report HTML/CSV crouch-timing
+collegato sotto il titolo. Comando: python demo-moves-sanmauro/scripts/build-crouch-report.py.
+Salti: Arianna 49 frame, Mangler 25, Bue 37, Mileto 39, Oscare 38,
+Peirò 40, Torpe 34. Selezioni e durate sorgenti derivano da Godot, incluse
+preparazione di 66.67 ms e durate variabili di Mangler, conservate nei campi
+sourceFrameDurations/sourceDurationMs/sourceTakeoffMs del manifest.
+Il playback demo è sincronizzato: apice selezionato a 500 ms e ciclo 1000 ms.
+Selezioni vincolate agli hash in assets/jump-timing.json; report HTML/CSV in
+reports/jump-timing.html, collegato sotto il titolo Salto. Rigenerazione:
+python demo-moves-sanmauro/scripts/build-jump-report.py (funziona senza Godot).
+I casi di plateau e il bordo tagliato di Arianna sono annotati nel report.
+Mangler jump usa scala 0.85 e
+04-jump.png con rettangoli dalla risorsa idle_frames.tres (5 colonne).
+Vista: mosse.html?move=jump. È l'anteprima degli asset, senza fisica del salto.
+Anteprime normalizzate: altezza idle mediana 344 px, centro x=256 e appoggio
+y=430 su canvas 512 × 512, trasformazione fissa per animazione. Conservato
+il rapporto Godot delle scale fra mosse: Mangler idle 0.85 / walk 0.70.
+Scale/posizioni sorgenti e trasformazioni di preview sono nel manifest;
+gli spritesheet originali non sono modificati. Dettagli nel LEGGIMI Sanmauro.
+Immagini e spritesheet necessari sono copiati dentro la sua cartella assets/;
+non dipende dal percorso F:/Personali/Godot per essere visualizzata.
+Avvio: node demo-moves-sanmauro/scripts/serve.mjs → http://127.0.0.1:4185/
+Importazione e dettagli: demo-moves-sanmauro/LEGGIMI.txt.
+L'analisi del progetto precedente è in ANALISI-VECCHIO-PROGETTO-GODOT.txt.
+La demo Sanmauro include ora Stages → Piazza Europa (stages.html): mondo
+2550 × 1080, vista 1920 × 1080 con drag e fullscreen; tre nuvole 5000 × 1080
+a 6/12/20 px/s, fondale davanti. Arianna a sinistra, Oscare riflesso a destra,
+idle a 24 fps e ombre dalle sagome con contatti delle suole per tutti i frame.
+CRT base/avanzato, foschia, polvere e colore hanno gli stessi default WEDOO.
+Tutti gli asset stage sono in demo-moves-sanmauro/assets/stages/Piazza Europa/.
+Il file delle nuvole vicine si chiama 03-nuvole-vicine.png. Preset canonico:
+crt-preset.json nella stessa cartella. Rigenerazione:
+python demo-moves-sanmauro/scripts/build-stages.py.
+Altezze fisiche definitive solo per Sanmauro: Arianna 165 cm, Bue 170 cm,
+Mangler 183 cm, Mileto 170 cm, Oscare 183 cm, Peirò 170 cm, Torpe 175 cm.
+Fonte: demo-moves-sanmauro/assets/character-proportions.json. Arianna è il
+riferimento di scala; il fattore fisico è altezza/165, applicato nello stage
+alla scala normalizzata dello sprite. Anche roster, hover, gallerie per
+personaggio/mossa e report usano le proporzioni in centimetri. Nelle anteprime
+un solo zoom comune conserva un margine per tutti i salti, senza tagli.
+La base normalizedPreview resta separata, così lo stage non raddoppia il
+fattore fisico e mantiene le dimensioni già approvate.
+Altezza e fattore sono incorporati anche nel manifest
+e catalogo per Godot. Rigenerare con build-stages.py dopo modifiche al JSON.
+Questa configurazione non interviene sugli sprite o sulla demo WEDOO.
+La ripartenza dello sviluppo Godot è rimandata; nessuna migrazione eseguita.
+
+demo-moves è il catalogo locale degli asset e il banco di prova visivo.
+Lo sviluppo del gioco avverrà in Godot. Le modifiche visive della demo non
+alterano i PNG o le animazioni originali. Il porting degli effetti in Godot
+resta da realizzare e confrontare visivamente: il JSON CRT non è uno shader.
+Questo file fotografa le scelte attuali; i file indicati sotto sono le fonti
+effettive da aggiornare se cambiano impostazioni o asset.
+
+RIPRENDERE SU UN ALTRO COMPUTER
+1. Trasferire il repository completo, inclusi asset e modifiche non committate.
+   Un clone recupera solo quanto è stato committato e inviato al remoto.
+   Controllare git status --short prima di lasciare questa postazione.
+   I file ignorati da Git richiedono una copia separata se servono al lavoro.
+2. Conservare la struttura relativa delle cartelle: i percorsi F: e quelli
+   della cartella Downloads sono propri di questa macchina, non necessari
+   per riprodurre la demo. I preset approvati sono già nel repository.
+3. Installare Node.js (su questa postazione è stato usato Node 20.19.6).
+   La demo non richiede dipendenze frontend o servizi remoti.
+4. Dalla radice del repository avviare:
+     node demo-moves/scripts/serve.mjs
+   Aprire http://127.0.0.1:4173/demo-moves/stages.html
+   Porta alternativa: node demo-moves/scripts/serve.mjs 4184
+   Il server rimane aperto nel terminale; Ctrl+C lo arresta.
+5. Usare il server per il CRT avanzato: aprire direttamente il file HTML può
+   impedire a WebGL di leggere le immagini locali. Il CRT base ha un fallback.
+6. Per rigenerare report o contatti dei piedi serve anche Python con Pillow.
+   Credenziali AutoSprite, se necessarie per nuovi download, vanno configurate
+   separatamente; la visualizzazione degli asset locali non le richiede.
+
+VILLA ARDUINO — COMPOSIZIONE
+Fonte: demo-moves/stages-catalog.js
+Mondo: 2550 × 1080. Finestra: 1920 × 1080, rapporto 16:9.
+Camera iniziale centrata (x=315); escursione orizzontale da 0 a 630.
+Drag mouse/touch; frecce, Home ed End con focus sul canvas.
+Fullscreen usa la Fullscreen API sul riquadro stage, con eventuali bande nere.
+Il movimento della camera non modifica il tempo di scorrimento delle nuvole.
+
+Immagini in original-backgrounds/villa-arduino/:
+- cielo.png: 2550 × 1080, z=0.
+- 01-nuvole-lontane.png: 5000 × 1080, z=2, velocità 6 px/s verso sinistra.
+- 02-nuvole-intermedie.png: 5000 × 1080, z=3, velocità 12 px/s verso sinistra.
+- 03-nuvole-vicine.png: 5000 × 1080, z=4, velocità 20 px/s verso sinistra.
+- villa-arduino.png: 2550 × 1080, z=4, disegnata dopo le nuvole vicine.
+Le nuvole partono centrate, conservano le dimensioni native e si ripetono
+in loop. La vista è una finestra sul mondo: le parti laterali si esplorano
+con la camera. I layer occupano l'intera altezza dello stage.
+
+PERSONAGGI E OMBRE
+Alberto a sinistra: idle, x=675, groundY=1025, scala=4/3,
+anchorX=253, anchorY=430, senza riflessione.
+Marsan a destra: idle, x=1890, groundY=1025, scala=4/3,
+anchorX=256, anchorY=433, riflesso orizzontalmente.
+Entrambi a 24 fps. Pausa nuvole non ferma le idle o la polvere.
+La preferenza di movimento ridotto mantiene le animazioni statiche.
+
+Ombra dalla sagoma alpha del frame corrente, sincronizzata all'animazione.
+Luce assunta alta da sinistra; proiezione verso destra e verso il basso.
+Colore #1d1625, shearX=0.5, flattenY=0.11, opacity=0.72,
+contactOpacity=0.28. Intensità generale ombre=80%:
+opacità sagoma=0.576, contatto=0.224 prima delle altre modulazioni.
+La proiezione conserva entrambi i contatti dei piedi, anche per Marsan riflesso.
+Fonte contatti: animation/stage-foot-contacts.json.
+Copia incorporata: demo-moves/stage-foot-contacts.js.
+Dopo un cambio delle idle di Alberto/Marsan rigenerare:
+  python demo-moves/scripts/build-stage-foot-contacts.py
+La risposta dell'ombra all'altezza del salto resta da integrare nello stage.
+
+EFFETTI GENERALI APPROVATI
+Fonte: demo-moves/stage-effects.js, rendering in stage-player.js.
+- Ombre a terra: 80%.
+- Toni caldi sui personaggi: 35%; colore #ffb878, alpha base 0.16,
+  quindi alpha attuale 0.056, limitato alla sagoma del personaggio.
+- CRT base: intensità generale 100%.
+- Foschia lontana: 65%; colore #dae4ef, bande di 24 px fino al 70%
+  dell'altezza, massimo al 45%. Coefficiente alpha 0.5 × intensità × profondità.
+  Passaggi dopo nuvole lontane (profondità 1) e intermedie (0.35).
+- Polvere: 100%; 160 particelle, dimensioni 2/4/6 px, griglia di 2 px,
+  colori #d3bd99, #b49d7d, #e1cba7. Vita 4–7.6 s, deriva a sinistra/in alto.
+  Alpha = intensità × 0.65 × sin(pi × fase).
+  Il cursore cambia l'opacità; il numero delle particelle resta 160.
+
+CRT BASE — VALORI APPROVATI
+Tutti gli interruttori attivi; intensità generale 100%.
+Righe scanline: 50%.
+Trama RGB: 50%.
+Vignettatura: 80%.
+Contrasto: 50%.
+Saturazione: 70%.
+Luminosità: 100%.
+Riflesso del vetro: 100%.
+Fonte: defaults in demo-moves/stage-effects.js; aspetto in styles.css.
+Coefficienti massimi: scanline scura 0.38, chiara 0.045;
+maschera rosso/blu 0.12, verde 0.065; vignettatura 0.68.
+I cursori moltiplicano questi coefficienti. Le scanline CSS hanno passo di
+4 pixel visualizzati, la maschera RGB di 3: considerare questa scala nel porting.
+Filtri attuali: contrast(1.11) saturate(1.126) brightness(1.08).
+Il CRT base è indipendente dal CRT avanzato; entrambi sono attivi insieme.
+
+CRT AVANZATO — BASE APPROVATA
+Fonte canonica: original-backgrounds/villa-arduino/crt-preset.json.
+Schema wedoo.crt-preset, versione 1, riferimento 1920 × 1080,
+enabled=true, strength=1.
+Valori:
+  blur=0; grain=0.05; gamma=0.96; blackPoint=3; whitePoint=255;
+  type=lcd; distortion=0; dotScale=0.11; dotPitch=6.5; falloff=0.57;
+  brightnessBoost=3; vignette=0.11; glowRadius=0.07; glowIntensity=0.08;
+  blend=screen; bloomThreshold=0.56; bloomIntensity=0.86; bloomRadius=1.2;
+  redX=-0.6; redY=0.3; blueX=1.6; blueY=-6; convergenceStrength=0.
+Gli offset sono conservati ma la convergenza è disattivata dall'intensità a 0.
+
+Dopo modifiche al JSON eseguire:
+  node demo-moves/scripts/build-crt-presets.mjs
+Questo genera demo-moves/crt-presets.js, caricato automaticamente da stages.html
+anche su hosting statico. Non modificare a mano la copia generata.
+Il JSON esportato contiene soltanto il CRT avanzato: per recuperare tutto
+servono anche i valori del CRT base e degli effetti generali riportati qui.
+
+CONTROLLI E SALVATAGGI
+Parametri CRT apre un offcanvas con scroll interno, lasciando visibile lo stage.
+- Base di lavoro ripristina il preset avanzato del repository.
+- Azzera avanzato riporta a zero i parametri numerici avanzati.
+- Fissa preset avanzato salva soltanto l'avanzato nel browser corrente.
+- Esporta/Importa JSON trasferisce soltanto la configurazione avanzata.
+- Ripristina sotto lo stage ripristina effetti generali e CRT base.
+- Vista originale sospende temporaneamente gli effetti conservando i valori.
+I salvataggi nel localStorage non seguono il repository su un'altra macchina
+e dipendono anche dall'origine del sito (dominio/porta). Sono distinti per
+stage e revisione della base: una nuova base non è coperta da vecchie prove.
+Un preset personale fissato sulla stessa revisione può prevalere sulla base.
+
+ONLINE
+Per una nuova visita il preset del repository è già il default.
+Caricare anche crt-presets.js e conservare tutti i percorsi relativi degli
+asset necessari alla demo. Il server locale è soltanto per l'anteprima locale.
+La disponibilità di WebGL è necessaria per vedere il CRT avanzato.
+Nessuna pubblicazione è stata eseguita come parte di queste modifiche.
+
+PORTING IN GODOT — DA REALIZZARE
+Riutilizzare PNG, atlas, frame, timing e dati dei contatti del repository.
+Ricostruire stage/layer/camera, animazioni, particelle e ombre con lo stesso
+ordine di disegno. Ricostruire il CRT avanzato tramite shader e passaggi
+intermedi; applicare poi CRT base e relativi filtri, come nella demo.
+Pipeline attuale avanzata: preparazione in spazio lineare, selezione luci,
+blur bloom orizzontale e verticale, fosfori/glow, composizione finale/gamma.
+Buffer RGBA8; il bloom precede la maschera dei fosfori.
+Riferimenti implementativi: demo-moves/crt-webgl.js e styles.css.
+I valori sono riferimenti artistici; confrontare screenshot a 1920 × 1080
+per verificare gamma, spazio colore, campionamento e scala delle scanline.
+Non è ancora stata verificata una corrispondenza visiva in Godot.
+
+ALTRE SCELTE DEL CATALOGO MOSSE
+Menu: mosse di base prima dei colpi.
+Pugno leggero: ciclo 500 ms, massima estensione a 250 ms.
+Parata alta (block): posa selezionata raggiunta a 100 ms.
+Salto (jump): apice a 500 ms e ciclo 1000 ms, con timing adattato ai frame.
+Link ai report sotto il titolo della mossa, stile play-button, margin-top 30px.
+Fonti timing: animation/light-punch-timing.json, block-timing.json,
+jump-timing.json. Per importazioni e rigenerazione report seguire LEGGIMI.
+Non riportare idle/walk/victory a velocità remote: base della demo 24 fps.
+
+MAPPA DEI FILE E VERIFICHE
+demo-moves/LEGGIMI.txt: istruzioni dettagliate e comandi per mosse/report.
+demo-moves/stages.html e stages-app.js: pagina e collegamento dei componenti.
+demo-moves/stages-catalog.js: stage, layer, velocità, personaggi e luce.
+demo-moves/stage-player.js: rendering, camera, animazioni, ombre, foschia, polvere.
+demo-moves/stage-effects.js: valori iniziali, CRT base e confronto originale.
+demo-moves/crt-webgl.js: shader e pipeline CRT avanzata.
+demo-moves/crt-panel.js: pannello, import/export e salvataggi browser.
+demo-moves/stage-fullscreen.js: fullscreen del riquadro.
+demo-moves/scripts/build-catalog.mjs: ricostruzione catalogo dai manifest.
+.agents/skills/: istruzioni locali per demo, animazioni e AutoSprite.
+
+Test completi da PowerShell nella radice del repository:
+  $testFiles = @(Get-ChildItem demo-moves/scripts/*.test.cjs | ForEach-Object { $_.FullName })
+  node --test @testFiles
+Controllo modifiche: git diff --check
+I test automatici non sostituiscono il confronto visivo nel browser o in Godot.
+
+Pugno leggero Sanmauro integrato per tutti: 500 ms a 1x, incluso ultimo frame.
+Arianna 17 frame / 34 fps medi demo, Mangler 18 / 36 fps, altri 13 / 26 fps.
+Sequenze Godot: Arianna 0-8,7-0 (ritorno inverso richiesto), Mangler 0-17 (scala 0.85),
+altri 0-6,5-0 con ritorno integrato. Sorgenti 48/48/24 fps conservate.
+assets/light-punch-timing.json e reports/light-punch-timing.html/.csv dentro
+demo-moves-sanmauro; report collegato sotto il titolo Pugno leggero.
+Rigenerare con scripts/build-light-punch-report.py o import-roster.py.
+Pugni leggeri corretti: campo light_punch_sheet letto per nome esatto, distinto
+da jump_light_punch_sheet. Bue, Mileto, Peirò e Torpe: light_punch_spritesheet.png;
+Oscare: Oscare-light_punch.png. Tutti usano il pugno a terra, durata 500 ms.
+
+Massima estensione Pugno leggero Sanmauro sincronizzata a 300 ms (0.30 s),
+durata totale 500 ms. Indici frame da 0: Arianna 8, Bue 4, Mangler 10,
+Mileto 6, Oscare 5, Peiro 4, Torpe 6. Timing variabili prima/dopo estensione.
+Configurazione light-punch-timing.json vincolata a hash PNG/sequenza; dopo
+nuovi asset rivedere la selezione. Report aggiornato con pose e timing.
+
+Arianna: ultimo frame del pugno (indice 8) a 0.30 s, poi ritorno al
+contrario 7-0 fino all’idle. Ciclo completo di 17 frame, durata 0.5 s.
+
+Demo Sanmauro: Loop attivo di default su tutte le animazioni, in tutte le
+gallerie per personaggio e per mossa. Disattivabile con il checkbox;
+nessuna modifica al comportamento sorgente Godot salvato nel manifest.
+
+Pugno medio Sanmauro: integrato per tutti con estensione 450 ms e idle
+terminale esatto a 750 ms. Config medium-punch-timing.json e report HTML/CSV
+collegato sotto il titolo. Mangler usa medium_open_hand_slap: preparazione
+10 + colpo 16 + ritorno 16, tre PNG originali copiati e atlas derivato a
+pixel invariati. Nessuna variante estranea importata. Scala Godot 0.85.
+Altri conteggi completi: Arianna 49, Bue 47, Mileto 24, Oscare 43, Peiro 29,
+Torpe 27. Proporzioni e centratura condivise con gli altri movimenti.
+
+Ritratti accanto al nome in personaggio.html: PNG selezionati da Godot
+CharacterSelect.gd, copiati in demo-moves-sanmauro/assets/portraits.
+Arianna portrait-v2; Oscare portrait-slim-bust; altri cinque portrait-v1.
+Rigenerare con scripts/import-portraits.py; richiamato anche da import-roster.py.
+
+Pugno pesante Sanmauro integrato per tutti: estensione 0.5 s, durata 1 s,
+idle terminale esatto a 1000 ms. Proporzioni fisiche e centratura conservate.
+Mangler: solo moves/00-heavy_punch_high.png, 49 frame + recupero inverso
+40-20 di Godot, scala 0.85. La demo aggiunge la posa iniziale terminale
+per il passaggio idle (70 frame sorgenti + 1 terminale). Il PNG originale
+arriva al bordo destro durante il colpo, senza ulteriori tagli della demo.
+Altri conteggi: Arianna 49, Bue 21, Mileto 38, Oscare 28, Peiro 25, Torpe 31.
+assets/heavy-punch-timing.json, reports/heavy-punch-timing.html/.csv,
+rigenerazione con scripts/build-heavy-punch-report.py o import-roster.py.
+
+COMPLETAMENTO NORMALI SANMAURO
+159 animazioni aggiunte, totale 271. Calci in piedi, tutti gli attacchi
+accovacciati e aerei, corsa/backwalk/back-jump, posa aerea dove presente,
+hurt in aria, knockdown e rialzate. Esclusi special, super, prese, Combo e
+le due varianti Mangler già accovacciato, anche nelle rigenerazioni.
+Timing attacchi: light 300/500 ms, medium 450/750 ms, heavy 500/1000 ms
+(estensione/durata). Terminale: ritorno alla posa iniziale, senza pausa extra.
+Neutralità/reazioni nuove: timing sorgente; stand-up 250 ms.
+Mangler: scala runtime .85 reworked, .70 legacy, .80 calci aerei; posizioni
+Godot conservate. Menu con stati/movimenti prima degli attacchi.
+23 report HTML/CSV aggiuntivi, con pose e link sotto il titolo.
+Indice reports/remaining-moves.html. Configurazioni assets/remaining-moves-
+source.json e remaining-moves-timing.json, vincolate agli hash dei sorgenti.
+Audit Godot isolato con scripts/audit-godot-catalogs.py, poi snapshot con
+scripts/build-remaining-source.py. Nessuna modifica al vecchio progetto.
+Importazione: scripts/import-roster.py (include tutto); solo nuove mosse:
+scripts/remaining_moves.py. Report offline: scripts/build-remaining-reports.py.
+
+SPECIAL E SUPER ARIANNA
+Nuova pagina demo-moves-sanmauro/specials.html, voce di menu autonoma.
+Due Special: mazza da baseball con tornado (3 potenze), fischio con Bateau.
+Super: ondata di 12 gatti, 4 Tullio + 4 Tilda + 4 Telma. Peiro non incluso.
+16 PNG originali in assets/specials/arianna; specials.json e catalogo JS
+offline. Timing Godot: mazza 49@48fps/spawn frame23; fischio49@24/spawn12;
+super sorgenti9-42@24/spawn10. Bateau ha corsa/attacco/ritorno alla corsa.
+Ultima cella Bateau-run trasparente: mantenuto il frame precedente per
+un intervallo, PNG e durata invariati; eccezione registrata nel manifest.
+Scena Piazza Europa: Arianna a sinistra, Oscare riflesso come bersaglio,
+CRT, effetti, ombre, parallasse, drag e fullscreen. Riproduci/pausa, loop,
+riavvio, timeline, potenza tornado e nuova ondata. Gallerie asset sotto.
+Anteprima visiva dei proiettili; effetti particellari adattati al canvas.
+Audio, danni e collisioni fisiche non simulati. Normali invariate (271).
+Rigenerazione scripts/import-specials.py, richiamato anche dalla
+importazione completa. Report reports/arianna-specials.html.
+URL campione: specials.html?move=cats&seed=7&time=2600&paused=1
+
+Anteprima Special/Super: tutti i proiettili rialzati di 30 px sul riferimento
+1080p (preview.projectileOffsetY=-30). Personaggi, scale e timing invariati;
+correzione della sola demo, conservata anche dopo la rigenerazione.
+
+SPECIAL E SUPER - ESTENSIONE AGLI ALTRI PERSONAGGI
+Macchia = Torpe, confermato dall'autore. Specials.html ha un selettore per
+Arianna, Mangler, Oscare, Torpe, Mileto e Bue: 14 mosse, 42 sequenze totali.
+Peirò escluso finché le sue mosse non saranno create. WEDOO invariato.
+Mangler: piatti della batteria, rotazione coi pugni; Super con bacchette,
+corsa e due rullate (8 impatti). Oscare: sigaretta e fumata bianca, entrambe
+precedute dall'accensione. Torpe: bottiglia con arco/rotazione/frammenti e
+saldatura. Mileto: spallata elettrica e lancio della chitarra. Bue: Claudio
+Baglioni e Tom Waits con materializzazione/corsa/tre colpi/uscita.
+Spritesheet effettivamente referenziati dal codice Godot, copiati nella
+cartella assets/specials del relativo personaggio; nessuna modifica a Godot.
+FPS e fasi originali, altezze in cm e normalizzazione idle conservate.
+Oscare: source19 sostituisce runtime18 del lancio, come Godot. Torpe: TRES
+con 64 frame e ripetizioni reali; strip superiore rimossa solo nei runtime
+37/38 della bottiglia tramite atlas derivato, originali preservati.
+Stage: personaggio scelto a sinistra, Oscare riflesso a destra; per Oscare
+il bersaglio è Arianna. Stessi CRT/ombre/effetti, fullscreen, drag e timeline.
+Proiettili rialzati di 30px, scale Godot rapportate al personaggio.
+Resta un'anteprima visiva: contatti e particelle adattati al canvas;
+audio, danni e collisioni fisiche non simulati. Mosse ravvicinate mantengono
+la loro portata. Le normali rimangono 271, in catalogo separato.
+Rigenerazione COMPLETA: scripts/import-specials.py (anche da import-roster).
+Manifest aggregato assets/specials/manifest.json, incorporato nel catalogo JS
+per uso file://. Dettagli e parametri in LEGGIMI.txt e nei sei report
+reports/{personaggio}-specials.html.
+URL: specials.html?character=mangler&move=drums&time=3400&paused=1
+
+OMBRE SANMAURO E PROIETTILI BUE
+Corretto l'appoggio dell'ombra idle di Bue e degli altri personaggi: dati
+delle suole estesi a tutti i 386 frame idle, più hurt-high/knockdown/get-up.
+Proiezione corretta anche con un solo piede rilevabile e piano dell'ombra
+coerente con la posizione della sagoma; test su tutte le 42 sequenze Special.
+Generazione in scripts/build-stages.py, estrazione in scripts/feet_contacts.py.
+Baglioni/Tom Waits: altri 20 px verso l'alto, totale -50 px a 1080p.
+Parametro previewOffsetY=-20 per ciascun cantante; il rialzo comune resta -30.
+Timings, scale e posizione di Bue invariati; rigenerazione conserva la scelta.
+
+SEZIONE UI - SCHERMATA INIZIALE
+Nuova voce UI nel menu Sanmauro, pagina demo-moves-sanmauro/ui.html.
+Solo fondale della TitleScreen Godot, senza logo, testi o menu del gioco.
+Dieci layer effettivamente usati da TitleScreen.gd copiati integri in
+assets/ui/title-screen: cielo/paesaggio, tre nuvole, paesaggio, acqua,
+tre riflessi e primo piano. SHA256 e provenienza nel manifest screen.json,
+incorporato anche in ui-catalog.js per uso offline.
+Immagini native 1776x592, disegno proporzionale a 3240x1080; vista 1920x1080
+centrata ed esplorabile con drag/frecce. Tre velocità di Piazza Europa:
+6/12/20 px/s verso sinistra, stessi valori sui riflessi corrispondenti.
+Stessi CRT base/avanzato e preset, foschia, polvere, offcanvas, pausa nuvole,
+Vista originale/Ripristina e fullscreen reale. Acqua statica, niente shader
+specifici Godot: si usa la pipeline filtri condivisa con Piazza Europa.
+Generazione: python demo-moves-sanmauro/scripts/build-ui.py [percorso Godot].
+Player condiviso esteso con renderWidth/renderHeight opzionali: i PNG restano
+nativi; le altre pagine mantengono il disegno precedente.

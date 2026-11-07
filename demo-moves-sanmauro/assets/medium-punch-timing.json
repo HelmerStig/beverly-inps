@@ -1,0 +1,57 @@
+{
+  "schema": "sanmauro.medium-punch-timing",
+  "version": 1,
+  "durationMs": 750,
+  "impactMs": 450,
+  "items": [
+    {
+      "characterId": "arianna",
+      "impactFrame": 20,
+      "sourceSha256": "34a925921724646f2d764dd2cc4ab2d3e1a9e80ac866a5679b98023a7415920c",
+      "framesSha256": "c5941fa26fd6135a397f6a012ec3d0b983f36b650ae26dbb73293345b6624a96",
+      "note": "Prima massima estensione verificata visivamente; ritorno finale all’idle a 750 ms."
+    },
+    {
+      "characterId": "bue",
+      "impactFrame": 22,
+      "sourceSha256": "44b2b748f26c0cf07c3b01772160ddcc77b07b92d5961ec7156f33fe24e6ec2b",
+      "framesSha256": "db3e6d79bdf9e7dfbe2f99a4ead923bda1104d38b8fda6ff1c94d7c4b1a906fe",
+      "note": "Prima massima estensione verificata visivamente; ritorno finale all’idle a 750 ms."
+    },
+    {
+      "characterId": "mangler",
+      "impactFrame": 16,
+      "sourceSha256": "088a7188172da59519c7bf5f830a74043933902978a277109d48d81497d614fd",
+      "framesSha256": "330a52e4d0d871d47bb26335c96336c736839938fd165a77835012ab9f84b83f",
+      "note": "Prima massima estensione verificata visivamente; ritorno finale all’idle a 750 ms."
+    },
+    {
+      "characterId": "mileto",
+      "impactFrame": 13,
+      "sourceSha256": "eafe6329a8cc1dd04e5fcc203857cd6ca2bb1282c3d33ca976c6ba76eb480279",
+      "framesSha256": "c965eaecdcb9f6148da04fb65906ea78980a9c02be2901d3246a0836eb49d40e",
+      "note": "Prima massima estensione verificata visivamente; ritorno finale all’idle a 750 ms."
+    },
+    {
+      "characterId": "oscare",
+      "impactFrame": 20,
+      "sourceSha256": "648a5d1c51aebd92fdb652d36178942db5c737016479e9ba490c5500cf65cde3",
+      "framesSha256": "bc5335d6405cd53d6befe6e94cd584953eec3c1dffad13c2d82d94c3ba630907",
+      "note": "Prima massima estensione verificata visivamente; ritorno finale all’idle a 750 ms."
+    },
+    {
+      "characterId": "peirolo",
+      "impactFrame": 13,
+      "sourceSha256": "30dea2c7c3cb1d821acf432277b15709a91940247533f5e92a5e3c385b826e7e",
+      "framesSha256": "8eaeb879939d24b1b17939ddeca4953172c8be6225253ca07c6aac10f1a55ca2",
+      "note": "Prima massima estensione verificata visivamente; ritorno finale all’idle a 750 ms."
+    },
+    {
+      "characterId": "torpe",
+      "impactFrame": 10,
+      "sourceSha256": "3690838f5ea10e36d5e6382fc93e4ce91471761c16185f5a9655aed86a40427a",
+      "framesSha256": "f7846313c1f4c1d43383d8fa1d59c700d64f709d91f3fd55a43f53182f71fb96",
+      "note": "Prima massima estensione verificata visivamente; ritorno finale all’idle a 750 ms."
+    }
+  ]
+}
