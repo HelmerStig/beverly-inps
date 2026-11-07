@@ -467,3 +467,55 @@ Per conservare la portata gi? approvata nonostante il maggior tempo in aria,
 `horizontalFallSpeedScale=1/1.35` compensa soltanto la traslazione durante la
 discesa. Salita, altezza, portata simmetrica e regole dei fotogrammi per ciascun
 personaggio restano invariati, inclusi i recuperi a 100 FPS.
+
+## Pugno leggero in piedi
+
+Disponibile per tutti i sette personaggi nel Debug:
+
+- **P1:** F. **P2:** O. **Joypad 1/2:** X (pulsante ovest).
+- Solo a terra, senza attacco aereo o accovacciato. Una pressione avvia un
+  colpo; tenere premuto non lo ripete. Il movimento ? fermo durante i 500 ms
+  dell'attacco. Il facing resta quello scelto alla partenza.
+- Timing della demo copiati senza retiming: durata totale **500 ms**, frame
+  di estensione selezionato a **300 ms**, ritorni e durate per frame originali
+  del catalogo. La fase attiva comprende il frame di impatto e il successivo
+  (300?344/350/357 ms secondo il personaggio).
+- **F3** mostra hurtbox e hitbox offensive rosse solo quando attive.
+- `swosh.wav` all'avvio; `light-punch.wav` solo al contatto reale con una
+  hurtbox avversaria. I WAV locali sono identici ai file richiesti.
+- Un solo contatto per bersaglio e per attacco, con contatore ?Colpi? nella
+  toolbar. Per ora non vengono applicati danni, stun, animazioni hurt o parate.
+
+Le hitbox sono capsule riviste sui PNG al frame di impatto: pugno/polso, con
+parte distale dell'avambraccio per Mileto. Il frame seguente ? adattato tramite
+confronto locale dello sprite. Non si usano rettangoli dell'intero personaggio.
+Sono vere Area2D (layer 4, bersagli layer 2), con geometria disattivata fuori
+dalla fase attiva. La rilevazione confronta le forme reali dei due fighter,
+comprendendo scala, riflessione e altezza del bersaglio. Il bersaglio mantiene
+la sua animazione corrente finch? non implementeremo le reazioni.
+Anche le hurtbox del pugno seguono la sagoma di ogni frame.
+
+Dati modificabili: `data/light-punch-hitbox-seeds.json`; dati generati:
+`data/light-punch-hitboxes.json`. Rigenerazione dalla radice:
+
+```powershell
+node godot/tools/import-debug-assets.cjs
+python -B godot/tools/build-movement-contacts.py
+python -B godot/tools/build-movement-hurtboxes.py light-punch
+python -B godot/tools/build-light-punch-hitboxes.py
+```
+
+Il generatore hurtbox accetta ora nomi di animazioni come argomenti per
+aggiornare solo quelle, conservando i dati delle altre. Senza argomenti
+rigenera tutte le animazioni di movimento e il pugno leggero.
+
+Verifica dedicata:
+
+```powershell
+& 'C:/Program Files (x86)/Godot_v4.7.2-stable_win64_console.exe' --path godot --script res://tests/light_punch_check.gd --windowed --resolution 1920x1080
+```
+
+Il controllo copre i sette personaggi su entrambi i lati, timing 300/500 ms,
+colpi a vuoto, contatto, singolo impatto, suoni, input F/O reali, fine hitbox,
+nuova pressione e rifiuto dell'attacco aereo. I joypad sono mappati ma richiedono
+una prova fisica. Anteprima locale: `tests/artifacts/light-punch-screen.png`.

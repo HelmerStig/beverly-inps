@@ -127,6 +127,8 @@ func _cancel_attack() -> void:
 		hitbox.disable()
 	if swing_player!=null:
 		swing_player.stop()
+	if hit_player!=null:
+		hit_player.stop()
 
 func start_light_punch() -> void:
 	attack_active = true
@@ -299,7 +301,7 @@ func _update_frame() -> void:
 	# A raised leg is not a second ground contact. Fitting a ground plane through
 	# both feet while running produced steep/alternating slopes and rotating shadows.
 	var slope := 0.0
-	var attached := animation_id in ["idle","walk","backwalk"]
+	var attached := animation_id in ["idle","walk","backwalk","light-punch"]
 	if attached and feet.size()==2 and absf(float(feet[1].x)-float(feet[0].x))>40.0:
 		var candidate := (float(feet[1].y)-float(feet[0].y))/(float(feet[1].x)-float(feet[0].x))
 		# Only use a two-sole plane when well-conditioned. A nearly vertical pair
@@ -328,7 +330,7 @@ func _draw() -> void:
 	for foot: Dictionary in feet:
 		bottom = maxf(bottom,float(foot.y))
 	for foot: Dictionary in feet:
-		var attached := animation_id in ["idle","walk","backwalk"]
+		var attached := animation_id in ["idle","walk","backwalk","light-punch"]
 		if not attached and (bottom<anchor.y-12.0 or float(foot.y)<bottom-6.0):
 			continue
 		var x := flip * visual_scale * (float(foot.x) - anchor.x)

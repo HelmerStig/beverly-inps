@@ -23,6 +23,7 @@ func configure(character: Dictionary, sprite_anchor: Vector2) -> void:
 		catalog = JSON.parse_string(FileAccess.get_file_as_string("res://data/light-punch-hitboxes.json")).characters
 	config = catalog[character.id]
 	assert(config.sourceSha256==character.animations["light-punch"].sourceSha256,"Review punch hitbox after changing sprites")
+	assert(config.frames.size()==character.animations["light-punch"].frames.size(),"Punch hitbox frame count differs from animation")
 	anchor = sprite_anchor
 	disable()
 

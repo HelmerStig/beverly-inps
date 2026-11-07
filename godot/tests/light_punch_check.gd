@@ -33,6 +33,7 @@ func _run() -> void:
 			check(attacker.frame_index==int(attacker.animation.impactFrame),"Impact frame occurs at 300ms")
 			check(attacker.hitbox.active and not attacker.hitbox.shape.disabled,"Actual attack capsule is enabled at impact")
 			check(not attacker.resolve_light_punch(target),"A distant punch misses")
+			check(not attacker.hit_player.playing,"A miss does not play impact sound")
 			attacker.locomotion_step(0.0,0.2,false,true)
 			check(not attacker.attack_active and attacker.animation_id=="idle","Attack ends at 500ms")
 			check(not attacker.hitbox.active,"No lingering attack hitbox")
@@ -58,6 +59,28 @@ func _run() -> void:
 			attacker.locomotion_step(0.0,0.0,true,false)
 			attacker.locomotion_step(0.0,0.2,false,true)
 			check(not attacker.attack_active and attacker.jump.active,"Standing punch cannot start in the air")
+	for slot in range(2):
+		scene.select_character(0,0)
+		scene.select_character(1,0)
+		scene.reset_positions()
+		scene.move_pair(Vector2(10000,0) if slot==0 else Vector2(0,-10000))
+		var actor: Node2D = scene.fighters[slot]
+		var before: int = actor.confirmed_hits
+		var key := InputEventKey.new()
+		key.physical_keycode = KEY_F if slot==0 else KEY_O
+		key.pressed = true
+		Input.parse_input_event(key)
+		Input.flush_buffered_events()
+		scene.movement_enabled = true
+		await create_timer(0.12).timeout
+		check(actor.attack_active,"Keyboard punch starts for player "+str(slot+1))
+		await create_timer(0.3).timeout
+		check(actor.confirmed_hits==before+1,"Physics update resolves one hit from actual keyboard input")
+		var released := key.duplicate() as InputEventKey
+		released.pressed = false
+		Input.parse_input_event(released)
+		Input.flush_buffered_events()
+		scene.movement_enabled = false
 	scene.select_character(0,0)
 	scene.select_character(1,4)
 	scene.reset_positions()
