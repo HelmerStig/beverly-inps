@@ -18,13 +18,23 @@ copy('assets/stages/Piazza Europa/crt-preset.json');
 const characters = manifest.characters.map(character => {
   const idle = character.animations.find(a => a.id === 'idle');
   const animations = {};
-  for(const id of ['idle','walk','backwalk','run','back-jump']) {
+  for(const id of ['idle','walk','backwalk','run','back-jump','jump']) {
     const animation = character.animations.find(a=>a.id===id);
     if(!animation) throw Error('Missing movement: '+character.id+'/'+id);
     copy(animation.image);
     const digest = crypto.createHash('sha256').update(fs.readFileSync(path.join(root,animation.image))).digest('hex');
     if(digest!==animation.sourceSha256) throw Error('Movement hash mismatch: '+character.id+'/'+id);
-    animations[id]=animation;
+    animations[id]=structuredClone(animation);
+    if(id==='jump') {
+      animations[id].demoFrameDurations=animation.frameDurations;
+      // A 67ms startup spread across 8-12 source frames skipped most of the
+      // anticipation on a 60Hz display. Give each startup frame a visible tick.
+      animations[id].frameDurations=animation.sourceFrameDurations.map((duration,index)=>
+        index<animation.takeoffFrame ? Math.max(duration,1000/60) : duration);
+      animations[id].playbackFps=animation.sourceFps;
+      animations[id].durationMs=animations[id].frameDurations.reduce((s,d)=>s+d,0);
+      animations[id].takeoffMs=animations[id].frameDurations.slice(0,animation.takeoffFrame).reduce((s,d)=>s+d,0);
+    }
   }
   copy(idle.image);
   const hash = crypto.createHash('sha256').update(fs.readFileSync(path.join(root,idle.image))).digest('hex');
@@ -34,4 +44,4 @@ const characters = manifest.characters.map(character => {
 });
 fs.mkdirSync(path.join(root,'data'), {recursive:true});
 fs.writeFileSync(path.join(root,'data/debug-roster.json'), JSON.stringify({characters}, null, 2)+'\n');
-console.log('Imported Piazza Europa and 35 verified locomotion animations.');
+console.log('Imported Piazza Europa and 42 verified locomotion animations.');

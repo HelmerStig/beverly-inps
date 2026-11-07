@@ -63,7 +63,7 @@ def build(frame):
 
 for c in roster['characters']:
     out['characters'][c['id']]={}
-    for name in ['walk','backwalk','run','back-jump']:
+    for name in ['walk','backwalk','run','back-jump','jump']:
         a=c['animations'][name]; source=ROOT/a['image']
         digest=hashlib.sha256(source.read_bytes()).hexdigest()
         if digest!=a['sourceSha256']: raise ValueError('Stale asset: '+c['id']+'/'+name)

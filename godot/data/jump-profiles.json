@@ -1,0 +1,84 @@
+{
+  "schema": "sanmauro.legacy-jump-physics",
+  "version": 1,
+  "legacyReferenceHeight": 648,
+  "referenceHeight": 1080,
+  "startupSeconds": 0.06666666666666667,
+  "notes": "Velocities and gravity below are in old arena units; multiply both by 1080/648. Animation sourceFrameDurations preserve startup and frame timing. No air steering.",
+  "sources": [
+    "CharacterData.gd: air_speed 280, jump_velocity -850",
+    "Fighter.gd: JUMP_STARTUP_SECONDS 4/60",
+    "Arianna.gd: ARIANNA_JUMP_GRAVITY 1800",
+    "Mangler.gd: gravity 1400*1.5^2; velocity -850*1.5; running horizontal multiplier 1.35",
+    "IdleRosterFighter.gd: gravity 3150; velocity -850*1.5; air_speed 280"
+  ],
+  "characters": {
+    "arianna": {
+      "velocityY": -850,
+      "gravity": 1800,
+      "airSpeed": 280,
+      "runMultiplier": 1
+    },
+    "bue": {
+      "velocityY": -1275,
+      "gravity": 3150,
+      "airSpeed": 280,
+      "runMultiplier": 1
+    },
+    "mangler": {
+      "velocityY": -1275,
+      "gravity": 3150,
+      "airSpeed": 280,
+      "runMultiplier": 1.35
+    },
+    "mileto": {
+      "velocityY": -1275,
+      "gravity": 3150,
+      "airSpeed": 280,
+      "runMultiplier": 1
+    },
+    "oscare": {
+      "velocityY": -1275,
+      "gravity": 3150,
+      "airSpeed": 280,
+      "runMultiplier": 1
+    },
+    "peirolo": {
+      "velocityY": -1275,
+      "gravity": 3150,
+      "airSpeed": 280,
+      "runMultiplier": 1
+    },
+    "torpe": {
+      "velocityY": -1275,
+      "gravity": 3150,
+      "airSpeed": 280,
+      "runMultiplier": 1
+    }
+  },
+  "sourceSnapshots": [
+    {
+      "path": "scripts/CharacterData.gd",
+      "sha256": "0839597d3344ae4fb33ae0a0739ed54c6200ffd87154b8539ab83a615f87434b"
+    },
+    {
+      "path": "scripts/Fighter.gd",
+      "sha256": "61842c6b5b8a12d7f1feb6988e3629d848cd152b4de8e12a2f6d4ef42bb6d9fd"
+    },
+    {
+      "path": "scripts/Arianna.gd",
+      "sha256": "7b7addeb778dac5bd21a11b3423fe75b638b3ccc7491d16c25c3756ef876c50c"
+    },
+    {
+      "path": "scripts/Mangler.gd",
+      "sha256": "507c4caf301f7d9c6cf26de73610aa68fa17107d3e6503355a892a560af2a82b"
+    },
+    {
+      "path": "scripts/IdleRosterFighter.gd",
+      "sha256": "ffea698ed4b8d160846b277d89a383101f703616bba82605076d672652e84939"
+    }
+  ],
+  "descentSpeedMultiplier": 1.35,
+  "horizontalDistanceMultiplier": 2.5,
+  "forwardDistanceScale": 0.8
+}

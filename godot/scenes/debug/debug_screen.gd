@@ -131,9 +131,9 @@ func _build_toolbar() -> void:
 	status.add_theme_font_size_override("font_size",22)
 	ui.add_child(status)
 	var help := Label.new()
-	help.text = "Scelta: P1 ←/→ · P2 ↑/↓ | Movimento: P1 A/D · P2 J/L · Joypad 1/2 | F3: hurtbox · Esc: titolo · F8: CRT · F11: fullscreen"
+	help.text = "P1 A/D · salto W/Spazio | P2 J/L · salto I | Joypad: direzioni/su | Scelta: P1 ←/→ P2 ↑/↓ | F3 hurtbox · Esc titolo · F8 CRT · F11 fullscreen"
+	help.add_theme_font_size_override("font_size",21)
 	help.position = Vector2(30,1037)
-	help.add_theme_font_size_override("font_size",23)
 	help.add_theme_color_override("font_shadow_color",Color.BLACK)
 	help.add_theme_constant_override("shadow_outline_size",5)
 	ui.add_child(help)
@@ -168,10 +168,20 @@ func _physics_process(delta: float) -> void:
 		return
 	var focused := source_viewport.gui_get_focus_owner()
 	if focused != null:
-		for fighter in fighters:
+		for slot in range(fighters.size()):
+			var fighter := fighters[slot]
 			fighter.reset_motion()
+			fighter.jump_was_down = _jump_held(slot)
+		_update_view()
 		return
-	move_pair(Vector2(fighters[0].locomotion_step(_axis(0),delta),fighters[1].locomotion_step(_axis(1),delta)))
+	move_pair(Vector2(fighters[0].locomotion_step(_axis(0),delta,_jump_held(0)),fighters[1].locomotion_step(_axis(1),delta,_jump_held(1))))
+
+func _jump_held(slot: int) -> bool:
+	var keyboard := (Input.is_physical_key_pressed(KEY_W) or Input.is_physical_key_pressed(KEY_SPACE)) if slot==0 else Input.is_physical_key_pressed(KEY_I)
+	var pads := Input.get_connected_joypads()
+	if slot<pads.size():
+		return keyboard or Input.is_joy_button_pressed(pads[slot],JOY_BUTTON_DPAD_UP) or Input.get_joy_axis(pads[slot],JOY_AXIS_LEFT_Y)<-0.5
+	return keyboard
 
 func _axis(slot: int) -> float:
 	var left := KEY_A if slot == 0 else KEY_J
@@ -201,8 +211,12 @@ func _update_view() -> void:
 	background.camera_x = camera_x
 	for slot in range(fighters.size()):
 		var fighter := fighters[slot]
-		fighter.position = Vector2(fighter.world_x-camera_x,1025)
-		fighter.flipped = fighter.world_x > fighters[1-slot].world_x
+		fighter.position = Vector2(fighter.world_x-camera_x,1025+fighter.body_y)
+		if not fighter.jump.active:
+			var desired_facing: bool = fighter.world_x > fighters[1-slot].world_x
+			if fighter.flipped!=desired_facing:
+				fighter.flipped = desired_facing
+				fighter._update_frame()
 		var animation: Dictionary = fighter.animation
 		readouts[slot].text = "%d cm · %s · %d frame @ %d FPS · x %d" % [fighter.data.heightCm,animation.name,animation.frames.size(),animation.playbackFps,fighter.world_x]
 	status.text = "Camera: %d / 630 · 2× avanti: corsa · 2× indietro: salto · F3: hurtbox %s (posa corrente)" % [camera_x,"visibili" if hurtboxes_visible else "nascoste"]

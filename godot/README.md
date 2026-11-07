@@ -64,7 +64,7 @@ Le hurtbox idle sono ora definite come descritto sotto; hitbox d'attacco ed edit
 interattivo delle box restano ai prossimi step.
 
 Gli asset necessari sono locali: cinque livelli e le animazioni di locomozione
-dei sette personaggi (35 sequenze, con fogli condivisi dove previsto).
+dei sette personaggi (42 sequenze, con fogli condivisi dove previsto).
 Per rigenerarli dai dati verificati della demo, dalla radice del repository:
 
 ```powershell
@@ -237,7 +237,7 @@ le animazioni legacy di Mangler; il contatto usa le stesse capsule visualizzate
 con F3. Non viene pi? impiegato il profilo idle per questi movimenti.
 
 Verifica di input relativi, finestra del doppio tocco, rilascio della corsa,
-durata/distanza del salto e caricamento di tutte le 35 sequenze:
+durata/distanza del salto e caricamento di tutte le 42 sequenze:
 
 ```powershell
 & 'C:/Program Files (x86)/Godot_v4.7.2-stable_win64_console.exe' --path godot --script res://tests/locomotion_check.gd --windowed --resolution 1920x1080
@@ -287,3 +287,165 @@ Il salto indietro sposta il personaggio a 630 px/s, pi? velocemente della
 camminata avanti (420) e indietro (320). La durata e i FPS delle animazioni
 restano invariati: cambia solo la traslazione Godot, con distanza risultante
 proporzionale alla durata e sempre limitata da stage, camera e contatto.
+
+## Salto normale
+
+- **P1:** W oppure Spazio. **P2:** I.
+- **Joypad 1/2:** direzionale su oppure stick sinistro verso l'alto.
+- Direzione orizzontale alla pressione: salto verticale, avanti o indietro.
+  L'arco resta fissato durante il volo; tenere il salto non lo ripete.
+- Preparazione a terra di 4/60 s; movimento orizzontale solo dallo stacco.
+- Al contatto con il terreno si azzera l'altezza e si torna subito in idle
+  o camminata se una direzione ? premuta, senza recupero bloccante. Reset/cambio personaggio
+  annullano il salto. I controlli di selezione restano sulle frecce della tastiera.
+
+Parametri verificati nel vecchio progetto e salvati con hash dei sorgenti in
+`data/jump-profiles.json` (valori in unit? della vecchia arena):
+
+| Personaggio | Impulso Y | Gravit? | Velocit? X | Moltiplicatore X da corsa |
+|---|---:|---:|---:|---:|
+| Arianna | -850 | 1800 | 280 | 1 |
+| Mangler | -1275 | 3150 | 280 | 1,35 |
+| Bue, Mileto, Oscare, Peir?, Torpe | -1275 | 3150 | 280 | 1 |
+
+Velocit? e gravit? sono moltiplicate per **1080/648** per conservare le
+proporzioni rispetto all'altezza della vecchia arena. La traiettoria ? integrata
+analiticamente con gli stessi parametri: altezza del nodo fisico circa 334,5 px
+per Arianna e 430,1 px per gli altri; volo circa 0,944 s e 0,810 s rispettivamente.
+Lo spostamento libero direzionale ? circa 440,7 px / 377,8 px (Mangler da corsa
+510 px); camera, stage e hurtbox possono limitarlo. Questi valori descrivono il
+nodo, oltre alla posa verticale eventualmente incorporata nel PNG.
+
+Per il salto l'importatore ripristina `sourceFrameDurations`, `sourceFps` e
+`sourceTakeoffMs`, invece del timing uniformato della demo con apice a 500 ms.
+Tutti i rettangoli e PNG restano quelli del catalogo. ? importata una sesta
+sequenza per ogni fighter; i due generatori di contatti e hurtbox comprendono
+anche `jump`. Le hurtbox seguono frame, scala e altezza fisica. Il contatto
+orizzontale tiene conto del dislivello: due sagome che non si incontrano
+verticalmente non si bloccano a vicenda. Ombre sempre proiettate a terra,
+contatti delle suole nascosti durante il volo; facing bloccato fino alla fine
+del salto e aggiornato dopo l'atterraggio se i personaggi hanno scambiato lato.
+
+Verifica dedicata (profili, apex/distanza a 30/60/120 Hz, startup, direzione
+fissata, input W e hurtbox per ogni frame dei sette personaggi):
+
+```powershell
+& 'C:/Program Files (x86)/Godot_v4.7.2-stable_win64_console.exe' --path godot --script res://tests/jump_check.gd --windowed --resolution 1920x1080
+```
+
+Anteprima locale: `tests/artifacts/jump-screen.png`. I test Jump, Debug e
+Locomotion sono passati con Godot 4.7.2. I joypad richiedono una prova fisica.
+
+### Atterraggio senza stallo
+
+Il salto termina alla fine del volo fisico (startup + 2|v|/g), senza attendere
+la coda del foglio animato. L'eventuale frazione residua del tick di atterraggio
+viene subito usata per camminare: non ? necessario rilasciare e ripremere
+la direzione. Tenere il salto continua a non generare salti automatici.
+
+La preparazione e i frame aerei usano il clock sorgente, senza stirare la
+sequenza per riempire il tempo fisico. Appena termina la sequenza aerea
+(primo rientro delle suole dopo l'apice, esclusa la coda di recupero),
+si passa alla idle anche se il nodo ? ancora in aria. La discesa e la velocit?
+orizzontale continuano senza interruzione; hurtbox e ombre seguono la nuova posa.
+Se il volo fisico termina prima, prevale l'atterraggio immediato. Per Mangler,
+il cui foglio non contiene una posa finale a terra, vale la fine della sequenza
+o l'atterraggio fisico, senza mantenere un ultimo frame sospeso.
+Il controllo Jump include atterraggio immediato e movimento nello stesso tick
+per tutti e sette i personaggi.
+
+Il test Jump verifica anche il passaggio alla idle prima del contatto a terra,
+la prosecuzione della discesa senza pausa e le hurtbox della idle in aria.
+
+### Discesa accelerata
+
+`descentSpeedMultiplier` in `data/jump-profiles.json` ? impostato a **1,35**.
+Salita e altezza massima conservano i parametri originali; solo dopo l'apice
+la gravit? viene moltiplicata per 1,35?. Il tempo di discesa diventa quindi
+1/1,35 del precedente, con posizione e velocit? continue all'apice.
+Il volo complessivo dura circa 0,822 s per Arianna e 0,705 s per gli altri,
+escluso lo startup. La velocit? orizzontale resta invariata: il salto
+direzionale percorre naturalmente meno spazio perch? atterra prima.
+Restano attivi passaggio alla idle a fine sequenza e controllo immediato
+all'atterraggio. I valori teorici precedenti descrivono il profilo simmetrico
+originale, prima di questa regolazione richiesta. Test Jump superati.
+
+### Sequenza completa e maggiore portata del salto
+
+La sequenza `jump` ora termina esclusivamente alla fine di **tutti** i suoi
+frame oppure al contatto fisico con il terreno. La posizione dei piedi dentro
+il PNG non viene pi? usata per troncarla: ? una posa, non una collisione.
+Se la sequenza finisce prima del volo, viene mostrata la idle in aria, mentre
+la fisica e lo spostamento continuano. Atterrando si riprende subito il controllo.
+Questa regola sostituisce la precedente ricerca di una posa di rientro delle suole.
+
+I frame di preparazione hanno durata minima di 1/60 s; lo stacco fisico segue
+la loro durata reale. Questo evita di comprimere 8?12 frame in soli 67 ms:
+Bue/Torpe/Arianna preparano per 150 ms, Mileto per 183 ms, Peir? per 200 ms,
+Oscare per 133 ms e Mangler per 83 ms. La salita e l'altezza massima non cambiano.
+La parte aerea viene solo accelerata quando ? pi? lunga del volo disponibile,
+mai rallentata per allungarne la coda; sono mantenuti tutti i frame, con
+hurtbox sincronizzate. Il test verifica che tutti i frame siano visibili a 60 Hz.
+
+`horizontalDistanceMultiplier=2.5` aumenta la portata orizzontale rispetto
+alla velocit? aerea originale, senza modificare la discesa rapida n? il salto
+indietro. Lo spostamento libero ? circa 959 px per Arianna e 822 px per gli altri
+(Mangler da corsa circa 1111 px), prima dei limiti di stage/camera e contatto.
+Il test verifica per tutti i sette personaggi il salto partendo dal contatto
+con Oscare, il passaggio sull'altro lato senza trascinare l'avversario.
+
+### Arianna: posa aerea 28, contatto al 39, recupero a 100 FPS
+
+Regola specifica del salto normale di Arianna, con numerazione da 1:
+si raggiunge il frame 28 durante la salita e lo si mantiene fino alla discesa.
+I frame 29?38 seguono la discesa; il frame 39 coincide col contatto fisico a terra.
+A terra si riproduce 39?49 a 100 FPS (110 ms totali), poi si torna alla idle
+oppure all'animazione di movimento richiesta. La coda non blocca lo spostamento;
+un nuovo salto pu? interromperla. Hurtbox sincronizzate alla posa mostrata.
+Salto indietro e salti degli altri personaggi non usano questa regola.
+Il test Jump verifica il 28 in aria, il 39 al contatto, gli 11 frame a 100 FPS
+e la disponibilit? del movimento durante il recupero. A 60 Hz alcuni frame
+della coda a 100 FPS non sono materialmente renderizzati; il clock resta corretto.
+
+### Riduzione della portata in avanti
+
+`forwardDistanceScale=0.8` riduce del 20% il solo salto diretto in avanti
+rispetto al facing alla partenza, anche partendo in corsa. Il salto direzionale
+indietro e il doppio-indietro restano invariati, cos? come fisica verticale
+e sequenza specifica di Arianna. La portata libera in avanti diventa circa
+767 px per Arianna e 658 px per gli altri, prima dei limiti di stage/contatto.
+
+### Bue e Mangler: sequenze del salto normale
+
+Numerazione visiva da 1, senza modifiche alla fisica o alla sequenza di Arianna:
+
+- **Bue:** raggiunge il 21 in salita e lo mantiene fino alla discesa; durante
+  la discesa procede 21?26, arriva al 27 al contatto fisico, quindi riproduce
+  27?37 a 100 FPS (110 ms) e torna alla idle/locomozione richiesta.
+- **Mangler:** raggiunge il 15 in salita e lo mantiene fino alla discesa;
+  riproduce poi 15?1 al contrario, con il frame 1 al contatto a terra.
+  Dal tick seguente torna alla idle/locomozione richiesta.
+
+Il recupero non blocca i comandi. Le hurtbox usano il frame realmente mostrato,
+anche nella riproduzione inversa. Le regole sono centralizzate in `JUMP_POSES`
+di `debug_fighter.gd`; non si applicano al salto indietro. Il test Jump verifica
+pose aeree, discesa, touchdown e recupero a 100 FPS, mantenendo i controlli
+specifici di Arianna e le verifiche degli altri personaggi.
+
+### Mileto, Oscare e Torpe: pose di salto
+
+Numerazione da 1, con recupero a 100 FPS senza bloccare il movimento:
+
+| Personaggio | Posa mantenuta in aria | Frame al contatto a terra | Recupero a terra |
+|---|---:|---:|---|
+| Mileto | 25 | 33 | 33?39 |
+| Oscare | 21 | 31 | 31?38 |
+| Torpe | 18 | 25 | 25?34 |
+
+Durante la discesa si riproduce il tratto tra la posa mantenuta e quella di
+contatto. Al termine del recupero torna la idle/locomozione richiesta; le
+hurtbox seguono sempre il frame mostrato. Per Oscare la scritta ?38?38?
+nella richiesta ? stata interpretata come refuso per ?31?38?, coerentemente
+con il frame 31 richiesto al contatto. Le regole di Arianna, Bue e Mangler
+restano invariate. Il test Jump comprende mantenimento, discesa, contatto
+e durata esatta del recupero per questi tre personaggi.

@@ -43,3 +43,21 @@ Step 2
 	- Salto indietro: dev'essere uno spostamento più veloce della camminata (in godot non lo sprite)
 	Bug Ombre:
 		- Nella camminata avanti e indietro l'ombra risulta staccata dai piedi: oscar,torpe,Arianna, Bue, MIleto, Mangler (solo quella indietro)
+	
+	- Ora passa al salto, per l'altezza e lo spostamento controlla i parametri usati nel vevvhio progetto godot, guarda anche le hurtbox durante il salto
+
+	- Bug salto: I salti hanno un momento di stallo in atteragio in cui non cxi si può muovere, quando lo sprite tocca terra deve subito tornare in idle e potersi muovere. Mangler mentre atterra, rallenta l'atterragio per qualche motivo
+
+	- Per tutti i personaggi ora c'è un blocco leggero a mezz'aria poco prima dell'atterraggio, se l'animazione del salto è finita prima, torna in idle
+
+	Arianna: se è in aria deve rimanere a fotogramma 28 ed eseguire il resto dell'animazione di atterrata (29 -> 49), quando è atterrata deve trovarsi al fotogramma 39 e poi eseguire da 39 a 49 ad un fps molto alto, diciamo 100 e poi tornare in idle
+	
+	Bue: se è in aria deve rimanere a fotogramma 21 ed eseguire il resto dell'animazione di atterrata (21 -> 37), quando è atterrata deve trovarsi al fotogramma 27 e poi eseguire da 27 a 37 ad un fps molto alto, diciamo 100 e poi tornare in idle
+
+	Mangler: se è in aria deve rimanere a fotogramma 15 ed eseguire il resto dell'animazione al contrario, deve ritrovarsi a fotogramma 1 quando è a terra
+
+	Mileto: se è in aria deve rimanere a fotogramma 25 ed eseguire il resto dell'animazione di atterrata (25 -> 39), quando è atterrato deve trovarsi al fotogramma 33 e poi eseguire da 33 a 39 ad un fps molto alto, diciamo 100 e poi tornare in idle
+
+	Oscare: se è in aria deve rimanere a fotogramma 21 ed eseguire il resto dell'animazione di atterrata (21 -> 38), quando è atterrato deve trovarsi al fotogramma 31 e poi eseguire da 38 a 38 ad un fps molto alto, diciamo 100 e poi tornare in idle
+
+	Torpe: se è in aria deve rimanere a fotogramma 18 ed eseguire il resto dell'animazione di atterrata (18 -> 34), quando è atterrato deve trovarsi al fotogramma 25 e poi eseguire da 25 a 34 ad un fps molto alto, diciamo 100 e poi tornare in idle

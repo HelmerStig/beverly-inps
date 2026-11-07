@@ -6,10 +6,10 @@ var cached_key := ""
 var cached_distance := 0.0
 
 func separation(left: Node2D, right: Node2D) -> float:
-	var key := "%s:%s:%s:%s:%d:%d:%s:%s" % [left.data.id,right.data.id,left.animation_id,right.animation_id,left.hurtbox_frame,right.hurtbox_frame,left.flipped,right.flipped]
+	var key := "%s:%s:%s:%s:%d:%d:%s:%s:%.4f:%.4f" % [left.data.id,right.data.id,left.animation_id,right.animation_id,left.hurtbox_frame,right.hurtbox_frame,left.flipped,right.flipped,left.body_y,right.body_y]
 	if key == cached_key:
 		return cached_distance
-	var result := 0.0
+	var result := -INF
 	for first: Dictionary in left.hurtboxes.current_parts:
 		var a := _capsule(left,first.capsule)
 		for second: Dictionary in right.hurtboxes.current_parts:
@@ -22,12 +22,13 @@ func separation(left: Node2D, right: Node2D) -> float:
 				for j in range(i+1,4):
 					result = maxf(result,_boundary(points[i],points[j],radius))
 	cached_key = key
-	cached_distance = result + 0.5
+	cached_distance = maxf(0.0,result+0.5)
 	return cached_distance
 
 func _capsule(fighter: Node2D, box: Array) -> Array:
 	var scale: Vector2 = fighter.hurtboxes.scale
-	return [(Vector2(box[0],box[1])-fighter.hurtboxes.anchor)*scale,(Vector2(box[2],box[3])-fighter.hurtboxes.anchor)*scale,float(box[4])*absf(scale.y)]
+	var height := Vector2(0,fighter.body_y)
+	return [(Vector2(box[0],box[1])-fighter.hurtboxes.anchor)*scale+height,(Vector2(box[2],box[3])-fighter.hurtboxes.anchor)*scale+height,float(box[4])*absf(scale.y)]
 
 func _boundary(a: Vector2, b: Vector2, radius: float) -> float:
 	var delta := b-a
@@ -47,6 +48,8 @@ func _boundary(a: Vector2, b: Vector2, radius: float) -> float:
 func constrain(previous: Vector2, desired: Vector2, first: Node2D, second: Node2D) -> Vector2:
 	var direction := 1.0 if previous.x<=previous.y else -1.0
 	var distance := separation(first,second) if direction>0 else separation(second,first)
+	if distance<=0.0:
+		return desired
 	var old_gap := absf(previous.y-previous.x)
 	# Animation/character changes may already overlap: never lock retreat.
 	var closing := (desired.x-previous.x)*direction+(previous.y-desired.y)*direction

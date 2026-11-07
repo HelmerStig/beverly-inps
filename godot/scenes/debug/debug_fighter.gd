@@ -3,6 +3,15 @@ extends Node2D
 const SHADER := preload("res://shaders/debug_fighter.gdshader")
 const HURTBOX_RIG := preload("res://scenes/debug/hurtbox_rig.gd")
 const LOCOMOTION := preload("res://scenes/debug/locomotion.gd")
+const JUMP_MOTION := preload("res://scenes/debug/jump_motion.gd")
+const JUMP_POSES := {
+	"arianna": {"hold":27,"descent":28,"touchdown":38,"end":48},
+	"bue": {"hold":20,"descent":20,"touchdown":26,"end":36},
+	"mangler": {"hold":14,"descent":14,"touchdown":0,"end":0},
+	"mileto": {"hold":24,"descent":24,"touchdown":32,"end":38},
+	"oscare": {"hold":20,"descent":20,"touchdown":30,"end":37},
+	"torpe": {"hold":17,"descent":17,"touchdown":24,"end":33},
+}
 static var movement_contacts: Dictionary = {}
 var data: Dictionary
 var world_x := 0.0
@@ -21,6 +30,13 @@ var animation_id := "idle"
 var animation: Dictionary
 var visual_scale := 1.0
 var hurtbox_frame := 0
+var jump := JUMP_MOTION.new()
+var body_y := 0.0
+var jump_was_down := false
+var jump_sequence_end := 0.0
+var landing_active := false
+var landing_elapsed := 0.0
+var touchdown_hold := false
 
 func _ready() -> void:
 	texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
@@ -46,6 +62,11 @@ func _make_sprite(is_shadow: bool) -> Sprite2D:
 func select_character(character: Dictionary) -> void:
 	data = character
 	motion.reset()
+	jump.reset()
+	body_y = 0.0
+	jump_was_down = false
+	landing_active = false
+	touchdown_hold = false
 	if movement_contacts.is_empty():
 		movement_contacts = JSON.parse_string(FileAccess.get_file_as_string("res://data/movement-contacts.json"))
 	elapsed = 0.0
@@ -69,6 +90,8 @@ func set_animation(id: String, force: bool = false) -> void:
 	shadow_sprite.texture = texture
 	sprite.offset = -anchor
 	shadow_sprite.offset = -anchor
+	if id=="jump":
+		jump_sequence_end = animation_duration("jump")
 	_update_frame()
 
 func animation_duration(id: String) -> float:
@@ -80,13 +103,92 @@ func animation_duration(id: String) -> float:
 		return total
 	return a.frames.size()/float(a.playbackFps)
 
-func locomotion_step(axis: float, delta: float) -> float:
+func _jump_frame_time(index: int) -> float:
+	var time := 0.0
+	for frame in range(index):
+		time += float(data.animations.jump.frameDurations[frame])/1000.0
+	return time+0.000001
+
+func _character_jump_clock() -> float:
+	if jump.elapsed<jump.startup:
+		return jump.elapsed
+	var pose: Dictionary = JUMP_POSES[data.id]
+	var airborne := jump.elapsed-jump.startup
+	if airborne<=jump.ascent_duration:
+		var progress := clampf(airborne/(jump.ascent_duration*0.65),0.0,1.0)
+		var takeoff := int(data.animations.jump.takeoffFrame)
+		return _jump_frame_time(takeoff+int(floor(progress*(int(pose.hold)-takeoff))))
+	var progress := clampf((airborne-jump.ascent_duration)/jump.fall_duration,0.0,1.0)
+	var difference := int(pose.touchdown)-int(pose.descent)
+	return _jump_frame_time(int(pose.descent)+int(signf(difference))*int(floor(progress*abs(difference)+0.0000001)))
+
+func locomotion_step(axis: float, delta: float, jump_down: bool = false) -> float:
+	var jump_pressed := jump_down and not jump_was_down
+	jump_was_down = jump_down
+	touchdown_hold = false
+	if jump_pressed and not jump.active and motion.state!="back-jump":
+		landing_active = false
+		var forward := axis*(-1.0 if flipped else 1.0)>0.0
+		jump.begin(data.id,axis,motion.state=="run",animation_duration("jump"),float(data.animations.jump.takeoffMs)/1000.0,forward)
+		motion.reset()
+		set_animation("jump")
+	if jump.active:
+		var displacement := jump.step(delta)
+		body_y = jump.body_y
+		# The sprite runs on its own source clock. Never stretch the final airborne
+		# poses to fill the physics trajectory or hold their last frame in mid-air.
+		if animation_id=="jump" and JUMP_POSES.has(data.id):
+			elapsed = _character_jump_clock()
+		elif animation_id=="jump":
+			# Preserve visible anticipation. Speed up a long airborne sequence to
+			# fit the flight, but never slow down a shorter one into a final hold.
+			var air_length := maxf(0.000001,jump_sequence_end-jump.startup)
+			var air_speed := maxf(1.0,air_length/jump.flight_duration)
+			var clip_time := jump.elapsed if jump.elapsed<=jump.startup else jump.startup+(jump.elapsed-jump.startup)*air_speed
+			if clip_time>=jump_sequence_end-0.0000001:
+				var remaining := maxf(0.0,(clip_time-jump_sequence_end)/air_speed)
+				set_animation("idle")
+				elapsed = remaining
+			else:
+				elapsed = clip_time
+		else:
+			elapsed += delta
+		_update_frame()
+		if not jump.active:
+			motion.reset()
+			# Consume any grounded part of this same physics tick immediately.
+			displacement += motion.step(axis,flipped,jump.unused_delta,animation_duration("back-jump"))
+			if JUMP_POSES.has(data.id):
+				var pose: Dictionary = JUMP_POSES[data.id]
+				landing_active = int(pose.end)>int(pose.touchdown)
+				touchdown_hold = not landing_active
+				landing_elapsed = 0.0
+				elapsed = _jump_frame_time(int(pose.touchdown))
+				_update_frame()
+			else:
+				set_animation(motion.state)
+		return displacement
 	var distance := motion.step(axis,flipped,delta,animation_duration("back-jump"))
+	if landing_active:
+		landing_elapsed += delta
+		var pose: Dictionary = JUMP_POSES[data.id]
+		var duration := (int(pose.end)-int(pose.touchdown)+1)/100.0
+		if landing_elapsed<duration-0.0000001 and motion.state!="back-jump":
+			elapsed = _jump_frame_time(mini(int(pose.end),int(pose.touchdown)+int(floor(landing_elapsed*100.0+0.0000001))))
+			_update_frame()
+			return distance
+		landing_active = false
 	set_animation(motion.state)
 	return distance
 
 func reset_motion() -> void:
 	motion.reset()
+	jump.reset()
+	body_y = 0.0
+	jump_was_down = false
+	landing_active = false
+	landing_elapsed = 0.0
+	touchdown_hold = false
 	set_animation("idle",true)
 
 func _feet() -> Array:
@@ -94,14 +196,14 @@ func _feet() -> Array:
 	return feet if not feet.is_empty() else [{"x":anchor.x,"y":anchor.y,"width":36.0}]
 
 func _process(delta: float) -> void:
-	if not frozen:
+	if not frozen and not jump.active and not landing_active and not touchdown_hold:
 		elapsed += delta
 	if not data.is_empty():
 		_update_frame()
 
 func _update_frame() -> void:
 	var duration := animation_duration(animation_id)
-	var clock := minf(elapsed,duration-0.000001) if animation_id=="back-jump" else fposmod(elapsed,duration)
+	var clock := minf(elapsed,duration-0.000001) if animation_id in ["back-jump","jump"] else fposmod(elapsed,duration)
 	frame_index = 0
 	if animation.has("frameDurations"):
 		while frame_index<animation.frames.size()-1 and clock>=float(animation.frameDurations[frame_index])/1000.0-0.0000001:
@@ -137,13 +239,16 @@ func _update_frame() -> void:
 	# their actual sprite positions instead of forcing the shadow onto anchor Y.
 	var ground_factor := 1.11 if attached else 0.11
 	shadow_sprite.transform = Transform2D(Vector2(visual_scale*(flip+0.5*slope),visual_scale*slope*1.11),Vector2(-0.5*visual_scale,-0.11*visual_scale),Vector2(0.5*visual_scale*offset,visual_scale*offset*ground_factor))
-	shadow_sprite.modulate.a = clampf(1.0-maxf(0.0,anchor.y-bottom)/220.0,0.55,1.0)
+	shadow_sprite.position.y -= body_y
+	shadow_sprite.modulate.a = clampf(1.0-(maxf(0.0,anchor.y-bottom)*visual_scale-body_y)/600.0,0.35,1.0)
 	shadow_sprite.visible = effects_enabled
 	(sprite.material as ShaderMaterial).set_shader_parameter("effects_enabled", effects_enabled)
 	queue_redraw()
 
 func _draw() -> void:
 	if data.is_empty() or not effects_enabled:
+		return
+	if body_y < -1.0:
 		return
 	var flip := -1.0 if flipped else 1.0
 	var feet := _feet()
