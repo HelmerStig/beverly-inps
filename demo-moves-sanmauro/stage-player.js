@@ -22,6 +22,20 @@
     }
     return stars;
   }
+  function rainSplashes(width,height,elapsed,groundTop=.87){
+    const splashes=[];
+    for(let i=0;i<140;i++){
+      const period=850+(i%7)*113,clock=elapsed+i*239;
+      const age=(clock%period)/1000;
+      if(age>=.30)continue;
+      const cycle=Math.floor(clock/period);
+      const jitter=((Math.imul(i+cycle*31+1,1597334677)>>>0)%65536)/65536;
+      const depth=((Math.imul(i+13,3812015801)>>>0)%65536)/65536;
+      splashes.push({x:(i%20+.1+jitter*.8)*width/20,
+        y:height*(groundTop+depth*(.99-groundTop)),age,depth,alpha:(1-age/.30)*(.30+depth*.25)});
+    }
+    return splashes;
+  }
   function dustParticles(width,height,elapsed,intensity){
     const amount=Number.isFinite(intensity)?Math.max(0,Math.min(1,intensity)):0;
     const count=amount>0?160:0;
@@ -181,6 +195,25 @@
           context.fillStyle='#c2d3ff';context.fillRect(0,0,viewportWidth,stage.height);context.restore();
         }
       }
+      if(rainEnabled){
+        context.save();context.filter='none';context.fillStyle='#b9d0e5';
+        for(const splash of rainSplashes(stage.width,stage.height,rainElapsed,stage.rainGroundTop??.87)){
+          const x=Math.round((splash.x-camera)/2)*2,y=Math.round(splash.y/2)*2;
+          if(x< -16||x>viewportWidth+16)continue;
+          const size=.7+splash.depth*.8;
+          const spread=Math.round((2+splash.age*28)*size/2)*2;
+          const lift=Math.round(Math.max(0,Math.sin(splash.age/.30*Math.PI)*7*size)/2)*2;
+          context.globalAlpha=splash.alpha;
+          // Two airborne droplets and an expanding, flattened pixel ripple.
+          context.fillRect(x-spread,y-lift,2,2);
+          context.fillRect(x+spread,y-lift,2,2);
+          context.globalAlpha=splash.alpha*.55;
+          context.fillRect(x-spread,y,4,2);
+          context.fillRect(x+spread-2,y,4,2);
+          if(splash.age<.08)context.fillRect(x,y-2,2,4);
+        }
+        context.restore();
+      }
       dust();
       fighters.forEach(shadow);
       for(const fighter of fighters){
@@ -321,5 +354,5 @@
       fighters.forEach(fighter=>{for(const canvas of [fighter.colorCanvas,fighter.shadowCanvas])if(canvas){canvas.width=0;canvas.height=0;}});
     }};
   }
-  return Object.freeze({install,cloudPositions,shootingStars,dustParticles,shadowProjection});
+  return Object.freeze({install,cloudPositions,shootingStars,rainSplashes,dustParticles,shadowProjection});
 });
