@@ -139,7 +139,7 @@ func _build_toolbar() -> void:
 	back.pressed.connect(_return_to_title)
 	row.add_child(back)
 	status = Label.new()
-	status.position = Vector2(30,190)
+	status.position = Vector2(30,220)
 	status.add_theme_color_override("font_shadow_color",Color.BLACK)
 	status.add_theme_constant_override("shadow_outline_size",5)
 	status.add_theme_font_size_override("font_size",22)
@@ -152,9 +152,11 @@ func _build_toolbar() -> void:
 	help.add_theme_constant_override("shadow_outline_size",5)
 	ui.add_child(help)
 	var shortcuts := Label.new()
-	shortcuts.text = "Dummy P2: G guardia on/off | C accovacciato on/off | G+C guardia bassa"
-	shortcuts.position = Vector2(30,145)
+	shortcuts.text = "Dummy P2: G guardia on/off | C accovacciato on/off | G+C guardia bassa | Basso: P1 S / P2 K / stick o D-pad | Medio: P1 R / P2 P / Joy Y | Forte: P1 T / P2 U / Joy RB"
+	shortcuts.position = Vector2(30,185)
 	shortcuts.add_theme_font_size_override("font_size",21)
+	shortcuts.add_theme_color_override("font_shadow_color",Color.BLACK)
+	shortcuts.add_theme_constant_override("shadow_outline_size",5)
 	ui.add_child(shortcuts)
 
 func _selection_arrow(text: String, slot: int, direction: int) -> Button:
@@ -200,16 +202,35 @@ func _physics_process(delta: float) -> void:
 			fighter.reset_motion()
 			fighter.jump_was_down = _jump_held(slot)
 			fighter.attack_was_down = _attack_held(slot)
+			fighter.medium_was_down = _medium_held(slot)
+			fighter.heavy_was_down = _heavy_held(slot)
 		_update_view()
 		return
-	move_pair(Vector2(fighters[0].locomotion_step(_axis(0),delta,_jump_held(0),_attack_held(0)),fighters[1].locomotion_step(_axis(1),delta,_jump_held(1),_attack_held(1))))
+	move_pair(Vector2(fighters[0].locomotion_step(_axis(0),delta,_jump_held(0),_attack_held(0),_crouch_held(0),_medium_held(0),_heavy_held(0)),fighters[1].locomotion_step(_axis(1),delta,_jump_held(1),_attack_held(1),_crouch_held(1),_medium_held(1),_heavy_held(1))))
 	fighters[0].resolve_light_punch(fighters[1])
 	fighters[1].resolve_light_punch(fighters[0])
+
+func _heavy_held(slot: int) -> bool:
+	var keyboard := Input.is_physical_key_pressed(KEY_T if slot==0 else KEY_U)
+	var pads := Input.get_connected_joypads()
+	return keyboard or (slot<pads.size() and Input.is_joy_button_pressed(pads[slot],JOY_BUTTON_RIGHT_SHOULDER))
+
+func _medium_held(slot: int) -> bool:
+	var keyboard := Input.is_physical_key_pressed(KEY_R if slot==0 else KEY_P)
+	var pads := Input.get_connected_joypads()
+	return keyboard or (slot<pads.size() and Input.is_joy_button_pressed(pads[slot],JOY_BUTTON_Y))
 
 func _attack_held(slot: int) -> bool:
 	var keyboard := Input.is_physical_key_pressed(KEY_F if slot==0 else KEY_O)
 	var pads := Input.get_connected_joypads()
 	return keyboard or (slot<pads.size() and Input.is_joy_button_pressed(pads[slot],JOY_BUTTON_X))
+
+func _crouch_held(slot: int) -> bool:
+	var keyboard := Input.is_physical_key_pressed(KEY_S if slot==0 else KEY_K)
+	var pads := Input.get_connected_joypads()
+	if slot<pads.size():
+		return keyboard or Input.is_joy_button_pressed(pads[slot],JOY_BUTTON_DPAD_DOWN) or Input.get_joy_axis(pads[slot],JOY_AXIS_LEFT_Y)>0.5
+	return keyboard
 
 func _jump_held(slot: int) -> bool:
 	var keyboard := (Input.is_physical_key_pressed(KEY_W) or Input.is_physical_key_pressed(KEY_SPACE)) if slot==0 else Input.is_physical_key_pressed(KEY_I)

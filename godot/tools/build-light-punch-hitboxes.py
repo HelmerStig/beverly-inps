@@ -1,14 +1,17 @@
 """Fit reviewed fist capsules to the impact and first recovery frame. Pillow only."""
 import hashlib
 import json
+import sys
 from pathlib import Path
 from PIL import Image, ImageChops, ImageStat, ImageDraw
 ROOT=Path(__file__).resolve().parents[1]
+attack=sys.argv[1] if len(sys.argv)>1 else 'light-punch'
+if attack not in ['light-punch','medium-punch','heavy-punch']: raise ValueError('Unsupported punch')
 roster=json.loads((ROOT/'data/debug-roster.json').read_text(encoding='utf-8'))
-seeds=json.loads((ROOT/'data/light-punch-hitbox-seeds.json').read_text(encoding='utf-8'))
-out={'schema':'sanmauro.light-punch-hitboxes','version':1,'characters':{}}
+seeds=json.loads((ROOT/f'data/{attack}-hitbox-seeds.json').read_text(encoding='utf-8'))
+out={'schema':f'sanmauro.{attack}-hitboxes','version':1,'characters':{}}
 for c in roster['characters']:
-    a=c['animations']['light-punch']; peak=a['impactFrame']; seed=seeds['characters'][c['id']]
+    a=c['animations'][attack]; peak=a['impactFrame']; seed=seeds['characters'][c['id']]
     source=ROOT/a['image']; digest=hashlib.sha256(source.read_bytes()).hexdigest()
     if digest!=a['sourceSha256']: raise ValueError('Changed punch PNG: '+c['id'])
     sheet=Image.open(source).convert('RGBA')
@@ -38,6 +41,6 @@ for c in roster['characters']:
         for cx,cy in [(x,y),(u,v)]: d.ellipse((cx-r,cy-r,cx+r,cy+r),outline=(255,65,80,255),width=2)
         preview.paste(frame,(col*512,24),frame)
         ImageDraw.Draw(preview).text((col*512+10,6),f'{c["id"]} frame {index}',fill='white')
-    preview.save(ROOT/f'tests/artifacts/light-punch-hitbox-{c["id"]}.png')
+    preview.save(ROOT/f'tests/artifacts/{attack}-hitbox-{c["id"]}.png')
     print(c['id'],f'{start:.2f}-{end:.2f} ms',flush=True)
-(ROOT/'data/light-punch-hitboxes.json').write_text(json.dumps(out,indent=2)+'\n',encoding='utf-8')
+(ROOT/f'data/{attack}-hitboxes.json').write_text(json.dumps(out,indent=2)+'\n',encoding='utf-8')

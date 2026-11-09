@@ -1,5 +1,5 @@
 extends Area2D
-static var catalog: Dictionary = {}
+static var catalogs: Dictionary = {}
 var config: Dictionary
 var shape: CollisionShape2D
 var anchor := Vector2.ZERO
@@ -18,12 +18,12 @@ func _ready() -> void:
 	shape.disabled = true
 	add_child(shape)
 
-func configure(character: Dictionary, sprite_anchor: Vector2) -> void:
-	if catalog.is_empty():
-		catalog = JSON.parse_string(FileAccess.get_file_as_string("res://data/light-punch-hitboxes.json")).characters
-	config = catalog[character.id]
-	assert(config.sourceSha256==character.animations["light-punch"].sourceSha256,"Review punch hitbox after changing sprites")
-	assert(config.frames.size()==character.animations["light-punch"].frames.size(),"Punch hitbox frame count differs from animation")
+func configure(character: Dictionary, sprite_anchor: Vector2, attack_id: String = "light-punch") -> void:
+	if not catalogs.has(attack_id):
+		catalogs[attack_id] = JSON.parse_string(FileAccess.get_file_as_string("res://data/"+attack_id+"-hitboxes.json")).characters
+	config = catalogs[attack_id][character.id]
+	assert(config.sourceSha256==character.animations[attack_id].sourceSha256,"Review punch hitbox after changing sprites")
+	assert(config.frames.size()==character.animations[attack_id].frames.size(),"Punch hitbox frame count differs from animation")
 	anchor = sprite_anchor
 	disable()
 

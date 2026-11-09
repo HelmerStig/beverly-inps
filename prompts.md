@@ -12,6 +12,8 @@ devo ora creare come fatto per gli altri personaggi il portrait di LELE, trovi i
 lo sprite di lele è res://../demo-moves-sanmauro/assets/characters/lele/lele-idle.png
 la persona vera e propria di riferimento è qui: original-images/lele
 
+Ora nello stage di mercatò metti Lele e mangler anziche Ari e Oscare, rispetto alla sezione Piazza europa, gli sprites risultano più piccoli, puoi usare la stessa scala di piazza europa?
+
 
 Vorrei creare un nuovo progetto godot in questo repo per rifare quello vecchio:
 F:/Personali/Godot
@@ -49,18 +51,24 @@ Step 2
 - Ora iniziamo che la creazione delle hurtbox, falle tu analizzando il personaggio. Fai si che siano visualizzabili con il tasto F3
 - Okay ora quando le hurtbox dei personaggi si toccano, il personaggio non dovrebbe continuare ad avanzare in direzione dell'avversario
 - Ora possiamo iniziare a implementare i movimenti di base, li trovi tutti in demo-moves-sanmauro\personaggio.html
-	- Camminata
-	- Camminata indietro
-	- Corsa (attivabile con 2 volte avanti, resta attiva finchè non si rilascia avanti)
-	- Salto indietro (attivabile con 2 volte indietro)
+	- Camminata<-ok
+	- Camminata indietro<-ok
+	- Corsa (attivabile con 2 volte avanti, resta attiva finchè non si rilascia avanti)<-ok
+	- Salto indietro (attivabile con 2 volte indietro) <-ok
 	Bugfixes:
-		- Controlla le ombre, fanno strane rotazioni soprattutto durante la corsa
+		- Controlla le ombre, fanno strane rotazioni soprattutto durante la corsa 
 		- Aggiorna le hurtBox
 	- Salto indietro: dev'essere uno spostamento più veloce della camminata (in godot non lo sprite)
 	Bug Ombre:
 		- Nella camminata avanti e indietro l'ombra risulta staccata dai piedi: oscar,torpe,Arianna, Bue, MIleto, Mangler (solo quella indietro)
 	
-	- Ora passa al salto, per l'altezza e lo spostamento controlla i parametri usati nel vevvhio progetto godot, guarda anche le hurtbox durante il salto
+	- Ora passa al salto, per l'altezza e lo spostamento controlla i parametri usati nel vevvhio progetto godot, guarda anche le hurtbox durante il salto <-ok
+
+	- Ora vorrei implementare le animazioni per il passaggio da idle a crouched, va eseguita per intero e mantenuta finchè si tiene premuto basso, al rilascio di basso, il personaggio deve eseguire l'animazione al contrario e tornare in idle position
+
+	- Ora passiamo al pugno medio, implementalo per tutti i personaggi prendendo come riferimento per i timing il solito catalogo, fai attenzione sempre a Mangler che potrebbe avere delle mosse composte da più spritesheet, lo puoi controlalre nel vecchio progetto godot
+
+	- Ora passiamo al pugno potente, implementalo per tutti i personaggi prendendo come riferimento per i timing il solito catalogo, fai attenzione sempre a Mangler che potrebbe avere delle mosse composte da più spritesheet, lo puoi contrllare nel vecchio progetto godot, usa i suoni utilizzati nel vecchio progetto.
 
 	- Bug salto: I salti hanno un momento di stallo in atteragio in cui non cxi si può muovere, quando lo sprite tocca terra deve subito tornare in idle e potersi muovere. Mangler mentre atterra, rallenta l'atterragio per qualche motivo
 
@@ -88,3 +96,9 @@ Step 2
 		- Hurt alto se colpito
 		- Parata alta se parato (usa questo suono: "F:\Personali\Godot\sound-libraries\block_small_69.wav")
 			- la parata alta va mantenuta nella sua posa di guardia fino a fine mossa per poi proseguirla e toprnare in idle
+
+	ora mi servirebbero le seguenti integrazioni
+		- 2 shortcut:
+			pulsante g per mettere player 2 in guardia, g di nuovo per rimuovere la guardia
+			pulsante c pper metterr player 2 in crouched, c d nuovo per pfarlo tornare in idle, se metto in crouched e clicco g, deve essere in guardia bassa
+	  	- ora vorrei aggiungere un effetto di hit quando il colpo colpisce ed uno diverso quando viene parato, hai suggerimenti?

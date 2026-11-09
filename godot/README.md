@@ -533,3 +533,12 @@ Nel Debug, G attiva/disattiva la guardia e C attiva/disattiva la posa accovaccia
 
 ### Effetti di contatto
 Il pugno leggero genera una scintilla giallo-arancio di 140 ms sul colpo a segno e un arco azzurro di 180 ms sulla parata. Il punto viene ricavato dalle forme native prima della reazione del bersaglio. Gli effetti seguono le coordinate del mondo, si specchiano con la direzione del colpo e vengono disegnati nel SubViewport sopra i personaggi, prima del CRT. Nessun effetto sui colpi a vuoto e nessuna duplicazione durante lo stesso attacco.
+
+### Accovacciamento con basso
+P1: S. P2: K. Joypad: stick sinistro verso il basso o D-pad gi?. La sequenza crouch dura 250 ms: viene completata anche con un tocco breve, mantiene la posa finale finch? basso resta premuto e si riproduce per intero al contrario al rilascio. Durante le transizioni e il mantenimento non si avviano camminate, salti o pugni in piedi; le hurtbox seguono esattamente il frame corrente anche in risalita. Il comando non interrompe un salto o un attacco gi? avviato. Gli shortcut G/C del dummy restano disponibili.
+
+### Pugno medio in piedi
+P1: R. P2: P. Joypad: Y. Timing del catalogo demo: impatto a 450 ms e fine a 750 ms. Mangler usa tutti i 42 frame dei tre spritesheet originali (preparazione, colpo, ritorno), riuniti nell'atlas locale senza cambiare l'ordine. Una pressione esegue una mossa: tenere premuto non la ripete; durante salto e accovacciamento non parte la variante in piedi. Hitbox su mano/avambraccio nei due frame attivi, hurtbox per ogni posa, Hurt medio su colpo a segno e parata con mantenimento fino alla fine del pugno. I suoni riprendono FighterAttackAudio.gd: swosh.wav e light-punch.wav per l'impatto. Effetti di hit/parata e scintille usano il punto di contatto nativo. L'ancoraggio iniziale ? allineato all'idle, preservando gli spostamenti interni della mossa.
+
+### Pugno potente in piedi
+P1: T. P2: U. Joypad: RB (spalla destra). Timing del catalogo: impatto a 500 ms e ritorno all'idle a 1000 ms, senza interrompere il recupero. Per Mangler: spritesheet 00-heavy_punch_high.png, 49 frame in avanti e recupero inverso dal frame sorgente 40 al 20 (70 frame animati, pi? marcatore idle finale senza durata). Suoni originali FighterAttackAudio.gd: swosh.wav per il movimento, strong-punch.wav solo sul contatto non parato. Hitbox e hurtbox seguono lo sprite; posa iniziale allineata all'idle. Parata ed effetti di contatto condivisi con gli altri pugni.
