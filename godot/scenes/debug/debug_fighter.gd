@@ -9,6 +9,8 @@ const JUMP_MOTION := preload("res://scenes/debug/jump_motion.gd")
 const CROUCH_MOTION := preload("res://scenes/debug/crouch_motion.gd")
 const HITBOX := preload("res://scenes/debug/light_punch_hitbox.gd")
 const SWING_SOUND := preload("res://assets/sounds/sfx/swosh.wav")
+const KICK_SWING_SOUND := preload("res://assets/sounds/sfx/kick_short_whoosh_12.wav")
+const KICK_HIT_SOUND := preload("res://assets/sounds/sfx/body_hit_small_11.wav")
 const HEAVY_HIT_SOUND := preload("res://assets/sounds/sfx/strong-punch.wav")
 const HIT_SOUND := preload("res://assets/sounds/sfx/light-punch.wav")
 const BLOCK_SOUND := preload("res://assets/sounds/sfx/block_small_69.wav")
@@ -52,6 +54,7 @@ var hit_player: AudioStreamPlayer
 var attack_id := "light-punch"
 var medium_was_down := false
 var heavy_was_down := false
+var kick_was_down := false
 var attack_active := false
 var attack_elapsed := 0.0
 var attack_was_down := false
@@ -70,6 +73,8 @@ var block_player: AudioStreamPlayer
 func _ready() -> void:
 	texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	shadow_sprite = _make_sprite(true)
+	shadow_sprite.z_as_relative = false
+	shadow_sprite.z_index = 0
 	sprite = _make_sprite(false)
 	hurtboxes = HURTBOX_RIG.new()
 	hurtboxes.name = "Hurtboxes"
@@ -126,13 +131,13 @@ func set_animation(id: String, force: bool = false) -> void:
 	if animation_id==id and not force:
 		return
 	animation_id = id
-	if id not in ["hurt-high","hurt-medium"]:
+	if id not in ["hurt-high","hurt-medium","hurt-low","hurt-crouched"]:
 		hurt_plant_locked = false
 	animation = data.animations[id]
 	elapsed = 0.0
 	anchor = Vector2(animation.normalizedPreview.anchor[0],animation.normalizedPreview.anchor[1])
 	visual_scale = float(animation.normalizedPreview.scale[0]) * (float(data.heightCm)/165.0) * float(data.get("heightScaleCorrection",1.0)) * (4.0/3.0)
-	if id in ["medium-punch","heavy-punch"]:
+	if id in ["medium-punch","heavy-punch","light-kick"]:
 		# The catalog centers each move's union bounds, which include the extended
 		# arm. Align its initial stance with idle instead of shifting the body back.
 		var idle: Dictionary = data.animations.idle
@@ -148,7 +153,7 @@ func set_animation(id: String, force: bool = false) -> void:
 	shadow_sprite.offset = -anchor
 	if id=="jump":
 		jump_sequence_end = animation_duration("jump")
-	if id in ["light-punch","medium-punch","heavy-punch"]:
+	if id in ["light-punch","medium-punch","heavy-punch","light-kick"]:
 		hitbox.configure(data,anchor,id)
 	_update_frame()
 
@@ -158,6 +163,7 @@ func _cancel_attack() -> void:
 	attack_was_down = false
 	medium_was_down = false
 	heavy_was_down = false
+	kick_was_down = false
 	attack_targets.clear()
 	if hitbox!=null:
 		hitbox.disable()
@@ -175,6 +181,9 @@ func start_medium_punch() -> void:
 func start_heavy_punch() -> void:
 	start_attack("heavy-punch")
 
+func start_light_kick() -> void:
+	start_attack("light-kick")
+
 func start_attack(id: String) -> void:
 	attack_id = id
 	attack_active = true
@@ -184,7 +193,8 @@ func start_attack(id: String) -> void:
 	touchdown_hold = false
 	motion.reset()
 	set_animation(attack_id,true)
-	hit_player.stream = HEAVY_HIT_SOUND if attack_id=="heavy-punch" else HIT_SOUND
+	swing_player.stream = KICK_SWING_SOUND if attack_id=="light-kick" else SWING_SOUND
+	hit_player.stream = KICK_HIT_SOUND if attack_id=="light-kick" else HEAVY_HIT_SOUND if attack_id=="heavy-punch" else HIT_SOUND
 	swing_player.play()
 
 func resolve_light_punch(target: Node2D) -> bool:
@@ -213,7 +223,8 @@ func _clear_reaction() -> void:
 func receive_light_punch(attacker: Node2D) -> bool:
 	var facing := -1.0 if flipped else 1.0
 	var crouched := training_crouch or crouch.is_active()
-	var blocked: bool = guard_held and not attack_active and not jump.active and body_y==0.0 and (attacker.world_x-world_x)*facing>0.0
+	var low_attack: bool = attacker.attack_id=="light-kick"
+	var blocked: bool = guard_held and (not low_attack or crouched) and not attack_active and not jump.active and body_y==0.0 and (attacker.world_x-world_x)*facing>0.0
 	if data.id=="mangler" and not blocked and not jump.active and body_y==0.0:
 		var foot := _planted_foot()
 		hurt_plant_reference = (Vector2(foot.x,foot.y)-anchor)*visual_scale
@@ -223,7 +234,8 @@ func receive_light_punch(attacker: Node2D) -> bool:
 	motion.reset()
 	landing_active = false
 	touchdown_hold = false
-	reaction_kind = ("block-low" if crouched else "block-high") if blocked else ("hurt-medium" if attacker.attack_id in ["medium-punch","heavy-punch"] else "hurt-high")
+	var hurt_id := "hurt-crouched" if low_attack and crouched else "hurt-low" if low_attack else "hurt-medium" if attacker.attack_id in ["medium-punch","heavy-punch"] else "hurt-high"
+	reaction_kind = ("block-low" if crouched else "block-high") if blocked else hurt_id
 	reaction_attacker = attacker if blocked else null
 	guard_recovering = false
 	set_animation(reaction_kind,true)
@@ -307,11 +319,13 @@ func _character_jump_clock() -> float:
 	var difference := int(pose.touchdown)-int(pose.descent)
 	return _jump_frame_time(int(pose.descent)+int(signf(difference))*int(floor(progress*abs(difference)+0.0000001)))
 
-func locomotion_step(axis: float, delta: float, jump_down: bool = false, attack_down: bool = false, crouch_down: bool = false, medium_down: bool = false, heavy_down: bool = false) -> float:
+func locomotion_step(axis: float, delta: float, jump_down: bool = false, attack_down: bool = false, crouch_down: bool = false, medium_down: bool = false, heavy_down: bool = false, kick_down: bool = false) -> float:
 	var jump_pressed := jump_down and not jump_was_down
 	var attack_pressed := attack_down and not attack_was_down
 	var medium_pressed := medium_down and not medium_was_down
 	var heavy_pressed := heavy_down and not heavy_was_down
+	var kick_pressed := kick_down and not kick_was_down
+	kick_was_down = kick_down
 	heavy_was_down = heavy_down
 	medium_was_down = medium_down
 	attack_was_down = attack_down
@@ -323,8 +337,8 @@ func locomotion_step(axis: float, delta: float, jump_down: bool = false, attack_
 		_apply_training_pose()
 		return 0.0
 	touchdown_hold = false
-	if (attack_pressed or medium_pressed or heavy_pressed) and not attack_active and not jump.active and not crouch.is_active() and not crouch_down and body_y==0.0 and motion.state!="back-jump" and not jump_pressed:
-		start_attack("heavy-punch" if heavy_pressed else "medium-punch" if medium_pressed else "light-punch")
+	if (attack_pressed or medium_pressed or heavy_pressed or kick_pressed) and not attack_active and not jump.active and not crouch.is_active() and not crouch_down and body_y==0.0 and motion.state!="back-jump" and not jump_pressed:
+		start_attack("heavy-punch" if heavy_pressed else "medium-punch" if medium_pressed else "light-kick" if kick_pressed else "light-punch")
 	if attack_active:
 		attack_elapsed = minf(attack_elapsed+delta,animation_duration(attack_id))
 		elapsed = attack_elapsed
@@ -443,7 +457,7 @@ func _process(delta: float) -> void:
 
 func _update_frame() -> void:
 	var duration := animation_duration(animation_id)
-	var clock := minf(elapsed,duration-0.000001) if animation_id in ["back-jump","jump","light-punch","hurt-high","block-high","crouch","block-low","medium-punch","hurt-medium","heavy-punch"] else fposmod(elapsed,duration)
+	var clock := minf(elapsed,duration-0.000001) if animation_id in ["back-jump","jump","light-punch","hurt-high","block-high","crouch","block-low","medium-punch","hurt-medium","heavy-punch","light-kick","hurt-low","hurt-crouched"] else fposmod(elapsed,duration)
 	frame_index = 0
 	if animation.has("frameDurations"):
 		while frame_index<animation.frames.size()-1 and clock>=float(animation.frameDurations[frame_index])/1000.0-0.0000001:
@@ -452,7 +466,7 @@ func _update_frame() -> void:
 	else:
 		frame_index = mini(int(floor(clock*float(animation.playbackFps)+0.0000001)),animation.frames.size()-1)
 	var cell: Array = animation.frames[frame_index]
-	if hurt_plant_locked and animation_id in ["hurt-high","hurt-medium"]:
+	if hurt_plant_locked and animation_id in ["hurt-high","hurt-medium","hurt-low","hurt-crouched"]:
 		# Legacy Mangler hurt frames lean far outside their initial stance. The
 		# union-bounds center is not a stable pivot: keep the planted sole fixed.
 		var foot := _planted_foot()
@@ -465,7 +479,7 @@ func _update_frame() -> void:
 	shadow_sprite.region_rect = region
 	var flip := -1.0 if flipped else 1.0
 	sprite.scale = Vector2(visual_scale * flip, visual_scale)
-	if animation_id in ["light-punch","medium-punch","heavy-punch"]:
+	if animation_id in ["light-punch","medium-punch","heavy-punch","light-kick"]:
 		hitbox.update_frame(frame_index,attack_active,sprite.scale)
 	else:
 		hitbox.disable()

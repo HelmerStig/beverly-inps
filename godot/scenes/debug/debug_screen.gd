@@ -152,7 +152,7 @@ func _build_toolbar() -> void:
 	help.add_theme_constant_override("shadow_outline_size",5)
 	ui.add_child(help)
 	var shortcuts := Label.new()
-	shortcuts.text = "Dummy P2: G guardia on/off | C accovacciato on/off | G+C guardia bassa | Basso: P1 S / P2 K / stick o D-pad | Medio: P1 R / P2 P / Joy Y | Forte: P1 T / P2 U / Joy RB"
+	shortcuts.text = "Dummy P2: G guardia on/off | C accovacciato on/off | G+C guardia bassa | Basso: P1 S / P2 K / stick o D-pad | Medio: P1 R / P2 P / Joy Y | Forte: P1 T / P2 U / Joy RB | Calcio: P1 V / P2 M / Joy A"
 	shortcuts.position = Vector2(30,185)
 	shortcuts.add_theme_font_size_override("font_size",21)
 	shortcuts.add_theme_color_override("font_shadow_color",Color.BLACK)
@@ -204,11 +204,18 @@ func _physics_process(delta: float) -> void:
 			fighter.attack_was_down = _attack_held(slot)
 			fighter.medium_was_down = _medium_held(slot)
 			fighter.heavy_was_down = _heavy_held(slot)
+			fighter.kick_was_down = _kick_held(slot)
 		_update_view()
 		return
-	move_pair(Vector2(fighters[0].locomotion_step(_axis(0),delta,_jump_held(0),_attack_held(0),_crouch_held(0),_medium_held(0),_heavy_held(0)),fighters[1].locomotion_step(_axis(1),delta,_jump_held(1),_attack_held(1),_crouch_held(1),_medium_held(1),_heavy_held(1))))
+	move_pair(Vector2(fighters[0].locomotion_step(_axis(0),delta,_jump_held(0),_attack_held(0),_crouch_held(0),_medium_held(0),_heavy_held(0),_kick_held(0)),fighters[1].locomotion_step(_axis(1),delta,_jump_held(1),_attack_held(1),_crouch_held(1),_medium_held(1),_heavy_held(1),_kick_held(1))))
 	fighters[0].resolve_light_punch(fighters[1])
 	fighters[1].resolve_light_punch(fighters[0])
+	_update_fighter_depth()
+
+func _kick_held(slot: int) -> bool:
+	var keyboard := Input.is_physical_key_pressed(KEY_V if slot==0 else KEY_M)
+	var pads := Input.get_connected_joypads()
+	return keyboard or (slot<pads.size() and Input.is_joy_button_pressed(pads[slot],JOY_BUTTON_A))
 
 func _heavy_held(slot: int) -> bool:
 	var keyboard := Input.is_physical_key_pressed(KEY_T if slot==0 else KEY_U)
@@ -264,6 +271,7 @@ func move_pair(displacement: Vector2) -> void:
 	_update_view()
 
 func _update_view() -> void:
+	_update_fighter_depth()
 	background.camera_x = camera_x
 	impact_effects.position.x = -camera_x
 	for slot in range(fighters.size()):
@@ -278,7 +286,12 @@ func _update_view() -> void:
 		readouts[slot].text = "%d cm · %s · x %d · Colpi %d" % [fighter.data.heightCm,animation.name,fighter.world_x,fighter.confirmed_hits]
 	status.text = "Camera: %d / 630 · 2× avanti: corsa · 2× indietro: salto · F3: hurtbox %s (posa corrente)" % [camera_x,"visibili" if hurtboxes_visible else "nascoste"]
 
+func _update_fighter_depth() -> void:
+	for fighter in fighters:
+		fighter.z_index = 10 if fighter.attack_active else 1
+
 func _show_impact(point: Vector2, blocked: bool, direction: float) -> void:
+	_update_fighter_depth()
 	var effect := preload("res://scenes/debug/impact_effect.gd").new()
 	effect.setup(point+Vector2(camera_x,0),blocked,direction)
 	impact_effects.add_child(effect)

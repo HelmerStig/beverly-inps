@@ -12,7 +12,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageStat
 ROOT=Path(__file__).resolve().parents[1]
 roster=json.loads((ROOT/'data/debug-roster.json').read_text(encoding='utf-8'))
 out={'schema':'sanmauro.movement-hurtboxes','version':1,'method':'Alpha silhouette, adaptive capsule bands; idle anatomical model kept separately','characters':{}}
-names=sys.argv[1:] or ['walk','backwalk','run','back-jump','jump','light-punch','hurt-high','block-high','crouch','block-low','medium-punch','hurt-medium','heavy-punch']
+names=sys.argv[1:] or ['walk','backwalk','run','back-jump','jump','light-punch','hurt-high','block-high','crouch','block-low','medium-punch','hurt-medium','heavy-punch','light-kick','hurt-low','hurt-crouched']
 if sys.argv[1:] and (ROOT/'data/movement-hurtboxes.json').exists():
     out=json.loads((ROOT/'data/movement-hurtboxes.json').read_text(encoding='utf-8'))
 artifacts=ROOT/'tests/artifacts'

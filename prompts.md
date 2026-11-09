@@ -68,6 +68,8 @@ Step 2
 
 	- Ora passiamo al pugno medio, implementalo per tutti i personaggi prendendo come riferimento per i timing il solito catalogo, fai attenzione sempre a Mangler che potrebbe avere delle mosse composte da più spritesheet, lo puoi controlalre nel vecchio progetto godot
 
+	- In genrale, il personaggio che colpisce, deve avere uno z-index più alto dell'avversario
+
 	- Ora passiamo al pugno potente, implementalo per tutti i personaggi prendendo come riferimento per i timing il solito catalogo, fai attenzione sempre a Mangler che potrebbe avere delle mosse composte da più spritesheet, lo puoi contrllare nel vecchio progetto godot, usa i suoni utilizzati nel vecchio progetto.
 
 	- Bug salto: I salti hanno un momento di stallo in atteragio in cui non cxi si può muovere, quando lo sprite tocca terra deve subito tornare in idle e potersi muovere. Mangler mentre atterra, rallenta l'atterragio per qualche motivo
