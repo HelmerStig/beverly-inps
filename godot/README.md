@@ -519,3 +519,11 @@ Il controllo copre i sette personaggi su entrambi i lati, timing 300/500 ms,
 colpi a vuoto, contatto, singolo impatto, suoni, input F/O reali, fine hitbox,
 nuova pressione e rifiuto dell'attacco aereo. I joypad sono mappati ma richiedono
 una prova fisica. Anteprima locale: `tests/artifacts/light-punch-screen.png`.
+
+### Reazioni al pugno leggero
+Il contatto non parato avvia Hurt alto con i timing della demo (500 ms). Per parare, tenere la direzione opposta all'avversario, a terra e senza attaccare. La parata entra nella posa di guardia della sequenza block-high, la mantiene fino alla fine del pugno avversario anche rilasciando indietro, poi completa il ritorno della demo e torna in idle. Durante le reazioni non si possono avviare mosse; un colpo in aria non ferma la fisica del salto. Il suono block_small_69.wav � copiato localmente ed � alternativo al suono d'impatto; le parate non incrementano il contatore Colpi. Hurtbox e ombre seguono anche le nuove animazioni, visualizzabili con F3.
+
+### Editor manuale delle hurtbox
+Aprire Debug e premere F4 oppure il pulsante Hurtbox. Il gioco si ferma; scegliere Player 1/2, il personaggio dai selettori superiori, l'animazione e il fotogramma (numerato da 1). Riproduci/Pausa permette di controllare la sequenza; le frecce ai lati del numero avanzano di un frame.
+Selezionare una capsule nell'elenco o sopra lo sprite: trascinare il corpo per spostarla, i due punti bianchi per modificarne gli estremi. I campi A x/y, B x/y e Raggio usano le coordinate del fotogramma originale, indipendenti da orientamento e scala. Aggiungi, Elimina e Annulla agiscono sul frame corrente. Ripristina frame recupera le forme generate; anche il ripristino va salvato.
+Salva scrive `godot/data/manual-hurtboxes.json`: contiene solo i frame modificati e viene ricaricato automaticamente dal gioco. I generatori delle hurtbox non sovrascrivono queste correzioni. Le modifiche non salvate restano in memoria durante la sessione. F3 mostra/nasconde le forme; F4 o Esc chiudono l'editor e riprendono il gioco. Il salvataggio richiede che la cartella del progetto sia scrivibile.

@@ -3,6 +3,10 @@ extends Area2D
 const CONFIG_PATH := "res://data/idle-hurtboxes.json"
 static var catalog: Dictionary = {}
 static var movement_catalog: Dictionary = {}
+const OVERRIDE_PATH := "res://data/manual-hurtboxes.json"
+static var overrides: Dictionary = {}
+static var overrides_loaded := false
+var current_frame := 0
 var frame_data: Array = []
 var shapes: Array[CollisionShape2D] = []
 var shape_pool: Array[CollisionShape2D] = []
@@ -38,7 +42,14 @@ func select_animation(character: Dictionary, id: String, sprite_anchor: Vector2)
 	update_frame(0)
 
 func update_frame(index: int) -> void:
-	current_parts = frame_data[index]
+	if not overrides_loaded:
+		overrides_loaded = true
+		if FileAccess.file_exists(OVERRIDE_PATH):
+			var saved = JSON.parse_string(FileAccess.get_file_as_string(OVERRIDE_PATH))
+			if saved is Dictionary:
+				overrides = saved
+	current_frame = index
+	current_parts = overrides.get(frame_key(index),frame_data[index])
 	while shape_pool.size()<current_parts.size():
 		var shape := CollisionShape2D.new()
 		shape.name = "HurtShape%d" % shape_pool.size()
@@ -60,6 +71,20 @@ func update_frame(index: int) -> void:
 		shape.position = (a+b)/2.0
 		shape.rotation = (b-a).angle()-PI/2.0
 	queue_redraw()
+
+func frame_key(index: int) -> String:
+	return character_id+"/"+animation_id+"/"+str(index)
+
+func edit_parts(parts: Array) -> void:
+	overrides[frame_key(current_frame)] = parts.duplicate(true)
+	update_frame(current_frame)
+
+func save_overrides() -> Error:
+	var file := FileAccess.open(OVERRIDE_PATH,FileAccess.WRITE)
+	if file==null:
+		return FileAccess.get_open_error()
+	file.store_string(JSON.stringify(overrides,"\t")+"\n")
+	return OK
 
 func _draw() -> void:
 	if not debug_visible:

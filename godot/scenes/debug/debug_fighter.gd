@@ -8,6 +8,7 @@ const JUMP_MOTION := preload("res://scenes/debug/jump_motion.gd")
 const HITBOX := preload("res://scenes/debug/light_punch_hitbox.gd")
 const SWING_SOUND := preload("res://assets/sounds/sfx/swosh.wav")
 const HIT_SOUND := preload("res://assets/sounds/sfx/light-punch.wav")
+const BLOCK_SOUND := preload("res://assets/sounds/sfx/block_small_69.wav")
 const JUMP_POSES := {
 	"arianna": {"hold":27,"descent":28,"touchdown":38,"end":48},
 	"bue": {"hold":20,"descent":20,"touchdown":26,"end":36},
@@ -49,6 +50,11 @@ var attack_elapsed := 0.0
 var attack_was_down := false
 var attack_targets: Dictionary = {}
 var confirmed_hits := 0
+var guard_held := false
+var reaction_kind := ""
+var reaction_attacker: Node2D
+var guard_recovering := false
+var block_player: AudioStreamPlayer
 
 func _ready() -> void:
 	texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
@@ -66,6 +72,9 @@ func _ready() -> void:
 	hit_player = AudioStreamPlayer.new()
 	hit_player.stream = HIT_SOUND
 	add_child(hit_player)
+	block_player = AudioStreamPlayer.new()
+	block_player.stream = BLOCK_SOUND
+	add_child(block_player)
 
 func _make_sprite(is_shadow: bool) -> Sprite2D:
 	var node := Sprite2D.new()
@@ -81,6 +90,7 @@ func _make_sprite(is_shadow: bool) -> Sprite2D:
 	return node
 
 func select_character(character: Dictionary) -> void:
+	_clear_reaction()
 	_cancel_attack()
 	data = character
 	motion.reset()
@@ -144,10 +154,65 @@ func resolve_light_punch(target: Node2D) -> bool:
 	if not attack_active or attack_targets.has(target.get_instance_id()) or not hitbox.touches(target.hurtboxes):
 		return false
 	attack_targets[target.get_instance_id()] = true
+	if target.receive_light_punch(self):
+		target.block_player.play()
+		return true
 	confirmed_hits += 1
 	hit_player.play()
 	light_punch_landed.emit(target)
 	return true
+
+func _clear_reaction() -> void:
+	reaction_kind = ""
+	reaction_attacker = null
+	guard_recovering = false
+	guard_held = false
+	if block_player!=null:
+		block_player.stop()
+
+func receive_light_punch(attacker: Node2D) -> bool:
+	var facing := -1.0 if flipped else 1.0
+	var blocked: bool = guard_held and not attack_active and not jump.active and body_y==0.0 and (attacker.world_x-world_x)*facing>0.0
+	_cancel_attack()
+	motion.reset()
+	landing_active = false
+	touchdown_hold = false
+	reaction_kind = "block-high" if blocked else "hurt-high"
+	reaction_attacker = attacker if blocked else null
+	guard_recovering = false
+	set_animation(reaction_kind,true)
+	if blocked:
+		# The demo stores a forward sequence followed by its reverse. Enter the
+		# actual defensive pose immediately, then hold it for the incoming move.
+		elapsed = _reaction_frame_time(int(animation.sourceForwardFrameCount)-1)
+		_update_frame()
+	return blocked
+
+func _reaction_frame_time(index: int) -> float:
+	var time := 0.000001
+	for frame in range(index):
+		time += float(animation.frameDurations[frame])/1000.0
+	return time
+
+func _reaction_step(delta: float) -> float:
+	var displacement := 0.0
+	# A hit in flight must not suspend the vertical physics.
+	if jump.active:
+		displacement = jump.step(delta)
+		body_y = jump.body_y
+	if reaction_kind=="block-high" and not guard_recovering:
+		if is_instance_valid(reaction_attacker) and reaction_attacker.attack_active:
+			return displacement
+		guard_recovering = true
+		elapsed = _reaction_frame_time(int(animation.sourceForwardFrameCount))
+	else:
+		elapsed += delta
+	if elapsed>=animation_duration(reaction_kind)-0.0000001:
+		_clear_reaction()
+		set_animation("idle",true)
+	else:
+		_update_frame()
+	return displacement
 
 func animation_duration(id: String) -> float:
 	var a: Dictionary = data.animations[id]
@@ -182,6 +247,9 @@ func locomotion_step(axis: float, delta: float, jump_down: bool = false, attack_
 	var attack_pressed := attack_down and not attack_was_down
 	attack_was_down = attack_down
 	jump_was_down = jump_down
+	guard_held = axis*(-1.0 if flipped else 1.0)<-0.2
+	if not reaction_kind.is_empty():
+		return _reaction_step(delta)
 	touchdown_hold = false
 	if attack_pressed and not attack_active and not jump.active and body_y==0.0 and motion.state!="back-jump" and not jump_pressed:
 		start_light_punch()
@@ -251,6 +319,7 @@ func locomotion_step(axis: float, delta: float, jump_down: bool = false, attack_
 	return distance
 
 func reset_motion() -> void:
+	_clear_reaction()
 	_cancel_attack()
 	motion.reset()
 	jump.reset()
@@ -266,14 +335,14 @@ func _feet() -> Array:
 	return feet if not feet.is_empty() else [{"x":anchor.x,"y":anchor.y,"width":36.0}]
 
 func _process(delta: float) -> void:
-	if not frozen and not jump.active and not landing_active and not touchdown_hold and not attack_active:
+	if not frozen and not jump.active and not landing_active and not touchdown_hold and not attack_active and reaction_kind.is_empty():
 		elapsed += delta
 	if not data.is_empty():
 		_update_frame()
 
 func _update_frame() -> void:
 	var duration := animation_duration(animation_id)
-	var clock := minf(elapsed,duration-0.000001) if animation_id in ["back-jump","jump","light-punch"] else fposmod(elapsed,duration)
+	var clock := minf(elapsed,duration-0.000001) if animation_id in ["back-jump","jump","light-punch","hurt-high","block-high"] else fposmod(elapsed,duration)
 	frame_index = 0
 	if animation.has("frameDurations"):
 		while frame_index<animation.frames.size()-1 and clock>=float(animation.frameDurations[frame_index])/1000.0-0.0000001:
@@ -301,7 +370,7 @@ func _update_frame() -> void:
 	# A raised leg is not a second ground contact. Fitting a ground plane through
 	# both feet while running produced steep/alternating slopes and rotating shadows.
 	var slope := 0.0
-	var attached := animation_id in ["idle","walk","backwalk","light-punch"]
+	var attached := animation_id in ["idle","walk","backwalk","light-punch","hurt-high","block-high"]
 	if attached and feet.size()==2 and absf(float(feet[1].x)-float(feet[0].x))>40.0:
 		var candidate := (float(feet[1].y)-float(feet[0].y))/(float(feet[1].x)-float(feet[0].x))
 		# Only use a two-sole plane when well-conditioned. A nearly vertical pair
@@ -330,7 +399,7 @@ func _draw() -> void:
 	for foot: Dictionary in feet:
 		bottom = maxf(bottom,float(foot.y))
 	for foot: Dictionary in feet:
-		var attached := animation_id in ["idle","walk","backwalk","light-punch"]
+		var attached := animation_id in ["idle","walk","backwalk","light-punch","hurt-high","block-high"]
 		if not attached and (bottom<anchor.y-12.0 or float(foot.y)<bottom-6.0):
 			continue
 		var x := flip * visual_scale * (float(foot.x) - anchor.x)

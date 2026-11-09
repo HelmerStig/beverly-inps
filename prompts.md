@@ -67,3 +67,8 @@ Step 2
 		- per il suono usa questo: "F:\Personali\Godot\assets\sounds\sfx\swosh.wav"
 		- se il colpo va a segno aggiungi questo: "F:\Personali\Godot\assets\sounds\sfx\light-punch.wav"
 		- crea le hitbox in base allo sprite
+	
+	Il pugno leggero deve generare nell'avversario:
+		- Hurt alto se colpito
+		- Parata alta se parato (usa questo suono: "F:\Personali\Godot\sound-libraries\block_small_69.wav")
+			- la parata alta va mantenuta nella sua posa di guardia fino a fine mossa per poi proseguirla e toprnare in idle

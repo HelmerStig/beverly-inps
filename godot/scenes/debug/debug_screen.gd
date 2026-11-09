@@ -21,6 +21,7 @@ var movement_enabled := true
 var returning := false
 var hurtboxes_visible := false
 var contact := CONTACT.new()
+var hurtbox_editor: Control
 
 func _ready() -> void:
 	roster = JSON.parse_string(FileAccess.get_file_as_string("res://data/debug-roster.json")).characters
@@ -45,6 +46,9 @@ func _ready() -> void:
 		fighter.flipped = slot == 1
 		fighter.select_character(roster[0 if slot == 0 else 4])
 	_build_toolbar()
+	hurtbox_editor = preload("res://scenes/debug/hurtbox_editor.gd").new()
+	source_viewport.add_child(hurtbox_editor)
+	hurtbox_editor.setup(self)
 	pipeline = PIPELINE.new()
 	add_child(pipeline)
 	pipeline.build(source_viewport.get_texture(), "res://assets/stages/Piazza Europa/crt-preset.json")
@@ -114,6 +118,11 @@ func _build_toolbar() -> void:
 		column.add_child(info)
 		readouts.append(info)
 	var reset := Button.new()
+	var edit := Button.new()
+	edit.text = "Hurtbox · F4"
+	edit.focus_mode = Control.FOCUS_NONE
+	edit.pressed.connect(func(): hurtbox_editor.toggle())
+	row.add_child(edit)
 	reset.text = "Centra / Reset"
 	reset.pressed.connect(func():
 		reset_positions()
@@ -153,6 +162,8 @@ func cycle_character(slot: int, direction: int) -> void:
 func select_character(slot: int, index: int) -> void:
 	fighters[slot].select_character(roster[index])
 	selectors[slot].select(index)
+	if hurtbox_editor!=null and hurtbox_editor.active:
+		hurtbox_editor._refresh_animations()
 	_update_view()
 
 func reset_positions() -> void:
@@ -161,9 +172,13 @@ func reset_positions() -> void:
 	fighters[0].world_x = 675.0
 	fighters[1].world_x = 1890.0
 	camera_x = 315.0
+	if hurtbox_editor!=null and hurtbox_editor.active:
+		hurtbox_editor._refresh_animations()
 	_update_view()
 
 func _physics_process(delta: float) -> void:
+	if hurtbox_editor!=null and hurtbox_editor.active:
+		return
 	if not movement_enabled or fighters.is_empty():
 		return
 	var focused := source_viewport.gui_get_focus_owner()
@@ -220,7 +235,7 @@ func _update_view() -> void:
 	for slot in range(fighters.size()):
 		var fighter := fighters[slot]
 		fighter.position = Vector2(fighter.world_x-camera_x,1025+fighter.body_y)
-		if not fighter.jump.active and not fighter.attack_active:
+		if not fighter.jump.active and not fighter.attack_active and fighter.reaction_kind.is_empty():
 			var desired_facing: bool = fighter.world_x > fighters[1-slot].world_x
 			if fighter.flipped!=desired_facing:
 				fighter.flipped = desired_facing
@@ -240,6 +255,18 @@ func set_hurtboxes_visible(value: bool) -> void:
 
 func _input(event: InputEvent) -> void:
 	if not event is InputEventKey or not event.pressed or event.echo:
+		return
+	if event.keycode == KEY_F4:
+		hurtbox_editor.toggle()
+		get_viewport().set_input_as_handled()
+		return
+	if hurtbox_editor.active:
+		if event.keycode == KEY_F3:
+			set_hurtboxes_visible(not hurtboxes_visible)
+			get_viewport().set_input_as_handled()
+		if event.keycode == KEY_ESCAPE:
+			hurtbox_editor.toggle()
+			get_viewport().set_input_as_handled()
 		return
 	if event.keycode == KEY_F3:
 		set_hurtboxes_visible(not hurtboxes_visible)
