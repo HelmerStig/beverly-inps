@@ -9,6 +9,8 @@ const JUMP_MOTION := preload("res://scenes/debug/jump_motion.gd")
 const CROUCH_MOTION := preload("res://scenes/debug/crouch_motion.gd")
 const HITBOX := preload("res://scenes/debug/light_punch_hitbox.gd")
 const SWING_SOUND := preload("res://assets/sounds/sfx/swosh.wav")
+const MEDIUM_KICK_SWING_SOUND := preload("res://assets/sounds/sfx/kick_short_whoosh_23.wav")
+const MEDIUM_KICK_HIT_SOUND := preload("res://assets/sounds/sfx/body_hit_large_44.wav")
 const KICK_SWING_SOUND := preload("res://assets/sounds/sfx/kick_short_whoosh_12.wav")
 const KICK_HIT_SOUND := preload("res://assets/sounds/sfx/body_hit_small_11.wav")
 const HEAVY_HIT_SOUND := preload("res://assets/sounds/sfx/strong-punch.wav")
@@ -55,12 +57,14 @@ var attack_id := "light-punch"
 var medium_was_down := false
 var heavy_was_down := false
 var kick_was_down := false
+var medium_kick_was_down := false
 var attack_active := false
 var attack_elapsed := 0.0
 var attack_was_down := false
 var attack_targets: Dictionary = {}
 var confirmed_hits := 0
 var guard_held := false
+var training_opponent: Node2D
 var training_guard := false
 var training_crouch := false
 var hurt_plant_locked := false
@@ -137,7 +141,7 @@ func set_animation(id: String, force: bool = false) -> void:
 	elapsed = 0.0
 	anchor = Vector2(animation.normalizedPreview.anchor[0],animation.normalizedPreview.anchor[1])
 	visual_scale = float(animation.normalizedPreview.scale[0]) * (float(data.heightCm)/165.0) * float(data.get("heightScaleCorrection",1.0)) * (4.0/3.0)
-	if id in ["medium-punch","heavy-punch","light-kick"]:
+	if id in ["medium-punch","heavy-punch","light-kick","medium-kick"]:
 		# The catalog centers each move's union bounds, which include the extended
 		# arm. Align its initial stance with idle instead of shifting the body back.
 		var idle: Dictionary = data.animations.idle
@@ -153,7 +157,7 @@ func set_animation(id: String, force: bool = false) -> void:
 	shadow_sprite.offset = -anchor
 	if id=="jump":
 		jump_sequence_end = animation_duration("jump")
-	if id in ["light-punch","medium-punch","heavy-punch","light-kick"]:
+	if id in ["light-punch","medium-punch","heavy-punch","light-kick","medium-kick"]:
 		hitbox.configure(data,anchor,id)
 	_update_frame()
 
@@ -181,6 +185,9 @@ func start_medium_punch() -> void:
 func start_heavy_punch() -> void:
 	start_attack("heavy-punch")
 
+func start_medium_kick() -> void:
+	start_attack("medium-kick")
+
 func start_light_kick() -> void:
 	start_attack("light-kick")
 
@@ -193,8 +200,8 @@ func start_attack(id: String) -> void:
 	touchdown_hold = false
 	motion.reset()
 	set_animation(attack_id,true)
-	swing_player.stream = KICK_SWING_SOUND if attack_id=="light-kick" else SWING_SOUND
-	hit_player.stream = KICK_HIT_SOUND if attack_id=="light-kick" else HEAVY_HIT_SOUND if attack_id=="heavy-punch" else HIT_SOUND
+	swing_player.stream = MEDIUM_KICK_SWING_SOUND if attack_id=="medium-kick" else KICK_SWING_SOUND if attack_id=="light-kick" else SWING_SOUND
+	hit_player.stream = MEDIUM_KICK_HIT_SOUND if attack_id=="medium-kick" else KICK_HIT_SOUND if attack_id=="light-kick" else HEAVY_HIT_SOUND if attack_id=="heavy-punch" else HIT_SOUND
 	swing_player.play()
 
 func resolve_light_punch(target: Node2D) -> bool:
@@ -224,6 +231,8 @@ func receive_light_punch(attacker: Node2D) -> bool:
 	var facing := -1.0 if flipped else 1.0
 	var crouched := training_crouch or crouch.is_active()
 	var low_attack: bool = attacker.attack_id=="light-kick"
+	if training_guard:
+		guard_held = attacker.attack_active
 	var blocked: bool = guard_held and (not low_attack or crouched) and not attack_active and not jump.active and body_y==0.0 and (attacker.world_x-world_x)*facing>0.0
 	if data.id=="mangler" and not blocked and not jump.active and body_y==0.0:
 		var foot := _planted_foot()
@@ -234,8 +243,8 @@ func receive_light_punch(attacker: Node2D) -> bool:
 	motion.reset()
 	landing_active = false
 	touchdown_hold = false
-	var hurt_id := "hurt-crouched" if low_attack and crouched else "hurt-low" if low_attack else "hurt-medium" if attacker.attack_id in ["medium-punch","heavy-punch"] else "hurt-high"
-	reaction_kind = ("block-low" if crouched else "block-high") if blocked else hurt_id
+	var hurt_id := "hurt-crouched" if low_attack and crouched else "hurt-low" if low_attack else "hurt-medium" if attacker.attack_id in ["medium-punch","heavy-punch","medium-kick"] else "hurt-high"
+	reaction_kind = ("block-mid" if attacker.attack_id=="medium-kick" else "block-low" if crouched else "block-high") if blocked else hurt_id
 	reaction_attacker = attacker if blocked else null
 	guard_recovering = false
 	set_animation(reaction_kind,true)
@@ -258,7 +267,7 @@ func _reaction_step(delta: float) -> float:
 	if jump.active:
 		displacement = jump.step(delta)
 		body_y = jump.body_y
-	if reaction_kind in ["block-high","block-low"] and not guard_recovering:
+	if reaction_kind in ["block-high","block-mid","block-low"] and not guard_recovering:
 		if is_instance_valid(reaction_attacker) and reaction_attacker.attack_active:
 			return displacement
 		guard_recovering = true
@@ -279,16 +288,15 @@ func set_training_stance(guard: bool, crouched: bool) -> void:
 	reset_motion()
 	training_guard = guard
 	training_crouch = crouched
-	guard_held = guard
+	guard_held = false
 	_apply_training_pose()
 
 func _apply_training_pose() -> void:
-	guard_held = training_guard
-	var id := "block-low" if training_guard and training_crouch else "block-high" if training_guard else "crouch" if training_crouch else "idle"
+	guard_held = training_guard and is_instance_valid(training_opponent) and training_opponent.attack_active
+	var id := "crouch" if training_crouch else "idle"
 	set_animation(id)
-	if id!="idle":
-		var pose: int = int(animation.sourceForwardFrameCount)-1 if training_guard else animation.frames.size()-1
-		elapsed = _reaction_frame_time(pose)
+	if training_crouch:
+		elapsed = _reaction_frame_time(animation.frames.size()-1)
 		_update_frame()
 
 func animation_duration(id: String) -> float:
@@ -319,26 +327,37 @@ func _character_jump_clock() -> float:
 	var difference := int(pose.touchdown)-int(pose.descent)
 	return _jump_frame_time(int(pose.descent)+int(signf(difference))*int(floor(progress*abs(difference)+0.0000001)))
 
-func locomotion_step(axis: float, delta: float, jump_down: bool = false, attack_down: bool = false, crouch_down: bool = false, medium_down: bool = false, heavy_down: bool = false, kick_down: bool = false) -> float:
+func locomotion_step(axis: float, delta: float, jump_down: bool = false, attack_down: bool = false, crouch_down: bool = false, medium_down: bool = false, heavy_down: bool = false, kick_down: bool = false, medium_kick_down: bool = false) -> float:
 	var jump_pressed := jump_down and not jump_was_down
 	var attack_pressed := attack_down and not attack_was_down
 	var medium_pressed := medium_down and not medium_was_down
 	var heavy_pressed := heavy_down and not heavy_was_down
+	var medium_kick_pressed := medium_kick_down and not medium_kick_was_down
+	medium_kick_was_down = medium_kick_down
 	var kick_pressed := kick_down and not kick_was_down
 	kick_was_down = kick_down
 	heavy_was_down = heavy_down
 	medium_was_down = medium_down
 	attack_was_down = attack_down
 	jump_was_down = jump_down
-	guard_held = training_guard or axis*(-1.0 if flipped else 1.0)<-0.2
+	if training_guard:
+		var defending: bool = is_instance_valid(training_opponent) and training_opponent.attack_active
+		axis = (1.0 if flipped else -1.0) if defending else 0.0
+		jump_pressed = false
+		attack_pressed = false
+		medium_pressed = false
+		heavy_pressed = false
+		kick_pressed = false
+		medium_kick_pressed = false
+	guard_held = axis*(-1.0 if flipped else 1.0)<-0.2
 	if not reaction_kind.is_empty():
 		return _reaction_step(delta)
-	if training_guard or training_crouch:
+	if training_crouch:
 		_apply_training_pose()
 		return 0.0
 	touchdown_hold = false
-	if (attack_pressed or medium_pressed or heavy_pressed or kick_pressed) and not attack_active and not jump.active and not crouch.is_active() and not crouch_down and body_y==0.0 and motion.state!="back-jump" and not jump_pressed:
-		start_attack("heavy-punch" if heavy_pressed else "medium-punch" if medium_pressed else "light-kick" if kick_pressed else "light-punch")
+	if (attack_pressed or medium_pressed or heavy_pressed or kick_pressed or medium_kick_pressed) and not attack_active and not jump.active and not crouch.is_active() and not crouch_down and body_y==0.0 and motion.state!="back-jump" and not jump_pressed:
+		start_attack("heavy-punch" if heavy_pressed else "medium-punch" if medium_pressed else "medium-kick" if medium_kick_pressed else "light-kick" if kick_pressed else "light-punch")
 	if attack_active:
 		attack_elapsed = minf(attack_elapsed+delta,animation_duration(attack_id))
 		elapsed = attack_elapsed
@@ -457,7 +476,7 @@ func _process(delta: float) -> void:
 
 func _update_frame() -> void:
 	var duration := animation_duration(animation_id)
-	var clock := minf(elapsed,duration-0.000001) if animation_id in ["back-jump","jump","light-punch","hurt-high","block-high","crouch","block-low","medium-punch","hurt-medium","heavy-punch","light-kick","hurt-low","hurt-crouched"] else fposmod(elapsed,duration)
+	var clock := minf(elapsed,duration-0.000001) if animation_id in ["back-jump","jump","light-punch","hurt-high","block-high","block-mid","crouch","block-low","medium-punch","hurt-medium","heavy-punch","light-kick","medium-kick","hurt-low","hurt-crouched"] else fposmod(elapsed,duration)
 	frame_index = 0
 	if animation.has("frameDurations"):
 		while frame_index<animation.frames.size()-1 and clock>=float(animation.frameDurations[frame_index])/1000.0-0.0000001:
@@ -479,7 +498,7 @@ func _update_frame() -> void:
 	shadow_sprite.region_rect = region
 	var flip := -1.0 if flipped else 1.0
 	sprite.scale = Vector2(visual_scale * flip, visual_scale)
-	if animation_id in ["light-punch","medium-punch","heavy-punch","light-kick"]:
+	if animation_id in ["light-punch","medium-punch","heavy-punch","light-kick","medium-kick"]:
 		hitbox.update_frame(frame_index,attack_active,sprite.scale)
 	else:
 		hitbox.disable()
@@ -493,7 +512,7 @@ func _update_frame() -> void:
 	# A raised leg is not a second ground contact. Fitting a ground plane through
 	# both feet while running produced steep/alternating slopes and rotating shadows.
 	var slope := 0.0
-	var attached := animation_id in ["idle","walk","backwalk","light-punch","hurt-high","block-high","crouch","block-low"]
+	var attached := animation_id in ["idle","walk","backwalk","light-punch","hurt-high","block-high","block-mid","crouch","block-low"]
 	if attached and feet.size()==2 and absf(float(feet[1].x)-float(feet[0].x))>40.0:
 		var candidate := (float(feet[1].y)-float(feet[0].y))/(float(feet[1].x)-float(feet[0].x))
 		# Only use a two-sole plane when well-conditioned. A nearly vertical pair
@@ -522,7 +541,7 @@ func _draw() -> void:
 	for foot: Dictionary in feet:
 		bottom = maxf(bottom,float(foot.y))
 	for foot: Dictionary in feet:
-		var attached := animation_id in ["idle","walk","backwalk","light-punch","hurt-high","block-high","crouch","block-low"]
+		var attached := animation_id in ["idle","walk","backwalk","light-punch","hurt-high","block-high","block-mid","crouch","block-low"]
 		if not attached and (bottom<anchor.y-12.0 or float(foot.y)<bottom-6.0):
 			continue
 		var x := flip * visual_scale * (float(foot.x) - anchor.x)

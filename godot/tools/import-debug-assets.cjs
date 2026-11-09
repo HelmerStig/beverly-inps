@@ -18,7 +18,7 @@ copy('assets/stages/Piazza Europa/crt-preset.json');
 const characters = manifest.characters.filter(character=>!character.localIdleOnly).map(character => {
   const idle = character.animations.find(a => a.id === 'idle');
   const animations = {};
-  for(const id of ['idle','walk','backwalk','run','back-jump','jump','light-punch','hurt-high','block-high','crouch','block-low','medium-punch','hurt-medium','heavy-punch','light-kick','hurt-low','hurt-crouched']) {
+  for(const id of ['idle','walk','backwalk','run','back-jump','jump','light-punch','hurt-high','block-high','block-mid','crouch','block-low','medium-punch','hurt-medium','heavy-punch','light-kick','medium-kick','hurt-low','hurt-crouched']) {
     const animation = character.animations.find(a=>a.id===id);
     if(!animation) throw Error('Missing movement: '+character.id+'/'+id);
     copy(animation.image);
@@ -44,4 +44,4 @@ const characters = manifest.characters.filter(character=>!character.localIdleOnl
 });
 fs.mkdirSync(path.join(root,'data'), {recursive:true});
 fs.writeFileSync(path.join(root,'data/debug-roster.json'), JSON.stringify({characters}, null, 2)+'\n');
-console.log('Imported Piazza Europa and 119 verified character animations.');
+console.log('Imported Piazza Europa and 133 verified character animations.');

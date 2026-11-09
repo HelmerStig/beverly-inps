@@ -6,7 +6,7 @@ from pathlib import Path
 from PIL import Image, ImageChops, ImageStat, ImageDraw
 ROOT=Path(__file__).resolve().parents[1]
 attack=sys.argv[1] if len(sys.argv)>1 else 'light-punch'
-if attack not in ['light-punch','medium-punch','heavy-punch','light-kick']: raise ValueError('Unsupported attack')
+if attack not in ['light-punch','medium-punch','heavy-punch','light-kick','medium-kick']: raise ValueError('Unsupported attack')
 roster=json.loads((ROOT/'data/debug-roster.json').read_text(encoding='utf-8'))
 seeds=json.loads((ROOT/f'data/{attack}-hitbox-seeds.json').read_text(encoding='utf-8'))
 out={'schema':f'sanmauro.{attack}-hitboxes','version':1,'characters':{}}

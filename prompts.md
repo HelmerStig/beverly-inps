@@ -68,9 +68,15 @@ Step 2
 
 	- Ora passiamo al pugno medio, implementalo per tutti i personaggi prendendo come riferimento per i timing il solito catalogo, fai attenzione sempre a Mangler che potrebbe avere delle mosse composte da più spritesheet, lo puoi controlalre nel vecchio progetto godot
 
+	- Ora passiamo al calcio leggero, implementalo per tutti i personaggi prendendo come riferimento per i timing il solito catalogo, fai attenzione sempre a Mangler che potrebbe avere delle mosse composte da più spritesheet, lo puoi controlalre nel vecchio progetto godot per i suoni utilizzati.
+
+	- Ora passiamo al calcio medio, implementalo per tutti i personaggi prendendo come riferimento per i timing il solito catalogo, fai attenzione sempre a Mangler che potrebbe avere delle mosse composte da più spritesheet, lo puoi controlalre nel vecchio progetto godot per i suoni utilizzati.
+
 	- In genrale, il personaggio che colpisce, deve avere uno z-index più alto dell'avversario
 
 	- Ora passiamo al pugno potente, implementalo per tutti i personaggi prendendo come riferimento per i timing il solito catalogo, fai attenzione sempre a Mangler che potrebbe avere delle mosse composte da più spritesheet, lo puoi contrllare nel vecchio progetto godot, usa i suoni utilizzati nel vecchio progetto.
+
+	- Ora passiamo al calcio potente, implementalo per tutti i personaggi prendendo come riferimento per i timing il solito catalogo, fai attenzione sempre a Mangler che potrebbe avere delle mosse composte da più spritesheet, lo puoi contrllare nel vecchio progetto godot, usa i suoni utilizzati nel vecchio progetto.
 
 	- Bug salto: I salti hanno un momento di stallo in atteragio in cui non cxi si può muovere, quando lo sprite tocca terra deve subito tornare in idle e potersi muovere. Mangler mentre atterra, rallenta l'atterragio per qualche motivo
 
@@ -104,3 +110,12 @@ Step 2
 			pulsante g per mettere player 2 in guardia, g di nuovo per rimuovere la guardia
 			pulsante c pper metterr player 2 in crouched, c d nuovo per pfarlo tornare in idle, se metto in crouched e clicco g, deve essere in guardia bassa
 	  	- ora vorrei aggiungere un effetto di hit quando il colpo colpisce ed uno diverso quando viene parato, hai suggerimenti?
+
+Calcio Medio rework
+- Arianna: deve generare hurt medium o parata media
+
+Abbiamo implementato prima gli shortcut della parata, la logica va modificata come segue:
+	- Quando si preme g, il personaggio 2, deve tenere indietro se il personaggio 1 effettua una mossa in modo da parare.
+	- Quanso si è in crouched, e si preme g, deve simulare basso + diagonale basso indietro in modo da parare
+
+Tutto chiaro?

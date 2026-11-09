@@ -542,3 +542,12 @@ P1: R. P2: P. Joypad: Y. Timing del catalogo demo: impatto a 450 ms e fine a 750
 
 ### Pugno potente in piedi
 P1: T. P2: U. Joypad: RB (spalla destra). Timing del catalogo: impatto a 500 ms e ritorno all'idle a 1000 ms, senza interrompere il recupero. Per Mangler: spritesheet 00-heavy_punch_high.png, 49 frame in avanti e recupero inverso dal frame sorgente 40 al 20 (70 frame animati, pi? marcatore idle finale senza durata). Suoni originali FighterAttackAudio.gd: swosh.wav per il movimento, strong-punch.wav solo sul contatto non parato. Hitbox e hurtbox seguono lo sprite; posa iniziale allineata all'idle. Parata ed effetti di contatto condivisi con gli altri pugni.
+
+### Calcio leggero in piedi
+P1: V. P2: M. Joypad: A. Timing del catalogo: impatto a 300 ms e ritorno all'idle a 500 ms; una pressione esegue una sola mossa. Mangler usa light_kick.png: frame sorgenti 10?24 in avanti, poi 23?10 in ritorno (29 frame animati, pi? marcatore finale senza durata). Hitbox su piede e caviglia, hurtbox specifiche per tutte le pose, altezze e punto d'appoggio coerenti con l'idle. Come nel vecchio Godot il calcio ? basso: richiede guardia bassa, causa Hurt basso sul bersaglio in piedi e Hurt accovacciato su quello accovacciato. Suoni originali: kick_short_whoosh_12.wav e body_hit_small_11.wav. Mantiene gli effetti di contatto, la priorit? visiva dell'attaccante e i toggle G/C.
+
+Calcio medio in piedi: joypad B, tastiera P1 B / P2 N. Timing catalogo: impatto 450 ms, durata 750 ms; hitbox sul piede, hurtbox per frame e suoni originali kick_short_whoosh_23 / body_hit_large_44. Mangler usa un solo sheet, frame 14-41 poi 40-14. Genera hurt-medium o parata block-mid; puo passare sopra un bersaglio accovacciato.
+
+Il calcio medio provoca hurt-medium su colpo a segno e block-mid su parata; la posa di parata media resta fino alla fine dell'attacco prima del recupero.
+
+Shortcut dummy: G abilita/disabilita difesa automatica P2. Quando P1 attacca simula indietro relativo al facing (con arretramento); con C attivo mantiene crouch e simula basso-indietro. Nessuna posa di guardia permanente: al contatto usa la parata appropriata, mantiene fino a fine attacco e recupera in idle/crouch.
