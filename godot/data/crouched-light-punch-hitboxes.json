@@ -1,0 +1,256 @@
+{
+  "schema": "sanmauro.crouched-light-punch-hitboxes",
+  "version": 1,
+  "characters": {
+    "arianna": {
+      "sourceSha256": "7f576338f2b08e8c09693a44909aef17f5633dd9f241f7a327990193c806ad33",
+      "framesSha256": "8157f1cf53a360b21ec44519ca703cf725ba6cebcbf61cce2396825aef146097",
+      "impactFrame": 14,
+      "activeStartMs": 300.0,
+      "activeEndMs": 326.66666666666663,
+      "durationMs": 500,
+      "frames": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          390,
+          231,
+          408,
+          232,
+          10
+        ],
+        [
+          388,
+          232,
+          406,
+          233,
+          10
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "bue": {
+      "sourceSha256": "a77d7888ede01fd8cc334e70a69ba8923138338b7450fae405cfdf9301aa132a",
+      "framesSha256": "3a0e8d89757a0452791a55cff12d8cd24f2eb41fb3728a86bfc7d7bf326e2aad",
+      "impactFrame": 2,
+      "activeStartMs": 300,
+      "activeEndMs": 380,
+      "durationMs": 500,
+      "frames": [
+        null,
+        null,
+        [
+          397,
+          210,
+          414,
+          210,
+          10
+        ],
+        [
+          392,
+          211,
+          409,
+          211,
+          10
+        ],
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "mangler": {
+      "sourceSha256": "faacfea360928c5fa6708ee293f9bc4480fdc74a06aeb65acd554012f1ed70b7",
+      "framesSha256": "63d823a3bf8d826d89371bbf722e49dc425dc66145cda39127f104a156771389",
+      "impactFrame": 10,
+      "activeStartMs": 300,
+      "activeEndMs": 336.3636363636364,
+      "durationMs": 500,
+      "frames": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          429,
+          222,
+          443,
+          223,
+          11
+        ],
+        [
+          428,
+          223,
+          442,
+          224,
+          11
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "mileto": {
+      "sourceSha256": "1b94ffec389f1801b862a4fe8a5aadd3cd7b4d18280473fa3d08e7b78d5dbdb5",
+      "framesSha256": "3a0e8d89757a0452791a55cff12d8cd24f2eb41fb3728a86bfc7d7bf326e2aad",
+      "impactFrame": 3,
+      "activeStartMs": 300,
+      "activeEndMs": 400,
+      "durationMs": 500,
+      "frames": [
+        null,
+        null,
+        null,
+        [
+          365,
+          201,
+          382,
+          201,
+          10
+        ],
+        [
+          337,
+          206,
+          354,
+          206,
+          10
+        ],
+        null,
+        null,
+        null
+      ]
+    },
+    "oscare": {
+      "sourceSha256": "5f80a432d72f0022fe8004c851e1468313e8867d60a57f132ef32c031e11af9c",
+      "framesSha256": "3a0e8d89757a0452791a55cff12d8cd24f2eb41fb3728a86bfc7d7bf326e2aad",
+      "impactFrame": 2,
+      "activeStartMs": 300,
+      "activeEndMs": 380,
+      "durationMs": 500,
+      "frames": [
+        null,
+        null,
+        [
+          376,
+          220,
+          389,
+          220,
+          9
+        ],
+        [
+          373,
+          222,
+          386,
+          222,
+          9
+        ],
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "peirolo": {
+      "sourceSha256": "106d6450028f93d42d19a949b9a887627df0ab2111fd012b652c64d52279bf6e",
+      "framesSha256": "6436c87aa30b7c0dcc3d19df992d2a984f21b6577f1a4f643d28098928bfb9f7",
+      "impactFrame": 5,
+      "activeStartMs": 300,
+      "activeEndMs": 366.66666666666663,
+      "durationMs": 500,
+      "frames": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          393,
+          189,
+          408,
+          188,
+          10
+        ],
+        [
+          389,
+          190,
+          404,
+          189,
+          10
+        ],
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "torpe": {
+      "sourceSha256": "ef673ebfa0f8da441e0634494b2f836bd6372ae6f58e58e965c9f911410b1179",
+      "framesSha256": "3a0e8d89757a0452791a55cff12d8cd24f2eb41fb3728a86bfc7d7bf326e2aad",
+      "impactFrame": 2,
+      "activeStartMs": 300,
+      "activeEndMs": 380,
+      "durationMs": 500,
+      "frames": [
+        null,
+        null,
+        [
+          383,
+          189,
+          396,
+          189,
+          10
+        ],
+        [
+          382,
+          190,
+          395,
+          190,
+          10
+        ],
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  }
+}

@@ -6,7 +6,7 @@ from pathlib import Path
 from PIL import Image, ImageChops, ImageStat, ImageDraw
 ROOT=Path(__file__).resolve().parents[1]
 attack=sys.argv[1] if len(sys.argv)>1 else 'light-punch'
-if attack not in ['light-punch','medium-punch','heavy-punch','light-kick','medium-kick']: raise ValueError('Unsupported attack')
+if attack not in ['light-punch','medium-punch','heavy-punch','light-kick','medium-kick','heavy-kick','crouched-light-punch','crouched-medium-punch','crouched-heavy-punch']: raise ValueError('Unsupported attack')
 roster=json.loads((ROOT/'data/debug-roster.json').read_text(encoding='utf-8'))
 seeds=json.loads((ROOT/f'data/{attack}-hitbox-seeds.json').read_text(encoding='utf-8'))
 out={'schema':f'sanmauro.{attack}-hitboxes','version':1,'characters':{}}
@@ -30,7 +30,9 @@ for c in roster['characters']:
                 return sum(diff[:3])/3+diff[3]*0.8+(x*x+y*y)*0.006
             _,dx,dy=min((score(x,y),x,y) for y in range(-48,49,4) for x in range(-64,65,4))
             _,dx,dy=min((score(x,y),x,y) for y in range(dy-2,dy+3) for x in range(dx-2,dx+3))
-        result[index]=[ax+dx,ay+dy,bx+dx,by+dy,r]
+        extension=seeds.get("forwardExtensionPixels",0)
+        forward=seeds.get("characterForwardOffsets",{}).get(c["id"],0)
+        result[index]=[ax+dx+forward,ay+dy,bx+dx+extension+forward,by+dy,r+(2 if extension else 0)]
     start=sum(a['frameDurations'][:peak]); end=sum(a['frameDurations'][:peak+2])
     out['characters'][c['id']]={'sourceSha256':digest,'framesSha256':hashlib.sha256(json.dumps(a['frames'],separators=(',',':')).encode()).hexdigest(),
         'impactFrame':peak,'activeStartMs':start,'activeEndMs':end,'durationMs':a['durationMs'],'frames':result}

@@ -50,21 +50,33 @@ func update_frame(index: int, enabled: bool, sprite_scale: Vector2) -> void:
 	active = true
 	queue_redraw()
 
-func touches(target: Area2D) -> bool:
+func _contacts(target: Area2D, sweep: bool) -> PackedVector2Array:
 	if not active:
-		return false
+		return PackedVector2Array()
+	var geometry: Shape2D = shape.shape
+	var transform := shape.global_transform
+	if sweep:
+		# Sweep the foot inward at its actual height; never extend its reach outward.
+		var foot := shape.position
+		var start := Vector2(0.0,foot.y)
+		var swept := CapsuleShape2D.new()
+		swept.radius = float(capsule[4])
+		swept.height = start.distance_to(foot)+swept.radius*2.0
+		geometry = swept
+		transform = global_transform*Transform2D((foot-start).angle()-PI/2.0,(foot+start)*0.5)
 	for hurt: CollisionShape2D in target.shapes:
-		if not hurt.disabled and shape.shape.collide(shape.global_transform,hurt.shape,hurt.global_transform):
-			return true
-	return false
+		if hurt.disabled: continue
+		var contacts := geometry.collide_and_get_contacts(transform,hurt.shape,hurt.global_transform)
+		if contacts.size()>=2: return contacts
+	return PackedVector2Array()
 
-func contact_point(target: Area2D) -> Vector2:
-	for hurt: CollisionShape2D in target.shapes:
-		if hurt.disabled:
-			continue
-		var contacts := shape.shape.collide_and_get_contacts(shape.global_transform,hurt.shape,hurt.global_transform)
-		if contacts.size()>=2:
-			return (contacts[0]+contacts[1])*0.5
+func touches(target: Area2D, sweep: bool = false) -> bool:
+	return not _contacts(target,false).is_empty() or (sweep and not _contacts(target,true).is_empty())
+
+func contact_point(target: Area2D, sweep: bool = false) -> Vector2:
+	var contacts := _contacts(target,false)
+	if contacts.is_empty() and sweep: contacts = _contacts(target,true)
+	if contacts.size()>=2: return (contacts[0]+contacts[1])*0.5
 	return shape.global_position
 
 func _draw() -> void:

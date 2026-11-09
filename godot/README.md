@@ -551,3 +551,23 @@ Calcio medio in piedi: joypad B, tastiera P1 B / P2 N. Timing catalogo: impatto 
 Il calcio medio provoca hurt-medium su colpo a segno e block-mid su parata; la posa di parata media resta fino alla fine dell'attacco prima del recupero.
 
 Shortcut dummy: G abilita/disabilita difesa automatica P2. Quando P1 attacca simula indietro relativo al facing (con arretramento); con C attivo mantiene crouch e simula basso-indietro. Nessuna posa di guardia permanente: al contatto usa la parata appropriata, mantiene fino a fine attacco e recupera in idle/crouch.
+
+Calcio potente in piedi: joypad RT (asse trigger destro, soglia 0.5), tastiera P1 H / P2 virgola. Impatto 500 ms, durata 1000 ms dal catalogo; hurt-high e parata alta, hitbox sul piede e hurtbox per frame. Suoni originali kick_long_whoosh_19 / body_hit_large_76. Mangler: un solo spritesheet, frame 21-48 poi 47-21.
+
+Calcio potente Arianna: hurt-medium / block-mid. Tutte le mosse controllano anche il tratto orizzontale interno attraversato dal colpo durante i frame attivi, senza estendere portata o altezza, e risolvono hurt o parata al contatto.
+
+Reazioni accovacciate: per tutti gli attacchi la postura del bersaglio ha precedenza sul livello del colpo: hurt-crouched se colpito, block-low (parata crouched) se para. La postura viene mantenuta anche su colpi successivi durante la reazione.
+
+Correzione Bue calcio potente: riprodotti tutti i 49 fotogrammi del foglio, inclusa la discesa della gamba assente nel catalogo legacy troncato a 27. Impatto, finestra attiva e durata totale invariati; recupero completo senza salto dalla posa col ginocchio alto a idle.
+
+Il controllo del tratto interno attraversato dal colpo si applica a tutte le mosse attive, anche contro la guardia: un contatto ravvicinato oltrepassato produce la reazione corretta (hurt/parata e postura). Portata esterna, altezza e finestre attive restano quelle della mossa.
+
+Pugno leggero da crouch: basso + X, P1 S+F / P2 K+O. Timing catalogo: impatto 300 ms, durata 500 ms. Colpisce in medium contro bersagli in piedi (hurt-medium/block-mid), oppure usa hurt-crouched/block-low contro bersagli accovacciati. Ritorna in crouch se basso resta premuto, altrimenti esegue la risalita. Hitbox/hurtbox per frame e suoni del pugno leggero.
+
+Ombre degli attacchi a terra: proiezione e contatti restano ancorati alle suole anche durante pugni/calci e pugno crouched. Peirolo pugno leggero crouched: recupero completo verificato, tempi redistribuiti dalle pose col braccio esteso ai due fotogrammi finali di rientro; impatto, finestra attiva e durata totale invariati.
+
+Pugno medio da crouch: basso + Y, P1 S+R / P2 K+P. Impatto 450 ms, durata 750 ms dal catalogo; hurt-medium/block-mid contro bersaglio in piedi, hurt-crouched/block-low contro bersaglio accovacciato. Hitbox/hurtbox per frame, ombre agganciate alle suole e recupero completo verso crouch; suoni swosh e light-punch del pugno medio.
+
+Pugno forte da crouch: basso + RB, P1 S+T / P2 K+U. Impatto 500 ms e durata 1000 ms. Bersaglio in piedi: hurt-high/block-high; accovacciato: nessun contatto, anche con sweep ravvicinato. Hitbox estesa di 24 pixel sorgente in avanti per gli uppercut verticali, hurtbox per frame, audio del pugno forte. Arianna termina in piedi e ripete la discesa se basso e ancora premuto.
+
+Pugno forte crouched: Torpe ha hitbox frontale riallineata e tratto utile del braccio per raggiungere tutti gli avversari in piedi a contatto. Mangler esegue un salto iniziale di 200 pixel (durata 1 s, sincronizzata con tutto il recupero) con hurtbox solidali e ombra a terra; la discesa continua anche se colpito.

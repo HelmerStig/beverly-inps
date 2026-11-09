@@ -153,7 +153,7 @@ func _build_toolbar() -> void:
 	help.add_theme_constant_override("shadow_outline_size",5)
 	ui.add_child(help)
 	var shortcuts := Label.new()
-	shortcuts.text = "Dummy P2: G difesa automatica on/off | C accovacciato on/off | G+C basso-indietro | Basso: P1 S / P2 K / stick o D-pad | Medio: P1 R / P2 P / Joy Y | Forte: P1 T / P2 U / Joy RB | Calcio: P1 V / P2 M / Joy A | Calcio medio: B / N / Joy B"
+	shortcuts.text = "Dummy P2: G difesa automatica on/off | C accovacciato on/off | G+C basso-indietro | Basso: P1 S / P2 K / stick o D-pad | Medio: P1 R / P2 P / Joy Y | Forte: P1 T / P2 U / Joy RB | Calci: V/M A | B/N B | H/, RT"
 	shortcuts.position = Vector2(30,185)
 	shortcuts.add_theme_font_size_override("font_size",21)
 	shortcuts.add_theme_color_override("font_shadow_color",Color.BLACK)
@@ -207,12 +207,18 @@ func _physics_process(delta: float) -> void:
 			fighter.heavy_was_down = _heavy_held(slot)
 			fighter.kick_was_down = _kick_held(slot)
 			fighter.medium_kick_was_down = _medium_kick_held(slot)
+			fighter.heavy_kick_was_down = _heavy_kick_held(slot)
 		_update_view()
 		return
-	move_pair(Vector2(fighters[0].locomotion_step(_axis(0),delta,_jump_held(0),_attack_held(0),_crouch_held(0),_medium_held(0),_heavy_held(0),_kick_held(0),_medium_kick_held(0)),fighters[1].locomotion_step(_axis(1),delta,_jump_held(1),_attack_held(1),_crouch_held(1),_medium_held(1),_heavy_held(1),_kick_held(1),_medium_kick_held(1))))
+	move_pair(Vector2(fighters[0].locomotion_step(_axis(0),delta,_jump_held(0),_attack_held(0),_crouch_held(0),_medium_held(0),_heavy_held(0),_kick_held(0),_medium_kick_held(0),_heavy_kick_held(0)),fighters[1].locomotion_step(_axis(1),delta,_jump_held(1),_attack_held(1),_crouch_held(1),_medium_held(1),_heavy_held(1),_kick_held(1),_medium_kick_held(1),_heavy_kick_held(1))))
 	fighters[0].resolve_light_punch(fighters[1])
 	fighters[1].resolve_light_punch(fighters[0])
 	_update_fighter_depth()
+
+func _heavy_kick_held(slot: int) -> bool:
+	var keyboard := Input.is_physical_key_pressed(KEY_H if slot==0 else KEY_COMMA)
+	var pads := Input.get_connected_joypads()
+	return keyboard or (slot<pads.size() and Input.get_joy_axis(pads[slot],JOY_AXIS_TRIGGER_RIGHT)>0.5)
 
 func _medium_kick_held(slot: int) -> bool:
 	var keyboard := Input.is_physical_key_pressed(KEY_B if slot==0 else KEY_N)

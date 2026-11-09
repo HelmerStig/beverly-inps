@@ -59,7 +59,7 @@ func run() -> void:
 			actor.start_medium_kick()
 			actor.locomotion_step(0,.45)
 			scene._update_view()
-			check(target.receive_light_punch(actor) and target.animation_id=="block-mid","Low guard blocks standing medium kick: "+str(actor.data.id))
+			check(target.receive_light_punch(actor) and target.animation_id=="block-low","Low guard blocks standing medium kick: "+str(actor.data.id))
 			var pose: int=target.frame_index
 			target.locomotion_step(0,.1)
 			check(target.frame_index==pose,"Medium guard holds through kick")

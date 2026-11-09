@@ -78,6 +78,15 @@ Step 2
 
 	- Ora passiamo al calcio potente, implementalo per tutti i personaggi prendendo come riferimento per i timing il solito catalogo, fai attenzione sempre a Mangler che potrebbe avere delle mosse composte da più spritesheet, lo puoi contrllare nel vecchio progetto godot, usa i suoni utilizzati nel vecchio progetto.
 
+	- Ora passiamo al pugno leggero basso (da crouched), genera hurt_medium e block mediuam se il personaggio è in piedi, se è accucciato hurt_crouched e block_crouched
+
+	- Ora passiamo al pugno medio basso (da crouched), genera hurt_medium e block mediuam se il personaggio è in piedi, se è accucciato hurt_crouched e block_crouched
+
+	- Ora passiamo al pugno forte basso (da crouched), genera hurt_high e block high se il personaggio è in piedi, se è accucciato non viene recepito
+
+	Torpe non riesce acolpire anche se attaccato al peronaggio avversario, sposta la hitbox in avanti.
+	Mangler invece deve avere un comportamnento particolare, all'avvio del colpo deve staccarsi da terra in salto (un salto di circa 200ox)
+
 	- Bug salto: I salti hanno un momento di stallo in atteragio in cui non cxi si può muovere, quando lo sprite tocca terra deve subito tornare in idle e potersi muovere. Mangler mentre atterra, rallenta l'atterragio per qualche motivo
 
 	- Per tutti i personaggi ora c'è un blocco leggero a mezz'aria poco prima dell'atterraggio, se l'animazione del salto è finita prima, torna in idle
@@ -118,4 +127,8 @@ Abbiamo implementato prima gli shortcut della parata, la logica va modificata co
 	- Quando si preme g, il personaggio 2, deve tenere indietro se il personaggio 1 effettua una mossa in modo da parare.
 	- Quanso si è in crouched, e si preme g, deve simulare basso + diagonale basso indietro in modo da parare
 
-Tutto chiaro?
+Calcio potente
+ - Arianna: Genera Hurt medium o block medium
+ - In generale, alcuni dei calci leggeri, se si è vicino ad un personaggio, superano in estensione le hurtbox dell'avversario, ma se non è in parata, dovrebbe colpire lo stesso
+
+ - se un personaggio è crouched e il colpo colpisce deve avere come reazioni: hurt_crouched e parata_crouched
