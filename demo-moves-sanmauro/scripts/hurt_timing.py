@@ -2,6 +2,7 @@
 
 
 def apply_hurt_timing(data, config):
+    data = {**data, 'characters': [c for c in data['characters'] if not c.get('localIdleOnly')]}
     ids = ['hurt-high','hurt-medium','hurt-low','hurt-crouched']
     if config.get('schema')!='sanmauro.hurt-timing' or config.get('version')!=1 or config.get('animationIds')!=ids:
         raise ValueError('Configurazione timing hurt non valida')

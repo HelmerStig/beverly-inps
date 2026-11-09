@@ -15,6 +15,7 @@ apply_heavy_punch_timing(data,config)
 report=root/'reports';poses=report/'heavy-punch-poses';poses.mkdir(parents=True,exist_ok=True)
 rows,records=[],[]
 for c in data['characters']:
+    if c.get('localIdleOnly'): continue
     a=next(a for a in c['animations'] if a['id']=='heavy-punch')
     count=len(a['frames']);samples=[0,a["impactFrame"],count-1]
     triptych=Image.new('RGBA',(1536,512));dx,dy,dw,dh=a['preview']['drawRect']

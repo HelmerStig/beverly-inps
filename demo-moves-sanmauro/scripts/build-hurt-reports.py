@@ -19,6 +19,7 @@ for ident in config['animationIds']:
     rows,records=[],[]
     poses=report/(ident+'-poses');poses.mkdir(parents=True,exist_ok=True)
     for c in data['characters']:
+        if c.get('localIdleOnly'): continue
         a=next(a for a in c['animations'] if a['id']==ident)
         count=len(a['frames']);samples=[0,count//2,count-1]
         triptych=Image.new('RGBA',(1536,512))

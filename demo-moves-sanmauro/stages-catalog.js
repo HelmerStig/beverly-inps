@@ -61,7 +61,7 @@
         "animationId": "idle",
         "x": 675,
         "groundY": 1025,
-        "scale": 1.2865825151940158,
+        "scale": 1.2847805788982258,
         "heightCm": 165,
         "heightMultiplier": 1.0,
         "anchorX": 256.5,
@@ -73,7 +73,7 @@
         "animationId": "idle",
         "x": 1890,
         "groundY": 1025,
-        "scale": 1.5322380430814164,
+        "scale": 1.541524334251607,
         "heightCm": 183,
         "heightMultiplier": 1.1090909090909091,
         "anchorX": 257.5,
@@ -87,7 +87,7 @@
     "name": "Mercatò",
     "width": 2550,
     "height": 1080,
-    "viewportWidth": 2550,
+    "viewportWidth": 1920,
     "shadow": {
       "color": "#1d1625",
       "shearX": 0.5,
@@ -113,28 +113,28 @@
     ],
     "fighters": [
       {
-        "characterId": "arianna",
+        "characterId": "lele",
         "animationId": "idle",
         "x": 675,
         "groundY": 1025,
-        "scale": 1.2865825151940158,
-        "heightCm": 165,
-        "heightMultiplier": 1.0,
-        "anchorX": 256.5,
-        "anchorY": 428,
-        "flipX": false
+        "flipX": false,
+        "scale": 1.5884559884559881,
+        "heightCm": 176,
+        "heightMultiplier": 1.0666666666666667,
+        "anchorX": 283.0,
+        "anchorY": 409
       },
       {
-        "characterId": "oscare",
+        "characterId": "mangler",
         "animationId": "idle",
         "x": 1890,
         "groundY": 1025,
-        "scale": 1.5322380430814164,
+        "flipX": true,
+        "scale": 1.4289410963568265,
         "heightCm": 183,
         "heightMultiplier": 1.1090909090909091,
-        "anchorX": 257.5,
-        "anchorY": 414,
-        "flipX": true
+        "anchorX": 259.5,
+        "anchorY": 428
       }
     ],
     "shootingStars": true,

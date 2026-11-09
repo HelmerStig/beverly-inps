@@ -22,6 +22,7 @@ poses = report / 'jump-poses'
 poses.mkdir(parents=True, exist_ok=True)
 rows, records = [], []
 for c in data['characters']:
+    if c.get('localIdleOnly'): continue
     a = next(a for a in c['animations'] if a['id'] == 'jump')
     apex, count = a['apexFrame'], len(a['frames'])
     x, y, w, h = a['frames'][apex]

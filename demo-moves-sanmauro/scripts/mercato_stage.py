@@ -20,8 +20,20 @@ def build_mercato(root, template):
         if speed:
             layer['speed'] = speed
         layers.append(layer)
-    stage = dict(id='mercato',name='Mercatò',width=width,height=height,viewportWidth=width,
-                 shadow=template['shadow'],layers=layers,fighters=template['fighters'],shootingStars=True,rain=True,webglClouds=True,lightning=True)
+    manifest=json.loads((root/'assets/manifest.json').read_text(encoding='utf-8'))
+    proportions=json.loads((root/'assets/character-proportions.json').read_text(encoding='utf-8'))
+    fighters=[]
+    for ident, placement in zip(['lele','mangler'],template['fighters']):
+        character=next(c for c in manifest['characters'] if c['id']==ident)
+        idle=next(a for a in character['animations'] if a['id']=='idle')
+        preview=idle['normalizedPreview']
+        multiplier=proportions['heightsCm'][ident]/proportions['referenceHeightCm']
+        fighters.append(dict(characterId=ident,animationId='idle',x=placement['x'],groundY=height-55,
+            flipX=placement['flipX'],scale=idle['stageSpriteScale'][0],
+            heightCm=proportions['heightsCm'][ident],heightMultiplier=multiplier,
+            anchorX=preview['anchor'][0],anchorY=preview['anchor'][1]))
+    stage = dict(id='mercato',name='Mercatò',width=width,height=height,viewportWidth=height*16//9,
+                 shadow=template['shadow'],layers=layers,fighters=fighters,shootingStars=True,rain=True,webglClouds=True,lightning=True)
     (folder/'stage.json').write_text(json.dumps(stage,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     return stage
 
@@ -32,4 +44,4 @@ if __name__ == '__main__':
     root = Path(__file__).resolve().parents[1]
     piazza = json.loads((root/'assets/stages/Piazza Europa/stage.json').read_text(encoding='utf-8'))
     write_catalog(root,[piazza,build_mercato(root,piazza)])
-    print('Mercatò added after Piazza Europa; native 2550x1080 full-stage viewport.')
+    print('Mercatò added after Piazza Europa; native stage with centered, draggable 1920x1080 viewport.')

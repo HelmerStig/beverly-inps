@@ -20,6 +20,7 @@ for ident in config['animationIds']:
     poses = report/(ident+'-poses')
     poses.mkdir(parents=True,exist_ok=True)
     for c in data['characters']:
+        if c.get('localIdleOnly'): continue
         a = next(a for a in c['animations'] if a['id']==ident)
         pose_index = a.get('sourceForwardFrameCount',len(a['frames']))-1
         x,y,w,h = a['frames'][pose_index]

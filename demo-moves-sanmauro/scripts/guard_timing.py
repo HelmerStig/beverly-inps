@@ -2,6 +2,7 @@
 
 
 def apply_guard_timing(data, config):
+    data = {**data, 'characters': [c for c in data['characters'] if not c.get('localIdleOnly')]}
     ids = ['block-high','block-mid','block-low']
     if config.get('schema')!='sanmauro.guard-timing' or config.get('version')!=1 or config.get('animationIds')!=ids:
         raise ValueError('Configurazione timing parate non valida')

@@ -2,6 +2,7 @@
 
 
 def apply_crouch_timing(data, config):
+    data = {**data, 'characters': [c for c in data['characters'] if not c.get('localIdleOnly')]}
     if config.get('schema')!='sanmauro.crouch-timing' or config.get('version')!=1:
         raise ValueError('Configurazione timing crouch non valida')
     duration=config.get('durationMs')

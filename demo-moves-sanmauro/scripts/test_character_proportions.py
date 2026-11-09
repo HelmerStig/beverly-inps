@@ -31,6 +31,20 @@ class CharacterProportionsTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'Altezze non valide'):
             apply_proportions(self.data,self.config)
 
+    def test_same_pixels_per_cm_in_stage_and_gallery(self):
+        apply_proportions(self.data,self.config)
+        for c in self.data['characters']:
+            idle=next(a for a in c['animations'] if a['id']=='idle')
+            pixels=c['referenceIdleHeightPixels']
+            expected=344/self.config['referenceHeightCm']
+            self.assertAlmostEqual(pixels*idle['stageSpriteScale'][1]/c['heightCm'],expected*self.config['stageScale'])
+            self.assertAlmostEqual(pixels*idle['preview']['scale'][1]/c['heightCm'],expected*self.data['previewScale'])
+        lele=next(c for c in self.data['characters'] if c['id']=='lele')
+        mangler=next(c for c in self.data['characters'] if c['id']=='mangler')
+        def stage_height(c):
+            return c['referenceIdleHeightPixels']*c['animations'][0]['stageSpriteScale'][1]
+        self.assertAlmostEqual(stage_height(mangler)/stage_height(lele),183/176)
+
 
 if __name__ == '__main__':
     unittest.main()

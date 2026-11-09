@@ -3,6 +3,7 @@ from jump_timing import frames_hash
 
 
 def apply_heavy_punch_timing(data, config):
+    data = {**data, 'characters': [c for c in data['characters'] if not c.get('localIdleOnly')]}
     if config.get('schema') != 'sanmauro.heavy-punch-timing' or config.get('version') != 1:
         raise ValueError('Configurazione timing heavy-punch non valida')
     duration = config.get('durationMs')

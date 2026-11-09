@@ -8,6 +8,7 @@ def frames_hash(frames):
 
 
 def apply_timing(data, timing):
+    data = {**data, 'characters': [c for c in data['characters'] if not c.get('localIdleOnly')]}
     if timing.get('schema') != 'sanmauro.jump-timing' or timing.get('version') != 1:
         raise ValueError('Schema timing salto non valido')
     apex_ms, total_ms = timing['apexMs'], timing['durationMs']

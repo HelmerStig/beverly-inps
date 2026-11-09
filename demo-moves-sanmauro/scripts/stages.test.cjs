@@ -42,7 +42,7 @@ test('Arianna a sinistra e Oscare riflesso: altezze in centimetri applicate sopr
   assert.deepEqual(stages[0].fighters.map(f=>[f.characterId,f.flipX]),[['arianna',false],['oscare',true]]);
   for(const fighter of stages[0].fighters){
     const character=manifest.characters.find(c=>c.id===fighter.characterId),idle=character.animations[0];
-    assert.ok(Math.abs(fighter.scale*idle.medianContentHeight-344*4/3*character.heightCm/165)<1e-8);
+    assert.ok(Math.abs(fighter.scale*character.referenceIdleHeightPixels-344*4/3*character.heightCm/165)<1e-8);
     assert.equal(fighter.heightCm,character.heightCm);
     assert.deepEqual([fighter.anchorX,fighter.anchorY],idle.preview.anchor);
     assert.equal(fighter.groundY,1025);
@@ -51,14 +51,14 @@ test('Arianna a sinistra e Oscare riflesso: altezze in centimetri applicate sopr
 
 test('altezze definitive salvate per tutti e sette, proporzioni delle mosse e dati Godot conservati',()=>{
   const config=JSON.parse(fs.readFileSync(path.join(demo,'assets/character-proportions.json'),'utf8'));
-  assert.deepEqual(config.heightsCm,{arianna:165,bue:170,mangler:183,mileto:170,oscare:183,peirolo:170,torpe:175});
+  assert.deepEqual(config.heightsCm,{arianna:165,bue:170,mangler:183,mileto:170,oscare:183,peirolo:170,torpe:180,lele:176});
   assert.deepEqual(manifest.characterProportions,config);
   for(const character of manifest.characters){
     assert.equal(character.heightCm,config.heightsCm[character.id]);
     assert.equal(character.stageHeightMultiplier,character.heightCm/165);
   }
   const [arianna,oscare]=stages[0].fighters;
-  const idleHeight=f=>manifest.characters.find(c=>c.id===f.characterId).animations[0].medianContentHeight*f.scale;
+  const idleHeight=f=>manifest.characters.find(c=>c.id===f.characterId).referenceIdleHeightPixels*f.scale;
   assert.ok(Math.abs(idleHeight(oscare)/idleHeight(arianna)-183/165)<1e-8);
 });
 
@@ -73,6 +73,7 @@ test('ombre animate: entrambi i piedi restano agganciati per tutti i personaggi 
     assert.equal(item.frames.length,idle.frames.length);
     for(const id of ['hurt-high','knockdown','get-up']){
       const animation=character.animations.find(a=>a.id===id),contact=item.animations[id];
+      if(!animation){assert.equal(contact,undefined);continue;}
       assert.equal(contact.frames.length,animation.frames.length);
       assert.equal(contact.pngSha256,createHash('sha256').update(fs.readFileSync(path.join(demo,contact.image))).digest('hex'));
     }
@@ -198,10 +199,10 @@ function fixture(reduced=false,withFighters=false,stage=stages[0]){
 }
 
 
-test('Mercat? follows Piazza Europa and shows the complete native foreground with frequent shooting stars',async()=>{
+test('Mercat? follows Piazza Europa and uses a centered draggable 16:9 viewport with frequent shooting stars',async()=>{
   const stage=stages[1];
   assert.equal(stage.id,'mercato');assert.equal(stage.name,'Mercat\u00f2');
-  assert.deepEqual([stage.width,stage.height,stage.viewportWidth],[2550,1080,2550]);
+  assert.deepEqual([stage.width,stage.height,stage.viewportWidth],[2550,1080,1920]);
   assert.deepEqual(stage.layers.map(l=>l.zIndex),[0,4]);
   assert.deepEqual(stage.layers.filter(l=>l.speed).map(l=>l.speed),[]);
   for(const layer of stage.layers){
@@ -210,8 +211,8 @@ test('Mercat? follows Piazza Europa and shows the complete native foreground wit
   }
   assert.deepEqual(stage,JSON.parse(fs.readFileSync(path.join(demo,'assets/stages/Mercat\u00f2/stage.json'),'utf8')));
   const f=fixture(false,false,stage);await f.load();
-  assert.deepEqual([f.canvas.width,f.canvas.height],[2550,1080]);
-  assert.deepEqual(f.draws.find(d=>d[0]===f.images[1]).slice(1),[0,0],'foreground rendered whole at native size');
+  assert.deepEqual([f.canvas.width,f.canvas.height],[1920,1080]);
+  assert.deepEqual(f.draws.find(d=>d[0]===f.images[1]).slice(1),[-315,0],'foreground starts centered without scaling');
 
   assert.equal(stage.shootingStars,true);
   assert.equal(stage.webglClouds,true);
@@ -234,5 +235,12 @@ test('Mercat? follows Piazza Europa and shows the complete native foreground wit
     }
     assert.equal(cloudPositions(stage.width,layer.width,1000,layer.speed)[0],-1225-layer.speed);
   }
+  const foregroundX=()=>f.draws.filter(d=>d[0]===f.images[1]).at(-1)[1];
+  f.canvas.listeners.keydown({key:'Home',preventDefault(){}});assert.equal(foregroundX(),0);
+  f.canvas.listeners.keydown({key:'End',preventDefault(){}});assert.equal(foregroundX(),-630);
+  f.canvas.listeners.pointerdown({pointerId:1,clientX:100,button:0,isPrimary:true});
+  f.canvas.listeners.pointermove({pointerId:1,clientX:200});
+  assert.equal(foregroundX(),-430,'drag moves camera using preview scale');
+  f.canvas.listeners.pointerup({pointerId:1});
   f.player.destroy();
 });

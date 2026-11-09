@@ -359,6 +359,8 @@ apply_medium_punch_timing(data,json.loads((root/'assets/medium-punch-timing.json
 apply_heavy_punch_timing(data,json.loads((root/'assets/heavy-punch-timing.json').read_text(encoding='utf-8')))
 if (root/'assets/remaining-moves-source.json').exists():
     import_remaining(root,source,data)
+# Local additions are integrated after the complete legacy move import.
+runpy.run_path(str(root/'scripts/import-lele.py'))['add_lele'](root,data)
 (root / 'assets' / 'manifest.json').write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 (root / 'catalog.js').write_text('// Generato da scripts/import-roster.py.\nwindow.SANMAURO_CATALOG = ' + json.dumps(data, ensure_ascii=False, indent=2) + ';\n', encoding='utf-8')
 print(f'Copiate {sum(len(c["animations"]) for c in characters)} animazioni e {len(characters)} anteprime in {root / "assets"}')

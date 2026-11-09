@@ -1,0 +1,9 @@
+{
+  "id": "lele",
+  "idleImage": "lele-idle.png",
+  "cellSize": 512,
+  "frameCount": 46,
+  "fps": 24,
+  "portrait": "assets/portraits/lele-portrait-v3.png",
+  "notes": "Idle only; playback uses the demo default 24 fps. Height: 176 cm, parametrized in assets/character-proportions.json."
+}

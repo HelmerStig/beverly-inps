@@ -11,6 +11,18 @@
     "mileto": 170,
     "oscare": 183,
     "peirolo": 170,
-    "torpe": 175
-  }
+    "torpe": 180,
+    "lele": 176
+  },
+  "idleReferenceHeightsPx": {
+    "arianna": 357,
+    "bue": 335,
+    "mangler": 356,
+    "mileto": 330,
+    "oscare": 330,
+    "peirolo": 336,
+    "torpe": 323,
+    "lele": 308
+  },
+  "heightCalibration": "Fixed first idle pose, alpha >=32; preserve posture changes without per-frame resizing."
 }

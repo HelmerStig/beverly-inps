@@ -11,7 +11,7 @@ def apply_proportions(data, config):
     if config.get('schema') != 'sanmauro.character-proportions' or config.get('version') != 1:
         raise ValueError('Schema proporzioni non valido')
     heights = config.get('heightsCm', {})
-    if set(heights) != {c['id'] for c in data['characters']}:
+    if not {c['id'] for c in data['characters']}.issubset(heights):
         raise ValueError('Altezze roster incomplete')
     if not positive(config.get('referenceHeightCm')) or not positive(config.get('stageScale')):
         raise ValueError('Riferimento proporzioni non valido')
@@ -25,13 +25,21 @@ def apply_proportions(data, config):
         for animation in character['animations']:
             if 'normalizedPreview' not in animation:
                 animation['normalizedPreview'] = copy.deepcopy(animation['preview'])
+        idle = next(a for a in character['animations'] if a['id']=='idle')
+        reference_height = config.get('idleReferenceHeightsPx',{}).get(character['id'],idle['medianContentHeight'])
+        if not positive(reference_height):
+            raise ValueError('Altezza posa di riferimento non valida')
+        character['referenceIdleHeightPixels'] = reference_height
+        character['heightScaleCorrection'] = 344.0/(reference_height*idle['normalizedPreview']['scale'][1])
+        for animation in character['animations']:
+            animation['stageSpriteScale'] = [v*character['heightScaleCorrection']*character['stageHeightMultiplier']*config['stageScale'] for v in animation['normalizedPreview']['scale']]
     # Un unico zoom per l'intero roster mantiene i rapporti in cm e contiene
     # tutti i frame, inclusi i salti, nel canvas comune senza tagli.
     view_scale = 1.0
     for character in data['characters']:
         for animation in character['animations']:
             base = animation['normalizedPreview']
-            sx, sy = [v*character['stageHeightMultiplier'] for v in base['scale']]
+            sx, sy = [v*character['heightScaleCorrection']*character['stageHeightMultiplier'] for v in base['scale']]
             ax, ay = base['anchor']
             left, top, right, bottom = animation['contentBounds']
             for available, extent in [(base['centerX']-16,(ax-left)*sx),
@@ -42,7 +50,7 @@ def apply_proportions(data, config):
     for character in data['characters']:
         for animation in character['animations']:
             base = animation['normalizedPreview']
-            sx, sy = [v*character['stageHeightMultiplier']*view_scale for v in base['scale']]
+            sx, sy = [v*character['heightScaleCorrection']*character['stageHeightMultiplier']*view_scale for v in base['scale']]
             ax, ay = base['anchor']
             preview = copy.deepcopy(base)
             preview.update(scale=[sx,sy],drawRect=[base['centerX']-ax*sx,

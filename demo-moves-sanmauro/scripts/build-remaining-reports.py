@@ -13,6 +13,7 @@ apply_remaining_timing(data,json.loads((root/'assets/remaining-moves-timing.json
 (root/'catalog.js').write_text('// Generato dai manifest locali Sanmauro.\nwindow.SANMAURO_CATALOG = '+json.dumps(data,ensure_ascii=False,indent=2)+';\n',encoding='utf-8')
 groups={}
 for c in data['characters']:
+    if c.get('localIdleOnly'): continue
     for a in c['animations']:
         if a.get('remainingImport'):groups.setdefault(a['id'],[]).append((c,a))
 report=root/'reports'

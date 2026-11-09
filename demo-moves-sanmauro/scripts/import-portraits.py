@@ -14,6 +14,8 @@ def import_portraits(root, source, data):
     destination = root/'assets/portraits'
     destination.mkdir(parents=True,exist_ok=True)
     for character in data['characters']:
+        if character.get('localIdleOnly'):
+            continue
         ident = 'peiro' if character['id']=='peirolo' else character['id']
         constant = re.search(r'if character_id == "'+ident+r'":\s*return (\w+)',function)[1]
         relative = re.search(r'const '+constant+r' := preload\("res://([^"]+)"\)',code)[1]

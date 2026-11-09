@@ -650,3 +650,22 @@ test('hurt_crouched collegato a report e gallerie per mossa e per personaggio',(
   const detail=fixture({page:'character',search:'?id=mangler&anim=hurt-crouched'});
   assert.equal(detail.galleries[0].options.highlightId,'hurt-crouched');
 });
+
+
+test('Lele: roster, search, idle-only gallery, portrait v3 and 176 cm',()=>{
+  const c=manifest.characters.find(c=>c.id==='lele');
+  assert.equal(c.heightCm,176);assert.equal(c.stageHeightMultiplier,176/165);
+  assert.equal(c.portrait,'assets/portraits/lele-portrait-v3.png');
+  assert.deepEqual(c.animations.map(a=>a.id),['idle']);assert.equal(c.animations[0].frames.length,46);
+  for(const image of [c.thumbnail,c.portrait,c.animations[0].image])assert.ok(fs.existsSync(path.join(root,image)));
+  const f=fixture({page:'character',search:'?id=lele'});
+  assert.equal(f.document.title,'Lele \u00b7 Animazioni \u00b7 Sanmauro Fighters');
+  assert.deepEqual(f.galleries[0].data.animations.map(a=>a.id),['idle']);
+  assert.match(f.nodes.get('#character-detail').innerHTML,/lele-portrait-v3.png/);
+  const roster=fixture();const search=roster.nodes.get('#character-search');search.value='lele';search.emit('input');
+  assert.deepEqual(roster.elements.filter(el=>!el.hidden).map(el=>el.dataset.character),['lele','lele']);
+  const idle=require('../move-groups.js').group(manifest.characters).find(g=>g.id==='idle');
+  assert.equal(idle.animations.length,8);
+  const jump=require('../move-groups.js').group(manifest.characters).find(g=>g.id==='jump');
+  assert.equal(jump.animations.length,7);
+});

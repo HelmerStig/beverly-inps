@@ -10,6 +10,7 @@ from jump_timing import frames_hash
 
 
 def apply_remaining_timing(data, config):
+    data = {**data, 'characters': [c for c in data['characters'] if not c.get('localIdleOnly')]}
     if config.get('schema')!='sanmauro.remaining-moves-timing' or config.get('version')!=1:
         raise ValueError('Timing mosse normali non valido')
     entries={(e['characterId'],e['id']):e for e in config['items']}

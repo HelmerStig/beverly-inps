@@ -67,7 +67,7 @@ for ident, position_x, flipped in [('arianna',675,False),('oscare',1890,True)]:
     animation = next(a for a in character['animations'] if a['id'] == 'idle')
     fighters.append(dict(characterId=ident, animationId='idle', x=position_x,
         groundY=height-55,
-        scale=animation['normalizedPreview']['scale'][0]*proportions['stageScale']*character['stageHeightMultiplier'],
+        scale=animation['stageSpriteScale'][0],
         heightCm=character['heightCm'],heightMultiplier=character['stageHeightMultiplier'],
         anchorX=animation['preview']['anchor'][0],anchorY=animation['preview']['anchor'][1],flipX=flipped))
 

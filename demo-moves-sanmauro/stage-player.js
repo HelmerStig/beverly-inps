@@ -71,7 +71,7 @@
     const maxCamera=Math.max(0,stage.width-viewportWidth);
     let camera=maxCamera/2,drag=null;
     const layers=stage.layers.map((layer,index)=>({...layer,index,imageObject:null})).sort((a,b)=>a.zIndex-b.zIndex||a.index-b.index);
-    const fighters=(stage.fighters??[]).map(fighter=>({...fighter,imageObject:null}));
+    const fighters=(stage.fighters??[]).map(fighter=>({...fighter,scale:fighter.animation?.stageSpriteScale?.[0]??fighter.scale,imageObject:null}));
     const assets=[...layers,...fighters];
     const shadowStyle={color:'#1d1625',shearX:0.5,flattenY:0.11,opacity:0.72,contactOpacity:0.28,...stage.shadow};
     let effects={shadows:0,color:0,fog:0,dust:0};

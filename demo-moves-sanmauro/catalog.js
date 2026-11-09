@@ -187,24 +187,24 @@ window.SANMAURO_CATALOG = {
           "sourceSha256": "018b289bce737c677eeb83dc9f2aa5649bbfb80aca3b55e427fe070d70b189ec",
           "preview": {
             "drawRect": [
-              51.37357407267507,
-              88.55707486590615,
-              408.4550880108786,
-              408.4550880108786
+              58.323421171747384,
+              100.15370082459214,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               256.5,
               428
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -224,7 +224,11 @@ window.SANMAURO_CATALOG = {
             "centerX": 256,
             "groundY": 430,
             "targetIdleHeight": 344
-          }
+          },
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "walk",
@@ -549,24 +553,24 @@ window.SANMAURO_CATALOG = {
           "sourceSha256": "7be5a78efd12bb3a7c594d9b1e238bc09121a8753b25b7071f7fd04686788721",
           "preview": {
             "drawRect": [
-              50.575810228903805,
-              87.75931102213491,
-              408.4550880108786,
-              408.4550880108786
+              57.552752248440356,
+              99.38303190128511,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               257.5,
               429
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -586,7 +590,11 @@ window.SANMAURO_CATALOG = {
             "centerX": 256,
             "groundY": 430,
             "targetIdleHeight": 344
-          }
+          },
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "jump",
@@ -972,24 +980,24 @@ window.SANMAURO_CATALOG = {
           "sourceLoop": false,
           "preview": {
             "drawRect": [
-              56.16015713530254,
-              82.97272795950744,
-              408.4550880108786,
-              408.4550880108786
+              62.94743471158955,
+              94.75901836144294,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               250.5,
               435
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -1065,7 +1073,11 @@ window.SANMAURO_CATALOG = {
           "sourceTakeoffMs": 66.66666666666667,
           "apexFrame": 22,
           "apexMs": 500,
-          "apexNote": "Testa tagliata dal bordo superiore per pi? pose: apice stimato dal corpo visibile; plateau vicino ai frame 22-23."
+          "apexNote": "Testa tagliata dal bordo superiore per pi? pose: apice stimato dal corpo visibile; plateau vicino ai frame 22-23.",
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "crouch",
@@ -1219,24 +1231,24 @@ window.SANMAURO_CATALOG = {
           "sourceAnimation": "crouch",
           "preview": {
             "drawRect": [
-              54.96351136964569,
-              85.36601949082115,
-              408.4550880108786,
-              408.4550880108786
+              61.79143132662901,
+              97.07102513136402,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               252.0,
               432
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -1301,7 +1313,11 @@ window.SANMAURO_CATALOG = {
             13.157894736842104
           ],
           "durationMs": 250,
-          "poseDurationMs": 250
+          "poseDurationMs": 250,
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "block-high",
@@ -1527,24 +1543,24 @@ window.SANMAURO_CATALOG = {
           "sourceAnimation": "block_high",
           "preview": {
             "drawRect": [
-              45.78922716627633,
-              88.55707486590615,
-              408.4550880108786,
-              408.4550880108786
+              52.92873870859819,
+              100.15370082459214,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               263.5,
               428
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -1718,7 +1734,11 @@ window.SANMAURO_CATALOG = {
             16.129032258064516
           ],
           "durationMs": 500,
-          "guardDurationMs": 500
+          "guardDurationMs": 500,
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "block-mid",
@@ -1908,24 +1928,24 @@ window.SANMAURO_CATALOG = {
           "sourceAnimation": "block_mid",
           "preview": {
             "drawRect": [
-              53.766865603988805,
-              88.55707486590615,
-              408.4550880108786,
-              408.4550880108786
+              60.63542794166847,
+              100.15370082459214,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               253.5,
               428
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -2072,7 +2092,11 @@ window.SANMAURO_CATALOG = {
             20.0
           ],
           "durationMs": 500,
-          "guardDurationMs": 500
+          "guardDurationMs": 500,
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "block-low",
@@ -2298,24 +2322,24 @@ window.SANMAURO_CATALOG = {
           "sourceAnimation": "block_low",
           "preview": {
             "drawRect": [
-              49.37916446324695,
-              86.96154717836367,
-              408.4550880108786,
-              408.4550880108786
+              56.396748863479814,
+              98.61236297797808,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               259.0,
               430
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -2489,7 +2513,11 @@ window.SANMAURO_CATALOG = {
             16.129032258064516
           ],
           "durationMs": 500,
-          "guardDurationMs": 500
+          "guardDurationMs": 500,
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "hurt-high",
@@ -2589,24 +2617,24 @@ window.SANMAURO_CATALOG = {
           "reactionDurationMs": 500,
           "preview": {
             "drawRect": [
-              54.96351136964569,
-              88.55707486590615,
-              408.4550880108786,
-              408.4550880108786
+              61.79143132662901,
+              100.15370082459214,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               252.0,
               428
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -2637,7 +2665,11 @@ window.SANMAURO_CATALOG = {
             41.666666666666664,
             41.666666666666664
           ],
-          "sourceDurationMs": 333.3333333333333
+          "sourceDurationMs": 333.3333333333333,
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "hurt-medium",
@@ -2786,24 +2818,24 @@ window.SANMAURO_CATALOG = {
           "reactionDurationMs": 500,
           "preview": {
             "drawRect": [
-              56.957920979073805,
-              88.55707486590615,
-              408.4550880108786,
-              408.4550880108786
+              63.71810363489658,
+              100.15370082459214,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               249.5,
               428
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -2841,7 +2873,11 @@ window.SANMAURO_CATALOG = {
             20.833333333333332,
             20.833333333333332
           ],
-          "sourceDurationMs": 312.5
+          "sourceDurationMs": 312.5,
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "hurt-low",
@@ -2934,24 +2970,24 @@ window.SANMAURO_CATALOG = {
           "reactionDurationMs": 500,
           "preview": {
             "drawRect": [
-              8.294326509027712,
-              88.55707486590615,
-              408.4550880108786,
-              408.4550880108786
+              16.70729931316788,
+              100.15370082459214,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               310.5,
               428
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -2981,7 +3017,11 @@ window.SANMAURO_CATALOG = {
             41.666666666666664,
             41.666666666666664
           ],
-          "sourceDurationMs": 291.66666666666663
+          "sourceDurationMs": 291.66666666666663,
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "hurt-crouched",
@@ -3110,24 +3150,24 @@ window.SANMAURO_CATALOG = {
           "reactionDurationMs": 500,
           "preview": {
             "drawRect": [
-              54.96351136964569,
-              83.77049180327867,
-              408.4550880108786,
-              408.4550880108786
+              61.79143132662901,
+              95.52968728474997,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               252.0,
               434
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -3162,7 +3202,11 @@ window.SANMAURO_CATALOG = {
             41.666666666666664,
             41.666666666666664
           ],
-          "sourceDurationMs": 500.0
+          "sourceDurationMs": 500.0,
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "victory",
@@ -3496,24 +3540,24 @@ window.SANMAURO_CATALOG = {
           "sourceSkippedFrames": [],
           "preview": {
             "drawRect": [
-              50.17692830701819,
-              84.56825564704991,
-              408.4550880108786,
-              408.4550880108786
+              57.16741778678684,
+              96.300356208057,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               258.0,
               433
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -3533,7 +3577,11 @@ window.SANMAURO_CATALOG = {
             "centerX": 256,
             "groundY": 430,
             "targetIdleHeight": 344
-          }
+          },
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "ko",
@@ -3723,24 +3771,24 @@ window.SANMAURO_CATALOG = {
           "sourceSkippedFrames": [],
           "preview": {
             "drawRect": [
-              29.036186447080127,
-              78.18614489687991,
-              408.4550880108786,
-              408.4550880108786
+              36.744691319150604,
+              90.13500482160077,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               284.5,
               441
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -3760,7 +3808,11 @@ window.SANMAURO_CATALOG = {
             "centerX": 256,
             "groundY": 430,
             "targetIdleHeight": 344
-          }
+          },
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "light-punch",
@@ -3926,24 +3978,24 @@ window.SANMAURO_CATALOG = {
           "playbackComposition": "forward-then-reverse-without-repeated-peak",
           "preview": {
             "drawRect": [
-              18.2663745561683,
-              90.15260255344862,
-              408.4550880108786,
-              408.4550880108786
+              26.340660854505728,
+              101.69503867120619,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               298.0,
               426
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -3987,7 +4039,11 @@ window.SANMAURO_CATALOG = {
           "impactMs": 300,
           "impactFrame": 8,
           "impactNote": "Ultimo frame di andata a 300 ms; ritorno inverso 7-0 fino all’idle, senza ripetere il picco.",
-          "attackDurationMs": 500
+          "attackDurationMs": 500,
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "medium-punch",
@@ -4378,24 +4434,24 @@ window.SANMAURO_CATALOG = {
           "sourceReverseFps": 48.0,
           "preview": {
             "drawRect": [
-              18.2663745561683,
-              87.75931102213491,
-              408.4550880108786,
-              408.4550880108786
+              26.340660854505728,
+              99.38303190128511,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               298.0,
               429
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -4472,7 +4528,11 @@ window.SANMAURO_CATALOG = {
           "impactMs": 450,
           "impactFrame": 20,
           "impactNote": "Prima massima estensione verificata visivamente; ritorno finale all’idle a 750 ms.",
-          "attackDurationMs": 750
+          "attackDurationMs": 750,
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "heavy-punch",
@@ -4910,24 +4970,24 @@ window.SANMAURO_CATALOG = {
           "durationMs": 1000,
           "preview": {
             "drawRect": [
-              39.80599833799198,
-              85.36601949082115,
-              408.4550880108786,
-              408.4550880108786
+              47.14872178379548,
+              97.07102513136402,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               271.0,
               432
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -5004,7 +5064,11 @@ window.SANMAURO_CATALOG = {
           "impactMs": 500,
           "impactFrame": 23,
           "impactNote": "Massima estensione verificata visivamente; idle terminale a 1000 ms.",
-          "attackDurationMs": 1000
+          "attackDurationMs": 1000,
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "backwalk",
@@ -5725,24 +5789,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 361.0,
           "preview": {
             "drawRect": [
-              50.575810228903805,
-              87.75931102213491,
-              408.4550880108786,
-              408.4550880108786
+              57.552752248440356,
+              99.38303190128511,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               257.5,
               429
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -5765,7 +5829,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "run",
@@ -6486,24 +6554,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 358.5,
           "preview": {
             "drawRect": [
-              68.92437863564251,
-              65.42192339653997,
-              408.4550880108786,
-              408.4550880108786
+              75.278137484502,
+              77.80430204868833,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               234.5,
               457
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -6526,7 +6594,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "back-jump",
@@ -6883,24 +6955,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 302.5,
           "preview": {
             "drawRect": [
-              51.37357407267507,
-              88.55707486590615,
-              408.4550880108786,
-              408.4550880108786
+              58.323421171747384,
+              100.15370082459214,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               256.5,
               428
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -6923,7 +6995,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "crouched-light-punch",
@@ -7385,24 +7461,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 265,
           "preview": {
             "drawRect": [
-              31.030596056508244,
-              86.96154717836367,
-              408.4550880108786,
-              408.4550880108786
+              38.671363627418174,
+              98.61236297797808,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               282.0,
               430
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -7431,7 +7507,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "crouched-medium-punch",
@@ -7767,24 +7847,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 257.0,
           "preview": {
             "drawRect": [
-              1.9122157588577409,
-              82.97272795950744,
-              408.4550880108786,
-              408.4550880108786
+              10.541947926711657,
+              94.75901836144294,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               318.5,
               435
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -7813,7 +7893,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "crouched-heavy-punch",
@@ -8359,24 +8443,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 354,
           "preview": {
             "drawRect": [
-              29.036186447080127,
-              81.37720027196491,
-              408.4550880108786,
-              408.4550880108786
+              36.744691319150604,
+              93.21768051482888,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               284.5,
               437
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -8405,7 +8489,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "crouched",
-          "impactNote": "Montante: massima estensione verso l’alto, verificata sulla sequenza runtime."
+          "impactNote": "Montante: massima estensione verso l’alto, verificata sulla sequenza runtime.",
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "light-kick",
@@ -8811,24 +8899,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 358,
           "preview": {
             "drawRect": [
-              9.092090352798948,
-              79.78167258442244,
-              408.4550880108786,
-              408.4550880108786
+              17.477968236474908,
+              91.67634266821483,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               309.5,
               439
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -8857,7 +8945,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "idle",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "crouched-light-kick",
@@ -9487,24 +9579,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 253,
           "preview": {
             "drawRect": [
-              14.277555337312066,
-              86.96154717836367,
-              408.4550880108786,
-              408.4550880108786
+              22.48731623797059,
+              98.61236297797808,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               303.0,
               430
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -9533,7 +9625,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "medium-kick",
@@ -10163,24 +10259,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 356,
           "preview": {
             "drawRect": [
-              20.659666087482037,
-              86.16378333459238,
-              408.4550880108786,
-              408.4550880108786
+              28.65266762442681,
+              97.84169405467105,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               295.0,
               431
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -10209,7 +10305,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "idle",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "crouched-medium-kick",
@@ -10643,24 +10743,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 274,
           "preview": {
             "drawRect": [
-              15.873083024854566,
-              86.96154717836367,
-              408.4550880108786,
-              408.4550880108786
+              24.028654084584645,
+              98.61236297797808,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               301.0,
               430
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -10689,7 +10789,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "heavy-kick",
@@ -11249,24 +11353,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 241.0,
           "preview": {
             "drawRect": [
-              8.69320843091333,
-              87.75931102213491,
-              408.4550880108786,
-              408.4550880108786
+              17.092633774821394,
+              99.38303190128511,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               310.0,
               429
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -11295,7 +11399,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "idle",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "crouched-heavy-kick",
@@ -12037,24 +12145,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 218,
           "preview": {
             "drawRect": [
-              16.6708468686258,
-              86.16378333459238,
-              408.4550880108786,
-              408.4550880108786
+              24.799323007891672,
+              97.84169405467105,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               300.0,
               431
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -12083,7 +12191,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "jump-light-punch",
@@ -12377,24 +12489,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 323,
           "preview": {
             "drawRect": [
-              39.80599833799198,
-              154.77147389891968,
-              408.4550880108786,
-              408.4550880108786
+              47.14872178379548,
+              164.11922145907545,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               271.0,
               345
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -12423,7 +12535,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "jump-medium-punch",
@@ -12899,24 +13015,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 344.5,
           "preview": {
             "drawRect": [
-              52.171337916446305,
-              130.04079474201103,
-              408.4550880108786,
-              408.4550880108786
+              59.09409009505441,
+              140.22848483655758,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               255.5,
               376
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -12945,7 +13061,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "jump-heavy-punch",
@@ -13379,24 +13499,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 289,
           "preview": {
             "drawRect": [
-              32.626123744050744,
-              138.81619702349474,
-              408.4550880108786,
-              408.4550880108786
+              40.21270147403223,
+              148.7058429929349,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               280.0,
               365
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -13425,7 +13545,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "jump-light-kick",
@@ -13887,24 +14011,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 411,
           "preview": {
             "drawRect": [
-              21.4574299312533,
-              71.80403414670997,
-              408.4550880108786,
-              408.4550880108786
+              29.42333654773384,
+              83.96965343514455,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               294.0,
               449
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -13933,7 +14057,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "air",
-          "impactNote": "Calcio in aria: posa di estensione verso il basso verificata nei frame 8-14."
+          "impactNote": "Calcio in aria: posa di estensione verso il basso verificata nei frame 8-14.",
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "jump-medium-kick",
@@ -14661,24 +14789,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 321.0,
           "preview": {
             "drawRect": [
-              24.249603384452655,
-              133.23185011709597,
-              408.4550880108786,
-              408.4550880108786
+              32.12067777930844,
+              143.3111605297857,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               290.5,
               372
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -14707,7 +14835,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "jump-heavy-kick",
@@ -15183,24 +15315,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 300.5,
           "preview": {
             "drawRect": [
-              45.78922716627633,
-              127.64750321069727,
-              408.4550880108786,
-              408.4550880108786
+              52.92873870859819,
+              137.9164780666365,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               263.5,
               379
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -15229,7 +15361,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "hurt-air",
@@ -15516,24 +15652,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 171,
           "preview": {
             "drawRect": [
-              35.418297197250126,
-              32.713605801918845,
-              408.4550880108786,
-              408.4550880108786
+              42.91004270560683,
+              46.206876193100186,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               276.5,
               498
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -15556,7 +15692,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "knockdown",
@@ -15955,24 +16095,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 254,
           "preview": {
             "drawRect": [
-              41.40152602553448,
-              81.37720027196491,
-              408.4550880108786,
-              408.4550880108786
+              48.690059630409536,
+              93.21768051482888,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               269.0,
               437
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -15995,7 +16135,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "get-up",
@@ -16394,24 +16538,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 206,
           "preview": {
             "drawRect": [
-              54.16574752587442,
-              76.59061720933744,
-              408.4550880108786,
-              408.4550880108786
+              61.02076240332198,
+              88.59366697498672,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               253.0,
               443
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -16434,7 +16578,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         },
         {
           "id": "stand-up",
@@ -16735,24 +16883,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 293.5,
           "preview": {
             "drawRect": [
-              54.96351136964569,
-              85.36601949082115,
-              408.4550880108786,
-              408.4550880108786
+              61.79143132662901,
+              97.07102513136402,
+              394.5824887331982,
+              394.5824887331982
             ],
             "anchor": [
               252.0,
               432
             ],
             "scale": [
-              0.7977638437712473,
-              0.7977638437712473
+              0.7706689233070277,
+              0.7706689233070277
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 284.40281030444964,
+            "targetIdleHeight": 275.12880562060894,
             "heightMultiplier": 1.0,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -16776,7 +16924,11 @@ window.SANMAURO_CATALOG = {
           "trimmed": true,
           "remainingImport": true,
           "attackStrength": null,
-          "poseDurationMs": 250
+          "poseDurationMs": 250,
+          "stageSpriteScale": [
+            1.2847805788982258,
+            1.2847805788982258
+          ]
         }
       ],
       "heightCm": 165,
@@ -16786,7 +16938,9 @@ window.SANMAURO_CATALOG = {
         "sourcePath": "assets/ui/portraits/arianna-portrait-v2.png",
         "sourceConfigPath": "scripts/CharacterSelect.gd",
         "sourceSha256": "f874feb648a8105d44dde8db18a3a77d459434f01ebb313766a6aafbe5ad4ec3"
-      }
+      },
+      "referenceIdleHeightPixels": 357,
+      "heightScaleCorrection": 0.9985994397759103
     },
     {
       "id": "bue",
@@ -17206,24 +17360,24 @@ window.SANMAURO_CATALOG = {
           "sourceSha256": "64e3b8238bac795e0ff3a8fc082081f401906b7e178b0eb65c4134369efedaee",
           "preview": {
             "drawRect": [
-              29.808291219852862,
-              68.43598066203754,
-              438.67482914937625,
-              438.67482914937625
+              32.61183543640112,
+              72.91740361424723,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               264.0,
               422
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -17243,7 +17397,11 @@ window.SANMAURO_CATALOG = {
             "centerX": 256,
             "groundY": 430,
             "targetIdleHeight": 344
-          }
+          },
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "walk",
@@ -17574,24 +17732,24 @@ window.SANMAURO_CATALOG = {
           "sourceSha256": "edcd681ac2056a43d84dfc3056c5291dd3fa84dd7c9efdacae5e4a4398f5abbb",
           "preview": {
             "drawRect": [
-              43.51687963077089,
-              66.7224071106728,
-              438.67482914937625,
-              438.67482914937625
+              46.150512076619236,
+              71.22506903421998,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               248.0,
               424
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -17611,7 +17769,11 @@ window.SANMAURO_CATALOG = {
             "centerX": 256,
             "groundY": 430,
             "targetIdleHeight": 344
-          }
+          },
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "jump",
@@ -17913,24 +18075,24 @@ window.SANMAURO_CATALOG = {
           "sourceLoop": false,
           "preview": {
             "drawRect": [
-              32.807044934741185,
-              66.7224071106728,
-              438.67482914937625,
-              438.67482914937625
+              35.57342095144884,
+              71.22506903421998,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               260.5,
               424
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -17994,7 +18156,11 @@ window.SANMAURO_CATALOG = {
           "sourceTakeoffMs": 66.66666666666667,
           "apexFrame": 16,
           "apexMs": 500,
-          "apexNote": "Plateau breve vicino ai frame 17-18; selezionata la posa di massima elevazione del corpo."
+          "apexNote": "Plateau breve vicino ai frame 17-18; selezionata la posa di massima elevazione del corpo.",
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "crouch",
@@ -18076,24 +18242,24 @@ window.SANMAURO_CATALOG = {
           "sourceAnimation": "crouch",
           "preview": {
             "drawRect": [
-              34.09222509826475,
-              68.43598066203754,
-              438.67482914937625,
-              438.67482914937625
+              36.842671886469276,
+              72.91740361424723,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               259.0,
               422
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -18134,7 +18300,11 @@ window.SANMAURO_CATALOG = {
             35.714285714285715
           ],
           "durationMs": 250,
-          "poseDurationMs": 250
+          "poseDurationMs": 250,
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "block-high",
@@ -18288,24 +18458,24 @@ window.SANMAURO_CATALOG = {
           "sourceAnimation": "block_high",
           "preview": {
             "drawRect": [
-              34.520618486105946,
-              68.43598066203754,
-              438.67482914937625,
-              438.67482914937625
+              37.26575553147609,
+              72.91740361424723,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               258.5,
               422
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -18425,7 +18595,11 @@ window.SANMAURO_CATALOG = {
             26.31578947368421
           ],
           "durationMs": 500,
-          "guardDurationMs": 500
+          "guardDurationMs": 500,
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "block-mid",
@@ -18531,24 +18705,24 @@ window.SANMAURO_CATALOG = {
           "sourceAnimation": "block_mid",
           "preview": {
             "drawRect": [
-              37.94776558883544,
-              66.7224071106728,
-              438.67482914937625,
-              438.67482914937625
+              40.65042469153062,
+              71.22506903421998,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               254.5,
               424
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -18632,7 +18806,11 @@ window.SANMAURO_CATALOG = {
             45.45454545454545
           ],
           "durationMs": 500,
-          "guardDurationMs": 500
+          "guardDurationMs": 500,
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "block-low",
@@ -18798,24 +18976,24 @@ window.SANMAURO_CATALOG = {
           "sourceAnimation": "block_low",
           "preview": {
             "drawRect": [
-              32.37865154689999,
-              67.57919388635514,
-              438.67482914937625,
-              438.67482914937625
+              35.150337306442026,
+              72.07123632423361,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               261.0,
               423
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -18944,7 +19122,11 @@ window.SANMAURO_CATALOG = {
             23.80952380952381
           ],
           "durationMs": 500,
-          "guardDurationMs": 500
+          "guardDurationMs": 500,
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "hurt-high",
@@ -19114,24 +19296,24 @@ window.SANMAURO_CATALOG = {
           "reactionDurationMs": 500,
           "preview": {
             "drawRect": [
-              31.95025815905882,
-              69.29276743771993,
-              438.67482914937625,
-              438.67482914937625
+              34.72725366143521,
+              73.76357090426086,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               261.5,
               421
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -19172,7 +19354,11 @@ window.SANMAURO_CATALOG = {
             20.833333333333332,
             20.833333333333332
           ],
-          "sourceDurationMs": 375.0
+          "sourceDurationMs": 375.0,
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "hurt-medium",
@@ -19293,24 +19479,24 @@ window.SANMAURO_CATALOG = {
           "reactionDurationMs": 500,
           "preview": {
             "drawRect": [
-              -15.173014503471848,
-              67.57919388635514,
-              438.67482914937625,
-              438.67482914937625
+              -11.81194728931456,
+              72.07123632423361,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               316.5,
               423
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -19344,7 +19530,11 @@ window.SANMAURO_CATALOG = {
             20.833333333333332,
             20.833333333333332
           ],
-          "sourceDurationMs": 229.16666666666666
+          "sourceDurationMs": 229.16666666666666,
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "hurt-low",
@@ -19465,24 +19655,24 @@ window.SANMAURO_CATALOG = {
           "reactionDurationMs": 500,
           "preview": {
             "drawRect": [
-              34.09222509826475,
-              67.57919388635514,
-              438.67482914937625,
-              438.67482914937625
+              36.842671886469276,
+              72.07123632423361,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               259.0,
               423
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -19516,7 +19706,11 @@ window.SANMAURO_CATALOG = {
             20.833333333333332,
             20.833333333333332
           ],
-          "sourceDurationMs": 229.16666666666666
+          "sourceDurationMs": 229.16666666666666,
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "hurt-crouched",
@@ -19645,24 +19839,24 @@ window.SANMAURO_CATALOG = {
           "reactionDurationMs": 500,
           "preview": {
             "drawRect": [
-              -25.88284919950155,
-              65.86562033499041,
-              438.67482914937625,
-              438.67482914937625
+              -22.389038414484958,
+              70.37890174420636,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               329.0,
               425
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -19697,7 +19891,11 @@ window.SANMAURO_CATALOG = {
             41.666666666666664,
             41.666666666666664
           ],
-          "sourceDurationMs": 500.0
+          "sourceDurationMs": 500.0,
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "victory",
@@ -20031,24 +20229,24 @@ window.SANMAURO_CATALOG = {
           "sourceSkippedFrames": [],
           "preview": {
             "drawRect": [
-              25.095963953599806,
-              68.43598066203754,
-              438.67482914937625,
-              438.67482914937625
+              27.957915341326157,
+              72.91740361424723,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               269.5,
               422
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -20068,7 +20266,11 @@ window.SANMAURO_CATALOG = {
             "centerX": 256,
             "groundY": 430,
             "targetIdleHeight": 344
-          }
+          },
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "ko",
@@ -20402,24 +20604,24 @@ window.SANMAURO_CATALOG = {
           "sourceSkippedFrames": [],
           "preview": {
             "drawRect": [
-              17.813276360299625,
-              62.43847323226089,
-              438.67482914937625,
-              438.67482914937625
+              20.76549337621026,
+              66.9942325841518,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               278.0,
               429
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -20439,7 +20641,11 @@ window.SANMAURO_CATALOG = {
             "centerX": 256,
             "groundY": 430,
             "targetIdleHeight": 344
-          }
+          },
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "light-punch",
@@ -20574,24 +20780,24 @@ window.SANMAURO_CATALOG = {
           "durationMs": 500,
           "preview": {
             "drawRect": [
-              -1.464426092553822,
-              66.7224071106728,
-              438.67482914937625,
-              438.67482914937625
+              1.726729350903554,
+              71.22506903421998,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               300.5,
               424
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -20631,7 +20837,11 @@ window.SANMAURO_CATALOG = {
           "impactMs": 300,
           "impactFrame": 4,
           "impactNote": "Prima posa di massima estensione, verificata visivamente sullo spritesheet.",
-          "attackDurationMs": 500
+          "attackDurationMs": 500,
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "medium-punch",
@@ -21008,24 +21218,24 @@ window.SANMAURO_CATALOG = {
           "sourceReverseFps": 96.0,
           "preview": {
             "drawRect": [
-              2.3911143980168674,
-              67.57919388635514,
-              438.67482914937625,
-              438.67482914937625
+              5.534482155964895,
+              72.07123632423361,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               296.0,
               423
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -21100,7 +21310,11 @@ window.SANMAURO_CATALOG = {
           "impactMs": 450,
           "impactFrame": 22,
           "impactNote": "Prima massima estensione verificata visivamente; ritorno finale all’idle a 750 ms.",
-          "attackDurationMs": 750
+          "attackDurationMs": 750,
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "heavy-punch",
@@ -21314,24 +21528,24 @@ window.SANMAURO_CATALOG = {
           "durationMs": 1000,
           "preview": {
             "drawRect": [
-              8.388621827793486,
-              67.57919388635514,
-              438.67482914937625,
-              438.67482914937625
+              11.457653186060327,
+              72.07123632423361,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               289.0,
               423
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -21380,7 +21594,11 @@ window.SANMAURO_CATALOG = {
           "impactMs": 500,
           "impactFrame": 15,
           "impactNote": "Massima estensione verificata visivamente; idle terminale a 1000 ms.",
-          "attackDurationMs": 1000
+          "attackDurationMs": 1000,
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "back-jump",
@@ -21709,24 +21927,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 302.5,
           "preview": {
             "drawRect": [
-              32.807044934741185,
-              68.43598066203754,
-              438.67482914937625,
-              438.67482914937625
+              35.57342095144884,
+              72.91740361424723,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               260.5,
               422
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -21749,7 +21967,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "backwalk",
@@ -22484,24 +22706,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 334,
           "preview": {
             "drawRect": [
-              43.51687963077089,
-              66.7224071106728,
-              438.67482914937625,
-              438.67482914937625
+              46.150512076619236,
+              71.22506903421998,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               248.0,
               424
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -22524,7 +22746,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "crouched-light-kick",
@@ -22972,24 +23198,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 255.0,
           "preview": {
             "drawRect": [
-              -10.032293849377595,
-              61.58168645657855,
-              438.67482914937625,
-              438.67482914937625
+              -6.734943549232753,
+              66.14806529413818,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               310.5,
               430
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -23018,7 +23244,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "crouched-light-punch",
@@ -23172,24 +23402,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 260,
           "preview": {
             "drawRect": [
-              7.960228439952289,
-              67.57919388635514,
-              438.67482914937625,
-              438.67482914937625
+              11.034569541053514,
+              72.07123632423361,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               289.5,
               423
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -23218,7 +23448,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "crouched-medium-kick",
@@ -23680,24 +23914,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 240,
           "preview": {
             "drawRect": [
-              40.94651930372376,
-              63.295260007943284,
-              438.67482914937625,
-              438.67482914937625
+              43.61201020657833,
+              67.84039987416543,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               251.0,
               428
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -23726,7 +23960,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "crouched-medium-punch",
@@ -24062,24 +24300,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 252.5,
           "preview": {
             "drawRect": [
-              10.958982154840612,
-              67.57919388635514,
-              438.67482914937625,
-              438.67482914937625
+              13.996155056101202,
+              72.07123632423361,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               286.0,
               423
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -24108,7 +24346,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "crouched-heavy-kick",
@@ -24640,24 +24882,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 259.5,
           "preview": {
             "drawRect": [
-              -0.6076393168714844,
-              62.43847323226089,
-              438.67482914937625,
-              438.67482914937625
+              2.572896640917179,
+              66.9942325841518,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               299.5,
               429
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -24686,7 +24928,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "crouched-heavy-punch",
@@ -24994,24 +25240,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 299.0,
           "preview": {
             "drawRect": [
-              19.098456523823188,
-              59.86811290521376,
-              438.67482914937625,
-              438.67482914937625
+              22.034744311230725,
+              64.45573071411093,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               276.5,
               432
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -25040,7 +25286,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "crouched",
-          "impactNote": "Montante: massima estensione verso l’alto, verificata sulla sequenza runtime."
+          "impactNote": "Montante: massima estensione verso l’alto, verificata sulla sequenza runtime.",
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "hurt-air",
@@ -25369,24 +25619,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 228.0,
           "preview": {
             "drawRect": [
-              31.95025815905882,
-              64.15204678362568,
-              438.67482914937625,
-              438.67482914937625
+              34.72725366143521,
+              68.68656716417911,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               261.5,
               427
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -25409,7 +25659,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "jump-light-kick",
@@ -25647,24 +25901,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 265,
           "preview": {
             "drawRect": [
-              31.093471383376425,
-              159.25537888436935,
-              438.67482914937625,
-              438.67482914937625
+              33.88108637142156,
+              162.61113635569222,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               262.5,
               316
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -25693,7 +25947,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "jump-light-punch",
@@ -25889,24 +26147,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 331.0,
           "preview": {
             "drawRect": [
-              36.662585425311875,
-              107.84817234342682,
-              438.67482914937625,
-              438.67482914937625
+              39.38117375651018,
+              111.84109895487433,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               256.0,
               376
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -25935,7 +26193,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "jump-medium-kick",
@@ -26495,24 +26757,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 285.0,
           "preview": {
             "drawRect": [
-              26.38114411712337,
-              156.68501855732222,
-              438.67482914937625,
-              438.67482914937625
+              29.227166276346594,
+              160.07263448565135,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               268.0,
               319
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -26541,7 +26803,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "jump-medium-punch",
@@ -27045,24 +27311,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 335.5,
           "preview": {
             "drawRect": [
-              29.808291219852862,
-              89.85565005409694,
-              438.67482914937625,
-              438.67482914937625
+              32.61183543640112,
+              94.07158586458803,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               264.0,
               397
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -27091,7 +27357,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "air-guard",
@@ -27154,24 +27424,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 287,
           "preview": {
             "drawRect": [
-              37.51937220099424,
-              159.25537888436935,
-              438.67482914937625,
-              438.67482914937625
+              40.227341046523804,
+              162.61113635569222,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               255.0,
               316
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -27194,7 +27464,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "jump-heavy-kick",
@@ -27712,24 +27986,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 264,
           "preview": {
             "drawRect": [
-              37.94776558883544,
-              159.25537888436935,
-              438.67482914937625,
-              438.67482914937625
+              40.65042469153062,
+              162.61113635569222,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               254.5,
               316
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -27758,7 +28032,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "jump-heavy-punch",
@@ -28178,24 +28456,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 309.5,
           "preview": {
             "drawRect": [
-              37.51937220099424,
-              88.99886327841455,
-              438.67482914937625,
-              438.67482914937625
+              40.227341046523804,
+              93.2254185745744,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               255.0,
               398
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -28224,7 +28502,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "get-up",
@@ -28511,24 +28793,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 213,
           "preview": {
             "drawRect": [
-              37.09097881315307,
-              63.295260007943284,
-              438.67482914937625,
-              438.67482914937625
+              39.80425740151699,
+              67.84039987416543,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               255.5,
               428
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -28551,7 +28833,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "light-kick",
@@ -28971,24 +29257,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 327.5,
           "preview": {
             "drawRect": [
-              -4.463179807442145,
-              69.29276743771993,
-              438.67482914937625,
-              438.67482914937625
+              -1.234856164144162,
+              73.76357090426086,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               304.0,
               421
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -29017,7 +29303,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "idle",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "medium-kick",
@@ -29381,24 +29671,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 331.0,
           "preview": {
             "drawRect": [
-              39.6613391402002,
-              68.43598066203754,
-              438.67482914937625,
-              438.67482914937625
+              42.342759271557895,
+              72.91740361424723,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               252.5,
               422
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -29427,7 +29717,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "idle",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "run",
@@ -29910,24 +30204,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 315,
           "preview": {
             "drawRect": [
-              48.65760028486514,
-              69.29276743771993,
-              438.67482914937625,
-              438.67482914937625
+              51.22751581670104,
+              73.76357090426086,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               242.0,
               421
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -29950,7 +30244,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "heavy-kick",
@@ -30384,24 +30682,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 334,
           "preview": {
             "drawRect": [
-              -16.458194666995382,
-              68.43598066203754,
-              438.67482914937625,
-              438.67482914937625
+              -13.081198224335026,
+              72.91740361424723,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               318.0,
               422
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -30430,7 +30728,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "idle",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "knockdown",
@@ -31067,24 +31369,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 211.5,
           "preview": {
             "drawRect": [
-              30.665077995535256,
-              60.72489968089616,
-              438.67482914937625,
-              438.67482914937625
+              33.45800272641475,
+              65.30189800412455,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               263.0,
               431
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -31107,7 +31409,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         },
         {
           "id": "stand-up",
@@ -31254,24 +31560,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 282,
           "preview": {
             "drawRect": [
-              34.09222509826475,
-              68.43598066203754,
-              438.67482914937625,
-              438.67482914937625
+              36.842671886469276,
+              72.91740361424723,
+              433.23765248697964,
+              433.23765248697964
             ],
             "anchor": [
               259.0,
               422
             ],
             "scale": [
-              0.8567867756823755,
-              0.8567867756823755
+              0.8461672900136321,
+              0.8461672900136321
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -31295,7 +31601,11 @@ window.SANMAURO_CATALOG = {
           "trimmed": true,
           "remainingImport": true,
           "attackStrength": null,
-          "poseDurationMs": 250
+          "poseDurationMs": 250,
+          "stageSpriteScale": [
+            1.4106437509422582,
+            1.4106437509422582
+          ]
         }
       ],
       "heightCm": 170,
@@ -31305,7 +31615,9 @@ window.SANMAURO_CATALOG = {
         "sourcePath": "assets/ui/portraits/bue-portrait-v1.png",
         "sourceConfigPath": "scripts/CharacterSelect.gd",
         "sourceSha256": "5e6e30b13b366a8309b741d4dda88765863676b5ba8a354d730d7ab153e9d362"
-      }
+      },
+      "referenceIdleHeightPixels": 335,
+      "heightScaleCorrection": 1.0208955223880596
     },
     {
       "id": "mangler",
@@ -31656,9 +31968,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -31678,7 +31990,11 @@ window.SANMAURO_CATALOG = {
             "centerX": 256,
             "groundY": 430,
             "targetIdleHeight": 344
-          }
+          },
+          "stageSpriteScale": [
+            1.4289410963568265,
+            1.4289410963568265
+          ]
         },
         {
           "id": "walk",
@@ -32018,9 +32334,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -32040,7 +32356,11 @@ window.SANMAURO_CATALOG = {
             "centerX": 256,
             "groundY": 430,
             "targetIdleHeight": 344
-          }
+          },
+          "stageSpriteScale": [
+            1.1767750205291514,
+            1.1767750205291514
+          ]
         },
         {
           "id": "jump",
@@ -32273,9 +32593,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -32327,7 +32647,11 @@ window.SANMAURO_CATALOG = {
           "sourceTakeoffMs": 66.66666666666667,
           "apexFrame": 14,
           "apexMs": 500,
-          "apexNote": "Apice del corpo al frame 15, dopo la massima quota del cappello: non usare solo il bordo alto. Scala Godot 0.85 conservata; il foglio termina ancora in aria."
+          "apexNote": "Apice del corpo al frame 15, dopo la massima quota del cappello: non usare solo il bordo alto. Scala Godot 0.85 conservata; il foglio termina ancora in aria.",
+          "stageSpriteScale": [
+            1.4289410963568265,
+            1.4289410963568265
+          ]
         },
         {
           "id": "crouch",
@@ -32532,9 +32856,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -32611,7 +32935,11 @@ window.SANMAURO_CATALOG = {
             10.0
           ],
           "durationMs": 250,
-          "poseDurationMs": 250
+          "poseDurationMs": 250,
+          "stageSpriteScale": [
+            1.4289410963568265,
+            1.4289410963568265
+          ]
         },
         {
           "id": "block-high",
@@ -32828,9 +33156,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -32986,7 +33314,11 @@ window.SANMAURO_CATALOG = {
             18.51851851851852
           ],
           "durationMs": 500,
-          "guardDurationMs": 500
+          "guardDurationMs": 500,
+          "stageSpriteScale": [
+            1.4289410963568265,
+            1.4289410963568265
+          ]
         },
         {
           "id": "block-mid",
@@ -33131,9 +33463,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -33235,7 +33567,11 @@ window.SANMAURO_CATALOG = {
             33.333333333333336
           ],
           "durationMs": 500,
-          "guardDurationMs": 500
+          "guardDurationMs": 500,
+          "stageSpriteScale": [
+            1.4289410963568265,
+            1.4289410963568265
+          ]
         },
         {
           "id": "block-low",
@@ -33416,9 +33752,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -33547,7 +33883,11 @@ window.SANMAURO_CATALOG = {
             23.80952380952381
           ],
           "durationMs": 500,
-          "guardDurationMs": 500
+          "guardDurationMs": 500,
+          "stageSpriteScale": [
+            1.4289410963568265,
+            1.4289410963568265
+          ]
         },
         {
           "id": "hurt-high",
@@ -33718,9 +34058,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -33759,7 +34099,11 @@ window.SANMAURO_CATALOG = {
             41.666666666666664,
             41.666666666666664
           ],
-          "sourceDurationMs": 666.6666666666666
+          "sourceDurationMs": 666.6666666666666,
+          "stageSpriteScale": [
+            1.1767750205291514,
+            1.1767750205291514
+          ]
         },
         {
           "id": "hurt-medium",
@@ -33930,9 +34274,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -33971,7 +34315,11 @@ window.SANMAURO_CATALOG = {
             41.666666666666664,
             41.666666666666664
           ],
-          "sourceDurationMs": 666.6666666666666
+          "sourceDurationMs": 666.6666666666666,
+          "stageSpriteScale": [
+            1.1767750205291514,
+            1.1767750205291514
+          ]
         },
         {
           "id": "hurt-low",
@@ -34100,9 +34448,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -34135,7 +34483,11 @@ window.SANMAURO_CATALOG = {
             41.666666666666664,
             41.666666666666664
           ],
-          "sourceDurationMs": 416.66666666666663
+          "sourceDurationMs": 416.66666666666663,
+          "stageSpriteScale": [
+            1.1767750205291514,
+            1.1767750205291514
+          ]
         },
         {
           "id": "hurt-crouched",
@@ -34279,9 +34631,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -34316,7 +34668,11 @@ window.SANMAURO_CATALOG = {
             41.666666666666664,
             41.666666666666664
           ],
-          "sourceDurationMs": 500.0
+          "sourceDurationMs": 500.0,
+          "stageSpriteScale": [
+            1.4289410963568265,
+            1.4289410963568265
+          ]
         },
         {
           "id": "victory",
@@ -34646,9 +35002,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -34668,7 +35024,11 @@ window.SANMAURO_CATALOG = {
             "centerX": 256,
             "groundY": 430,
             "targetIdleHeight": 344
-          }
+          },
+          "stageSpriteScale": [
+            1.4289410963568265,
+            1.4289410963568265
+          ]
         },
         {
           "id": "ko",
@@ -34873,9 +35233,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -34895,7 +35255,11 @@ window.SANMAURO_CATALOG = {
             "centerX": 256,
             "groundY": 430,
             "targetIdleHeight": 344
-          }
+          },
+          "stageSpriteScale": [
+            1.1767750205291514,
+            1.1767750205291514
+          ]
         },
         {
           "id": "light-punch",
@@ -35080,9 +35444,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -35127,7 +35491,11 @@ window.SANMAURO_CATALOG = {
           "impactMs": 300,
           "impactFrame": 10,
           "impactNote": "Prima posa di massima estensione, verificata visivamente sullo spritesheet.",
-          "attackDurationMs": 500
+          "attackDurationMs": 500,
+          "stageSpriteScale": [
+            1.4289410963568265,
+            1.4289410963568265
+          ]
         },
         {
           "id": "medium-punch",
@@ -35712,9 +36080,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -35829,7 +36197,11 @@ window.SANMAURO_CATALOG = {
           "impactMs": 450,
           "impactFrame": 16,
           "impactNote": "Prima massima estensione verificata visivamente; ritorno finale all’idle a 750 ms.",
-          "attackDurationMs": 750
+          "attackDurationMs": 750,
+          "stageSpriteScale": [
+            1.4289410963568265,
+            1.4289410963568265
+          ]
         },
         {
           "id": "heavy-punch",
@@ -36460,9 +36832,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -36560,7 +36932,11 @@ window.SANMAURO_CATALOG = {
           "impactMs": 500,
           "impactFrame": 40,
           "impactNote": "Massima estensione verificata visivamente; idle terminale a 1000 ms.",
-          "attackDurationMs": 1000
+          "attackDurationMs": 1000,
+          "stageSpriteScale": [
+            1.4289410963568265,
+            1.4289410963568265
+          ]
         },
         {
           "id": "backwalk",
@@ -36988,9 +37364,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -37013,7 +37389,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.1767750205291514,
+            1.1767750205291514
+          ]
         },
         {
           "id": "run",
@@ -37721,9 +38101,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -37746,7 +38126,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.1767750205291514,
+            1.1767750205291514
+          ]
         },
         {
           "id": "crouched-heavy-punch",
@@ -38503,9 +38887,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -38534,7 +38918,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "crouched",
-          "impactNote": "Montante: massima estensione verso l’alto, verificata sulla sequenza runtime."
+          "impactNote": "Montante: massima estensione verso l’alto, verificata sulla sequenza runtime.",
+          "stageSpriteScale": [
+            1.4289410963568265,
+            1.4289410963568265
+          ]
         },
         {
           "id": "heavy-kick",
@@ -39375,9 +39763,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -39406,7 +39794,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "idle",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4289410963568265,
+            1.4289410963568265
+          ]
         },
         {
           "id": "crouched-heavy-kick",
@@ -40163,9 +40555,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -40194,7 +40586,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4289410963568265,
+            1.4289410963568265
+          ]
         },
         {
           "id": "knockdown",
@@ -40944,9 +41340,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -40969,7 +41365,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.1767750205291514,
+            1.1767750205291514
+          ]
         },
         {
           "id": "medium-kick",
@@ -41810,9 +42210,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -41841,7 +42241,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "idle",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4289410963568265,
+            1.4289410963568265
+          ]
         },
         {
           "id": "crouched-medium-kick",
@@ -42598,9 +43002,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -42629,7 +43033,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4289410963568265,
+            1.4289410963568265
+          ]
         },
         {
           "id": "light-kick",
@@ -43106,9 +43514,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -43137,7 +43545,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "idle",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4289410963568265,
+            1.4289410963568265
+          ]
         },
         {
           "id": "crouched-light-kick",
@@ -43642,9 +44054,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -43673,7 +44085,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4289410963568265,
+            1.4289410963568265
+          ]
         },
         {
           "id": "jump-light-kick",
@@ -44275,24 +44691,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 334,
           "preview": {
             "drawRect": [
-              24.067226890756302,
-              58.10084033613447,
-              413.0420168067227,
-              413.0420168067227
+              24.067226890756274,
+              58.10084033613441,
+              413.04201680672276,
+              413.04201680672276
             ],
             "anchor": [
               287.5,
               461
             ],
             "scale": [
-              0.8067226890756303,
-              0.8067226890756303
+              0.8067226890756304,
+              0.8067226890756304
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -44321,7 +44737,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.3448857377476016,
+            1.3448857377476016
+          ]
         },
         {
           "id": "jump-light-punch",
@@ -44868,9 +45288,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -44899,7 +45319,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4289410963568265,
+            1.4289410963568265
+          ]
         },
         {
           "id": "jump-heavy-kick",
@@ -45501,24 +45925,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 319,
           "preview": {
             "drawRect": [
-              49.07563025210084,
-              108.11764705882354,
-              413.0420168067227,
-              413.0420168067227
+              49.07563025210081,
+              108.11764705882348,
+              413.04201680672276,
+              413.04201680672276
             ],
             "anchor": [
               256.5,
               399
             ],
             "scale": [
-              0.8067226890756303,
-              0.8067226890756303
+              0.8067226890756304,
+              0.8067226890756304
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -45547,7 +45971,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.3448857377476016,
+            1.3448857377476016
+          ]
         },
         {
           "id": "jump-medium-kick",
@@ -46149,24 +46577,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 398,
           "preview": {
             "drawRect": [
-              50.28571428571428,
-              45.19327731092437,
-              413.0420168067227,
-              413.0420168067227
+              50.28571428571425,
+              45.193277310924316,
+              413.04201680672276,
+              413.04201680672276
             ],
             "anchor": [
               255.0,
               477
             ],
             "scale": [
-              0.8067226890756303,
-              0.8067226890756303
+              0.8067226890756304,
+              0.8067226890756304
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -46195,7 +46623,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.3448857377476016,
+            1.3448857377476016
+          ]
         },
         {
           "id": "crouched-light-punch",
@@ -46560,9 +46992,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -46591,7 +47023,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4289410963568265,
+            1.4289410963568265
+          ]
         },
         {
           "id": "crouched-medium-punch",
@@ -46984,9 +47420,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -47015,7 +47451,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4289410963568265,
+            1.4289410963568265
+          ]
         },
         {
           "id": "jump-medium-punch",
@@ -47562,9 +48002,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -47593,7 +48033,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4289410963568265,
+            1.4289410963568265
+          ]
         },
         {
           "id": "jump-heavy-punch",
@@ -48098,9 +48542,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -48129,7 +48573,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "air",
-          "impactNote": "Colpo discendente a due mani: posa di estensione verso il basso verificata nella sequenza runtime."
+          "impactNote": "Colpo discendente a due mani: posa di estensione verso il basso verificata nella sequenza runtime.",
+          "stageSpriteScale": [
+            1.1767750205291514,
+            1.1767750205291514
+          ]
         },
         {
           "id": "hurt-air",
@@ -48543,9 +48991,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -48568,7 +49016,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.4289410963568265,
+            1.4289410963568265
+          ]
         },
         {
           "id": "back-jump",
@@ -48982,9 +49434,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -49007,7 +49459,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.1767750205291514,
+            1.1767750205291514
+          ]
         },
         {
           "id": "get-up",
@@ -49295,9 +49751,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -49320,7 +49776,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.1767750205291514,
+            1.1767750205291514
+          ]
         },
         {
           "id": "stand-up",
@@ -49734,9 +50194,9 @@ window.SANMAURO_CATALOG = {
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -49760,7 +50220,11 @@ window.SANMAURO_CATALOG = {
           "trimmed": true,
           "remainingImport": true,
           "attackStrength": null,
-          "poseDurationMs": 250
+          "poseDurationMs": 250,
+          "stageSpriteScale": [
+            1.4289410963568265,
+            1.4289410963568265
+          ]
         }
       ],
       "heightCm": 183,
@@ -49770,7 +50234,9 @@ window.SANMAURO_CATALOG = {
         "sourcePath": "assets/ui/portraits/mangler-portrait-v1.png",
         "sourceConfigPath": "scripts/CharacterSelect.gd",
         "sourceSha256": "6b1f6a6ce3e8e044ffc42e7a9d672109c296f95cb43c16f7808e561d8bd2b0e7"
-      }
+      },
+      "referenceIdleHeightPixels": 356,
+      "heightScaleCorrection": 1.0337078651685392
     },
     {
       "id": "mileto",
@@ -50190,24 +50656,24 @@ window.SANMAURO_CATALOG = {
           "sourceSha256": "388466b376f8e241d6749abb1c31411541e64a1d648e2001f3022c80bb0bd452",
           "preview": {
             "drawRect": [
-              37.54232184677153,
-              71.57243225158919,
-              446.50830824132925,
-              446.50830824132925
+              40.82350436448792,
+              76.95592931658496,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               250.5,
               411
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -50227,7 +50693,11 @@ window.SANMAURO_CATALOG = {
             "centerX": 256,
             "groundY": 430,
             "targetIdleHeight": 344
-          }
+          },
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "walk",
@@ -50558,24 +51028,24 @@ window.SANMAURO_CATALOG = {
           "sourceSha256": "e5e660414d812df03b9c690641b77e6719b93d2457c34a48e44e64ced8de8f86",
           "preview": {
             "drawRect": [
-              50.62361993977922,
-              67.21199955392001,
-              446.50830824132925,
-              446.50830824132925
+              53.70832446242278,
+              72.66098928394001,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               235.5,
               416
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -50595,7 +51065,11 @@ window.SANMAURO_CATALOG = {
             "centerX": 256,
             "groundY": 430,
             "targetIdleHeight": 344
-          }
+          },
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "jump",
@@ -50911,24 +51385,24 @@ window.SANMAURO_CATALOG = {
           "sourceLoop": false,
           "preview": {
             "drawRect": [
-              26.20519683283152,
-              71.57243225158919,
-              446.50830824132925,
-              446.50830824132925
+              29.65666027961106,
+              76.95592931658496,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               263.5,
               411
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -50994,7 +51468,11 @@ window.SANMAURO_CATALOG = {
           "sourceTakeoffMs": 66.66666666666667,
           "apexFrame": 21,
           "apexMs": 500,
-          "apexNote": "Plateau vicino ai frame 21-23; riferimento alla posa del corpo."
+          "apexNote": "Plateau vicino ai frame 21-23; riferimento alla posa del corpo.",
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "crouch",
@@ -51112,24 +51590,24 @@ window.SANMAURO_CATALOG = {
           "sourceAnimation": "crouch",
           "preview": {
             "drawRect": [
-              35.79814876770385,
-              71.57243225158919,
-              446.50830824132925,
-              446.50830824132925
+              39.10552835142994,
+              76.95592931658496,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               252.5,
               411
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -51182,7 +51660,11 @@ window.SANMAURO_CATALOG = {
             19.23076923076923
           ],
           "durationMs": 250,
-          "poseDurationMs": 250
+          "poseDurationMs": 250,
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "block-high",
@@ -51288,24 +51770,24 @@ window.SANMAURO_CATALOG = {
           "sourceAnimation": "block_high",
           "preview": {
             "drawRect": [
-              41.46671127467383,
-              71.57243225158919,
-              446.50830824132925,
-              446.50830824132925
+              44.68895039386837,
+              76.95592931658496,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               246.0,
               411
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -51389,7 +51871,11 @@ window.SANMAURO_CATALOG = {
             45.45454545454545
           ],
           "durationMs": 500,
-          "guardDurationMs": 500
+          "guardDurationMs": 500,
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "block-mid",
@@ -51495,24 +51981,24 @@ window.SANMAURO_CATALOG = {
           "sourceAnimation": "block_mid",
           "preview": {
             "drawRect": [
-              38.41440838630538,
-              68.95617263298766,
-              446.50830824132925,
-              446.50830824132925
+              41.682492371016906,
+              74.37896529699799,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               249.5,
               414
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -51596,7 +52082,11 @@ window.SANMAURO_CATALOG = {
             45.45454545454545
           ],
           "durationMs": 500,
-          "guardDurationMs": 500
+          "guardDurationMs": 500,
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "block-low",
@@ -51762,24 +52252,24 @@ window.SANMAURO_CATALOG = {
           "sourceAnimation": "block_low",
           "preview": {
             "drawRect": [
-              39.286494925839236,
-              78.54912456785996,
-              446.50830824132925,
-              446.50830824132925
+              42.541480377545895,
+              83.82783336881693,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               248.5,
               403
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -51908,7 +52398,11 @@ window.SANMAURO_CATALOG = {
             23.80952380952381
           ],
           "durationMs": 500,
-          "guardDurationMs": 500
+          "guardDurationMs": 500,
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "hurt-high",
@@ -52050,24 +52544,24 @@ window.SANMAURO_CATALOG = {
           "reactionDurationMs": 500,
           "preview": {
             "drawRect": [
-              34.92606222817,
-              71.57243225158919,
-              446.50830824132925,
-              446.50830824132925
+              38.24654034490095,
+              76.95592931658496,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               253.5,
               411
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -52104,7 +52598,11 @@ window.SANMAURO_CATALOG = {
             20.833333333333332,
             20.833333333333332
           ],
-          "sourceDurationMs": 291.66666666666663
+          "sourceDurationMs": 291.66666666666663,
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "hurt-medium",
@@ -52225,24 +52723,24 @@ window.SANMAURO_CATALOG = {
           "reactionDurationMs": 500,
           "preview": {
             "drawRect": [
-              41.46671127467383,
-              66.33991301438613,
-              446.50830824132925,
-              446.50830824132925
+              44.68895039386837,
+              71.80200127741102,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               246.0,
               417
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -52276,7 +52774,11 @@ window.SANMAURO_CATALOG = {
             20.833333333333332,
             20.833333333333332
           ],
-          "sourceDurationMs": 229.16666666666666
+          "sourceDurationMs": 229.16666666666666,
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "hurt-low",
@@ -52397,24 +52899,24 @@ window.SANMAURO_CATALOG = {
           "reactionDurationMs": 500,
           "preview": {
             "drawRect": [
-              41.90275454444077,
-              71.57243225158919,
-              446.50830824132925,
-              446.50830824132925
+              45.11844439713286,
+              76.95592931658496,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               245.5,
               411
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -52448,7 +52950,11 @@ window.SANMAURO_CATALOG = {
             20.833333333333332,
             20.833333333333332
           ],
-          "sourceDurationMs": 229.16666666666666
+          "sourceDurationMs": 229.16666666666666,
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "hurt-crouched",
@@ -52577,24 +53083,24 @@ window.SANMAURO_CATALOG = {
           "reactionDurationMs": 500,
           "preview": {
             "drawRect": [
-              -26.992082078733063,
-              73.3166053306569,
-              446.50830824132925,
-              446.50830824132925
+              -22.741608118657382,
+              78.67390532964293,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               324.5,
               409
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -52629,7 +53135,11 @@ window.SANMAURO_CATALOG = {
             41.666666666666664,
             41.666666666666664
           ],
-          "sourceDurationMs": 500.0
+          "sourceDurationMs": 500.0,
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "victory",
@@ -52963,24 +53473,24 @@ window.SANMAURO_CATALOG = {
           "sourceSkippedFrames": [],
           "preview": {
             "drawRect": [
-              54.548009367681544,
-              70.70034571205537,
-              446.50830824132925,
-              446.50830824132925
+              57.57377049180323,
+              76.09694131005597,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               231.0,
               412
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -53000,7 +53510,11 @@ window.SANMAURO_CATALOG = {
             "centerX": 256,
             "groundY": 430,
             "targetIdleHeight": 344
-          }
+          },
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "ko",
@@ -53334,24 +53848,24 @@ window.SANMAURO_CATALOG = {
           "sourceSkippedFrames": [],
           "preview": {
             "drawRect": [
-              20.972677595628454,
-              41.921489907438456,
-              446.50830824132925,
-              446.50830824132925
+              24.502732240437098,
+              47.75033709459933,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               269.5,
               445
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -53371,7 +53885,11 @@ window.SANMAURO_CATALOG = {
             "centerX": 256,
             "groundY": 430,
             "targetIdleHeight": 344
-          }
+          },
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "light-punch",
@@ -53506,24 +54024,24 @@ window.SANMAURO_CATALOG = {
           "durationMs": 500,
           "preview": {
             "drawRect": [
-              6.147206423553058,
-              71.57243225158919,
-              446.50830824132925,
-              446.50830824132925
+              9.899936129444285,
+              76.95592931658496,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               286.5,
               411
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -53563,7 +54081,11 @@ window.SANMAURO_CATALOG = {
           "impactMs": 300,
           "impactFrame": 6,
           "impactNote": "Prima posa di massima estensione, verificata visivamente sullo spritesheet.",
-          "attackDurationMs": 500
+          "attackDurationMs": 500,
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "medium-punch",
@@ -53776,24 +54298,24 @@ window.SANMAURO_CATALOG = {
           "sourceReverseFps": 0.0,
           "preview": {
             "drawRect": [
-              20.53663432586154,
-              70.70034571205537,
-              446.50830824132925,
-              446.50830824132925
+              24.073238237172603,
+              76.09694131005597,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               270.0,
               412
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -53845,7 +54367,11 @@ window.SANMAURO_CATALOG = {
           "impactMs": 450,
           "impactFrame": 13,
           "impactNote": "Prima massima estensione verificata visivamente; ritorno finale all’idle a 750 ms.",
-          "attackDurationMs": 750
+          "attackDurationMs": 750,
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "heavy-punch",
@@ -54195,24 +54721,24 @@ window.SANMAURO_CATALOG = {
           "durationMs": 1000,
           "preview": {
             "drawRect": [
-              15.74015835842539,
-              48.89818222370923,
-              446.50830824132925,
-              446.50830824132925
+              19.348804201263164,
+              54.62224114683124,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               275.5,
               437
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -54278,7 +54804,11 @@ window.SANMAURO_CATALOG = {
           "impactMs": 500,
           "impactFrame": 16,
           "impactNote": "Massima estensione verificata visivamente; idle terminale a 1000 ms.",
-          "attackDurationMs": 1000
+          "attackDurationMs": 1000,
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "back-jump",
@@ -54607,24 +55137,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 302.5,
           "preview": {
             "drawRect": [
-              44.5190141630423,
-              71.57243225158919,
-              446.50830824132925,
-              446.50830824132925
+              47.69540841671986,
+              76.95592931658496,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               242.5,
               411
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -54647,7 +55177,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "backwalk",
@@ -55382,24 +55916,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 329,
           "preview": {
             "drawRect": [
-              50.62361993977922,
-              67.21199955392001,
-              446.50830824132925,
-              446.50830824132925
+              53.70832446242278,
+              72.66098928394001,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               235.5,
               416
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -55422,7 +55956,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "crouched-light-kick",
@@ -55870,24 +56408,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 228.0,
           "preview": {
             "drawRect": [
-              40.15858146537306,
-              73.3166053306569,
-              446.50830824132925,
-              446.50830824132925
+              43.400468384074884,
+              78.67390532964293,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               247.5,
               409
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -55916,7 +56454,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "crouched-light-punch",
@@ -56070,24 +56612,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 251,
           "preview": {
             "drawRect": [
-              20.972677595628454,
-              79.42121110739384,
-              446.50830824132925,
-              446.50830824132925
+              24.502732240437098,
+              84.68682137534591,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               269.5,
               402
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -56116,7 +56658,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "crouched-medium-kick",
@@ -56662,24 +57208,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 216,
           "preview": {
             "drawRect": [
-              27.077283372365372,
-              76.80495148879231,
-              446.50830824132925,
-              446.50830824132925
+              30.51564828614005,
+              82.10985735575895,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               262.5,
               405
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -56708,7 +57254,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "crouched-medium-punch",
@@ -57100,24 +57650,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 247.0,
           "preview": {
             "drawRect": [
-              16.612244897959215,
-              78.54912456785996,
-              446.50830824132925,
-              446.50830824132925
+              20.207792207792153,
+              83.82783336881693,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               274.5,
               403
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -57146,7 +57696,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "crouched-heavy-kick",
@@ -57734,24 +58288,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 253.5,
           "preview": {
             "drawRect": [
-              -19.57934649269538,
-              57.619047619047706,
-              446.50830824132925,
-              446.50830824132925
+              -15.440210063160919,
+              63.21212121212113,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               316.0,
               427
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -57780,7 +58334,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "crouched-heavy-punch",
@@ -58158,24 +58716,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 263,
           "preview": {
             "drawRect": [
-              39.286494925839236,
-              80.29329764692767,
-              446.50830824132925,
-              446.50830824132925
+              42.541480377545895,
+              85.5458093818749,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               248.5,
               401
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -58204,7 +58762,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "crouched",
-          "impactNote": "Montante: massima estensione verso l’alto, verificata sulla sequenza runtime."
+          "impactNote": "Montante: massima estensione verso l’alto, verificata sulla sequenza runtime.",
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "hurt-air",
@@ -58533,24 +59095,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 147.0,
           "preview": {
             "drawRect": [
-              15.74015835842539,
-              69.82825917252154,
-              446.50830824132925,
-              446.50830824132925
+              19.348804201263164,
+              75.23795330352698,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               275.5,
               413
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -58573,7 +59135,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "jump-light-kick",
@@ -58867,24 +59433,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 249,
           "preview": {
             "drawRect": [
-              11.37972566075615,
-              166.62986506077846,
-              446.50830824132925,
-              446.50830824132925
+              15.053864168618219,
+              170.58562202824493,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               280.5,
               302
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -58913,7 +59479,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "jump-light-punch",
@@ -59151,24 +59721,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 292,
           "preview": {
             "drawRect": [
-              31.873759339801524,
-              142.21144195383079,
-              446.50830824132925,
-              446.50830824132925
+              35.24008232204949,
+              146.53395784543318,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               257.0,
               330
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -59197,7 +59767,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "jump-medium-kick",
@@ -59911,24 +60485,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 249,
           "preview": {
             "drawRect": [
-              20.53663432586154,
-              169.24612467938,
-              446.50830824132925,
-              446.50830824132925
+              24.073238237172603,
+              173.1625860478319,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               270.0,
               299
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -59957,7 +60531,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "jump-medium-punch",
@@ -60461,24 +61039,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 292.5,
           "preview": {
             "drawRect": [
-              29.693542990966904,
-              112.56049960968,
-              446.50830824132925,
-              446.50830824132925
+              33.092612305727016,
+              117.3283656234475,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               259.5,
               364
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -60507,7 +61085,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "air-guard",
@@ -60570,24 +61152,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 288,
           "preview": {
             "drawRect": [
-              17.048288167726156,
-              167.50195160031228,
-              446.50830824132925,
-              446.50830824132925
+              20.637286211056647,
+              171.44461003477392,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               274.0,
               301
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -60610,7 +61192,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "jump-heavy-kick",
@@ -61324,24 +61910,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 278,
           "preview": {
             "drawRect": [
-              26.20519683283152,
-              163.14151890264304,
-              446.50830824132925,
-              446.50830824132925
+              29.65666027961106,
+              167.14967000212897,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               263.5,
               306
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -61370,7 +61956,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "jump-heavy-punch",
@@ -61860,24 +62450,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 284,
           "preview": {
             "drawRect": [
-              53.23987955838075,
-              138.72309579569537,
-              446.50830824132925,
-              446.50830824132925
+              56.28528848200975,
+              143.09800581931722,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               232.5,
               334
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -61906,7 +62496,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "get-up",
@@ -62193,24 +62787,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 259,
           "preview": {
             "drawRect": [
-              32.309802609568465,
-              61.10739377718306,
-              446.50830824132925,
-              446.50830824132925
+              35.66957632531398,
+              66.64807323823709,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               256.5,
               423
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -62233,7 +62827,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "light-kick",
@@ -62583,24 +63181,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 319,
           "preview": {
             "drawRect": [
-              -16.527043604326934,
-              71.57243225158919,
-              446.50830824132925,
-              446.50830824132925
+              -12.433752040309457,
+              76.95592931658496,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               312.5,
               411
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -62629,7 +63227,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "idle",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "medium-kick",
@@ -63217,24 +63819,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 328.0,
           "preview": {
             "drawRect": [
-              -19.143303222928466,
-              71.57243225158919,
-              446.50830824132925,
-              446.50830824132925
+              -15.010716059896424,
+              76.95592931658496,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               315.5,
               411
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -63263,7 +63865,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "idle",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "run",
@@ -63760,24 +64366,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 319.5,
           "preview": {
             "drawRect": [
-              54.548009367681544,
-              71.57243225158919,
-              446.50830824132925,
-              446.50830824132925
+              57.57377049180323,
+              76.95592931658496,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               231.0,
               411
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -63800,7 +64406,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "heavy-kick",
@@ -64528,24 +65138,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 325.5,
           "preview": {
             "drawRect": [
-              -26.119995539199238,
-              71.57243225158919,
-              446.50830824132925,
-              446.50830824132925
+              -21.882620112128393,
+              76.95592931658496,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               323.5,
               411
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -64574,7 +65184,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "idle",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "knockdown",
@@ -65211,24 +65825,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 204.0,
           "preview": {
             "drawRect": [
-              11.37972566075615,
-              64.59573993531848,
-              446.50830824132925,
-              446.50830824132925
+              15.053864168618219,
+              70.08402526435304,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               280.5,
               419
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -65251,7 +65865,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         },
         {
           "id": "stand-up",
@@ -65482,24 +66100,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 265,
           "preview": {
             "drawRect": [
-              35.79814876770385,
-              71.57243225158919,
-              446.50830824132925,
-              446.50830824132925
+              39.10552835142994,
+              76.95592931658496,
+              439.80185934284304,
+              439.80185934284304
             ],
             "anchor": [
               252.5,
               411
             ],
             "scale": [
-              0.8720865395338462,
-              0.8720865395338462
+              0.8589880065289903,
+              0.8589880065289903
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -65523,7 +66141,11 @@ window.SANMAURO_CATALOG = {
           "trimmed": true,
           "remainingImport": true,
           "attackStrength": null,
-          "poseDurationMs": 250
+          "poseDurationMs": 250,
+          "stageSpriteScale": [
+            1.4320171411080502,
+            1.4320171411080502
+          ]
         }
       ],
       "heightCm": 170,
@@ -65533,7 +66155,9 @@ window.SANMAURO_CATALOG = {
         "sourcePath": "assets/ui/portraits/mileto-portrait-v1.png",
         "sourceConfigPath": "scripts/CharacterSelect.gd",
         "sourceSha256": "7367869e659e0fb43677b922895eca44a6580fcf19518f3868bd7bd499db832e"
-      }
+      },
+      "referenceIdleHeightPixels": 330,
+      "heightScaleCorrection": 1.0181818181818183
     },
     {
       "id": "oscare",
@@ -65953,24 +66577,24 @@ window.SANMAURO_CATALOG = {
           "sourceSha256": "5a50ba44aa69084300507f779558e61f5fc6c4be6762ca4353f8a3c5a0155073",
           "preview": {
             "drawRect": [
-              11.352839931153198,
-              36.66437177280551,
-              486.44406196213424,
-              486.44406196213424
+              17.896103896103853,
+              47.18441558441549,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               257.5,
               414
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -65990,7 +66614,11 @@ window.SANMAURO_CATALOG = {
             "centerX": 256,
             "groundY": 430,
             "targetIdleHeight": 344
-          }
+          },
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "walk",
@@ -66321,24 +66949,24 @@ window.SANMAURO_CATALOG = {
           "sourceSha256": "79703fa5e6f4e77291873b6b7b9ca4b9ba5cd396ee5893f66645b78ca26a0d60",
           "preview": {
             "drawRect": [
-              13.728055077452666,
-              35.71428571428572,
-              486.44406196213424,
-              486.44406196213424
+              20.207792207792153,
+              46.25974025974017,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               255.0,
               415
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -66358,7 +66986,11 @@ window.SANMAURO_CATALOG = {
             "centerX": 256,
             "groundY": 430,
             "targetIdleHeight": 344
-          }
+          },
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "jump",
@@ -66667,24 +67299,24 @@ window.SANMAURO_CATALOG = {
           "sourceLoop": false,
           "preview": {
             "drawRect": [
-              5.177280550774526,
-              36.66437177280551,
-              486.44406196213424,
-              486.44406196213424
+              11.885714285714243,
+              47.18441558441549,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               264.0,
               414
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -66749,7 +67381,11 @@ window.SANMAURO_CATALOG = {
           "sourceTakeoffMs": 66.66666666666667,
           "apexFrame": 18,
           "apexMs": 500,
-          "apexNote": "La raccolta delle gambe prosegue dopo la massima quota della testa; scelta la massima elevazione del corpo visibile."
+          "apexNote": "La raccolta delle gambe prosegue dopo la massima quota della testa; scelta la massima elevazione del corpo visibile.",
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "crouch",
@@ -66843,24 +67479,24 @@ window.SANMAURO_CATALOG = {
           "sourceAnimation": "crouch",
           "preview": {
             "drawRect": [
-              2.327022375215165,
-              35.71428571428572,
-              486.44406196213424,
-              486.44406196213424
+              9.111688311688255,
+              46.25974025974017,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               267.0,
               415
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -66905,7 +67541,11 @@ window.SANMAURO_CATALOG = {
             27.77777777777778
           ],
           "durationMs": 250,
-          "poseDurationMs": 250
+          "poseDurationMs": 250,
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "block-high",
@@ -67059,24 +67699,24 @@ window.SANMAURO_CATALOG = {
           "sourceAnimation": "block_high",
           "preview": {
             "drawRect": [
-              7.552495697074022,
-              36.66437177280551,
-              486.44406196213424,
-              486.44406196213424
+              14.197402597402544,
+              47.18441558441549,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               261.5,
               414
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -67196,7 +67836,11 @@ window.SANMAURO_CATALOG = {
             26.31578947368421
           ],
           "durationMs": 500,
-          "guardDurationMs": 500
+          "guardDurationMs": 500,
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "block-mid",
@@ -67302,24 +67946,24 @@ window.SANMAURO_CATALOG = {
           "sourceAnimation": "block_mid",
           "preview": {
             "drawRect": [
-              14.20309810671256,
-              36.66437177280551,
-              486.44406196213424,
-              486.44406196213424
+              20.670129870129813,
+              47.18441558441549,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               254.5,
               414
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -67403,7 +68047,11 @@ window.SANMAURO_CATALOG = {
             45.45454545454545
           ],
           "durationMs": 500,
-          "guardDurationMs": 500
+          "guardDurationMs": 500,
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "block-low",
@@ -67569,24 +68217,24 @@ window.SANMAURO_CATALOG = {
           "sourceAnimation": "block_low",
           "preview": {
             "drawRect": [
-              8.027538726333916,
-              35.71428571428572,
-              486.44406196213424,
-              486.44406196213424
+              14.659740259740204,
+              46.25974025974017,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               261.0,
               415
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -67715,7 +68363,11 @@ window.SANMAURO_CATALOG = {
             23.80952380952381
           ],
           "durationMs": 500,
-          "guardDurationMs": 500
+          "guardDurationMs": 500,
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "hurt-high",
@@ -67815,24 +68467,24 @@ window.SANMAURO_CATALOG = {
           "reactionDurationMs": 500,
           "preview": {
             "drawRect": [
-              3.7521514629948456,
-              34.764199655765935,
-              486.44406196213424,
-              486.44406196213424
+              10.498701298701235,
+              45.33506493506485,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               265.5,
               416
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -67863,7 +68515,11 @@ window.SANMAURO_CATALOG = {
             20.833333333333332,
             20.833333333333332
           ],
-          "sourceDurationMs": 166.66666666666666
+          "sourceDurationMs": 166.66666666666666,
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "hurt-medium",
@@ -67984,24 +68640,24 @@ window.SANMAURO_CATALOG = {
           "reactionDurationMs": 500,
           "preview": {
             "drawRect": [
-              4.702237521514633,
-              35.71428571428572,
-              486.44406196213424,
-              486.44406196213424
+              11.423376623376583,
+              46.25974025974017,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               264.5,
               415
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -68035,7 +68691,11 @@ window.SANMAURO_CATALOG = {
             20.833333333333332,
             20.833333333333332
           ],
-          "sourceDurationMs": 229.16666666666666
+          "sourceDurationMs": 229.16666666666666,
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "hurt-low",
@@ -68156,24 +68816,24 @@ window.SANMAURO_CATALOG = {
           "reactionDurationMs": 500,
           "preview": {
             "drawRect": [
-              8.977624784853703,
-              36.66437177280551,
-              486.44406196213424,
-              486.44406196213424
+              15.584415584415524,
+              47.18441558441549,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               260.0,
               414
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -68207,7 +68867,11 @@ window.SANMAURO_CATALOG = {
             20.833333333333332,
             20.833333333333332
           ],
-          "sourceDurationMs": 229.16666666666666
+          "sourceDurationMs": 229.16666666666666,
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "hurt-crouched",
@@ -68336,24 +69000,24 @@ window.SANMAURO_CATALOG = {
           "reactionDurationMs": 500,
           "preview": {
             "drawRect": [
-              8.027538726333916,
-              34.764199655765935,
-              486.44406196213424,
-              486.44406196213424
+              14.659740259740204,
+              45.33506493506485,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               261.0,
               416
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -68388,7 +69052,11 @@ window.SANMAURO_CATALOG = {
             41.666666666666664,
             41.666666666666664
           ],
-          "sourceDurationMs": 500.0
+          "sourceDurationMs": 500.0,
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "victory",
@@ -68722,24 +69390,24 @@ window.SANMAURO_CATALOG = {
           "sourceSkippedFrames": [],
           "preview": {
             "drawRect": [
-              35.58003442340791,
-              36.66437177280551,
-              486.44406196213424,
-              486.44406196213424
+              41.47532467532463,
+              47.18441558441549,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               232.0,
               414
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -68759,7 +69427,11 @@ window.SANMAURO_CATALOG = {
             "centerX": 256,
             "groundY": 430,
             "targetIdleHeight": 344
-          }
+          },
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "ko",
@@ -69093,24 +69765,24 @@ window.SANMAURO_CATALOG = {
           "sourceSkippedFrames": [],
           "preview": {
             "drawRect": [
-              16.103270223752162,
-              22.41308089500859,
-              486.44406196213424,
-              486.44406196213424
+              22.51948051948048,
+              33.31428571428563,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               252.5,
               429
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -69130,7 +69802,11 @@ window.SANMAURO_CATALOG = {
             "centerX": 256,
             "groundY": 430,
             "targetIdleHeight": 344
-          }
+          },
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "light-punch",
@@ -69265,24 +69941,24 @@ window.SANMAURO_CATALOG = {
           "durationMs": 500,
           "preview": {
             "drawRect": [
-              -7.648881239242655,
-              36.66437177280551,
-              486.44406196213424,
-              486.44406196213424
+              -0.5974025974026631,
+              47.18441558441549,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               277.5,
               414
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -69322,7 +69998,11 @@ window.SANMAURO_CATALOG = {
           "impactMs": 300,
           "impactFrame": 5,
           "impactNote": "Prima posa di massima estensione, verificata visivamente sullo spritesheet.",
-          "attackDurationMs": 500
+          "attackDurationMs": 500,
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "medium-punch",
@@ -69671,24 +70351,24 @@ window.SANMAURO_CATALOG = {
           "sourceReverseFps": 96.0,
           "preview": {
             "drawRect": [
-              -10.499139414802073,
-              35.71428571428572,
-              486.44406196213424,
-              486.44406196213424
+              -3.3714285714286234,
+              46.25974025974017,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               280.5,
               415
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -69759,7 +70439,11 @@ window.SANMAURO_CATALOG = {
           "impactMs": 450,
           "impactFrame": 20,
           "impactNote": "Prima massima estensione verificata visivamente; ritorno finale all’idle a 750 ms.",
-          "attackDurationMs": 750
+          "attackDurationMs": 750,
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "heavy-punch",
@@ -70029,24 +70713,24 @@ window.SANMAURO_CATALOG = {
           "durationMs": 1000,
           "preview": {
             "drawRect": [
-              -38.05163511187607,
-              36.66437177280551,
-              486.44406196213424,
-              486.44406196213424
+              -30.18701298701302,
+              47.18441558441549,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               309.5,
               414
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -70102,7 +70786,11 @@ window.SANMAURO_CATALOG = {
           "impactMs": 500,
           "impactFrame": 15,
           "impactNote": "Massima estensione verificata visivamente; idle terminale a 1000 ms.",
-          "attackDurationMs": 1000
+          "attackDurationMs": 1000,
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "back-jump",
@@ -70431,24 +71119,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 317.0,
           "preview": {
             "drawRect": [
-              8.027538726333916,
-              23.363166953528435,
-              486.44406196213424,
-              486.44406196213424
+              14.659740259740204,
+              34.23896103896095,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               261.0,
               428
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -70471,7 +71159,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "backwalk",
@@ -71206,24 +71898,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 330,
           "preview": {
             "drawRect": [
-              13.728055077452666,
-              35.71428571428572,
-              486.44406196213424,
-              486.44406196213424
+              20.207792207792153,
+              46.25974025974017,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               255.0,
               415
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -71246,7 +71938,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "crouched-light-kick",
@@ -71694,24 +72390,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 238.5,
           "preview": {
             "drawRect": [
-              -33.776247848537025,
-              28.11359724612737,
-              486.44406196213424,
-              486.44406196213424
+              -26.025974025974108,
+              38.86233766233755,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               305.0,
               423
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -71740,7 +72436,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "crouched-light-punch",
@@ -71894,24 +72594,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 241,
           "preview": {
             "drawRect": [
-              -10.974182444061967,
-              35.71428571428572,
-              486.44406196213424,
-              486.44406196213424
+              -3.833766233766312,
+              46.25974025974017,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               281.0,
               415
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -71940,7 +72640,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "crouched-medium-kick",
@@ -72346,24 +73050,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 217,
           "preview": {
             "drawRect": [
-              8.502581755593809,
-              31.913941480206574,
-              486.44406196213424,
-              486.44406196213424
+              15.122077922077864,
+              42.56103896103889,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               260.5,
               419
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -72392,7 +73096,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "crouched-medium-punch",
@@ -72784,24 +73492,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 238.0,
           "preview": {
             "drawRect": [
-              -11.924268502581754,
-              34.764199655765935,
-              486.44406196213424,
-              486.44406196213424
+              -4.758441558441632,
+              45.33506493506485,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               282.0,
               416
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -72830,7 +73538,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "crouched-heavy-kick",
@@ -73418,24 +74130,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 235.5,
           "preview": {
             "drawRect": [
-              -39.001721170395854,
-              29.063683304647157,
-              486.44406196213424,
-              486.44406196213424
+              -31.111688311688397,
+              39.78701298701293,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               310.5,
               422
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -73464,7 +74176,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "crouched-heavy-punch",
@@ -73898,24 +74614,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 304,
           "preview": {
             "drawRect": [
-              -5.273666092943188,
-              35.71428571428572,
-              486.44406196213424,
-              486.44406196213424
+              1.7142857142856656,
+              46.25974025974017,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               275.0,
               415
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -73944,7 +74660,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "crouched",
-          "impactNote": "Montante: massima estensione verso l’alto, verificata sulla sequenza runtime."
+          "impactNote": "Montante: massima estensione verso l’alto, verificata sulla sequenza runtime.",
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "hurt-air",
@@ -74273,24 +74993,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 204.0,
           "preview": {
             "drawRect": [
-              9.92771084337349,
-              37.614457831325296,
-              486.44406196213424,
-              486.44406196213424
+              16.509090909090844,
+              48.10909090909081,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               259.0,
               413
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -74313,7 +75033,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "jump-light-kick",
@@ -74593,24 +75317,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 236.0,
           "preview": {
             "drawRect": [
-              -14.299483648881221,
-              159.22547332185889,
-              486.44406196213424,
-              486.44406196213424
+              -7.070129870129904,
+              166.4675324675324,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               284.5,
               285
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -74639,7 +75363,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "jump-light-punch",
@@ -74835,24 +75563,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 287.0,
           "preview": {
             "drawRect": [
-              15.153184165232375,
-              111.7211703958692,
-              486.44406196213424,
-              486.44406196213424
+              21.594805194805133,
+              120.23376623376618,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               253.5,
               335
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -74881,7 +75609,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "jump-medium-kick",
@@ -75483,24 +76215,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 237,
           "preview": {
             "drawRect": [
-              -6.223752151462975,
-              166.82616179001724,
-              486.44406196213424,
-              486.44406196213424
+              0.7896103896103455,
+              173.86493506493503,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               276.0,
               277
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -75529,7 +76261,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "jump-medium-punch",
@@ -76117,24 +76853,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 256.0,
           "preview": {
             "drawRect": [
-              16.103270223752162,
-              89.86919104991392,
-              486.44406196213424,
-              486.44406196213424
+              22.51948051948048,
+              98.9662337662337,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               252.5,
               358
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -76163,7 +76899,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "air-guard",
@@ -76226,24 +76966,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 250,
           "preview": {
             "drawRect": [
-              -1.4733218588640398,
-              162.07573149741825,
-              486.44406196213424,
-              486.44406196213424
+              5.412987012986946,
+              169.24155844155837,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               271.0,
               282
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -76266,7 +77006,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "jump-heavy-kick",
@@ -76924,24 +77668,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 228,
           "preview": {
             "drawRect": [
-              -56.57831325301203,
-              165.87607573149745,
-              486.44406196213424,
-              486.44406196213424
+              -48.218181818181904,
+              172.9402597402597,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               329.0,
               278
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -76970,7 +77714,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "jump-heavy-punch",
@@ -77502,24 +78250,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 247.0,
           "preview": {
             "drawRect": [
-              30.829604130808946,
-              129.77280550774526,
-              486.44406196213424,
-              486.44406196213424
+              36.851948051948,
+              137.8025974025973,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               237.0,
               316
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -77548,7 +78296,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "get-up",
@@ -77835,24 +78587,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 179,
           "preview": {
             "drawRect": [
-              9.92771084337349,
-              30.013769363166944,
-              486.44406196213424,
-              486.44406196213424
+              16.509090909090844,
+              40.71168831168825,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               259.0,
               421
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -77875,7 +78627,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "light-kick",
@@ -78281,24 +79037,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 320,
           "preview": {
             "drawRect": [
-              -39.95180722891564,
-              36.66437177280551,
-              486.44406196213424,
-              486.44406196213424
+              -32.03636363636372,
+              47.18441558441549,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               311.5,
               414
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -78327,7 +79083,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "idle",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "medium-kick",
@@ -78845,24 +79605,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 317,
           "preview": {
             "drawRect": [
-              -52.302925989672985,
-              36.66437177280551,
-              486.44406196213424,
-              486.44406196213424
+              -44.057142857142935,
+              47.18441558441549,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               324.5,
               414
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -78891,7 +79651,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "idle",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "run",
@@ -79374,24 +80138,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 305,
           "preview": {
             "drawRect": [
-              30.829604130808946,
-              39.51462994836487,
-              486.44406196213424,
-              486.44406196213424
+              36.851948051948,
+              49.95844155844145,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               237.0,
               411
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -79414,7 +80178,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "heavy-kick",
@@ -80142,24 +80910,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 324.5,
           "preview": {
             "drawRect": [
-              4.702237521514633,
-              30.013769363166944,
-              486.44406196213424,
-              486.44406196213424
+              11.423376623376583,
+              40.71168831168825,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               264.5,
               421
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -80188,7 +80956,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "idle",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "knockdown",
@@ -80825,24 +81597,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 184.5,
           "preview": {
             "drawRect": [
-              3.7521514629948456,
-              29.063683304647157,
-              486.44406196213424,
-              486.44406196213424
+              10.498701298701235,
+              39.78701298701293,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               265.5,
               422
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -80865,7 +81637,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         },
         {
           "id": "stand-up",
@@ -81040,24 +81816,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 286,
           "preview": {
             "drawRect": [
-              2.327022375215165,
-              35.71428571428572,
-              486.44406196213424,
-              486.44406196213424
+              9.111688311688255,
+              46.25974025974017,
+              473.43376623376633,
+              473.43376623376633
             ],
             "anchor": [
               267.0,
               415
             ],
             "scale": [
-              0.9500860585197934,
-              0.9500860585197934
+              0.9246753246753249,
+              0.9246753246753249
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 315.42857142857144,
+            "targetIdleHeight": 305.1428571428572,
             "heightMultiplier": 1.1090909090909091,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -81081,7 +81857,11 @@ window.SANMAURO_CATALOG = {
           "trimmed": true,
           "remainingImport": true,
           "attackStrength": null,
-          "poseDurationMs": 250
+          "poseDurationMs": 250,
+          "stageSpriteScale": [
+            1.541524334251607,
+            1.541524334251607
+          ]
         }
       ],
       "heightCm": 183,
@@ -81091,7 +81871,9 @@ window.SANMAURO_CATALOG = {
         "sourcePath": "assets/ui/portraits/oscare-portrait-slim-bust.png",
         "sourceConfigPath": "scripts/CharacterSelect.gd",
         "sourceSha256": "3a7ecfcc268cef6b1c5749bc4e550dc6b3723f61a27fd238819172a4a3cd8e4e"
-      }
+      },
+      "referenceIdleHeightPixels": 330,
+      "heightScaleCorrection": 1.006060606060606
     },
     {
       "id": "peirolo",
@@ -81511,24 +82293,24 @@ window.SANMAURO_CATALOG = {
           "sourceSha256": "a74f7cbd55dc7c360e89745a46bcf7fec23eb720850c4b5e6c25658aca0daece",
           "preview": {
             "drawRect": [
-              30.433921446084327,
-              66.51637627311874,
-              439.96126559849455,
-              439.96126559849455
+              34.542154566744756,
+              73.13650050184009,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               262.5,
               423
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -81548,7 +82330,11 @@ window.SANMAURO_CATALOG = {
             "centerX": 256,
             "groundY": 430,
             "targetIdleHeight": 344
-          }
+          },
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "walk",
@@ -81879,24 +82665,24 @@ window.SANMAURO_CATALOG = {
           "sourceSha256": "a0ffcc8531a5850408816ccea0689d9d35752bec7ded46c5720d1cb82516093a",
           "preview": {
             "drawRect": [
-              40.74551360854906,
-              65.6570769262467,
-              439.96126559849455,
-              439.96126559849455
+              44.66594178655069,
+              72.29285156685626,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               250.5,
               424
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -81916,7 +82702,11 @@ window.SANMAURO_CATALOG = {
             "centerX": 256,
             "groundY": 430,
             "targetIdleHeight": 344
-          }
+          },
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "jump",
@@ -82239,24 +83029,24 @@ window.SANMAURO_CATALOG = {
           "sourceLoop": false,
           "preview": {
             "drawRect": [
-              26.9967240585961,
-              66.51637627311874,
-              439.96126559849455,
-              439.96126559849455
+              31.167558826809426,
+              73.13650050184009,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               266.5,
               423
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -82323,7 +83113,11 @@ window.SANMAURO_CATALOG = {
           "sourceTakeoffMs": 66.66666666666667,
           "apexFrame": 21,
           "apexMs": 500,
-          "apexNote": "Plateau vicino ai frame 21-23; riferimento alla posa del corpo."
+          "apexNote": "Plateau vicino ai frame 21-23; riferimento alla posa del corpo.",
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "crouch",
@@ -82429,24 +83223,24 @@ window.SANMAURO_CATALOG = {
           "sourceAnimation": "crouch",
           "preview": {
             "drawRect": [
-              36.87866654762479,
-              68.23497496686286,
-              439.96126559849455,
-              439.96126559849455
+              40.86952157912347,
+              74.82379837180775,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               255.0,
               421
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -82495,7 +83289,11 @@ window.SANMAURO_CATALOG = {
             22.727272727272727
           ],
           "durationMs": 250,
-          "poseDurationMs": 250
+          "poseDurationMs": 250,
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "block-high",
@@ -82601,24 +83399,24 @@ window.SANMAURO_CATALOG = {
           "sourceAnimation": "block_high",
           "preview": {
             "drawRect": [
-              30.863571119520373,
-              67.37567561999083,
-              439.96126559849455,
-              439.96126559849455
+              34.96397903423667,
+              73.98014943682392,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               262.0,
               422
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -82702,7 +83500,11 @@ window.SANMAURO_CATALOG = {
             45.45454545454545
           ],
           "durationMs": 500,
-          "guardDurationMs": 500
+          "guardDurationMs": 500,
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "block-mid",
@@ -82808,24 +83610,24 @@ window.SANMAURO_CATALOG = {
           "sourceAnimation": "block_mid",
           "preview": {
             "drawRect": [
-              38.16761556793287,
-              63.938478232502575,
-              439.96126559849455,
-              439.96126559849455
+              42.13499498159922,
+              70.60555369688859,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               253.5,
               426
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -82909,7 +83711,11 @@ window.SANMAURO_CATALOG = {
             45.45454545454545
           ],
           "durationMs": 500,
-          "guardDurationMs": 500
+          "guardDurationMs": 500,
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "block-low",
@@ -83075,24 +83881,24 @@ window.SANMAURO_CATALOG = {
           "sourceAnimation": "block_low",
           "preview": {
             "drawRect": [
-              23.12987699767183,
-              72.53147170122315,
-              439.96126559849455,
-              439.96126559849455
+              27.371138619382208,
+              79.04204304672692,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               271.0,
               416
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -83221,7 +84027,11 @@ window.SANMAURO_CATALOG = {
             23.80952380952381
           ],
           "durationMs": 500,
-          "guardDurationMs": 500
+          "guardDurationMs": 500,
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "hurt-high",
@@ -83328,24 +84138,24 @@ window.SANMAURO_CATALOG = {
           "reactionDurationMs": 500,
           "preview": {
             "drawRect": [
-              27.42637373203212,
-              67.37567561999083,
-              439.96126559849455,
-              439.96126559849455
+              31.589383294301342,
+              73.98014943682392,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               266.0,
               422
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -83377,7 +84187,11 @@ window.SANMAURO_CATALOG = {
             20.833333333333332,
             20.833333333333332
           ],
-          "sourceDurationMs": 187.5
+          "sourceDurationMs": 187.5,
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "hurt-medium",
@@ -83498,24 +84312,24 @@ window.SANMAURO_CATALOG = {
           "reactionDurationMs": 500,
           "preview": {
             "drawRect": [
-              32.152520139828454,
-              67.37567561999083,
-              439.96126559849455,
-              439.96126559849455
+              36.22945243671239,
+              73.98014943682392,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               260.5,
               422
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -83549,7 +84363,11 @@ window.SANMAURO_CATALOG = {
             20.833333333333332,
             20.833333333333332
           ],
-          "sourceDurationMs": 229.16666666666666
+          "sourceDurationMs": 229.16666666666666,
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "hurt-low",
@@ -83670,24 +84488,24 @@ window.SANMAURO_CATALOG = {
           "reactionDurationMs": 500,
           "preview": {
             "drawRect": [
-              31.722870466392436,
-              65.6570769262467,
-              439.96126559849455,
-              439.96126559849455
+              35.807627969220505,
+              72.29285156685626,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               261.0,
               424
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -83721,7 +84539,11 @@ window.SANMAURO_CATALOG = {
             20.833333333333332,
             20.833333333333332
           ],
-          "sourceDurationMs": 229.16666666666666
+          "sourceDurationMs": 229.16666666666666,
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "hurt-crouched",
@@ -83850,24 +84672,24 @@ window.SANMAURO_CATALOG = {
           "reactionDurationMs": 500,
           "preview": {
             "drawRect": [
-              42.03446262885714,
-              69.95357366060699,
-              439.96126559849455,
-              439.96126559849455
+              45.93141518902644,
+              76.51109624177542,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               249.0,
               419
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -83902,7 +84724,11 @@ window.SANMAURO_CATALOG = {
             41.666666666666664,
             41.666666666666664
           ],
-          "sourceDurationMs": 500.0
+          "sourceDurationMs": 500.0,
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "victory",
@@ -84236,24 +85062,24 @@ window.SANMAURO_CATALOG = {
           "sourceSkippedFrames": [],
           "preview": {
             "drawRect": [
-              30.00427177264831,
-              64.79777757937467,
-              439.96126559849455,
-              439.96126559849455
+              34.12033009925284,
+              71.44920263187242,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               263.0,
               425
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -84273,7 +85099,11 @@ window.SANMAURO_CATALOG = {
             "centerX": 256,
             "groundY": 430,
             "targetIdleHeight": 344
-          }
+          },
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "ko",
@@ -84607,24 +85437,24 @@ window.SANMAURO_CATALOG = {
           "sourceSkippedFrames": [],
           "preview": {
             "drawRect": [
-              25.70777503828802,
-              55.345484763782,
-              439.96126559849455,
-              439.96126559849455
+              29.902085424333677,
+              62.16906434705032,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               268.0,
               436
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -84644,7 +85474,11 @@ window.SANMAURO_CATALOG = {
             "centerX": 256,
             "groundY": 430,
             "targetIdleHeight": 344
-          }
+          },
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "light-punch",
@@ -84779,24 +85613,24 @@ window.SANMAURO_CATALOG = {
           "durationMs": 500,
           "preview": {
             "drawRect": [
-              6.373539733666661,
-              66.51637627311874,
-              439.96126559849455,
-              439.96126559849455
+              10.91998438719753,
+              73.13650050184009,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               290.5,
               423
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -84836,7 +85670,11 @@ window.SANMAURO_CATALOG = {
           "impactMs": 300,
           "impactFrame": 4,
           "impactNote": "Prima posa di massima estensione, verificata visivamente sullo spritesheet.",
-          "attackDurationMs": 500
+          "attackDurationMs": 500,
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "medium-punch",
@@ -85087,24 +85925,24 @@ window.SANMAURO_CATALOG = {
           "sourceReverseFps": 48.0,
           "preview": {
             "drawRect": [
-              10.240386794590933,
-              60.50128084501432,
-              439.96126559849455,
-              439.96126559849455
+              14.716404594624748,
+              67.23095795695332,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               286.0,
               430
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -85161,7 +85999,11 @@ window.SANMAURO_CATALOG = {
           "impactMs": 450,
           "impactFrame": 13,
           "impactNote": "Prima massima estensione verificata visivamente; ritorno finale all’idle a 750 ms.",
-          "attackDurationMs": 750
+          "attackDurationMs": 750,
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "heavy-punch",
@@ -85407,24 +86249,24 @@ window.SANMAURO_CATALOG = {
           "durationMs": 1000,
           "preview": {
             "drawRect": [
-              0.7880939789982904,
-              66.51637627311874,
-              439.96126559849455,
-              439.96126559849455
+              5.436266309802619,
+              73.13650050184009,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               297.0,
               423
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -85477,7 +86319,11 @@ window.SANMAURO_CATALOG = {
           "impactMs": 500,
           "impactFrame": 10,
           "impactNote": "Massima estensione verificata visivamente; idle terminale a 1000 ms.",
-          "attackDurationMs": 1000
+          "attackDurationMs": 1000,
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "back-jump",
@@ -85806,24 +86652,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 362.5,
           "preview": {
             "drawRect": [
-              30.00427177264831,
-              67.37567561999083,
-              439.96126559849455,
-              439.96126559849455
+              34.12033009925284,
+              73.98014943682392,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               263.0,
               422
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -85846,7 +86692,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "backwalk",
@@ -86581,24 +87431,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 333,
           "preview": {
             "drawRect": [
-              40.74551360854906,
-              65.6570769262467,
-              439.96126559849455,
-              439.96126559849455
+              44.66594178655069,
+              72.29285156685626,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               250.5,
               424
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -86621,7 +87471,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "crouched-light-kick",
@@ -87069,24 +87923,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 246.5,
           "preview": {
             "drawRect": [
-              7.66248875397477,
-              56.20478411065403,
-              439.96126559849455,
-              439.96126559849455
+              12.18545778967325,
+              63.012713282034156,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               289.0,
               435
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -87115,7 +87969,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "crouched-light-punch",
@@ -87325,24 +88183,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 281,
           "preview": {
             "drawRect": [
-              17.54443124300343,
-              69.95357366060699,
-              439.96126559849455,
-              439.96126559849455
+              21.887420541987296,
+              76.51109624177542,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               277.5,
               419
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -87371,7 +88229,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "crouched-medium-kick",
@@ -87889,24 +88751,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 262,
           "preview": {
             "drawRect": [
-              33.87111883357258,
-              67.37567561999083,
-              439.96126559849455,
-              439.96126559849455
+              37.91675030668006,
+              73.98014943682392,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               258.5,
               422
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -87935,7 +88797,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "crouched-medium-punch",
@@ -88313,24 +89179,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 275,
           "preview": {
             "drawRect": [
-              25.278125364851974,
-              72.53147170122315,
-              439.96126559849455,
-              439.96126559849455
+              29.48026095684176,
+              79.04204304672692,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               268.5,
               416
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -88359,7 +89225,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "crouched-heavy-kick",
@@ -88933,24 +89803,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 279,
           "preview": {
             "drawRect": [
-              14.107233855515204,
-              42.45599456070107,
-              439.96126559849455,
-              439.96126559849455
+              18.512824802051995,
+              49.51433032229289,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               281.5,
               451
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -88979,7 +89849,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "crouched-heavy-punch",
@@ -89357,24 +90231,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 298,
           "preview": {
             "drawRect": [
-              29.57462209921229,
-              70.81287300747908,
-              439.96126559849455,
-              439.96126559849455
+              33.69850563176092,
+              77.35474517675925,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               263.5,
               418
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -89403,7 +90277,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "crouched",
-          "impactNote": "Montante: massima estensione verso l’alto, verificata sulla sequenza runtime."
+          "impactNote": "Montante: massima estensione verso l’alto, verificata sulla sequenza runtime.",
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "hurt-air",
@@ -89732,24 +90610,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 190.5,
           "preview": {
             "drawRect": [
-              25.278125364851974,
-              69.09427431373496,
-              439.96126559849455,
-              439.96126559849455
+              29.48026095684176,
+              75.66744730679159,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               268.5,
               420
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -89772,7 +90650,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "jump-light-kick",
@@ -90052,24 +90934,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 290.0,
           "preview": {
             "drawRect": [
-              19.263029936747557,
-              128.38592924790703,
-              439.96126559849455,
-              439.96126559849455
+              23.57471841195496,
+              133.87922382067586,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               275.5,
               351
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -90098,7 +90980,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "jump-light-punch",
@@ -90336,24 +91222,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 335,
           "preview": {
             "drawRect": [
-              34.3007685070086,
-              94.01395537302466,
-              439.96126559849455,
-              439.96126559849455
+              38.338574774171974,
+              100.13326642132267,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               258.0,
               391
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -90382,7 +91268,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "jump-medium-kick",
@@ -91068,24 +91958,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 284,
           "preview": {
             "drawRect": [
-              21.411278303927702,
-              130.10452794165116,
-              439.96126559849455,
-              439.96126559849455
+              25.683840749414543,
+              135.56652169064347,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               273.0,
               349
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -91114,7 +92004,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "jump-medium-punch",
@@ -91632,24 +92526,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 317,
           "preview": {
             "drawRect": [
-              33.87111883357258,
-              91.4360573324085,
-              439.96126559849455,
-              439.96126559849455
+              37.91675030668006,
+              97.60231961637118,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               258.5,
               394
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -91678,7 +92572,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "air-guard",
@@ -91741,24 +92639,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 317,
           "preview": {
             "drawRect": [
-              33.441469160136535,
-              127.526629901035,
-              439.96126559849455,
-              439.96126559849455
+              37.49492583918814,
+              133.03557488569203,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               259.0,
               352
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -91781,7 +92679,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "jump-heavy-kick",
@@ -92229,24 +93131,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 308.0,
           "preview": {
             "drawRect": [
-              33.01181948670052,
-              128.38592924790703,
-              439.96126559849455,
-              439.96126559849455
+              37.073101371696225,
+              133.87922382067586,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               259.5,
               351
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -92275,7 +93177,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "jump-heavy-punch",
@@ -92653,24 +93559,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 312,
           "preview": {
             "drawRect": [
-              37.30831622106081,
-              89.71745863866437,
-              439.96126559849455,
-              439.96126559849455
+              41.29134604661539,
+              95.91502174640351,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               254.5,
               396
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -92699,7 +93605,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "get-up",
@@ -92986,24 +93896,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 197,
           "preview": {
             "drawRect": [
-              37.73796589449685,
-              62.21987953875845,
-              439.96126559849455,
-              439.96126559849455
+              41.713170514107304,
+              68.91825582692098,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               254.0,
               428
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -93026,7 +93936,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "light-kick",
@@ -93404,24 +94318,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 333,
           "preview": {
             "drawRect": [
-              1.217743652434308,
-              67.37567561999083,
-              439.96126559849455,
-              439.96126559849455
+              5.858090777294535,
+              73.98014943682392,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               296.5,
               422
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -93450,7 +94364,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "idle",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "medium-kick",
@@ -93842,24 +94760,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 330.0,
           "preview": {
             "drawRect": [
-              28.715322752340228,
-              67.37567561999083,
-              439.96126559849455,
-              439.96126559849455
+              32.85485669677709,
+              73.98014943682392,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               264.5,
               422
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -93888,7 +94806,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "idle",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "run",
@@ -94399,24 +95321,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 322,
           "preview": {
             "drawRect": [
-              60.50939858660644,
-              66.51637627311874,
-              439.96126559849455,
-              439.96126559849455
+              64.06986729117878,
+              73.13650050184009,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               227.5,
               423
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -94439,7 +95361,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "heavy-kick",
@@ -95097,24 +96023,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 333,
           "preview": {
             "drawRect": [
-              -12.101396224082634,
-              67.37567561999083,
-              439.96126559849455,
-              439.96126559849455
+              -7.218467714954841,
+              73.98014943682392,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               312.0,
               422
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -95143,7 +96069,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "idle",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "knockdown",
@@ -95780,24 +96710,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 146.5,
           "preview": {
             "drawRect": [
-              5.514240386794597,
-              62.21987953875845,
-              439.96126559849455,
-              439.96126559849455
+              10.076335452213698,
+              68.91825582692098,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               291.5,
               428
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -95820,7 +96750,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         },
         {
           "id": "stand-up",
@@ -96023,24 +96957,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 308,
           "preview": {
             "drawRect": [
-              36.87866654762479,
-              68.23497496686286,
-              439.96126559849455,
-              439.96126559849455
+              40.86952157912347,
+              74.82379837180775,
+              431.9482547117207,
+              431.9482547117207
             ],
             "anchor": [
               255.0,
               421
             ],
             "scale": [
-              0.8592993468720597,
-              0.8592993468720597
+              0.8436489349838295,
+              0.8436489349838295
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 293.0210772833724,
+            "targetIdleHeight": 283.46604215456676,
             "heightMultiplier": 1.0303030303030303,
-            "viewScale": 0.8267523555361909
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -96064,7 +96998,11 @@ window.SANMAURO_CATALOG = {
           "trimmed": true,
           "remainingImport": true,
           "attackStrength": null,
-          "poseDurationMs": 250
+          "poseDurationMs": 250,
+          "stageSpriteScale": [
+            1.4064454064454062,
+            1.4064454064454062
+          ]
         }
       ],
       "heightCm": 170,
@@ -96074,7 +97012,9 @@ window.SANMAURO_CATALOG = {
         "sourcePath": "assets/ui/portraits/peirolo-portrait-v1.png",
         "sourceConfigPath": "scripts/CharacterSelect.gd",
         "sourceSha256": "f87f45e23decefbdac4e76e55e52dead1c983e27683b1f035bc0698965e33594"
-      }
+      },
+      "referenceIdleHeightPixels": 336,
+      "heightScaleCorrection": 1.0148809523809523
     },
     {
       "id": "torpe",
@@ -96482,24 +97422,24 @@ window.SANMAURO_CATALOG = {
           "sourceSha256": "5f852bd15107be16c71b269250b2666bb9830c4d047846c6047e7add4838a950",
           "preview": {
             "drawRect": [
-              16.89564174330269,
-              53.87045181927232,
-              470.85165933626547,
-              470.85165933626547
+              14.400823659921258,
+              49.945911065029975,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               260.0,
               409
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -96519,7 +97459,11 @@ window.SANMAURO_CATALOG = {
             "centerX": 256,
             "groundY": 430,
             "targetIdleHeight": 344
-          }
+          },
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "walk",
@@ -96682,24 +97626,24 @@ window.SANMAURO_CATALOG = {
           "sourceSha256": "2d4cbe0c417dba91e623b201624dbd20a02de5c878acb88c89e54e20a20ea789",
           "preview": {
             "drawRect": [
-              29.770491803278702,
-              54.790083966413476,
-              470.85165933626547,
-              470.85165933626547
+              27.41001007823317,
+              50.87513866633793,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               246.0,
               408
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -96719,7 +97663,11 @@ window.SANMAURO_CATALOG = {
             "centerX": 256,
             "groundY": 430,
             "targetIdleHeight": 344
-          }
+          },
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "jump",
@@ -97000,24 +97948,24 @@ window.SANMAURO_CATALOG = {
           "sourceLoop": false,
           "preview": {
             "drawRect": [
-              14.136745301879273,
-              53.87045181927232,
-              470.85165933626547,
-              470.85165933626547
+              11.613140855997273,
+              49.945911065029975,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               263.0,
               409
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -97078,7 +98026,11 @@ window.SANMAURO_CATALOG = {
           "sourceTakeoffMs": 66.66666666666667,
           "apexFrame": 16,
           "apexMs": 500,
-          "apexNote": "Apice del corpo vicino ai frame 17-18; scala e ancoraggio costanti."
+          "apexNote": "Apice del corpo vicino ai frame 17-18; scala e ancoraggio costanti.",
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "crouch",
@@ -97160,24 +98112,24 @@ window.SANMAURO_CATALOG = {
           "sourceAnimation": "crouch",
           "preview": {
             "drawRect": [
-              15.97600959616156,
-              53.87045181927232,
-              470.85165933626547,
-              470.85165933626547
+              13.471596058613244,
+              49.945911065029975,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               261.0,
               409
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -97218,7 +98170,11 @@ window.SANMAURO_CATALOG = {
             35.714285714285715
           ],
           "durationMs": 250,
-          "poseDurationMs": 250
+          "poseDurationMs": 250,
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "block-high",
@@ -97360,24 +98316,24 @@ window.SANMAURO_CATALOG = {
           "sourceAnimation": "block_high",
           "preview": {
             "drawRect": [
-              12.757297081167536,
-              53.87045181927232,
-              470.85165933626547,
-              470.85165933626547
+              10.21929945403528,
+              49.945911065029975,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               264.5,
               409
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -97488,7 +98444,11 @@ window.SANMAURO_CATALOG = {
             29.41176470588235
           ],
           "durationMs": 500,
-          "guardDurationMs": 500
+          "guardDurationMs": 500,
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "block-mid",
@@ -97594,24 +98554,24 @@ window.SANMAURO_CATALOG = {
           "sourceAnimation": "block_mid",
           "preview": {
             "drawRect": [
-              21.953618552578973,
-              53.87045181927232,
-              470.85165933626547,
-              470.85165933626547
+              19.51157546711522,
+              49.945911065029975,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               254.5,
               409
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -97695,7 +98655,11 @@ window.SANMAURO_CATALOG = {
             45.45454545454545
           ],
           "durationMs": 500,
-          "guardDurationMs": 500
+          "guardDurationMs": 500,
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "block-low",
@@ -97861,24 +98825,24 @@ window.SANMAURO_CATALOG = {
           "sourceAnimation": "block_low",
           "preview": {
             "drawRect": [
-              21.033986405437844,
-              63.06677329068373,
-              470.85165933626547,
-              470.85165933626547
+              18.582347865807236,
+              59.23818707810989,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               255.5,
               399
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -98007,7 +98971,11 @@ window.SANMAURO_CATALOG = {
             23.80952380952381
           ],
           "durationMs": 500,
-          "guardDurationMs": 500
+          "guardDurationMs": 500,
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "hurt-high",
@@ -98107,24 +99075,24 @@ window.SANMAURO_CATALOG = {
           "reactionDurationMs": 500,
           "preview": {
             "drawRect": [
-              35.74810075969614,
-              53.87045181927232,
-              470.85165933626547,
-              470.85165933626547
+              33.44998948673515,
+              49.945911065029975,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               239.5,
               409
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -98155,7 +99123,11 @@ window.SANMAURO_CATALOG = {
             20.833333333333332,
             20.833333333333332
           ],
-          "sourceDurationMs": 166.66666666666666
+          "sourceDurationMs": 166.66666666666666,
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "hurt-medium",
@@ -98276,24 +99248,24 @@ window.SANMAURO_CATALOG = {
           "reactionDurationMs": 500,
           "preview": {
             "drawRect": [
-              28.850859656137544,
-              53.87045181927232,
-              470.85165933626547,
-              470.85165933626547
+              26.480782476925185,
+              49.945911065029975,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               247.0,
               409
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -98327,7 +99299,11 @@ window.SANMAURO_CATALOG = {
             20.833333333333332,
             20.833333333333332
           ],
-          "sourceDurationMs": 229.16666666666666
+          "sourceDurationMs": 229.16666666666666,
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "hurt-low",
@@ -98448,24 +99424,24 @@ window.SANMAURO_CATALOG = {
           "reactionDurationMs": 500,
           "preview": {
             "drawRect": [
-              37.58736505397843,
-              52.95081967213116,
-              470.85165933626547,
-              470.85165933626547
+              35.30844468935115,
+              49.01668346372196,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               237.5,
               410
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -98499,7 +99475,11 @@ window.SANMAURO_CATALOG = {
             20.833333333333332,
             20.833333333333332
           ],
-          "sourceDurationMs": 229.16666666666666
+          "sourceDurationMs": 229.16666666666666,
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "hurt-crouched",
@@ -98628,24 +99608,24 @@ window.SANMAURO_CATALOG = {
           "reactionDurationMs": 500,
           "preview": {
             "drawRect": [
-              17.815273890443848,
-              61.22750899640147,
-              470.85165933626547,
-              470.85165933626547
+              15.330051261229244,
+              57.37973187549392,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               259.0,
               401
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -98680,7 +99660,11 @@ window.SANMAURO_CATALOG = {
             41.666666666666664,
             41.666666666666664
           ],
-          "sourceDurationMs": 500.0
+          "sourceDurationMs": 500.0,
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "victory",
@@ -99014,24 +99998,24 @@ window.SANMAURO_CATALOG = {
           "sourceSkippedFrames": [],
           "preview": {
             "drawRect": [
-              5.400239904038386,
-              52.95081967213116,
-              470.85165933626547,
-              470.85165933626547
+              2.7854786435713095,
+              49.01668346372196,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               272.5,
               410
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -99051,7 +100035,11 @@ window.SANMAURO_CATALOG = {
             "centerX": 256,
             "groundY": 430,
             "targetIdleHeight": 344
-          }
+          },
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "ko",
@@ -99385,24 +100373,24 @@ window.SANMAURO_CATALOG = {
           "sourceSkippedFrames": [],
           "preview": {
             "drawRect": [
-              2.6413434626149694,
-              35.477808876449444,
-              470.85165933626547,
-              470.85165933626547
+              -0.002204160352675899,
+              31.361359038870035,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               275.5,
               429
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -99422,7 +100410,11 @@ window.SANMAURO_CATALOG = {
             "centerX": 256,
             "groundY": 430,
             "targetIdleHeight": 344
-          }
+          },
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "light-punch",
@@ -99557,24 +100549,24 @@ window.SANMAURO_CATALOG = {
           "durationMs": 500,
           "preview": {
             "drawRect": [
-              -15.751299480207877,
-              53.87045181927232,
-              470.85165933626547,
-              470.85165933626547
+              -18.58675618651256,
+              49.945911065029975,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               295.5,
               409
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -99614,7 +100606,11 @@ window.SANMAURO_CATALOG = {
           "impactMs": 300,
           "impactFrame": 6,
           "impactNote": "Prima posa di massima estensione, verificata visivamente sullo spritesheet.",
-          "attackDurationMs": 500
+          "attackDurationMs": 500,
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "medium-punch",
@@ -99851,24 +100847,24 @@ window.SANMAURO_CATALOG = {
           "sourceReverseFps": 30.0,
           "preview": {
             "drawRect": [
-              -14.831667333066775,
-              51.1115553778489,
-              470.85165933626547,
-              470.85165933626547
+              -17.657528585204602,
+              47.15822826110599,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               294.5,
               412
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -99923,7 +100919,11 @@ window.SANMAURO_CATALOG = {
           "impactMs": 450,
           "impactFrame": 10,
           "impactNote": "Prima massima estensione verificata visivamente; ritorno finale all’idle a 750 ms.",
-          "attackDurationMs": 750
+          "attackDurationMs": 750,
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "heavy-punch",
@@ -100217,24 +101217,24 @@ window.SANMAURO_CATALOG = {
           "durationMs": 1000,
           "preview": {
             "drawRect": [
-              -7.474610155937626,
-              46.51339464214317,
-              470.85165933626547,
-              470.85165933626547
+              -10.223707774740603,
+              42.512090254565976,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               286.5,
               417
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -100293,7 +101293,11 @@ window.SANMAURO_CATALOG = {
           "impactMs": 500,
           "impactFrame": 15,
           "impactNote": "Massima estensione verificata visivamente; idle terminale a 1000 ms.",
-          "attackDurationMs": 1000
+          "attackDurationMs": 1000,
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "back-jump",
@@ -100622,24 +101626,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 299.5,
           "preview": {
             "drawRect": [
-              14.596561375449824,
-              53.87045181927232,
-              470.85165933626547,
-              470.85165933626547
+              12.077754656651251,
+              49.945911065029975,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               262.5,
               409
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -100662,7 +101666,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "backwalk",
@@ -101005,24 +102013,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 329,
           "preview": {
             "drawRect": [
-              29.770491803278702,
-              54.790083966413476,
-              470.85165933626547,
-              470.85165933626547
+              27.41001007823317,
+              50.87513866633793,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               246.0,
               408
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -101045,7 +102053,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "crouched-light-kick",
@@ -101493,24 +102505,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 247.0,
           "preview": {
             "drawRect": [
-              -19.42982806877245,
-              59.38824470211915,
-              470.85165933626547,
-              470.85165933626547
+              -22.30366659174456,
+              55.521276672877946,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               299.5,
               403
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -101539,7 +102551,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "crouched-light-punch",
@@ -101693,24 +102709,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 259,
           "preview": {
             "drawRect": [
-              2.6413434626149694,
-              62.147141143542626,
-              470.85165933626547,
-              470.85165933626547
+              -0.002204160352675899,
+              58.30895947680193,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               275.5,
               400
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -101739,7 +102755,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "crouched-medium-kick",
@@ -102243,24 +103263,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 234.5,
           "preview": {
             "drawRect": [
-              27.471411435425836,
-              55.70971611355458,
-              470.85165933626547,
-              470.85165933626547
+              25.086941074963192,
+              51.804366267645946,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               248.5,
               407
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -102289,7 +103309,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "crouched-medium-punch",
@@ -102583,24 +103607,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 255,
           "preview": {
             "drawRect": [
-              -7.474610155937626,
-              62.147141143542626,
-              470.85165933626547,
-              470.85165933626547
+              -10.223707774740603,
+              58.30895947680193,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               286.5,
               400
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -102629,7 +103653,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "crouched-heavy-kick",
@@ -103217,24 +104245,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 250.0,
           "preview": {
             "drawRect": [
-              -25.8672530987605,
-              56.629348260695735,
-              470.85165933626547,
-              470.85165933626547
+              -28.808259800900544,
+              52.73359386895396,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               306.5,
               406
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -103263,7 +104291,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "crouched",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "crouched-heavy-punch",
@@ -103655,24 +104687,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 295.0,
           "preview": {
             "drawRect": [
-              20.574170331867265,
-              58.46861255497805,
-              470.85165933626547,
-              470.85165933626547
+              18.11773406515323,
+              54.59204907156993,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               256.0,
               404
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -103701,7 +104733,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "crouched",
-          "impactNote": "Montante: massima estensione verso l’alto, verificata sulla sequenza runtime."
+          "impactNote": "Montante: massima estensione verso l’alto, verificata sulla sequenza runtime.",
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "hurt-air",
@@ -104030,24 +105066,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 222.5,
           "preview": {
             "drawRect": [
-              44.94442223110758,
-              60.30787684926031,
-              470.85165933626547,
-              470.85165933626547
+              42.74226549981509,
+              56.4505042741859,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               229.5,
               402
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -104070,7 +105106,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "jump-light-kick",
@@ -104294,24 +105334,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 286.5,
           "preview": {
             "drawRect": [
-              0.802079168332682,
-              80.53978408636544,
-              470.85165933626547,
-              470.85165933626547
+              -1.8606593629686472,
+              76.89351150296181,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               277.5,
               380
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -104340,7 +105380,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "jump-light-punch",
@@ -104578,24 +105622,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 302,
           "preview": {
             "drawRect": [
-              30.69012395041983,
-              105.36985205917637,
-              470.85165933626547,
-              470.85165933626547
+              28.339237679541185,
+              101.98265673827768,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               245.0,
               353
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -104624,7 +105668,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "jump-medium-kick",
@@ -105100,24 +106148,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 245.5,
           "preview": {
             "drawRect": [
-              16.89564174330269,
-              134.79808076769297,
-              470.85165933626547,
-              470.85165933626547
+              14.400823659921258,
+              131.71793998013356,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               260.0,
               321
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -105146,7 +106194,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "jump-medium-punch",
@@ -105650,24 +106702,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 297.0,
           "preview": {
             "drawRect": [
-              19.194722111155556,
-              88.81647341063575,
-              470.85165933626547,
-              470.85165933626547
+              16.723892663191236,
+              85.25655991473377,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               257.5,
               371
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -105696,7 +106748,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "air-guard",
@@ -105759,24 +106815,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 291,
           "preview": {
             "drawRect": [
-              20.574170331867265,
-              132.0391843262695,
-              470.85165933626547,
-              470.85165933626547
+              18.11773406515323,
+              128.93025717620958,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               256.0,
               324
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -105799,7 +106855,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "jump-heavy-kick",
@@ -106485,24 +107545,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 258,
           "preview": {
             "drawRect": [
-              16.89564174330269,
-              133.8784486205518,
-              470.85165933626547,
-              470.85165933626547
+              14.400823659921258,
+              130.78871237882555,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               260.0,
               322
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -106531,7 +107591,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "jump-heavy-punch",
@@ -107049,24 +108113,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 280,
           "preview": {
             "drawRect": [
-              36.207916833266694,
-              116.40543782487009,
-              470.85165933626547,
-              470.85165933626547
+              33.914603287389156,
+              113.13338795397362,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               239.0,
               341
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -107095,7 +108159,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "air",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "get-up",
@@ -107382,24 +108450,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 191,
           "preview": {
             "drawRect": [
-              38.50699720111956,
-              48.35265893642543,
-              470.85165933626547,
-              470.85165933626547
+              36.237672290659134,
+              44.370545457182004,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               236.5,
               415
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -107422,7 +108490,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "light-kick",
@@ -107674,24 +108746,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 310.5,
           "preview": {
             "drawRect": [
-              -1.956817273090735,
-              53.87045181927232,
-              470.85165933626547,
-              470.85165933626547
+              -4.648342166892633,
+              49.945911065029975,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               280.5,
               409
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -107720,7 +108792,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 500,
           "returnToIdleMs": 500,
           "terminalPose": "idle",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "medium-kick",
@@ -108098,24 +109174,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 313,
           "preview": {
             "drawRect": [
-              24.71251499400242,
-              53.87045181927232,
-              470.85165933626547,
-              470.85165933626547
+              22.299258271039207,
+              49.945911065029975,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               251.5,
               409
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -108144,7 +109220,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 750,
           "returnToIdleMs": 750,
           "terminalPose": "idle",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "run",
@@ -108613,24 +109693,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 308.5,
           "preview": {
             "drawRect": [
-              35.288284686125564,
-              52.95081967213116,
-              470.85165933626547,
-              470.85165933626547
+              32.98537568608114,
+              49.01668346372196,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               240.0,
               410
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -108653,7 +109733,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "heavy-kick",
@@ -109227,24 +110311,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 306,
           "preview": {
             "drawRect": [
-              -16.211115553778484,
-              50.191923230707744,
-              470.85165933626547,
-              470.85165933626547
+              -19.051369987166595,
+              46.229000659797975,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               296.0,
               413
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -109273,7 +110357,11 @@ window.SANMAURO_CATALOG = {
           "attackDurationMs": 1000,
           "returnToIdleMs": 1000,
           "terminalPose": "idle",
-          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime."
+          "impactNote": "Posa di estensione verificata nel confronto dei frame runtime.",
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "knockdown",
@@ -109910,24 +110998,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 238.5,
           "preview": {
             "drawRect": [
-              24.71251499400242,
-              48.35265893642543,
-              470.85165933626547,
-              470.85165933626547
+              22.299258271039207,
+              44.370545457182004,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               251.5,
               415
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -109950,7 +111038,11 @@ window.SANMAURO_CATALOG = {
           },
           "trimmed": true,
           "remainingImport": true,
-          "attackStrength": null
+          "attackStrength": null,
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         },
         {
           "id": "stand-up",
@@ -110097,24 +111189,24 @@ window.SANMAURO_CATALOG = {
           "medianContentHeight": 282,
           "preview": {
             "drawRect": [
-              15.97600959616156,
-              53.87045181927232,
-              470.85165933626547,
-              470.85165933626547
+              13.471596058613244,
+              49.945911065029975,
+              475.76453186969354,
+              475.76453186969354
             ],
             "anchor": [
               261.0,
               409
             ],
             "scale": [
-              0.9196321471411435,
-              0.9196321471411435
+              0.9292276013079952,
+              0.9292276013079952
             ],
             "centerX": 256,
             "groundY": 430,
-            "targetIdleHeight": 301.6393442622951,
-            "heightMultiplier": 1.0606060606060606,
-            "viewScale": 0.8267523555361909
+            "targetIdleHeight": 300.14051522248246,
+            "heightMultiplier": 1.0909090909090908,
+            "viewScale": 0.7997930395947934
           },
           "normalizedPreview": {
             "drawRect": [
@@ -110138,20 +111230,399 @@ window.SANMAURO_CATALOG = {
           "trimmed": true,
           "remainingImport": true,
           "attackStrength": null,
-          "poseDurationMs": 250
+          "poseDurationMs": 250,
+          "stageSpriteScale": [
+            1.5491134252744159,
+            1.5491134252744159
+          ]
         }
       ],
-      "heightCm": 175,
-      "stageHeightMultiplier": 1.0606060606060606,
+      "heightCm": 180,
+      "stageHeightMultiplier": 1.0909090909090908,
       "portrait": "assets/portraits/torpe-portrait-v1.png",
       "portraitSource": {
         "sourcePath": "assets/ui/portraits/torpe-portrait-v1.png",
         "sourceConfigPath": "scripts/CharacterSelect.gd",
         "sourceSha256": "71bc182d916793237242a5179dbacda492fcc86726d2305db8471e5f4d2d332f"
-      }
+      },
+      "referenceIdleHeightPixels": 323,
+      "heightScaleCorrection": 1.0154798761609907
+    },
+    {
+      "id": "lele",
+      "name": "Lele",
+      "localIdleOnly": true,
+      "thumbnail": "assets/characters/lele/portrait.png",
+      "portrait": "assets/portraits/lele-portrait-v3.png",
+      "portraitSource": {
+        "sourcePath": "assets/portraits/lele-portrait-v3.png",
+        "sourceConfigPath": "assets/characters/lele/character.json",
+        "sourceSha256": "4435644823c778e7b80152f712ccbbfc2834adfb19d1a2c71714d14de22dba25"
+      },
+      "animations": [
+        {
+          "id": "idle",
+          "name": "Idle",
+          "image": "assets/characters/lele/lele-idle.png",
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              2560,
+              0,
+              512,
+              512
+            ],
+            [
+              3072,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ],
+            [
+              1536,
+              512,
+              512,
+              512
+            ],
+            [
+              2048,
+              512,
+              512,
+              512
+            ],
+            [
+              2560,
+              512,
+              512,
+              512
+            ],
+            [
+              3072,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              1024,
+              512,
+              512
+            ],
+            [
+              512,
+              1024,
+              512,
+              512
+            ],
+            [
+              1024,
+              1024,
+              512,
+              512
+            ],
+            [
+              1536,
+              1024,
+              512,
+              512
+            ],
+            [
+              2048,
+              1024,
+              512,
+              512
+            ],
+            [
+              2560,
+              1024,
+              512,
+              512
+            ],
+            [
+              3072,
+              1024,
+              512,
+              512
+            ],
+            [
+              0,
+              1536,
+              512,
+              512
+            ],
+            [
+              512,
+              1536,
+              512,
+              512
+            ],
+            [
+              1024,
+              1536,
+              512,
+              512
+            ],
+            [
+              1536,
+              1536,
+              512,
+              512
+            ],
+            [
+              2048,
+              1536,
+              512,
+              512
+            ],
+            [
+              2560,
+              1536,
+              512,
+              512
+            ],
+            [
+              3072,
+              1536,
+              512,
+              512
+            ],
+            [
+              0,
+              2048,
+              512,
+              512
+            ],
+            [
+              512,
+              2048,
+              512,
+              512
+            ],
+            [
+              1024,
+              2048,
+              512,
+              512
+            ],
+            [
+              1536,
+              2048,
+              512,
+              512
+            ],
+            [
+              2048,
+              2048,
+              512,
+              512
+            ],
+            [
+              2560,
+              2048,
+              512,
+              512
+            ],
+            [
+              3072,
+              2048,
+              512,
+              512
+            ],
+            [
+              0,
+              2560,
+              512,
+              512
+            ],
+            [
+              512,
+              2560,
+              512,
+              512
+            ],
+            [
+              1024,
+              2560,
+              512,
+              512
+            ],
+            [
+              1536,
+              2560,
+              512,
+              512
+            ],
+            [
+              2048,
+              2560,
+              512,
+              512
+            ],
+            [
+              2560,
+              2560,
+              512,
+              512
+            ],
+            [
+              3072,
+              2560,
+              512,
+              512
+            ],
+            [
+              0,
+              3072,
+              512,
+              512
+            ],
+            [
+              512,
+              3072,
+              512,
+              512
+            ],
+            [
+              1024,
+              3072,
+              512,
+              512
+            ],
+            [
+              1536,
+              3072,
+              512,
+              512
+            ]
+          ],
+          "playbackFps": 24,
+          "sourceFps": 24,
+          "sheetWidth": 3584,
+          "sheetHeight": 3584,
+          "sourcePath": "assets/characters/lele/lele-idle.png",
+          "sourceConfigPath": "assets/characters/lele/character.json",
+          "sourceTransform": {
+            "scale": [
+              1,
+              1
+            ],
+            "position": [
+              0,
+              0
+            ]
+          },
+          "contentBounds": [
+            154,
+            100,
+            412,
+            409
+          ],
+          "medianContentHeight": 298.0,
+          "trimmed": false,
+          "loop": true,
+          "sourceSha256": "e99e69c62dcfdec485b2f36eeefe62fd0d2f29dda4ce4dad835db657cd3916b4",
+          "preview": {
+            "drawRect": [
+              -13.650050184008023,
+              40.293743726999026,
+              487.8474406155905,
+              487.8474406155905
+            ],
+            "anchor": [
+              283.0,
+              409
+            ],
+            "scale": [
+              0.9528270324523251,
+              0.9528270324523251
+            ],
+            "centerX": 256,
+            "groundY": 430,
+            "targetIdleHeight": 293.47072599531623,
+            "heightMultiplier": 1.0666666666666667,
+            "viewScale": 0.7997930395947934
+          },
+          "normalizedPreview": {
+            "drawRect": [
+              -70.68456375838929,
+              -42.13422818791952,
+              591.0335570469799,
+              591.0335570469799
+            ],
+            "anchor": [
+              283.0,
+              409
+            ],
+            "scale": [
+              1.1543624161073827,
+              1.1543624161073827
+            ],
+            "centerX": 256,
+            "groundY": 430,
+            "targetIdleHeight": 344
+          },
+          "stageSpriteScale": [
+            1.5884559884559881,
+            1.5884559884559881
+          ]
+        }
+      ],
+      "heightCm": 176,
+      "stageHeightMultiplier": 1.0666666666666667,
+      "referenceIdleHeightPixels": 308,
+      "heightScaleCorrection": 0.9675324675324675
     }
   ],
-  "previewScale": 0.8267523555361909,
+  "previewScale": 0.7997930395947934,
   "characterProportions": {
     "schema": "sanmauro.character-proportions",
     "version": 1,
@@ -110165,7 +111636,19 @@ window.SANMAURO_CATALOG = {
       "mileto": 170,
       "oscare": 183,
       "peirolo": 170,
-      "torpe": 175
-    }
+      "torpe": 180,
+      "lele": 176
+    },
+    "idleReferenceHeightsPx": {
+      "arianna": 357,
+      "bue": 335,
+      "mangler": 356,
+      "mileto": 330,
+      "oscare": 330,
+      "peirolo": 336,
+      "torpe": 323,
+      "lele": 308
+    },
+    "heightCalibration": "Fixed first idle pose, alpha >=32; preserve posture changes without per-frame resizing."
   }
 };
