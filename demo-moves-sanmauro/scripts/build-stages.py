@@ -7,6 +7,7 @@ from pathlib import Path
 from PIL import Image
 from character_proportions import apply_proportions, write_portraits
 from feet_contacts import extract_contacts
+from mercato_stage import build_mercato, write_catalog
 
 root = Path(__file__).resolve().parents[1]
 folder = root / 'assets/stages/Piazza Europa'
@@ -79,7 +80,7 @@ save(root/'assets/manifest.json',manifest)
 (root/'catalog.js').write_text('// Generato dai manifest locali Sanmauro.\nwindow.SANMAURO_CATALOG = '+json.dumps(manifest,ensure_ascii=False,indent=2)+';\n',encoding='utf-8')
 foot_data = dict(method='Suola alpha >64; due contatti per frame, y al bordo inferiore del pixel.',items=contacts)
 save(folder/'foot-contacts.json',foot_data)
-(root/'stages-catalog.js').write_text('/* Generato da scripts/build-stages.py. */\n(function(root){const stages='+json.dumps([stage],ensure_ascii=False,indent=2)+';\nif(typeof module==="object"&&module.exports)module.exports=stages;else root.STAGES_CATALOG=stages;\n})(typeof globalThis!=="undefined"?globalThis:this);\n',encoding='utf-8')
+write_catalog(root,[stage,build_mercato(root,stage)])
 (root/'stage-foot-contacts.js').write_text('/* Generato da scripts/build-stages.py. */\nwindow.STAGE_FOOT_CONTACTS = '+json.dumps(foot_data,ensure_ascii=False,indent=2)+';\n',encoding='utf-8')
 preset = json.loads((folder/'crt-preset.json').read_text(encoding='utf-8'))
 if preset.get('schema')!='wedoo.crt-preset' or preset.get('version')!=1:

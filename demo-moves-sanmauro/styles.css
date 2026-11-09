@@ -52,10 +52,10 @@
 .stage-fullscreen-exit{display:none}
 .stage-fullscreen-message{padding:12px 18px;font-size:11px;color:#e4c09b}
 .stage-screen:fullscreen{display:grid;place-items:center;width:100vw;height:100vh;height:100dvh;background:#000;overflow:hidden}
-.stage-screen:fullscreen>.stage-preview{width:min(100vw,calc(100vh*16/9));width:min(100vw,calc(100dvh*16/9));max-width:none!important;margin:0;flex:none}
+.stage-screen:fullscreen>.stage-preview{width:min(100vw,calc(100vh*var(--stage-ratio,1.777777778)));width:min(100vw,calc(100dvh*var(--stage-ratio,1.777777778)));max-width:none!important;margin:0;flex:none}
 .stage-screen:fullscreen>.stage-fullscreen-exit{display:block;position:absolute;top:16px;right:16px;z-index:5;background:#171d17e8;border:1px solid #718251;color:var(--text);font-size:12px;padding:10px 14px}
 .stage-screen::backdrop{background:#000}
-.stage-preview canvas{display:block;width:100%;height:auto;aspect-ratio:16/9;image-rendering:pixelated;cursor:grab;touch-action:pan-y}
+.stage-preview canvas{display:block;width:100%;height:auto;aspect-ratio:var(--stage-ratio,16/9);image-rendering:pixelated;cursor:grab;touch-action:pan-y}
 .stage-preview canvas.is-dragging{cursor:grabbing}
 .stage-preview canvas:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
 .stage-status{position:absolute;inset:0;display:grid;place-items:center;margin:0;padding:20px;background:var(--surface);color:var(--muted);font-size:12px;text-align:center}
@@ -76,7 +76,7 @@
 .crt-drawer-footer{flex:none;border-top:1px solid var(--border);padding:14px 18px;background:var(--surface)}
 .crt-drawer-footer .crt-preset-actions{margin-top:0}
 body.crt-drawer-open .workspace{margin-right:420px}
-@media(max-width:1000px){body.crt-drawer-open .stage-preview{max-width:calc((52vh - 64px)*16/9);max-width:calc((52dvh - 64px)*16/9);margin-inline:auto}}
+@media(max-width:1000px){body.crt-drawer-open .stage-preview{max-width:calc((52vh - 64px)*var(--stage-ratio,1.777777778));max-width:calc((52dvh - 64px)*var(--stage-ratio,1.777777778));margin-inline:auto}}
 .crt-help,.crt-runtime,.crt-preset-status{font-size:11px;line-height:1.7;color:var(--muted);margin-bottom:14px}
 .crt-runtime{color:var(--accent)}
 .crt-base-group{padding-bottom:22px;margin-bottom:22px;border-bottom:1px solid var(--border)}

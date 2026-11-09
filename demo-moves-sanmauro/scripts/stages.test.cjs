@@ -161,7 +161,7 @@ test('server locale serve anche nomi con spazi, stage e moduli CRT senza esporre
   assert.equal((await fetch(base+'/assets/stages/Piazza%20Europa/nuvole-parallax-5000x1080.zip')).status,403);
 });
 
-function fixture(reduced=false,withFighters=false){
+function fixture(reduced=false,withFighters=false,stage=stages[0]){
   function node(){return {listeners:{},hidden:false,disabled:false,textContent:'',setAttribute(){},addEventListener(k,f){this.listeners[k]=f;},removeEventListener(k){delete this.listeners[k];}};}
   const images=[],draws=[],transforms=[],fills=[],paint=[],buffers=[],callbacks=new Map();let next=0;
   const document=node(),media=node();document.hidden=false;media.matches=reduced;
@@ -182,12 +182,13 @@ function fixture(reduced=false,withFighters=false){
   canvas.getContext=()=>({clearRect(){paint.push({kind:'clear'});},fillRect(...args){fills.push(args);paint.push({kind:'fill',color:this.fillStyle,alpha:this.globalAlpha,args});},drawImage(...args){draws.push(args);paint.push({kind:'image',image:args[0]});},save(){},restore(){},transform(...args){transforms.push(['project',...args]);},translate(...args){transforms.push(['translate',...args]);},scale(...args){transforms.push(['scale',...args]);}});
   const sandbox={window:{}};vm.runInNewContext(fs.readFileSync(path.join(demo,'catalog.js'),'utf8'),sandbox);
   const contacts=JSON.parse(fs.readFileSync(path.join(folder,'foot-contacts.json'),'utf8'));
-  const fighters=withFighters?stages[0].fighters.map(f=>({...f,footContacts:contacts.items.find(i=>i.characterId===f.characterId).frames,animation:sandbox.window.SANMAURO_CATALOG.characters.find(c=>c.id===f.characterId).animations.find(a=>a.id===f.animationId)})):[];
-  const player=install(canvas,button,status,{...stages[0],fighters},env);
+  const fighters=withFighters?stage.fighters.map(f=>({...f,footContacts:contacts.items.find(i=>i.characterId===f.characterId).frames,animation:sandbox.window.SANMAURO_CATALOG.characters.find(c=>c.id===f.characterId).animations.find(a=>a.id===f.animationId)})):[];
+  if(stage.webglClouds)env.StageCloudsWebGL={create(){return {supported:true,render(context){context.fillStyle='#cloud-webgl-test';context.fillRect(0,0,1,1);},destroy(){}};}};
+  const player=install(canvas,button,status,{...stage,fighters},env);
   function load(){images.forEach((image,i)=>{
-    if(i<5)Object.assign(image,{naturalWidth:stages[0].layers[i].width,naturalHeight:1080});
+    if(i<stage.layers.length)Object.assign(image,{naturalWidth:stage.layers[i].width,naturalHeight:1080});
     else{
-      const png=fs.readFileSync(path.resolve(demo,fighters[i-5].animation.image));
+      const png=fs.readFileSync(path.resolve(demo,fighters[i-stage.layers.length].animation.image));
       Object.assign(image,{naturalWidth:png.readUInt32BE(16),naturalHeight:png.readUInt32BE(20)});
     }
     image.onload();
@@ -195,3 +196,43 @@ function fixture(reduced=false,withFighters=false){
   function tick(time){const pending=[...callbacks.values()];callbacks.clear();pending.forEach(f=>f(time));}
   return {canvas,button,status,player,images,draws,transforms,fills,paint,buffers,callbacks,document,media,load,tick};
 }
+
+
+test('Mercat? follows Piazza Europa and shows the complete native foreground with frequent shooting stars',async()=>{
+  const stage=stages[1];
+  assert.equal(stage.id,'mercato');assert.equal(stage.name,'Mercat\u00f2');
+  assert.deepEqual([stage.width,stage.height,stage.viewportWidth],[2550,1080,2550]);
+  assert.deepEqual(stage.layers.map(l=>l.zIndex),[0,4]);
+  assert.deepEqual(stage.layers.filter(l=>l.speed).map(l=>l.speed),[]);
+  for(const layer of stage.layers){
+    const png=fs.readFileSync(path.join(demo,layer.image));
+    assert.deepEqual([layer.width,layer.height],[png.readUInt32BE(16),png.readUInt32BE(20)]);
+  }
+  assert.deepEqual(stage,JSON.parse(fs.readFileSync(path.join(demo,'assets/stages/Mercat\u00f2/stage.json'),'utf8')));
+  const f=fixture(false,false,stage);await f.load();
+  assert.deepEqual([f.canvas.width,f.canvas.height],[2550,1080]);
+  assert.deepEqual(f.draws.find(d=>d[0]===f.images[1]).slice(1),[0,0],'foreground rendered whole at native size');
+
+  assert.equal(stage.shootingStars,true);
+  assert.equal(stage.webglClouds,true);
+  assert.equal(stages[0].shootingStars,undefined);
+  f.tick(0);
+  for(let t=100;t<=1500;t+=100)f.tick(t);
+  const lastFrame=f.paint.slice(f.paint.map(p=>p.kind).lastIndexOf('clear'));
+  const sky=lastFrame.findIndex(p=>p.kind==='image'&&p.image===f.images[0]);
+  const meteor=lastFrame.findIndex(p=>p.kind==='fill'&&p.color==='#f2f7ff');
+  const cloud=lastFrame.findIndex(p=>p.kind==='image'&&p.image===f.images[1]);
+  assert.ok(sky<meteor&&meteor<cloud,'meteors rendered after sky and before foreground');
+  const webgl=lastFrame.findIndex(p=>p.kind==='fill'&&p.color==='#cloud-webgl-test');
+  assert.ok(meteor<webgl&&webgl<cloud,'WebGL clouds composite between stars and foreground');
+
+  f.tick(0);f.tick(1000);
+  for(const layer of stage.layers.filter(l=>l.speed)){
+    for(const time of [0,1000,1e9]){
+      const xs=cloudPositions(stage.width,layer.width,time,layer.speed);
+      assert.ok(xs[0]<=0&&xs.at(-1)+layer.width>=stage.width);
+    }
+    assert.equal(cloudPositions(stage.width,layer.width,1000,layer.speed)[0],-1225-layer.speed);
+  }
+  f.player.destroy();
+});

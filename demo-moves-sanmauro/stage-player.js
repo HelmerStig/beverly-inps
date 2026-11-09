@@ -10,6 +10,18 @@
     for(;x<stageWidth;x+=layerWidth)positions.push(x);
     return positions;
   }
+  function shootingStars(width,elapsed){
+    const stars=[];
+    for(let i=0;i<3;i++){
+      const period=3200+i*700,clock=elapsed+i*1300;
+      const time=(clock%period-1200)/1000;
+      if(time<0||time>=0.85)continue;
+      const cycle=Math.floor(clock/period),alpha=Math.sin(Math.PI*time/0.85);
+      stars.push({x:(530+i*733+cycle*419)%width-time*591.5,
+        y:75+(i*83+cycle*47)%190+time*269.75,alpha});
+    }
+    return stars;
+  }
   function dustParticles(width,height,elapsed,intensity){
     const amount=Number.isFinite(intensity)?Math.max(0,Math.min(1,intensity)):0;
     const count=amount>0?160:0;
@@ -36,8 +48,12 @@
     const media=env.matchMedia('(prefers-reduced-motion: reduce)');
     let disposed=false,ready=false,playing=!media.matches,elapsed=0,last=null,request=null;
     let fighterElapsed=0,animateFighters=!media.matches;
+    let rainEnabled=Boolean(stage.rain),rainElapsed=0;
     let postProcess=null,sceneRenderer=null;
     const viewportWidth=stage.viewportWidth??stage.height*16/9;
+    const cloudRenderer=stage.webglClouds?env.StageCloudsWebGL?.create(env):null;
+    const stormAudio=stage.lightning?env.StageStormAudio?.create(env):null;
+    if(stage.webglClouds)canvas.setAttribute('data-clouds-renderer',cloudRenderer?.supported?'webgl':'unavailable');
     const maxCamera=Math.max(0,stage.width-viewportWidth);
     let camera=maxCamera/2,drag=null;
     const layers=stage.layers.map((layer,index)=>({...layer,index,imageObject:null})).sort((a,b)=>a.zIndex-b.zIndex||a.index-b.index);
@@ -130,13 +146,40 @@
       context.clearRect(0,0,viewportWidth,stage.height);
       context.imageSmoothingEnabled=false;
       for(const layer of layers){
+        context.save();
+        context.globalAlpha=layer.opacity??1;
+        context.filter=layer.filter??'none';
         const width=layer.renderWidth??layer.width,height=layer.renderHeight??layer.height;
         const positions=layer.speed?cloudPositions(stage.width,width,elapsed,layer.speed):[(stage.width-width)/2];
         for(const x of positions){
           if(layer.renderWidth!==undefined||layer.renderHeight!==undefined)context.drawImage(layer.imageObject,x-camera,(stage.height-height)/2,width,height);
           else context.drawImage(layer.imageObject,x-camera,0);
         }
+        context.restore();
         if(layer.haze)fog(layer.haze);
+        if(layer.id==='sky'&&stage.shootingStars){
+          context.save();context.filter='none';
+          for(const star of shootingStars(stage.width,elapsed)){
+            context.fillStyle='#b0ccff';
+            for(let segment=17;segment>=0;segment--){
+              const fade=1-segment/18;
+              context.globalAlpha=star.alpha*fade*fade*0.75;
+              context.fillRect(Math.round((star.x+segment*6.37-camera)/2)*2,
+                Math.round((star.y-segment*2.905)/2)*2,6,2);
+            }
+            context.fillStyle='#f2f7ff';context.globalAlpha=star.alpha;
+            context.fillRect(Math.round((star.x-camera)/2)*2-2,Math.round(star.y/2)*2-2,4,4);
+          }
+          context.restore();
+        }
+        if(layer.id==='sky')cloudRenderer?.render(context,viewportWidth,stage.height,elapsed,camera,stage.width,stage.lightning&&!media.matches);
+      }
+      if(stage.lightning&&!media.matches){
+        const flash=env.StageCloudsWebGL?.lightningState?.(elapsed)?.flash??0;
+        if(flash>0){
+          context.save();context.filter='none';context.globalAlpha=flash*.20;
+          context.fillStyle='#c2d3ff';context.fillRect(0,0,viewportWidth,stage.height);context.restore();
+        }
       }
       dust();
       fighters.forEach(shadow);
@@ -152,21 +195,51 @@
         context.restore();
       }
       sceneRenderer?.(context,{elapsed:fighterElapsed,camera,effects,stage,viewportWidth});
+      if(rainEnabled){
+        context.save();context.filter='none';context.fillStyle='#a8bdd8';
+        // Stratified columns keep density stable across the entire stage.
+        // Horizontal advection is shared: varying it with the starting X made
+        // the rain field compress and expand as time advanced.
+        const seconds=rainElapsed/1000;
+        const gust=80*Math.sin(seconds*.47)+28*Math.sin(seconds*1.13);
+        const slant=1.3+.9*Math.sin(seconds*.47)+.35*Math.cos(seconds*1.13);
+        const drift=rainElapsed*.14+gust;
+        const columnWidth=stage.width/20;
+        for(let i=0;i<440;i++){
+          const seed=((Math.imul(i+1,1597334677)>>>0)%65536)/65536;
+          const variation=((Math.imul(i+37,3812015801)>>>0)%65536)/65536;
+          const depth=.45+variation*.7;
+          const y=(variation*(stage.height+60)+rainElapsed*(.65+depth*.55)+12*Math.sin(seconds*1.7+i))%(stage.height+60)-30;
+          const origin=(i%20+.1+seed*.8)*columnWidth;
+          const sway=8*Math.sin(seconds*.8+i*2.1);
+          const worldX=((origin-drift+sway)%stage.width+stage.width)%stage.width;
+          const x=worldX-camera;
+          context.globalAlpha=.20+depth*.20;
+          const length=3+Math.floor(variation*3);
+          for(const shift of [0,stage.width]){
+            if(x+shift<0||x+shift>viewportWidth+32)continue;
+            for(let step=0;step<length;step++)context.fillRect(Math.round((x+shift-step*slant*depth)/2)*2,Math.round((y+step*5)/2)*2,depth>1?3:2,5);
+          }
+        }
+        context.restore();
+      }
       postProcess?.(canvas,fighterElapsed);
     }
     function sync(){
       button.disabled=!ready;
-      button.textContent=playing?'Pausa nuvole':'Avvia nuvole';
+      button.textContent=(playing?'Pausa ':'Avvia ')+(stage.shootingStars?(stage.webglClouds?'cielo':'stelle cadenti'):'nuvole');
       button.setAttribute('aria-pressed',String(playing));
     }
     function schedule(){
-      if(!disposed&&ready&&(playing||(animateFighters&&(fighters.length||effects.dust>0||sceneRenderer)))&&!env.document.hidden&&request===null)request=env.requestAnimationFrame(tick);
+      if(!disposed&&ready&&(playing||(rainEnabled&&!media.matches)||(animateFighters&&(fighters.length||effects.dust>0||sceneRenderer)))&&!env.document.hidden&&request===null)request=env.requestAnimationFrame(tick);
     }
     function tick(time){
       request=null;
       const delta=last===null?0:Math.max(0,Math.min(time-last,100));
       if(playing)elapsed+=delta;
+      if(rainEnabled&&!media.matches)rainElapsed+=delta;
       if(animateFighters)fighterElapsed+=delta;
+      stormAudio?.update({rain:rainEnabled,elapsed,lightning:stage.lightning&&playing&&!media.matches,hidden:env.document.hidden});
       last=time;draw();schedule();
     }
     function resetClock(){
@@ -175,7 +248,7 @@
       schedule();
     }
     function toggle(){playing=!playing;sync();resetClock();}
-    function visibility(){resetClock();}
+    function visibility(){stormAudio?.update({rain:rainEnabled,elapsed,lightning:false,hidden:env.document.hidden});resetClock();}
     function reduced(){animateFighters=!media.matches;if(media.matches)playing=false;sync();resetClock();}
     function moveCamera(value){camera=Math.max(0,Math.min(maxCamera,value));draw();}
     function pointerDown(event){
@@ -200,7 +273,7 @@
       event.preventDefault();moveCamera(next);
     }
     button.disabled=true;
-    if(!context){status.textContent='Anteprima non supportata da questo browser.';return {setEffects(){},setPostProcess(){},setSceneRenderer(){},setSceneMotion(){},destroy(){}};}
+    if(!context){status.textContent='Anteprima non supportata da questo browser.';return {setRain(){},setEffects(){},setPostProcess(){},setSceneRenderer(){},setSceneMotion(){},destroy(){}};}
     button.addEventListener('click',toggle);
     canvas.addEventListener('pointerdown',pointerDown);
     canvas.addEventListener('pointermove',pointerMove);
@@ -231,12 +304,14 @@
       if(disposed)return;
       status.textContent=error.message;canvas.setAttribute('aria-busy','false');
     });
-    return {loaded,setSceneRenderer(callback){sceneRenderer=callback;draw();schedule();},setSceneMotion(value){animateFighters=Boolean(value);resetClock();draw();},setPostProcess(callback){postProcess=callback;if(callback)draw();},setEffects(values){
+    return {loaded,async setStormAudio(value){const result=await stormAudio?.setEnabled(value);stormAudio?.update({rain:rainEnabled,elapsed,lightning:false,hidden:env.document.hidden});return Boolean(result);},setRain(value){rainEnabled=Boolean(value);stormAudio?.update({rain:rainEnabled,elapsed,lightning:false,hidden:env.document.hidden});draw();resetClock();},setSceneRenderer(callback){sceneRenderer=callback;draw();schedule();},setSceneMotion(value){animateFighters=Boolean(value);resetClock();draw();},setPostProcess(callback){postProcess=callback;if(callback)draw();},setEffects(values){
       const clamp=value=>Number.isFinite(Number(value))?Math.max(0,Math.min(1,Number(value))):0;
       effects={shadows:clamp(values.shadows),color:clamp(values.color),fog:clamp(values.fog),dust:clamp(values.dust)};
       draw();schedule();
     },destroy(){
       disposed=true;postProcess=null;sceneRenderer=null;resetClock();
+      cloudRenderer?.destroy();
+      stormAudio?.destroy();
       button.removeEventListener('click',toggle);
       if(drag)pointerEnd({pointerId:drag.id});
       for(const [type,handler] of [['pointerdown',pointerDown],['pointermove',pointerMove],['pointerup',pointerEnd],['pointercancel',pointerEnd],['lostpointercapture',pointerEnd],['keydown',keyDown]])canvas.removeEventListener(type,handler);
@@ -246,5 +321,5 @@
       fighters.forEach(fighter=>{for(const canvas of [fighter.colorCanvas,fighter.shadowCanvas])if(canvas){canvas.width=0;canvas.height=0;}});
     }};
   }
-  return Object.freeze({install,cloudPositions,dustParticles,shadowProjection});
+  return Object.freeze({install,cloudPositions,shootingStars,dustParticles,shadowProjection});
 });

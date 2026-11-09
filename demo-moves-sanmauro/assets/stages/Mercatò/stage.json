@@ -1,0 +1,60 @@
+{
+  "id": "mercato",
+  "name": "Mercatò",
+  "width": 2550,
+  "height": 1080,
+  "viewportWidth": 2550,
+  "shadow": {
+    "color": "#1d1625",
+    "shearX": 0.5,
+    "flattenY": 0.11,
+    "opacity": 0.72,
+    "contactOpacity": 0.28
+  },
+  "layers": [
+    {
+      "id": "sky",
+      "image": "assets/stages/Mercatò/cielo.png",
+      "zIndex": 0,
+      "width": 2550,
+      "height": 1080
+    },
+    {
+      "id": "foreground",
+      "image": "assets/stages/Mercatò/mercato.png",
+      "zIndex": 4,
+      "width": 2550,
+      "height": 1080
+    }
+  ],
+  "fighters": [
+    {
+      "characterId": "arianna",
+      "animationId": "idle",
+      "x": 675,
+      "groundY": 1025,
+      "scale": 1.2865825151940158,
+      "heightCm": 165,
+      "heightMultiplier": 1.0,
+      "anchorX": 256.5,
+      "anchorY": 428,
+      "flipX": false
+    },
+    {
+      "characterId": "oscare",
+      "animationId": "idle",
+      "x": 1890,
+      "groundY": 1025,
+      "scale": 1.5322380430814164,
+      "heightCm": 183,
+      "heightMultiplier": 1.1090909090909091,
+      "anchorX": 257.5,
+      "anchorY": 414,
+      "flipX": true
+    }
+  ],
+  "shootingStars": true,
+  "rain": true,
+  "webglClouds": true,
+  "lightning": true
+}

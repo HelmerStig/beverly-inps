@@ -1,6 +1,22 @@
+- Repo immagini:
+okay, ora in demo-moves-sanmauro vorrei aggiungere alla sezione stages lo stage "Mercatò"
+dopo Piazza Europa.
+Sarà composto da 5 immagini:
+- demo-moves-sanmauro\assets\stages\Mercatò\cielo.png z-index 0
+- demo-moves-sanmauro\assets\stages\Mercatò\mercato.png: z-index 4, sfondo principale, le proprorzioni dell'immagine sono determinate da quest'immagine, non deve essere ritagliata, deve essere visibile per intero.
+- demo-moves-sanmauro\assets\stages\Mercatò\01-nuvole-lontane.png z-index 2, devi mantenere la sua dimensione e centrarle orizzontalemente nello stage, quindi avrai abbondaggio a destra e sinistra. Deve muoversi lentamente da destra verso sinistra, in loop, per dare l'effetto di parallax.
+- demo-moves-sanmauro\assets\stages\Mercatò\02-nuvole-intermedie.png z-index 3, devi mantenere la sua dimensione e centrarle orizzontalemente nello stage, quindi avrai abbondaggio a destra e sinistra. Deve muoversi più velocemente delle nuvole lontane da destra verso sinistra, in loop, per dare l'effetto di parallax.
+- demo-moves-sanmauro\assets\stages\Mercatò\03-nuvole-prossime.png z-index 4, devi mantenere la sua dimensione e centrarle orizzontalemente nello stage, quindi avrai abbondaggio a destra e sinistra. Deve muoversi più velocemente delle nuvole intermedie da destra verso sinistra, in loop, per dare l'effetto di parallax.
+
+devo ora creare come fatto per gli altri personaggi il portrait di LELE, trovi i portraits qui: demo-moves-sanmauro\assets\portraits
+lo sprite di lele è res://../demo-moves-sanmauro/assets/characters/lele/lele-idle.png
+la persona vera e propria di riferimento è qui: original-images/lele
+
+
 Vorrei creare un nuovo progetto godot in questo repo per rifare quello vecchio:
 F:/Personali/Godot
 Ho anche scaricato una nuova versione di Godot_v4.7.2, mi guidi?
+
 
 Descrizione Progetto
 

@@ -1,0 +1,4 @@
+Tool: built-in image_gen; transparent_background=true.
+Reference: lele-portrait-v2.png (identity, clothing and pixel-art style).
+
+undefined
