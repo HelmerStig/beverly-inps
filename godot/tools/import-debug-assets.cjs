@@ -15,10 +15,10 @@ function copy(relative) {
 for (const layer of stage.layers) copy(layer.image);
 copy('assets/stages/Piazza Europa/stage.json');
 copy('assets/stages/Piazza Europa/crt-preset.json');
-const characters = manifest.characters.map(character => {
+const characters = manifest.characters.filter(character=>!character.localIdleOnly).map(character => {
   const idle = character.animations.find(a => a.id === 'idle');
   const animations = {};
-  for(const id of ['idle','walk','backwalk','run','back-jump','jump','light-punch','hurt-high','block-high']) {
+  for(const id of ['idle','walk','backwalk','run','back-jump','jump','light-punch','hurt-high','block-high','crouch','block-low']) {
     const animation = character.animations.find(a=>a.id===id);
     if(!animation) throw Error('Missing movement: '+character.id+'/'+id);
     copy(animation.image);
@@ -39,9 +39,9 @@ const characters = manifest.characters.map(character => {
   copy(idle.image);
   const hash = crypto.createHash('sha256').update(fs.readFileSync(path.join(root,idle.image))).digest('hex');
   if(hash !== idle.sourceSha256) throw Error('Idle hash mismatch: ' + character.id);
-  return {id:character.id, name:character.name, heightCm:character.heightCm, idle, animations,
+  return {id:character.id, name:character.name, heightCm:character.heightCm, heightScaleCorrection:character.heightScaleCorrection??1, idle, animations,
     footContacts: contacts.items.find(item=>item.characterId===character.id).frames};
 });
 fs.mkdirSync(path.join(root,'data'), {recursive:true});
 fs.writeFileSync(path.join(root,'data/debug-roster.json'), JSON.stringify({characters}, null, 2)+'\n');
-console.log('Imported Piazza Europa and 63 verified character animations.');
+console.log('Imported Piazza Europa and 77 verified character animations.');

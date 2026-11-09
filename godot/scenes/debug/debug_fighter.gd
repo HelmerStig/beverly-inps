@@ -1,5 +1,6 @@
 extends Node2D
 signal light_punch_landed(target: Node2D)
+signal light_punch_contact(point: Vector2, blocked: bool, direction: float)
 ## Catalog-driven locomotion with pose-specific hurt geometry.
 const SHADER := preload("res://shaders/debug_fighter.gdshader")
 const HURTBOX_RIG := preload("res://scenes/debug/hurtbox_rig.gd")
@@ -51,6 +52,10 @@ var attack_was_down := false
 var attack_targets: Dictionary = {}
 var confirmed_hits := 0
 var guard_held := false
+var training_guard := false
+var training_crouch := false
+var hurt_plant_locked := false
+var hurt_plant_reference := Vector2.ZERO
 var reaction_kind := ""
 var reaction_attacker: Node2D
 var guard_recovering := false
@@ -90,6 +95,8 @@ func _make_sprite(is_shadow: bool) -> Sprite2D:
 	return node
 
 func select_character(character: Dictionary) -> void:
+	training_guard = false
+	training_crouch = false
 	_clear_reaction()
 	_cancel_attack()
 	data = character
@@ -104,7 +111,7 @@ func select_character(character: Dictionary) -> void:
 	elapsed = 0.0
 	var idle: Dictionary = data.idle
 	anchor = Vector2(idle.normalizedPreview.anchor[0], idle.normalizedPreview.anchor[1])
-	stage_scale = float(idle.normalizedPreview.scale[0]) * (float(data.heightCm) / 165.0) * (4.0 / 3.0)
+	stage_scale = float(idle.normalizedPreview.scale[0]) * (float(data.heightCm) / 165.0) * float(data.get("heightScaleCorrection",1.0)) * (4.0 / 3.0)
 	hurtboxes.select_character(character,anchor)
 	set_animation("idle",true)
 
@@ -112,10 +119,12 @@ func set_animation(id: String, force: bool = false) -> void:
 	if animation_id==id and not force:
 		return
 	animation_id = id
+	if id!="hurt-high":
+		hurt_plant_locked = false
 	animation = data.animations[id]
 	elapsed = 0.0
 	anchor = Vector2(animation.normalizedPreview.anchor[0],animation.normalizedPreview.anchor[1])
-	visual_scale = float(animation.normalizedPreview.scale[0]) * (float(data.heightCm)/165.0) * (4.0/3.0)
+	visual_scale = float(animation.normalizedPreview.scale[0]) * (float(data.heightCm)/165.0) * float(data.get("heightScaleCorrection",1.0)) * (4.0/3.0)
 	hurtboxes.select_animation(data,id,anchor)
 	var texture := load("res://" + str(animation.image)) as Texture2D
 	sprite.texture = texture
@@ -154,7 +163,10 @@ func resolve_light_punch(target: Node2D) -> bool:
 	if not attack_active or attack_targets.has(target.get_instance_id()) or not hitbox.touches(target.hurtboxes):
 		return false
 	attack_targets[target.get_instance_id()] = true
-	if target.receive_light_punch(self):
+	var point: Vector2 = hitbox.contact_point(target.hurtboxes)
+	var blocked: bool = target.receive_light_punch(self)
+	light_punch_contact.emit(point,blocked,-1.0 if flipped else 1.0)
+	if blocked:
 		target.block_player.play()
 		return true
 	confirmed_hits += 1
@@ -173,11 +185,15 @@ func _clear_reaction() -> void:
 func receive_light_punch(attacker: Node2D) -> bool:
 	var facing := -1.0 if flipped else 1.0
 	var blocked: bool = guard_held and not attack_active and not jump.active and body_y==0.0 and (attacker.world_x-world_x)*facing>0.0
+	if data.id=="mangler" and not blocked and not jump.active and body_y==0.0:
+		var foot := _planted_foot()
+		hurt_plant_reference = (Vector2(foot.x,foot.y)-anchor)*visual_scale
+		hurt_plant_locked = true
 	_cancel_attack()
 	motion.reset()
 	landing_active = false
 	touchdown_hold = false
-	reaction_kind = "block-high" if blocked else "hurt-high"
+	reaction_kind = ("block-low" if training_crouch else "block-high") if blocked else "hurt-high"
 	reaction_attacker = attacker if blocked else null
 	guard_recovering = false
 	set_animation(reaction_kind,true)
@@ -200,7 +216,7 @@ func _reaction_step(delta: float) -> float:
 	if jump.active:
 		displacement = jump.step(delta)
 		body_y = jump.body_y
-	if reaction_kind=="block-high" and not guard_recovering:
+	if reaction_kind in ["block-high","block-low"] and not guard_recovering:
 		if is_instance_valid(reaction_attacker) and reaction_attacker.attack_active:
 			return displacement
 		guard_recovering = true
@@ -209,10 +225,29 @@ func _reaction_step(delta: float) -> float:
 		elapsed += delta
 	if elapsed>=animation_duration(reaction_kind)-0.0000001:
 		_clear_reaction()
-		set_animation("idle",true)
+		if training_guard or training_crouch:
+			_apply_training_pose()
+		else:
+			set_animation("idle",true)
 	else:
 		_update_frame()
 	return displacement
+
+func set_training_stance(guard: bool, crouched: bool) -> void:
+	reset_motion()
+	training_guard = guard
+	training_crouch = crouched
+	guard_held = guard
+	_apply_training_pose()
+
+func _apply_training_pose() -> void:
+	guard_held = training_guard
+	var id := "block-low" if training_guard and training_crouch else "block-high" if training_guard else "crouch" if training_crouch else "idle"
+	set_animation(id)
+	if id!="idle":
+		var pose: int = int(animation.sourceForwardFrameCount)-1 if training_guard else animation.frames.size()-1
+		elapsed = _reaction_frame_time(pose)
+		_update_frame()
 
 func animation_duration(id: String) -> float:
 	var a: Dictionary = data.animations[id]
@@ -247,9 +282,12 @@ func locomotion_step(axis: float, delta: float, jump_down: bool = false, attack_
 	var attack_pressed := attack_down and not attack_was_down
 	attack_was_down = attack_down
 	jump_was_down = jump_down
-	guard_held = axis*(-1.0 if flipped else 1.0)<-0.2
+	guard_held = training_guard or axis*(-1.0 if flipped else 1.0)<-0.2
 	if not reaction_kind.is_empty():
 		return _reaction_step(delta)
+	if training_guard or training_crouch:
+		_apply_training_pose()
+		return 0.0
 	touchdown_hold = false
 	if attack_pressed and not attack_active and not jump.active and body_y==0.0 and motion.state!="back-jump" and not jump_pressed:
 		start_light_punch()
@@ -319,6 +357,8 @@ func locomotion_step(axis: float, delta: float, jump_down: bool = false, attack_
 	return distance
 
 func reset_motion() -> void:
+	training_guard = false
+	training_crouch = false
 	_clear_reaction()
 	_cancel_attack()
 	motion.reset()
@@ -334,15 +374,23 @@ func _feet() -> Array:
 	var feet: Array = movement_contacts[data.id][animation_id][frame_index]
 	return feet if not feet.is_empty() else [{"x":anchor.x,"y":anchor.y,"width":36.0}]
 
+func _planted_foot() -> Dictionary:
+	var feet := _feet()
+	var lowest: Dictionary = feet[0]
+	for foot: Dictionary in feet:
+		if float(foot.y)>float(lowest.y):
+			lowest = foot
+	return lowest
+
 func _process(delta: float) -> void:
-	if not frozen and not jump.active and not landing_active and not touchdown_hold and not attack_active and reaction_kind.is_empty():
+	if not frozen and not jump.active and not landing_active and not touchdown_hold and not attack_active and reaction_kind.is_empty() and not training_guard and not training_crouch:
 		elapsed += delta
 	if not data.is_empty():
 		_update_frame()
 
 func _update_frame() -> void:
 	var duration := animation_duration(animation_id)
-	var clock := minf(elapsed,duration-0.000001) if animation_id in ["back-jump","jump","light-punch","hurt-high","block-high"] else fposmod(elapsed,duration)
+	var clock := minf(elapsed,duration-0.000001) if animation_id in ["back-jump","jump","light-punch","hurt-high","block-high","crouch","block-low"] else fposmod(elapsed,duration)
 	frame_index = 0
 	if animation.has("frameDurations"):
 		while frame_index<animation.frames.size()-1 and clock>=float(animation.frameDurations[frame_index])/1000.0-0.0000001:
@@ -351,6 +399,14 @@ func _update_frame() -> void:
 	else:
 		frame_index = mini(int(floor(clock*float(animation.playbackFps)+0.0000001)),animation.frames.size()-1)
 	var cell: Array = animation.frames[frame_index]
+	if hurt_plant_locked and animation_id=="hurt-high":
+		# Legacy Mangler hurt frames lean far outside their initial stance. The
+		# union-bounds center is not a stable pivot: keep the planted sole fixed.
+		var foot := _planted_foot()
+		anchor = Vector2(foot.x,foot.y)-hurt_plant_reference/visual_scale
+		sprite.offset = -anchor
+		shadow_sprite.offset = -anchor
+		hurtboxes.anchor = anchor
 	var region := Rect2(cell[0], cell[1], cell[2], cell[3])
 	sprite.region_rect = region
 	shadow_sprite.region_rect = region
@@ -370,7 +426,7 @@ func _update_frame() -> void:
 	# A raised leg is not a second ground contact. Fitting a ground plane through
 	# both feet while running produced steep/alternating slopes and rotating shadows.
 	var slope := 0.0
-	var attached := animation_id in ["idle","walk","backwalk","light-punch","hurt-high","block-high"]
+	var attached := animation_id in ["idle","walk","backwalk","light-punch","hurt-high","block-high","crouch","block-low"]
 	if attached and feet.size()==2 and absf(float(feet[1].x)-float(feet[0].x))>40.0:
 		var candidate := (float(feet[1].y)-float(feet[0].y))/(float(feet[1].x)-float(feet[0].x))
 		# Only use a two-sole plane when well-conditioned. A nearly vertical pair
@@ -399,7 +455,7 @@ func _draw() -> void:
 	for foot: Dictionary in feet:
 		bottom = maxf(bottom,float(foot.y))
 	for foot: Dictionary in feet:
-		var attached := animation_id in ["idle","walk","backwalk","light-punch","hurt-high","block-high"]
+		var attached := animation_id in ["idle","walk","backwalk","light-punch","hurt-high","block-high","crouch","block-low"]
 		if not attached and (bottom<anchor.y-12.0 or float(foot.y)<bottom-6.0):
 			continue
 		var x := flip * visual_scale * (float(foot.x) - anchor.x)

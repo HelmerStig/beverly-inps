@@ -22,6 +22,7 @@ var returning := false
 var hurtboxes_visible := false
 var contact := CONTACT.new()
 var hurtbox_editor: Control
+var impact_effects: Node2D
 
 func _ready() -> void:
 	roster = JSON.parse_string(FileAccess.get_file_as_string("res://data/debug-roster.json")).characters
@@ -38,6 +39,9 @@ func _ready() -> void:
 	background.manifest_path = STAGE
 	background.camera_x = camera_x
 	source_viewport.add_child(background)
+	impact_effects = Node2D.new()
+	impact_effects.name = "ImpactEffects"
+	source_viewport.add_child(impact_effects)
 	for slot in range(2):
 		var fighter := FIGHTER.new()
 		source_viewport.add_child(fighter)
@@ -45,6 +49,7 @@ func _ready() -> void:
 		fighter.world_x = 675.0 if slot == 0 else 1890.0
 		fighter.flipped = slot == 1
 		fighter.select_character(roster[0 if slot == 0 else 4])
+		fighter.light_punch_contact.connect(_show_impact)
 	_build_toolbar()
 	hurtbox_editor = preload("res://scenes/debug/hurtbox_editor.gd").new()
 	source_viewport.add_child(hurtbox_editor)
@@ -146,6 +151,11 @@ func _build_toolbar() -> void:
 	help.add_theme_color_override("font_shadow_color",Color.BLACK)
 	help.add_theme_constant_override("shadow_outline_size",5)
 	ui.add_child(help)
+	var shortcuts := Label.new()
+	shortcuts.text = "Dummy P2: G guardia on/off | C accovacciato on/off | G+C guardia bassa"
+	shortcuts.position = Vector2(30,145)
+	shortcuts.add_theme_font_size_override("font_size",21)
+	ui.add_child(shortcuts)
 
 func _selection_arrow(text: String, slot: int, direction: int) -> Button:
 	var button := Button.new()
@@ -167,6 +177,8 @@ func select_character(slot: int, index: int) -> void:
 	_update_view()
 
 func reset_positions() -> void:
+	for effect in impact_effects.get_children():
+		effect.queue_free()
 	for fighter in fighters:
 		fighter.reset_motion()
 	fighters[0].world_x = 675.0
@@ -232,6 +244,7 @@ func move_pair(displacement: Vector2) -> void:
 
 func _update_view() -> void:
 	background.camera_x = camera_x
+	impact_effects.position.x = -camera_x
 	for slot in range(fighters.size()):
 		var fighter := fighters[slot]
 		fighter.position = Vector2(fighter.world_x-camera_x,1025+fighter.body_y)
@@ -243,6 +256,11 @@ func _update_view() -> void:
 		var animation: Dictionary = fighter.animation
 		readouts[slot].text = "%d cm · %s · x %d · Colpi %d" % [fighter.data.heightCm,animation.name,fighter.world_x,fighter.confirmed_hits]
 	status.text = "Camera: %d / 630 · 2× avanti: corsa · 2× indietro: salto · F3: hurtbox %s (posa corrente)" % [camera_x,"visibili" if hurtboxes_visible else "nascoste"]
+
+func _show_impact(point: Vector2, blocked: bool, direction: float) -> void:
+	var effect := preload("res://scenes/debug/impact_effect.gd").new()
+	effect.setup(point+Vector2(camera_x,0),blocked,direction)
+	impact_effects.add_child(effect)
 
 func set_hurtboxes_visible(value: bool) -> void:
 	hurtboxes_visible = value
@@ -276,6 +294,12 @@ func _input(event: InputEvent) -> void:
 		if selector.get_popup().visible:
 			return
 	match event.keycode:
+		KEY_G:
+			fighters[1].set_training_stance(not fighters[1].training_guard,fighters[1].training_crouch)
+			_update_view()
+		KEY_C:
+			fighters[1].set_training_stance(fighters[1].training_guard,not fighters[1].training_crouch)
+			_update_view()
 		KEY_LEFT:
 			cycle_character(0,-1)
 		KEY_RIGHT:

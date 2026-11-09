@@ -58,6 +58,15 @@ func touches(target: Area2D) -> bool:
 			return true
 	return false
 
+func contact_point(target: Area2D) -> Vector2:
+	for hurt: CollisionShape2D in target.shapes:
+		if hurt.disabled:
+			continue
+		var contacts := shape.shape.collide_and_get_contacts(shape.global_transform,hurt.shape,hurt.global_transform)
+		if contacts.size()>=2:
+			return (contacts[0]+contacts[1])*0.5
+	return shape.global_position
+
 func _draw() -> void:
 	if not active or not debug_visible:
 		return
